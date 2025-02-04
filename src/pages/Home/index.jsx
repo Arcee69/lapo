@@ -687,7 +687,7 @@ const Home = () => {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                   }}  
-                  className="w-[700px] h-[300px] flex relative rounded-xl" 
+                  className="w-[650px] h-[300px] flex relative rounded-xl" 
                 >
                   {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
@@ -704,7 +704,7 @@ const Home = () => {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                   }}  
-                  className="w-[700px] h-[300px] flex relative rounded-xl" 
+                  className="w-[650px] h-[300px] flex relative rounded-xl" 
                 >
                   {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
@@ -721,7 +721,7 @@ const Home = () => {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                   }}  
-                  className="w-[700px] h-[300px] flex relative rounded-xl" 
+                  className="w-[650px] h-[300px] flex relative rounded-xl" 
                 >
                   {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
@@ -738,7 +738,7 @@ const Home = () => {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                   }}  
-                  className="w-[700px] h-[300px] flex relative rounded-xl" 
+                  className="w-[650px] h-[300px] flex relative rounded-xl" 
                 >
                   {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
