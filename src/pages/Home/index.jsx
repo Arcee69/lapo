@@ -52,6 +52,7 @@ const Home = () => {
         className='h-[732px] bg-[#fff] flex flex-col items-start pl-[64px] pt-[213px]'
         data-aos="fade-up" 
         data-aos-duration="1000" 
+        data-aos-easing="linear"
       >
         <div className='w-[688px] h-[406px] flex flex-col gap-5'>
           <div className='flex items-center justify-center gap-2 bg-[#E780201A] w-[204px] rounded-full h-[28px] p-2'>
@@ -90,6 +91,7 @@ const Home = () => {
         className='w-full mt-[39px] flex flex-col items-center pt-[44px] pb-[86px] px-[31.99px] gap-[97px]'
         data-aos="fade-up" 
         data-aos-duration="1000"
+        data-aos-easing="linear"
       >
         <div className='flex flex-col items-center justify-center gap-5'>
           <div className='flex items-center gap-2 bg-[#E780201A] w-[89px] rounded-full h-[32px] p-2'>
@@ -409,6 +411,7 @@ const Home = () => {
         className='w-full mt-[59px] flex flex-col gap-[64px] px-[97px] py-[59px]'
         data-aos="fade-up" 
         data-aos-duration="1000"
+        data-aos-easing="linear"
       >
         <div className='flex flex-col items-center gap-2 w-[636px] mx-auto'>
           <div className='w-[128px] h-[32px] flex items-center justify-center rounded-md bg-[#E8FFF4]'>
@@ -568,6 +571,7 @@ const Home = () => {
         className='bg-[#0E362205] h-auto flex flex-col pt-[59px] gap-[59px] items-center justify-center'
         data-aos="fade-up" 
         data-aos-duration="1000"
+        data-aos-easing="linear"
       >
         <div className='flex flex-col items-center gap-[8px]'>
             <div className='bg-[#FDF2E9] w-[105px] flex items-center justify-center p-1 rounded-lg'>
@@ -759,6 +763,7 @@ const Home = () => {
         className='w-full px-[80px] py-[96px] h-[512px] overflow-hidden'
         data-aos="fade-up" 
         data-aos-duration="1000"
+        data-aos-easing="linear"
       >
         <div
           className='flex items-center justify-center gap-[64px]'

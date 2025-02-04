@@ -14,6 +14,7 @@ const Footer = () => {
       className="w-full flex flex-col"
       data-aos="fade-up" 
       data-aos-duration="1000"
+      data-aos-easing="linear"
     >
       <div className="border border-t-[#E2E2E2] border-x-0 border-b-0 px-[112px] pt-[56.98px] pb-[119.98px]">
         <div className="flex items-start gap-[32px]">
