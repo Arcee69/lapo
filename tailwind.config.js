@@ -12,7 +12,9 @@ export default {
     },
 
     fontFamily: {
-      grava: ["grava"],
+      nunito: ["Nunito Sans"],
+      inter: ["Inter"],
+      hanken: ["Hanken Grotesk"],
     },
     colors: {
       primary: "#3BFF81",
