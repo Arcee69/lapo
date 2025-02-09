@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoChevronForwardOutline } from "react-icons/io5";
 
 import AboutA from "../../assets/png/about_a.png"
 import AboutB from "../../assets/png/about_b.png"
@@ -330,7 +331,8 @@ const About = () => {
               <p className='font-inter text-[#000000] text-base leading-6'>Learn</p>
             </div>
             <div className='flex items-center gap-2'>
-
+              <p className="font-inter text-base text-[#000000]" >Explore</p>
+              <IoChevronForwardOutline />
             </div>
           </div>
         </div>

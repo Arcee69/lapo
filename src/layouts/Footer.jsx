@@ -27,11 +27,10 @@ const Footer = () => {
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Company</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">About us</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>About us</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Careers</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Press</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Find a Branch</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Media kit</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Media</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Contact</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Sustainability</p>
           </div>
@@ -40,6 +39,7 @@ const Footer = () => {
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Blog</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Newsletter</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Events</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Press</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Help centre</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
           </div>
@@ -56,8 +56,8 @@ const Footer = () => {
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Privacy</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Cookies</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Licenses</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Settings</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Contact</p>
+            {/* <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Settings</p> */}
+            {/* <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Contact</p> */}
           </div>
         </div>
       </div>

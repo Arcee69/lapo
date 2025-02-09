@@ -597,7 +597,16 @@ const Home = () => {
             >
                                               {/* Individual Card */}
               <SwiperSlide>
-                <div
+                <iframe 
+                  width="450" 
+                  height="300" 
+                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>
+                {/* <div
                   style={{
                     backgroundImage: `url(${Nurse})`,
                     backgroundSize: "cover",
@@ -605,16 +614,25 @@ const Home = () => {
                   }}  
                   className="w-[450px] h-[300px] flex relative rounded-xl" 
                 >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
                   <div className='flex flex-col  absolute bottom-4 left-6'>
                     <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
                     <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
                   </div>
-                </div>     
+                </div>    */}
               </SwiperSlide>
+
               <SwiperSlide>
-                <div
+                <iframe 
+                  width="450" 
+                  height="300" 
+                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>
+                {/* <div
                   style={{
                     backgroundImage: `url(${Nurse})`,
                     backgroundSize: "cover",
@@ -622,16 +640,25 @@ const Home = () => {
                   }}  
                   className="w-[450px] h-[300px] flex relative rounded-xl" 
                 >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
                   <div className='flex flex-col  absolute bottom-4 left-6'>
                     <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
                     <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
                   </div>
-                </div>   
+                </div>    */}
               </SwiperSlide>
+
               <SwiperSlide>
-                <div
+                <iframe 
+                  width="450" 
+                  height="300" 
+                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>
+                {/* <div
                   style={{
                     backgroundImage: `url(${Nurse})`,
                     backgroundSize: "cover",
@@ -639,16 +666,25 @@ const Home = () => {
                   }}  
                   className="w-[450px] h-[300px] flex relative rounded-xl" 
                 >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
                   <div className='flex flex-col  absolute bottom-4 left-6'>
                     <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
                     <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
                   </div>
-                </div>     
+                </div>    */}
               </SwiperSlide>
+              
               <SwiperSlide>
-                <div
+                <iframe 
+                  width="450" 
+                  height="300" 
+                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>
+                {/* <div
                   style={{
                     backgroundImage: `url(${Nurse})`,
                     backgroundSize: "cover",
@@ -656,106 +692,17 @@ const Home = () => {
                   }}  
                   className="w-[450px] h-[300px] flex relative rounded-xl" 
                 >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
                   <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
                   <div className='flex flex-col  absolute bottom-4 left-6'>
                     <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
                     <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
                   </div>
-                </div>    
+                </div>    */}
               </SwiperSlide>
             
             </Swiper>
           </div>
           
-          <div className='w-full'>
-            <Swiper
-              modules={[Autoplay]} 
-              spaceBetween={0} // Space between slides
-              slidesPerView={'2'} // Automatically adjust to fit the number of cards
-              grabCursor={true}
-              autoplay={{
-                  delay: 3000, // Slide transition delay in milliseconds
-                  disableOnInteraction: false, // Continue autoplay after interaction
-                  }}
-              loop={true} // Enables infinite looping of slides
-              // style={{
-              //     display: isMobile ? "none" : "block" 
-              // }}
-            >
-                                              {/* Individual Card */}
-              <SwiperSlide>
-                <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[650px] h-[300px] flex relative rounded-xl" 
-                >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>    
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[650px] h-[300px] flex relative rounded-xl" 
-                >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>   
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[650px] h-[300px] flex relative rounded-xl" 
-                >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>   
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[650px] h-[300px] flex relative rounded-xl" 
-                >
-                  {/* <div className='absolute inset-0 bg-gradient-to-b from-[#FFFFFF00] from-[0%] via-[#213F30B2] via-[70%] to-[#012412CC] to-[10%]' /> */}
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>   
-              </SwiperSlide>
-              
-                                
-            </Swiper>
-          </div>
         </div>
       </section>
 
