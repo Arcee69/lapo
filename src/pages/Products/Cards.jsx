@@ -36,16 +36,15 @@ const Cards = () => {
                     </div>
                     <div className='flex items-center gap-[17px]'>
                         <button
-                            className='w-[180px] h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
+                            className='w-[183px] h-[60px] flex items-center justify-center bg-[#fff] rounded-lg'
                         >
-                            <p className='text-[#F99650] font-medium text-base leading-7' >Get Started</p>
+                            <p className='text-[#F99650] font-medium text-base leading-7'>Get your Card today</p>
                         </button>
                         <button
                             className='w-[182px] h-[54px] border-[#FFFFFF] border flex items-center justify-center rounded-lg'
                         >
                             <p className='text-[#FFFFFF] font-medium text-base leading-7'>Learn More</p>
                         </button>
-
                     </div>
                 </div>
                 <div className='w-full mx-auto mt-[64px]'>
