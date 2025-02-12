@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules'; // Updated import
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useTransform, motion, useScroll } from "motion/react";
+import Lenis from "@studio-freight/lenis";
+
 
 import HomeBg from "../../assets/png/home_bg.png"
 import Girl from "../../assets/png/girl.png"
@@ -33,12 +36,71 @@ import NDIC from "../../assets/svg/ndic.svg"
 import Google from "../../assets/svg/google.svg"
 import Apple from "../../assets/svg/apple.svg"
 
+import "./css/styles.css";
+import "./css/card.css";
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("savings")
+  const cardsRef = useRef([]);
 
   const handleTabChange = (value) => {
     setActiveTab(value)
   }
+
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "start start"],
+  });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }); 
+
+  useEffect(() => {
+    const cards = cardsRef.current;
+
+    // Apply padding and scaling effects
+    cards.forEach((card, index) => {
+      const offsetTop = 20 + index * 20; // Adjust overlap amount
+      card.style.paddingTop = `${offsetTop}px`;
+
+      if (index === cards.length - 1) return;
+
+      const toScale = 1 - (cards.length - 1 - index) * 0.1; // Scale down effect
+      const nextCard = cards[index + 1];
+      const cardInner = card.querySelector(".card__inner");
+
+      const handleScroll = () => {
+        const rect = nextCard.getBoundingClientRect();
+        const percentageY = Math.max(
+          0,
+          Math.min(1, (window.innerHeight - rect.top) / window.innerHeight)
+        );
+
+        cardInner.style.transform = `scale(${valueAtPercentage({
+          from: 1,
+          to: toScale,
+          percentage: percentageY,
+        })})`;
+        cardInner.style.filter = `brightness(${valueAtPercentage({
+          from: 1,
+          to: 0.6,
+          percentage: percentageY,
+        })})`;
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    });
+  }, []);
 
   return (
     <div className='w-full '>
@@ -423,7 +485,7 @@ const Home = () => {
         </div>
 
         <div className='flex flex-col gap-[19px]'>
-          <div className='w-full h-[478px] relative flex justify-between rounded-tl-xl shadow-lg pl-[48px] border border-[#fcfcfc] items-center '>
+          <div  ref={container}  className='w-full  h-[478px] relative flex justify-between rounded-tl-xl shadow-lg pl-[48px] border border-[#fcfcfc] items-center '>
             <div className='absolute left-0 top-0'>
               <img src={CurveLeft} alt='CurveLeft' className='rounded-tl-xl ' />
             </div>
@@ -448,7 +510,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='w-full h-[512px] flex'>
+          <div className='w-full h-[512px] flex'  ref={container} >
             <div className='bg-[#012412] w-6/12 rounded-tl-lg rounded-bl-lg flex flex-col p-[48px] gap-[63px]'>
               <p className='font-inter font-semibold text-[#1AFF8C] text-[20px]'>
                 The First and the Best to ever do it
@@ -684,20 +746,7 @@ const Home = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
-                {/* <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[450px] h-[300px] flex relative rounded-xl" 
-                >
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>    */}
+               
               </SwiperSlide>
             
             </Swiper>

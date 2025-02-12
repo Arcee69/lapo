@@ -35,10 +35,10 @@ const Header = () => {
 
 
   
-
+//#FFFFFFE5
 
   return (
-    <div className='bg-[#FFFFFFE5] fixed z-50 w-full pl-[32px] h-[80px] pr-[127px] py-5 flex items-center justify-between'>
+    <div className='bg-[#fff] fixed z-50 w-full pl-[32px] h-[80px] pr-[127px] py-5 flex items-center justify-between'>
         <img src={Logo} alt="Logo" className='w-[109px] h-[44px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
         <div className='flex items-center gap-6'>
             <p 

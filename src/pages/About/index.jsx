@@ -4,7 +4,7 @@ import { IoChevronForwardOutline } from "react-icons/io5";
 import AboutA from "../../assets/png/about_a.png"
 import AboutB from "../../assets/png/about_b.png"
 import AboutC from "../../assets/png/about_c.png"
-import Christmas from "../../assets/png/christmas.png"
+import Building from "../../assets/png/lapo_building.png"
 import Curve from "../../assets/png/curve_about.png"
 import Groupies from "../../assets/png/groupies.png"
 
@@ -139,7 +139,7 @@ const About = () => {
               over 500 branches.
             </p>
         </div>
-        <img src={Christmas} className='' alt='Christmas' />
+        <img src={Building} className='' alt='Building' />
       </section>
 
       <section

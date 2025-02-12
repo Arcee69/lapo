@@ -1,0 +1,31 @@
+.cardContainer {
+    position: sticky;
+    top: 0px;
+    padding-top: 10%;
+
+  }
+  .main{
+    position: relative;
+    margin-top: 50vh;
+  }
+  .cardContainer .card1 {
+    flex-direction: column;
+    position: relative;
+    top: -25%;
+
+    border-radius: 25px;
+    padding: 50px;
+    transform-origin: top;
+  }
+  
+
+
+  @media (max-width: 767px) {
+
+
+    .cardContainer .card1 {
+      
+        padding: 50px 10px !important
+       
+    }
+}

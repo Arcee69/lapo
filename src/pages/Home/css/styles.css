@@ -1,0 +1,39 @@
+.my-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: radial-gradient(circle, transparent 40%, #ffcc33 41%);
+  cursor: pointer;
+  border: 2px solid #ffcc33;
+}
+
+.my-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: radial-gradient(circle, transparent 40%, #ffcc33 41%);
+  cursor: pointer;
+  border: 2px solid #ffcc33;
+}
+
+.my-slider::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: radial-gradient(circle, transparent 40%, #ffcc33 41%);
+  cursor: pointer;
+  border: 2px solid #ffcc33;
+}
+
+
+@media (min-width: 1024px) {
+
+
+  .cardContainer .card1 {
+    
+      padding: 50px 10px !important
+     
+  }
+}

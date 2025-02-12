@@ -21,9 +21,9 @@ const Footer = () => {
           <img src={Logo} alt="Logo" className='w-[153px] h-[50px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Products</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Savings</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Cards</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Loans <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate('/products/savings'), window.scrollTo(0, 0)}}>Savings</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products/cards"), window.scrollTo(0, 0)}}>Cards</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products") }}>Loans <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Company</p>
