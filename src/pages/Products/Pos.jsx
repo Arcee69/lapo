@@ -1,0 +1,325 @@
+import React, { useEffect, useRef } from 'react'
+import { FaArrowRight } from 'react-icons/fa'
+
+import PosBanner from "../../assets/png/pos_banner.png"
+import Terminal from "../../assets/png/terminal.png"
+import FiveStars from "../../assets/png/five_stars.png"
+
+import Stars from "../../assets/svg/stars.svg"
+import CBN from "../../assets/svg/cbn.svg"
+import NDIC from "../../assets/svg/ndic.svg"
+import Dollar from "../../assets/svg/dollar.svg"
+import Lightning from "../../assets/svg/lightning.svg"
+import Tracker from "../../assets/svg/tracker.svg"
+
+
+const Pos = () => {
+    const sectionRef = useRef(null);
+    const stepsContainerRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!sectionRef.current || !stepsContainerRef.current) return;
+
+            const section = sectionRef.current;
+            const container = stepsContainerRef.current;
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+            
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            // Calculate scroll boundaries
+            const start = sectionTop - windowHeight;
+            const end = sectionTop + sectionHeight;
+
+            if (scrollY > start && scrollY < end) {
+                const progress = (scrollY - start) / (end - start);
+                container.scrollLeft = progress * maxScrollLeft;
+            } else if (scrollY <= start) {
+                container.scrollLeft = 0;
+            } else if (scrollY >= end) {
+                container.scrollLeft = maxScrollLeft;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+  return (
+    <div className='w-full'>
+
+        <section 
+            style={{
+                backgroundImage: `linear-gradient(to left, rgba(249, 150, 80, 0), #753412), url(${PosBanner})`,
+                backgroundSize:"cover",
+                backgroundRepeat: "no-repeat"
+            }}
+            className='h-[832px]  flex flex-col items-start pl-[64px] pt-[213px]'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+
+            <div className='w-[550px] h-[406px] flex flex-col gap-5'>
+                <div className='flex items-center justify-center gap-2 bg-[#FFFFFFCF] w-[204px] rounded-full h-[28px] p-2'>
+                    <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
+                    <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 5M+ Nigerians</p>
+                </div>
+                <p className='text-[56px] font-semibold leading-[57.6px] text-[#fff] font-hanken'>
+                    Fast, <span className='text-[#1AFF8C]'>Secure</span>, and <span className='text-[#F99650]'>Reliable</span> Payments for Your Business.
+                </p>
+                <p className='text-[20px] font-hanken text-[#fff] w-[550px] leading-[30px]'>
+                    Trusted by generations to provide transparent, accessible financial services. 
+                    we’re here to support you with solutions that fit your needs.
+                </p>
+                <div className='flex items-center gap-5'>
+                    <button
+                        className='bg-[#E78020] flex flex-col items-center justify-center w-[211px] h-[56px] rounded-[10px]'
+                    >
+                        <p className='font-hanken text-[#fff] text-base font-semibold'>Apply For a LAPO POS</p>
+                    </button>
+                    <button
+                        className='border-[#FFFFFF] border flex flex-col items-center justify-center w-[182px] h-[56px] rounded-[10px]'
+                    >
+                        <p className='font-hanken text-[#FFFFFF] text-base font-semibold'>Learn More</p>
+                    </button>
+                </div>
+                <div className='flex items-center gap-2 mt-3'>
+                    <p className='text-xs font-hanken text-[#fff] font-medium capitalize'>licensed by </p>
+                    <img src={CBN} alt='cbn_logo' className='w-[22px] h-[28px]' />
+                    <p className='text-xs font-hanken text-[#fff] font-medium capitalize'> insured by </p>
+                    <img src={NDIC} alt='ndic_logo' className='w-[70px] h-[28px]' />
+                </div>
+            </div>
+        </section>
+
+        <section
+            className='bg-[#fff] flex flex-col gap-[64px] py-[92px] px-[80px]'
+        >
+            <div className='flex flex-col gap-3'>
+                <div className='bg-[#FDF2E9] rounded-[6px] flex items-center flex-col justify-center p-2 h-[32px] w-[172px]'>
+                    <p className='text-[#E78020] font-hanken font-medium text-sm leading-[15px]'>Why Choose Our POS?</p>
+                </div>
+                <div className='flex flex-col gap-5'>
+                    <p className='font-hanken font-medium text-[48px] leading-[62px] tracking-[-2%]'>
+                        Financial software to fuel your growth
+                    </p>
+                    <p className='font-inter text-[20px] leading-[30px] text-[#667085] '>
+                        Spend smarter, lower your bills, get cashback on everything you buy, 
+                        and unlock credit to grow your business.
+                    </p>
+                </div>
+            </div>
+
+            <div className='flex items-start gap-[64px]'>
+                <div className='flex flex-col gap-[48px] w-[576px]'>
+                    <div className='flex items-start gap-4'>
+                        <img src={Lightning} alt='Lightning' className=''/>
+                        <div className='flex flex-col gap-4 mt-2'>
+                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>Modern, User-Friendly POS Terminals</p>
+                            <p className='text-[#667085] font-inter text-base leading-6 '>
+                                Give your team the autonomy they need with access to as many cards as they need. 
+                                Authorise purchases with a click. Simple.
+                            </p>
+                            <div className='flex items-center gap-2'>
+                                <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
+                                <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-start gap-4'>
+                        <img src={Dollar} alt='Dollar' className=''/>
+                        <div className='flex flex-col gap-4 mt-2'>
+                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>No Hidden Charges</p>
+                            <p className='text-[#667085] font-inter text-base leading-6 '>
+                                Every card comes with configurable spending limits, purchase restrictions, 
+                                and cancellations for each employee and team.
+                            </p>
+                            <div className='flex items-center gap-2'>
+                                <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
+                                <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-start gap-4'>
+                        <img src={Tracker} alt='Tracker' className=''/>
+                        <div className='flex flex-col gap-4 mt-2'>
+                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>Real-Time Sales Tracking & Reporting</p>
+                            <p className='text-[#667085] font-inter text-base leading-6 '>
+                                An all-in-one platform that helps you balance everything your team 
+                                need to be happy and your finances in order.
+                            </p>
+                            <div className='flex items-center gap-2'>
+                                <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
+                                <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='w-[576px]'>
+                    <img src={Terminal} alt='Terminal' className='' />
+                </div>
+            </div>
+        </section>
+
+        <section
+            ref={sectionRef}
+            className='px-[64px] py-[112px] gap-[80px] flex flex-col h-[695px] bg-[#1E1E1E]'
+        >
+            {/* Header section unchanged */}
+            <div className='flex items-center flex-col gap-6'>
+                <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
+                    <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
+                </div>
+                <p className='font-hanken text-[56px] leading-[67px] text-[#fff]'>
+                    Simple Steps to Getting your POS
+                </p>
+                <p className='text-[#D9D9D9] font-inter text-[20px] leading-[30px]'>
+                    Our application process is designed to be straightforward and efficient. 
+                    Follow these easy steps to get started on your pos journey.
+                </p>
+            </div>
+
+            {/* Steps container with hidden scrollbar */}
+            <div 
+                ref={stepsContainerRef}
+                className='flex items-start gap-[48px] overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+            >
+                {[1, 2, 3, 4].map((step, index) => (
+                    <div
+                        key={step}
+                        className='flex flex-col items-center w-[396px] gap-6 flex-shrink-0'
+                    >
+                        <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
+                            <p className='font-hanken font-medium text-[#000] text-[32px] leading-[41px]'>{step}</p>
+                        </div>
+                        <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>
+                            Step {step}: {index === 1 ? 'Request a POS' : index === 2 ? "Get it Delivered" :  index === 3 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
+                        </p>
+                        <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
+                            {   index === 1 ? 'Sign up online or visit our branch.' : 
+                                index === 2 ? 'We’ll send it to your business location.' :
+                                index === 3 ? 'Seamless transactions, happy customers!' : 
+                                'Select from various loan options that suit your needs.'
+                            }
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section
+            className='bg-[#F7F9FC] py-[96px] px-[80px] gap-6 flex flex-col items-center'
+        >
+            <img src={FiveStars} alt="FiveStars" className='w-[116px] h-[20px]' />
+            <p className='font-hanken font-medium italic text-[72px] leading-[93.82px] tracking-[-2%] text-center'>
+                “This POS transformed how we handle payments! Quick, reliable, and easy to use. 
+            </p>
+            <div className='flex flex-col '>
+
+            </div>
+
+        </section>
+        
+        <section
+            className='bg-[#00984C] h-[471px] flex justify-center py-[112px] items-center'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+            <div className='w-[768px] flex flex-col items-center gap-6'>
+                <p className='font-hanken text-[48px] text-center leading-[57px] text-[#FFFFFF]'>
+                    Unlock new financial possibilities with us
+                </p>
+                <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF]'>
+                    Explore our diverse saving options tailored for personal, business, and educational needs.  
+                </p>
+                <div className='flex items-center gap-4'>
+                    <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
+                        <p className='font-hanken text-[#000000] font-medium text-base leading-6'>Contact Us</p>
+                    </div>
+                    <div className='bg-[#000000] w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                        <p className='font-hanken font-medium text-[#fff]'>Download the LAPO App</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section 
+            className='bg-[#fff] py-[112px] flex flex-col '
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        > 
+            <div className='w-[768px] flex flex-col mx-auto gap-[80px]'>
+                <div
+                    className='flex flex-col gap-6 items-center'
+                >
+                    <p className='font-hanken font-medium text-[48px] leading-[57px] '>FAQs</p>
+                    <p className='font-inter text-[#000000] text-[18px] leading-[27px]'>
+                        Find answers to your questions about our POS Terminal and application process.
+                    </p>
+                </div>
+                <div className='flex flex-col gap-[48px]'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>How do I request a POS?</p>
+                        <p className='font-inter text-[#000000] text-base leading-6'>
+                            You can request a POS by signing up online or visiting any of our branches. 
+                            Once approved, we’ll deliver it to your business location.
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What are the transaction fees?</p>
+                        <p className='font-inter text-[#000000] text-base leading-6'>
+                            Our fees are transparent and competitive. You only pay a small percentage per transaction,
+                            with no hidden charges. Contact us for detailed pricing.
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What are the benefits?</p>
+                        <p className='font-inter text-[#000000] text-base leading-6'>
+                            Process transactions in seconds with top-tier security, multiple Payment Options – 
+                            Accept card, mobile, and QR payments seamlessly, get your money quickly with no delays, 
+                            monitor transactions and sales from anywhere, reliable 24/7 Support,transparent pricing 
+                            with no surprises
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What happens if my POS stops working?</p>
+                        <p className='font-inter text-[#000000] text-base leading-6'>
+                            If you experience any issues, our 24/7 support team is ready to assist you. 
+                            We also offer quick replacements to keep your business running smoothly.
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>Can I track my transactions in real-time?</p>
+                        <p className='font-inter text-[#000000] text-base leading-6'>
+                            Yes! You can monitor all payments, settlements, 
+                            and sales reports instantly through our online dashboard or mobile app.
+                        </p>
+                    </div>
+                </div>
+                <div className='w-[560px] flex flex-col items-center mx-auto gap-4'>
+                    <p className='font-hanken text-[#000000] font-semibold text-[32px] leading-[41px]'>Still have questions?</p>
+                    <p className='text-[18px] text-[#000000] leading-[27px]'>We're here to help you!</p>
+                    <button
+                        className='w-[104px] h-[48px] p-2 bg-black rounded-lg'
+                    >
+                        <p className='text-[#fff] font-hanken font-medium leading-6 text-base'>Contact</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+  )
+}
+
+export default Pos

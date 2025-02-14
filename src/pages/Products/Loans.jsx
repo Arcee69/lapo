@@ -311,8 +311,7 @@ const Loans = () => {
                     </div>
                 ))}
 
-                {/* Connecting lines - removed absolute positioning */}
-                {/* Consider adding dynamic lines using CSS or another method */}
+         
             </div>
         </section>
 
