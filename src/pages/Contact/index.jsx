@@ -35,6 +35,9 @@ const Contact = () => {
         
         <section
             className='flex flex-col h-[350px] px-[80px] items-center gap-6 pt-[176px]'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
         >
             <div className='flex flex-col items-center gap-4 w-[960px] mx-auto'>
                 <div className='w-[90px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
@@ -51,12 +54,20 @@ const Contact = () => {
             </div>
         </section>
 
-        <section className='w-full mt-[96px]'>
+        <section 
+            className='w-full mt-[96px]'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
             <img src={Building} className='' alt='Building' />
         </section>
 
         <section
             className='bg-[#fff] px-[112px] flex items-center gap-6 pt-[64px] pb-[96px]'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
         >
             <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
                 <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
@@ -114,6 +125,9 @@ const Contact = () => {
 
         <section
             className='flex items-center flex-col gap-[96px] bg-[#fff] '
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
         >
             <div className='flex flex-col items-center gap-4'>
                 <div className='w-[111px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#E8FFF4]'>

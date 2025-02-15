@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { IoChevronForwardOutline } from "react-icons/io5";
 
 import AboutA from "../../assets/png/about_a.png"
 import AboutB from "../../assets/png/about_b.png"
 import AboutC from "../../assets/png/about_c.png"
-import Building from "../../assets/png/lapo_building.png"
+import Building from "../../assets/png/group.png"
 import Curve from "../../assets/png/curve_about.png"
 import Groupies from "../../assets/png/groupies.png"
 
@@ -22,6 +22,9 @@ import Sustainability from "../../assets/svg/sustainability.svg"
 
 const About = () => {
   const [activeTab, setActiveTab] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0);
+  const milestoneRefs = useRef([]);
+
 
   const changeActiveTab = (value) => {
     setActiveTab(value)
@@ -52,6 +55,35 @@ const About = () => {
       description: "",
     },
   ];
+
+  useEffect(() => {
+    // Ensure the refs array matches the number of milestones
+    milestoneRefs.current = milestoneRefs.current.slice(0, milestones.length);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Get the milestone index from a custom data attribute
+            const index = Number(entry.target.getAttribute("data-index"));
+            setActiveIndex(index);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust this value to set when a milestone is "active"
+    );
+
+    milestoneRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    // Cleanup on unmount
+    return () => {
+      milestoneRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className='w-full'>
@@ -193,11 +225,11 @@ const About = () => {
         data-aos-easing="ease-in-sine"
       >
         <p className='text-[#000000] font-hanken text-[48px] leading-[57px]'>Core Values</p>
-        <div className='flex flex-col gap-[55px] '>
-          <div className='flex items-start'>
+        <div className='flex flex-col items-center gap-[55px] '>
+          <div className='flex items-start justify-center'>
 
             <Box 
-              className="w-3/12 h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
               img={People}
               alt="People"
               title="People First"
@@ -205,7 +237,7 @@ const About = () => {
             /> 
 
             <Box 
-              className="w-3/12 h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
               img={Integrity}
               alt="Integrity"
               title="Integrity"
@@ -213,7 +245,7 @@ const About = () => {
             />
 
             <Box 
-              className="w-3/12 h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
               img={Sustainability}
               alt="Sustainability"
               title="Commitment to Sustainability"
@@ -221,7 +253,7 @@ const About = () => {
             />
 
             <Box 
-              className="w-3/12 h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
               img={Excellence}
               alt="Excellence"
               title="Excellence"
@@ -233,7 +265,7 @@ const About = () => {
           <div className='flex justify-center px-[234px] items-start'>
 
             <Box 
-              className="w-4/12 h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
               img={Passion}
               alt="Passion"
               title="Passion & Commitment"
@@ -241,7 +273,7 @@ const About = () => {
             />
 
             <Box 
-              className="w-4/12 h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
               img={Teamwork}
               alt="Teamwork"
               title="Enterprise & Teamwork"
@@ -249,7 +281,7 @@ const About = () => {
             />
 
             <Box 
-              className="w-4/12 h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
               img={Fun}
               alt="Fun"
               title="Fun & Excitement"
@@ -261,14 +293,14 @@ const About = () => {
         </div>
       </section>
 
-      <section 
+      {/* <section 
         className="bg-[#00984C] px-16 py-28 text-white"
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-          {/* Left Content */}
+      
           <div className="md:w-1/2">
             <span className="bg-[#E8FFF4] text-[#00954B] w-[82px] h-[32px] font-hanken px-3 py-1 rounded-[6px] text-sm">
               Milestones
@@ -283,28 +315,28 @@ const About = () => {
             </p>
           </div>
 
-          {/* Right Timeline */}
+          {/* Right Timeline 
           <div className="md:w-1/2 relative">
-            {/* Vertical Line */}
+            {/* Vertical Line 
             <div className="absolute left-4 top-0 h-full w-1 bg-[#C2D280] rounded-lg"></div>
 
-            {/* Timeline Items */}
+            {/* Timeline Items 
             {milestones.map((milestone, index) => (
               <div key={index} className="relative pl-12 mb-8 ">
-                {/* Dot */}
+                {/* Dot 
                 <div className="absolute left-3 top-4 w-3 h-3 bg-[#C2D280] rounded-full"></div>
 
-                {/* Year */}
+                {/* Year 
                 <h3 className={`text-[40px] leading-[48px] font-bold font-hanken ${
                   index === milestones.length - 1 ? "opacity-50" : "text-[#F99650]"
                 }`}>
                   {milestone.year}
                 </h3>
 
-                {/* Title */}
+                {/* Title 
                 <h4 className="text-[32px] leading-[41px] font-hanken text-[#FFFFFF] font-medium mt-4">{milestone.title}</h4>
 
-                {/* Description */}
+                {/* Description 
                 {milestone.description && (
                   <p className="mt-[32px] text-[18px] font-inter opacity-80">{milestone.description}</p>
                 )}
@@ -312,7 +344,72 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+<section
+      className="bg-[#00984C] px-16 py-28 text-white"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="linear"
+    >
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+        {/* Left Section */}
+        <div className="md:w-1/2">
+          <span className="bg-[#E8FFF4] text-[#00954B] w-[82px] h-[32px] font-hanken px-3 py-1 rounded-[6px] text-sm">
+            Milestones
+          </span>
+          <h2 className="text-[54px] leading-[64px] font-normal font-hanken mt-4">
+            Key Milestones in Our Journey
+          </h2>
+          <p className="mt-4 font-inter text-[18px] opacity-90">
+            Since our inception in 1987, we have achieved significant milestones.
+            Each step has reinforced our commitment to financial inclusion and innovation.
+          </p>
+        </div>
+
+        {/* Right Timeline */}
+        <div className="md:w-1/2 relative">
+          {/* Vertical Line */}
+          <div className="absolute left-4 top-0 h-full w-1 bg-[#C2D280] rounded-lg"></div>
+
+          {/* Timeline Items */}
+          {milestones.map((milestone, index) => (
+            <div
+              key={index}
+              ref={(el) => (milestoneRefs.current[index] = el)}
+              data-index={index}
+              className={`relative pl-12 mb-8 transition duration-300 ${
+                activeIndex === index ? "opacity-100 blur-0" : "opacity-50 blur-sm"
+              }`}
+            >
+              {/* Dot */}
+              <div className="absolute left-3 top-4 w-3 h-3 bg-[#C2D280] rounded-full"></div>
+
+              {/* Year */}
+              <h3
+                className={`text-[40px] leading-[48px] font-bold font-hanken ${
+                  activeIndex === index ? "text-[#F99650]" : "opacity-50"
+                }`}
+              >
+                {milestone.year}
+              </h3>
+
+              {/* Title */}
+              <h4 className="text-[32px] leading-[41px] font-hanken text-[#FFFFFF] font-medium mt-4">
+                {milestone.title}
+              </h4>
+
+              {/* Description */}
+              {milestone.description && (
+                <p className="mt-[32px] text-[18px] font-inter opacity-80">
+                  {milestone.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       <section
         className='flex items-center px-[64px] justify-between py-[112px]'
