@@ -7,9 +7,13 @@ import About from "../pages/About";
 import Loans from "../pages/Products/Loans";
 import Savings from "../pages/Products/Savings";
 import SavingsPlan from "../pages/Products/components/SavingsPlan";
-import Cards from "../pages/Products/Cards";
-import Pos from "../pages/Products/Pos";
+import Cards from "../pages/Digital/Cards";
+import Pos from "../pages/Pos";
 import Faqs from "../pages/Faq";
+import MobileApp from "../pages/Digital/MobileApp";
+import Contact from "../pages/Contact";
+import Media from "../pages/Media";
+import Sustainability from "../pages/Sustainability";
 
 
 export default function Routers() {
@@ -21,10 +25,14 @@ export default function Routers() {
           <Route path="/about" element={<About />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/products" element={<Loans />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/products/savings" element={<Savings />} />
-          <Route path="/products/cards" element={<Cards />} />
-          <Route path="/products/pos" element={<Pos />} />
+          <Route path="/pos" element={<Pos />} />
           <Route path="/products/savings/plan" element={<SavingsPlan />} />
+          <Route path="/digital" element={<MobileApp />} />
+          <Route path="/digital/cards" element={<Cards />} />
         </Route>
       </Routes>
     </div>

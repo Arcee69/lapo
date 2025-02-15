@@ -1,0 +1,225 @@
+import React, { useState } from 'react'
+import { FiMessageCircle } from "react-icons/fi";
+import { CiLocationOn, CiMail, CiSearch } from 'react-icons/ci'
+import { LiaPhoneSolid } from "react-icons/lia";
+import { IoIosArrowDown } from 'react-icons/io';
+
+import Building from "../../assets/png/lapo_building_b.png"
+import Curve from "../../assets/png/curve_top_right.png"
+import Premium from "../../assets/png/premium.png"
+
+
+
+const branches = {
+    "Delta": [
+      { name: "Abraka 1", address: "Police Station Road, Opposite Ik Super Market, Abraka, Delta State.", phone: "08150376077", lat: 6.2573, lng: 6.1846 },
+      { name: "Agbaro", lat: 6.0962, lng: 5.6936 },
+      { name: "Agbor 1", lat: 6.2643, lng: 6.2019 },
+      { name: "Agbor 2", lat: 6.2693, lng: 6.2020 }
+    ],
+    "Cross River": [],
+    "Ebonyi": [],
+    "Edo": [],
+    "Ekiti": [],
+    "Enugu": []
+  };
+
+const Contact = () => {
+    const [selectedBranch, setSelectedBranch] = useState(branches["Delta"][0]);
+    const [expandedState, setExpandedState] = useState("Delta");
+    const [search, setSearch] = useState("")
+    
+
+  return (
+    <div className='w-full'>
+        
+        <section
+            className='flex flex-col h-[350px] px-[80px] items-center gap-6 pt-[176px]'
+        >
+            <div className='flex flex-col items-center gap-4 w-[960px] mx-auto'>
+                <div className='w-[90px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
+                    <p className='text-xs font-hanken text-[#E78020]'>Contact Us</p>
+                </div>
+                <div className='flex flex-col gap-6'>
+                    <p className='font-hanken text-[56px] text-center font-medium text-[#101828] leading-[60px]'>
+                        We’d love to hear from you
+                    </p>
+                    <p className='font-inter text-[20px] leading-[30px] text-[#667085] text-center'>
+                        Our friendly team is always here to chat.
+                    </p>
+                </div>  
+            </div>
+        </section>
+
+        <section className='w-full mt-[96px]'>
+            <img src={Building} className='' alt='Building' />
+        </section>
+
+        <section
+            className='bg-[#fff] px-[112px] flex items-center gap-6 pt-[64px] pb-[96px]'
+        >
+            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                    <CiMail className='w-5 h-5 text-[#fff]' />
+                </div>
+                <div className='flex flex-col gap-5  mt-[64px]'>
+                    <div className='flex flex-col gap-2'>
+                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get instant response</p>
+                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team.</p>
+                    </div>
+                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>Use our Chatbot</p>
+                </div>
+            </div>
+            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                    <FiMessageCircle className='w-5 h-5 text-[#fff]' />
+                </div>
+                <div className='flex flex-col gap-5  mt-[64px]'>
+                    <div className='flex flex-col gap-2'>
+                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Chat to support</p>
+                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>We’re here to help.</p>
+                    </div>
+                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> info@lapo-nigeria.org</p>
+                </div>
+            </div>
+            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                    <CiLocationOn className='w-5 h-5 text-[#fff]' />
+                </div>
+                <div className='flex flex-col gap-5  mt-[64px]'>
+                    <div className='flex flex-col gap-2'>
+                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Head Office</p>
+                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Visit our office HQ.</p>
+                    </div>
+                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>LAPO PLACE, 15A Ikorodu-Ososun Road, Maryland, Ikeja, Lagos, Nigeria.</p>
+                </div>
+            </div>
+            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                    <LiaPhoneSolid className='w-5 h-5 text-[#fff]' />
+                </div>
+                <div className='flex flex-col gap-5  mt-[64px]'>
+                    <div className='flex flex-col gap-2'>
+                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Call us</p>
+                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Mon-Fri from 8am to 5pm.</p>
+                    </div>
+                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>+1 (555) 000-0000</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            className='flex items-center flex-col gap-[96px] bg-[#fff] '
+        >
+            <div className='flex flex-col items-center gap-4'>
+                <div className='w-[111px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#E8FFF4]'>
+                    <p className='text-xs font-hanken text-[#00954B]'>Find a branch</p>
+                </div>
+                <p className='font-inter font-semibold text-[#101828] leading-[60px] text-[48px] tracking-[-2%]'>Branch Locator</p>
+                <p className='font-inter text-[#667085] leading-[30px] text-[20px]'>Find our nearest branch for convenient and accessible banking services.</p>
+            </div>
+
+            <div className="flex items-start gap-6 p-4">
+                {/* Left Panel - Branch List */}
+                <div className="w-[533px] flex flex-col bg-gray-100 p-4 rounded-lg">
+                    <div className='flex items-center rounded-md mb-4 bg-[#F7F9FC] p-2'>
+                        <CiSearch className='w-4 h-4 text-[#667085]' />
+                        <input 
+                            type="text" 
+                            placeholder="Search State, City, Lg, branch" 
+                            className="w-full p-2 bg-[#F7F9FC] text-[#888888] font-hanken text-base  outline-none" 
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+
+                    </div>
+                    
+                    {Object.keys(branches).map((state) => (
+                    <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
+                        <button
+                            className={`w-full text-left p-3 font-bold flex items-center justify-between ${expandedState === state ? "bg-[#00984C] text-white rounded-xl" : "bg-[#fff]"}`}
+                            onClick={() => setExpandedState(expandedState === state ? "" : state)}
+                        >
+                           <p>{state}</p>
+                           <IoIosArrowDown className={`${expandedState === state ? "text-[#fff]" : "text-[#000]"} w-3 h-3`} />
+                        </button>   
+                        
+                        {expandedState === state && (
+                        <div className="bg-[#F7FCF9] rounded-md shadow p-2">
+                            {branches[state].map((branch) => (
+                            <div
+                                key={branch.name}
+                                className={`p-2 border-b cursor-pointer ${selectedBranch.name === branch.name ? "bg-green-100" : ""}`}
+                                onClick={() => setSelectedBranch(branch)}
+                            >
+                                {branch.name}
+                            </div>
+                            ))}
+                        </div>
+                        )}
+                    </div>
+                    ))}
+                </div>
+
+                {/* Right Panel - Map & Details */}
+                <div className="w-[795px] relative">
+                    <iframe
+                        title="Google Map"
+                        src={`https://www.google.com/maps?q=${selectedBranch.lat},${selectedBranch.lng}&output=embed`}
+                        className="w-full h-[500px] rounded-lg"
+                    ></iframe>
+
+                    {/* Branch Details */}
+                    <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col">
+                        <h2 className="font-bold text-lg">{selectedBranch.name} Branch</h2>
+                        <p className="flex items-center text-gray-700"><CiLocationOn className="mr-2 text-[#00984C]" /> {selectedBranch.address}</p>
+                        <p className="flex items-center text-gray-700"><LiaPhoneSolid className="mr-2 text-[#00984C]" /> {selectedBranch.phone}</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section
+            className='bg-[#FBFAF9] px-[80px] py-[96px] flex items-center gap-[64px]'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+            <div className='flex flex-col gap-6 w-[576px]'>
+                <p className='font-semibold text-[48px] whitespace-nowrap leading-[60px] text-[#101828] font-hanken'>
+                    Premium customer support
+                </p>
+                <p className='text-[#667085] font-inter text-[20px] leading-[30px]'>
+                    Enjoy the personalized service you need at LAPO Microfinance Bank, 
+                    including long-term business financial planning and extended-hours 
+                    access to our specialized business service team.
+                </p>
+                <ul className='pl-5 list-disc text-[#6A6A6A] text-[20px] font-hanken leading-[25px]'>
+                    <li>One combined monthly statement for all of your business accounts</li>
+                    <li>Extended-hours access to our specialized business service team</li>
+                </ul>
+                <button
+                    className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                >
+                    <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
+                </button>
+            </div>
+            <div className='w-[576px]'>
+                <img 
+                    src={Premium} 
+                    alt="Premium" 
+                    className='' 
+                />
+            </div>
+        </section>
+
+    </div>
+  )
+}
+
+export default Contact

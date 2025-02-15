@@ -1,44 +1,44 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { SlLock } from 'react-icons/sl'
-import { CiSearch } from 'react-icons/ci'
+import { FaArrowRight } from "react-icons/fa";
 
 import Logo from "../assets/svg/logo.svg" 
 
 import './css/Header.css';
 
 const Header = () => {
-  const [showPersonalDropdown, setShowPersonalDropdown] = useState(false);
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false)
 
   const navigate = useNavigate()
 
 
   const handleMouseEnter = (menu) => {
-    if (menu === 'about') {
-      setShowAboutDropdown(true);
-      setShowPersonalDropdown(false);
-    } else if (menu === 'personal') {
-      setShowPersonalDropdown(true);
-      setShowAboutDropdown(false);
+    if (menu === 'products') {
+      setShowProductsDropdown(true);
+    } else if (menu === "nil") {
+      setShowProductsDropdown(false);
     }
   };
   
   const handleMouseLeave = (menu) => {
-    if (menu === 'about') {
-      setShowAboutDropdown(false);
-    } else if (menu === 'personal') {
-      setShowPersonalDropdown(false);
+    if (menu === 'products') {
+      setShowProductsDropdown(false);
+    }  else if (menu === "nil") {
+      setShowProductsDropdown(false);
     }
   };
 
 
 
-  
-//#FFFFFFE5
-
   return (
-    <div className='bg-[#fff] fixed z-50 w-full pl-[32px] h-[80px] pr-[127px] py-5 flex items-center justify-between'>
+    <div 
+      className='bg-[#fff] fixed z-50 w-full pl-[32px] h-[80px] pr-[127px] py-5 flex items-center justify-between'
+      onMouseLeave={() => {
+        handleMouseEnter("nil"),
+        handleMouseLeave("nil");
+      }}
+    >
         <img src={Logo} alt="Logo" className='w-[109px] h-[44px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
         <div className='flex items-center gap-6'>
             <p 
@@ -48,6 +48,7 @@ const Header = () => {
             >
               Home
             </p>
+            
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer'  
               onClick={() => {navigate("/about"); 
@@ -55,13 +56,188 @@ const Header = () => {
             >
               About Us
             </p>
-            <p 
-              className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
-              onClick={() => {navigate("/products"); 
-              window.scrollTo(0, 0)}}
-            >
-              Products
-            </p>
+
+            <div className="relative inline-block dropdown-wrapper">
+              <div
+                onMouseEnter={() => handleMouseEnter("products")}
+                className='block font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
+                onClick={() => {navigate("/products"); 
+                window.scrollTo(0, 0)}}
+              >
+                Products
+              </div>
+              {showProductsDropdown && (
+                <div
+                  className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute left-1/3 -translate-x-1/3 rounded-xl p-[32px] w-[85vw] ${
+                    showProductsDropdown ? "show" : ""
+                  }`}
+                  onMouseLeave={() => handleMouseLeave("products")}
+                >
+                  <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 ">
+
+                    <div className='flex flex-col gap-6 w-[286px] '>
+                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Savings</p>
+
+                      <div 
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                        onClick={() => {
+                          navigate("/products/savings", {
+                            state: {section: "save"}
+                          })
+                        }}
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Xpress Savings Account</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>A very flexible and convenient savings account</p>
+                      </div>
+
+                      <div 
+                         onClick={() => {
+                          navigate("/products/savings", {
+                            state: {section: "save"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Fixed Deposit Account</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Earn more interest than traditional savings.</p>
+                      </div>
+
+                      <div 
+                         onClick={() => {
+                          navigate("/products/savings", {
+                            state: {section: "save"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>My Pikin & I Savings Account</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Child-focused savings account with high interest.....</p>
+                      </div>
+
+                      <div 
+                         onClick={() => {
+                          navigate("/products/savings")
+                        }}
+                        className='flex items-center cursor-pointer gap-2 w-full'
+                      >
+                        <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Savings Products</p>
+                        <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
+                      </div>
+
+                    </div>
+
+                    <div className='flex flex-col gap-6 w-[286px]'>
+                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Loans</p>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/products", {
+                            state: {section: "loans"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>SME Loan</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Big businesses require big loans.</p>
+                      </div>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/products", {
+                            state: {section: "loans"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Regular Loan</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Designed to operate on a group (union) methodology.</p>
+                      </div>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/products", {
+                            state: {section: "loans"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Agricultural loan</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Designed to help farmers achieve better results</p>
+                      </div>
+
+                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                        <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Loans Products</p>
+                        <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
+                      </div>
+
+                    </div>
+
+                    <div className='flex flex-col gap-6 w-[286px]'>
+                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Digital Banking</p>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/digital", {
+                            state: {section: "app"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Mobile App</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>The latest industry news.</p>
+                      </div>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/digital/cards", {
+                            state: {section: "cards"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>LAPO Card</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Shop. Pay. Withdraw</p>
+                      </div>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/digital/cards", {
+                            state: {section: "cards"}
+                          })
+                        }}
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
+                      >
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>USSD Banking</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Dial *351# to experience easy banking</p>
+                      </div>
+
+                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                        <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Digital Banking Products</p>
+                        <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
+                      </div>
+                    </div>
+
+                    <div className='flex flex-col gap-6 w-[286px]'>
+                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>POS Terminal</p>
+
+                      <div 
+                          onClick={() => {
+                            navigate("/pos", {
+                              state: {section: "pos"}
+                            })
+                          }}
+                        className='flex items-center cursor-pointer gap-2 w-full'
+                      >
+                        <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Pos Products</p>
+                        <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              )}
+            </div>
+
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
               onClick={() => {navigate("/sustainability"); 

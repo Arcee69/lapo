@@ -1,5 +1,6 @@
-import React from 'react'
+import React,  { useRef, useEffect } from 'react'
 import { IoChevronForward } from 'react-icons/io5'
+import { useLocation } from 'react-router-dom'
 
 import Left from "../../assets/svg/left_brick.svg"
 import Right from "../../assets/svg/right_brick.svg"
@@ -14,7 +15,20 @@ import SmilingPeople from "../../assets/png/smilingPeople.png"
 import SmallBox from '../../components/SmallBox'
 import BigBox from '../../components/BigBox'
 
+
+
 const Savings = () => {
+
+    const { state } = useLocation()
+
+    const saveRef = useRef(null)
+
+    useEffect(() => {
+        if (state?.section === "save" && saveRef.current) {
+            saveRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, [state]);
+
   return (
     <div className='w-full'>
 
@@ -103,9 +117,10 @@ const Savings = () => {
 
         <section
             className='bg-[#F7F9FC] py-[112px] px-[64px] flex flex-col items-center gap-[40px] '
+            ref={saveRef}
         >
             <div className='flex flex-col items-center gap-6'>
-                <div className='w-[110px] h-[32.59px] flex items-center p-1 rounded bg-[#E8FFF4]'>
+                <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#E8FFF4]'>
                     <p className='font-hanken font-medium text-sm leading-[15px] text-[#00954B]'>LAPO Savings</p>
                 </div>
                 <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>7 Ways to grow your future</p>
@@ -117,7 +132,7 @@ const Savings = () => {
                 </p>
             </div>
 
-            <div className='flex flex-col gap-4'>
+            <div  className='flex flex-col gap-4'>
                 <div className='flex gap-4 items-center'>
                     <div className='flex flex-col gap-4'>
                         <div className='flex items-center gap-4'>

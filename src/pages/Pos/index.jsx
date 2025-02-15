@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
 
 import PosBanner from "../../assets/png/pos_banner.png"
@@ -16,6 +17,17 @@ import Tracker from "../../assets/svg/tracker.svg"
 const Pos = () => {
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null);
+
+    const { state } = useLocation() 
+
+    const posRef = useRef(null)
+
+    useEffect(() => {
+        if (state?.section === "loans" && posRef.current) {
+            posRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, [state]);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,7 +62,7 @@ const Pos = () => {
 
 
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={posRef}>
 
         <section 
             style={{
@@ -201,12 +213,12 @@ const Pos = () => {
                             <p className='font-hanken font-medium text-[#000] text-[32px] leading-[41px]'>{step}</p>
                         </div>
                         <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>
-                            Step {step}: {index === 1 ? 'Request a POS' : index === 2 ? "Get it Delivered" :  index === 3 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
+                            Step {step}: {index === 0 ? 'Request a POS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
                         </p>
                         <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                            {   index === 1 ? 'Sign up online or visit our branch.' : 
-                                index === 2 ? 'We’ll send it to your business location.' :
-                                index === 3 ? 'Seamless transactions, happy customers!' : 
+                            {   index === 0 ? 'Sign up online or visit our branch.' : 
+                                index === 1 ? 'We’ll send it to your business location.' :
+                                index === 2 ? 'Seamless transactions, happy customers!' : 
                                 'Select from various loan options that suit your needs.'
                             }
                         </p>

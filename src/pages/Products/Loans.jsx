@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { IoChevronForwardSharp } from 'react-icons/io5'
+import { useLocation } from 'react-router-dom'
 
 import LoanPeople from "../../assets/png/loan_people.png"
 import Phone from "../../assets/png/phone.png"
@@ -12,6 +13,16 @@ import LoanBox from '../../components/LoanBox'
 const Loans = () => {
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null); 
+
+    const { state } = useLocation()
+
+    const loansRef = useRef(null)
+
+    useEffect(() => {
+        if (state?.section === "loans" && loansRef.current) {
+            loansRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, [state]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,7 +56,7 @@ const Loans = () => {
     }, []);
 
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={loansRef}>
         <section 
             className='bg-[#941D58] h-[645px] relative overflow-hidden'
             data-aos="fade-up" 

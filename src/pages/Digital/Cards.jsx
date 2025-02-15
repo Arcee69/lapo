@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
+import { useLocation } from 'react-router-dom'
 
 import Card from "../../assets/png/cards_transparent.png"
 import CardMain from "../../assets/png/card_main.png"
@@ -11,9 +12,21 @@ import CardSmall from "../../assets/svg/card.svg"
 import Smile from "../../assets/svg/smile.svg"
 import Shield from "../../assets/svg/shield.svg"
 
+
 const Cards = () => {
+
+    const { state } = useLocation()
+
+    const cardsRef = useRef(null)
+
+    useEffect(() => {
+        if (state?.section === "cards" && cardsRef.current) {
+            cardsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state]);
+
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={cardsRef}>
 
         <section 
             className='bg-[#012412] h-[875px] flex flex-col items-center gap-[64px] justify-center'
