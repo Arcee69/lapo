@@ -10,6 +10,7 @@ import SavingsPlan from "../pages/Products/components/SavingsPlan";
 import Cards from "../pages/Digital/Cards";
 import Pos from "../pages/Pos";
 import Faqs from "../pages/Faq";
+import Careers from "../pages/Careers";
 import MobileApp from "../pages/Digital/MobileApp";
 import Contact from "../pages/Contact";
 import Media from "../pages/Media";
@@ -29,6 +30,7 @@ export default function Routers() {
           <Route path="/media" element={<Media />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/products/savings" element={<Savings />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/pos" element={<Pos />} />
           <Route path="/products/savings/plan" element={<SavingsPlan />} />
           <Route path="/digital" element={<MobileApp />} />

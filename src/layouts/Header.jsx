@@ -264,7 +264,7 @@ const Header = () => {
           <button
             className='bg-[#E78020] w-[115px] h-[40px] rounded-lg gap-2 group flex items-center justify-center'
             type='button'
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/careers")}
           >
             <p
               className='font-medium text-base font-nunito text-[#fff]'

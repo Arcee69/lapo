@@ -24,7 +24,7 @@ const SmallBox = ({ title, subtitle, heading, link }) => {
             <p className='font-inter text-[#445D65] group-hover:text-[#FFFFFF] text-xs leading-[18px]'>
                {subtitle}
             </p>
-            <div onClick={() => navigate(link)} className='bg-[#FFFFFF] flex items-center cursor-pointer gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+            <div onClick={() => {navigate(link), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center cursor-pointer gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
                 <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm'>Learn More</p>
                 <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
             </div>

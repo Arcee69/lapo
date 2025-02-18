@@ -45,10 +45,10 @@ const Footer = () => {
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Social</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Twitter</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">LinkedIn</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Facebook</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Youtube</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => window.open("https://x.com/lapo_mfb", "_blank")}>X (Twitter)</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => window.open("https://www.linkedin.com/company/lapo-microfinance/", "_blank")}>LinkedIn</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => window.open("https://www.facebook.com/share/1ARzVT3J2E/?mibextid=LQQJ4d", "_blank")} >Facebook</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => window.open("https://www.instagram.com/lapo_microfinance_bank", "_blank")}>Instagram</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Legal</p>
