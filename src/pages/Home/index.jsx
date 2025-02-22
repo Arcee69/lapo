@@ -22,10 +22,12 @@ import FirstBoy from "../../assets/png/first_boy.png"
 import SecondBoy from "../../assets/png/second_boy.png"
 import Card from "../../assets/png/card.png"
 import PosMachine from "../../assets/png/pos_machine.png"
+import POS from "../../assets/png/pos_machine_a.png"
 import Nurse from "../../assets/png/nurse.png"
 import BackScreen from "../../assets/png/back_screen.png"
 import FrontScreen from "../../assets/png/front_screen.png"
-
+import Happy from "../../assets/png/happy_girl.png"
+import Model from "../../assets/png/model.png"
 
 import Stars from "../../assets/svg/stars.svg"
 import OneStar from "../../assets/svg/one_star.svg"
@@ -35,6 +37,15 @@ import CBN from "../../assets/svg/cbn.svg"
 import NDIC from "../../assets/svg/ndic.svg"
 import Google from "../../assets/svg/google.svg"
 import Apple from "../../assets/svg/apple.svg"
+import Lightning from "../../assets/svg/lightning_c.svg"
+import LightningGreen from "../../assets/svg/lightning_green.svg"
+import Tracking from "../../assets/svg/tracking.svg"
+import TrackingGreen from "../../assets/svg/tracking_green.svg"
+import Dollar from "../../assets/svg/dollar_a.svg"
+import DollarGreen from "../../assets/svg/dollar_green.svg"
+import Lock from "../../assets/svg/lock_b.svg"
+import Multiple from "../../assets/svg/multiple.svg"
+import Tablet from "../../assets/svg/tablet.svg"
 
 import "./css/styles.css";
 import "./css/card.css";
@@ -292,45 +303,42 @@ const Home = () => {
                </div>
                <div className='flex gap-1 items-center'>
                  <div className='flex flex-col'>
-                   <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">7 Ways to Grow Your Savings</h2>
+                   <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">Payment Solution to fuel your growth</h2>
                    <div className='flex flex-col'>
                      <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                        <div className='flex items-center justify-between'>
                          <div className='flex items-center gap-2'>
-                           <img src={OneStar} alt='OneStar' className='w-6 h-6' />
-                           <p className='font-nunito text-[18px] font-semibold'>High-Interest Returns</p>
+                           <img src={Lightning} alt='Lightning' className='w-6 h-6' />
+                           <p className='font-nunito text-[18px] font-semibold'>Modern, User-Friendly POS Terminals</p>
                          </div>
-                         <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                        </div>
                      </div>
                      <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                        <div className='flex items-center justify-between'>
                          <div className='flex items-center gap-2'>
-                           <img src={Cube} alt='Cube' className='w-6 h-6' />
-                           <p className='font-nunito text-[18px] font-semibold'>Flexible Savings Plans</p>
+                           <img src={Dollar} alt='Dollar' className='w-6 h-6' />
+                           <p className='font-nunito text-[18px] font-semibold'>No Hidden Charges</p>
                          </div>
-                         <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                        </div>
                      </div>
                      <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                        <div className='flex items-center justify-between'>
                          <div className='flex items-center gap-2'>
-                           <img src={Box} alt='Box' className='w-6 h-6' />
-                           <p className='font-nunito text-[18px] font-semibold'>Automatic Saving</p>
+                           <img src={Tracking} alt='Tracking' className='w-6 h-6' />
+                           <p className='font-nunito text-[18px] font-semibold'>Real-Time Sales Tracking & Reporting</p>
                          </div>
-                         <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                        </div>
                      </div>
                    </div>
                    <button 
                      className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
                    >
-                     <p className='font-medium text-base font-nunito'>Get Started</p> 
+                     <p className='font-medium text-base font-nunito'>Learn More</p> 
                      <p className='font-medium text-base font-nunito'>→</p>
                    </button>
                  </div>
-                 <div className='w-[320px]'>
-                   <img src={Girl} alt='Girl' className='w-[320px]' />
+                 <div className='w-[380px] h-full'>
+                   <img src={POS} alt='POS' className='w-[434px] rounded-tl-[18px] rounded-bl-[18px] h-full' />
                  </div>
                </div>
             </div> 
@@ -354,45 +362,42 @@ const Home = () => {
               </div>
               <div className='flex gap-1 items-center'>
                 <div className='flex flex-col'>
-                  <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">7 Ways to Grow Your Savings</h2>
+                  <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">Payment Solution to fuel your growth</h2>
                   <div className='flex flex-col'>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={OneStar} alt='OneStar' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>High-Interest Returns</p>
+                          <img src={Lock} alt='Lock' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>Secure Transactions</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={Cube} alt='Cube' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>Flexible Savings Plans</p>
+                          <img src={Multiple} alt='Multiple' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>Multiple Payment Options</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={Box} alt='Box' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>Automatic Saving</p>
+                          <img src={Tablet} alt='Tablet' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>User-Friendly Interface</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                   </div>
                   <button 
                     className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
                   >
-                    <p className='font-medium text-base font-nunito'>Get Started</p> 
+                    <p className='font-medium text-base font-nunito'>Learn More</p> 
                     <p className='font-medium text-base font-nunito'>→</p>
                   </button>
                 </div>
-                <div className='w-[320px]'>
-                  <img src={Girl} alt='Girl' className='w-[320px]' />
+                <div className='w-[346px] h-full'>
+                  <img src={Happy} alt='Happy' className='w-[346px] h-full' />
                 </div>
               </div>
             </div> 
@@ -408,39 +413,36 @@ const Home = () => {
           {/* Loans */}
           {activeTab === "loans" ? (
             <div className="w-auto h-full flex gap-[32px] justify-start cursor-pointer" onClick={() => handleTabChange("loans")}>
-              <div className='w-[85px] bg-[#34423B] pt-[47px] rounded-tr-2xl rounded-br-2xl flex flex-col gap-[180px] items-center'>
+              <div className='w-[85px] bg-[#34423B] pt-[47px] flex flex-col gap-[180px] items-center'>
                 <p className='font-inter text-[#fff] text-xs'>04</p>
                 <p className='font-semibold font-hanken text-[#fff] text-[20px] [writing-mode:vertical-rl] rotate-180'>Loans</p>
               </div>
               <div className='flex gap-1 items-center'>
                 <div className='flex flex-col'>
-                  <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">7 Ways to Grow Your Savings</h2>
+                  <h2 className="font-hanken text-[32px] text-[#101828] font-semibold">Uninterrupted Funds Supply</h2>
                   <div className='flex flex-col'>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={OneStar} alt='OneStar' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>High-Interest Returns</p>
+                          <img src={LightningGreen} alt='LightningGreen' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>Quick Approval</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={Cube} alt='Cube' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>Flexible Savings Plans</p>
+                          <img src={DollarGreen} alt='DollarGreen' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>Flexible Terms</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                     <div className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-[398px] flex flex-col gap-1.5'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
-                          <img src={Box} alt='Box' className='w-6 h-6' />
-                          <p className='font-nunito text-[18px] font-semibold'>Automatic Saving</p>
+                          <img src={TrackingGreen} alt='TrackingGreen' className='w-6 h-6' />
+                          <p className='font-nunito text-[18px] font-semibold'>No Hidden Charges</p>
                         </div>
-                        <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
                       </div>
                     </div>
                   </div>
@@ -451,8 +453,8 @@ const Home = () => {
                     <p className='font-medium text-base font-nunito'>→</p>
                   </button>
                 </div>
-                <div className='w-[320px]'>
-                  <img src={Girl} alt='Girl' className='w-[320px]' />
+                <div className='w-[346px] h-full'>
+                  <img src={Model} alt='Model' className='w-[346px]' />
                 </div>
               </div>
            </div> 
@@ -668,20 +670,6 @@ const Home = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
-                {/* <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[450px] h-[300px] flex relative rounded-xl" 
-                >
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>    */}
               </SwiperSlide>
 
               <SwiperSlide>
@@ -694,20 +682,6 @@ const Home = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
-                {/* <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[450px] h-[300px] flex relative rounded-xl" 
-                >
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>    */}
               </SwiperSlide>
 
               <SwiperSlide>
@@ -720,20 +694,6 @@ const Home = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
-                {/* <div
-                  style={{
-                    backgroundImage: `url(${Nurse})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                  }}  
-                  className="w-[450px] h-[300px] flex relative rounded-xl" 
-                >
-                  <div className="absolute inset-0 w-full h-auto rounded-lg bg-[#0005]" />
-                  <div className='flex flex-col  absolute bottom-4 left-6'>
-                    <p className='font-hanken font-italic text-[40px] text-[#fff]'>Ladidi</p>
-                    <p className='font-hanken font-italic text-base text-[#fff]'>A Pharmacy Owner</p>
-                  </div>
-                </div>    */}
               </SwiperSlide>
               
               <SwiperSlide>
