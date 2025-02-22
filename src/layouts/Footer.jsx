@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <div 
-      className="w-full flex flex-col"
+      className="w-full flex flex-col relative"
       data-aos="fade-up" 
       data-aos-duration="1000"
       data-aos-easing="linear"
@@ -70,6 +70,12 @@ const Footer = () => {
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Cookies Settings</p>
         </div>
       </div>
+
+      <img 
+        src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740240205/circle_adyxy6.png" 
+        alt="circle" 
+        className="absolute right-0 bottom-0 w-[691px] h-[318px] -z-10" 
+      />
     </div>
   );
 };

@@ -271,7 +271,7 @@ const Header = () => {
                 >
                   <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 ">
 
-                    <div className='flex flex-col gap-6 w-[389px] '>
+                    <div className='flex flex-col gap-6 w-[389px]'>
                       <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Blog</p>
 
                       <div 
