@@ -676,10 +676,10 @@ const Home = () => {
                 <iframe 
                   width="450" 
                   height="300" 
-                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740324812/3045a841-cd2e-4f58-a3c0-6f54b0d0bf17_prgzj3.mp4" 
                   title="YouTube video player" 
                   frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
               </SwiperSlide>
@@ -688,10 +688,10 @@ const Home = () => {
                 <iframe 
                   width="450" 
                   height="300" 
-                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325190/Testimonial_3_bdcxcn.mp4" 
                   title="YouTube video player" 
                   frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
               </SwiperSlide>
@@ -700,10 +700,23 @@ const Home = () => {
                 <iframe 
                   width="450" 
                   height="300" 
-                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
+                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325370/6421573a-07d3-4e4c-9927-8045526d4d20_nvpdmc.mp4" 
                   title="YouTube video player" 
                   frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>
+               
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <iframe 
+                  width="450" 
+                  height="300" 
+                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325569/c6233548-0776-42e9-a5a7-20d9732767f5_kz3gxo.mp4" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
                   allowfullscreen></iframe>
                
