@@ -15,6 +15,7 @@ import MobileApp from "../pages/Digital/MobileApp";
 import Contact from "../pages/Contact";
 import Media from "../pages/Media";
 import Sustainability from "../pages/Sustainability";
+import ViewBlogPost from "../pages/Media/components/ViewBlogPost";
 
 
 export default function Routers() {
@@ -35,6 +36,7 @@ export default function Routers() {
           <Route path="/products/savings/plan" element={<SavingsPlan />} />
           <Route path="/digital" element={<MobileApp />} />
           <Route path="/digital/cards" element={<Cards />} />
+          <Route path="/view-post" element={<ViewBlogPost />} />
         </Route>
       </Routes>
     </div>

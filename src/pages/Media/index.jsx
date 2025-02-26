@@ -1,4 +1,4 @@
-import React,  { useState } from 'react'
+import React,  { useEffect, useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
@@ -8,66 +8,110 @@ import Shopper from "../../assets/png/shopper.png"
 import Fx from "../../assets/png/fx.png"
 
 import Stars from "../../assets/svg/stars.svg"
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 const Media = () => {
     const [search, setSearch] = useState("")
-    const [statusFilter, setStatusFilter] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [blogPost, setBlogPost] = useState([])
+    const [prevPageUrl, setPrevPageUrl] = useState(null);
+    const [nextPageUrl, setNextPageUrl] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
+    const [statusFilter, setStatusFilter] = useState("")
     const postsPerPage = 6;
 
-    const blogPost = [
-        {
-            id: 1,
-            img: ChristmasB,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Season of Love and giving: LAPO MFB's christmas Party",
-            content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
-        },
-        {
-            id: 2,
-            img: Shopper,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
-            content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
-        },
-        {
-            id: 3,
-            img: Fx,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Recession-proof your finances.",
-            content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
-        },
-        {
-            id: 4,
-            img: Shopper,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
-            content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
-        },
-        {
-            id: 5,
-            img: Fx,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Recession-proof your finances.",
-            content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
-        },
-        {
-            id: 6,
-            img: ChristmasB,
-            publishedDate: "Rachel Edache • 04 March 2024",
-            title: "Season of Love and giving: LAPO MFB's christmas Party",
-            content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
-        },
-    ]
+    const navigate = useNavigate()
+
+    const fetchBlogPosts = async (url = "https://lapo.smhptech.com/api/v1/post") => {
+        setLoading(true)
+        try {
+          const res = await axios.get(url);
+          console.log(res, "addict")
+          const data = res.data;
+    
+          setBlogPost(data?.data || []);
+          setPrevPageUrl(data.pagination?.prev_page_url);
+          setNextPageUrl(data.pagination?.next_page_url);
+          setCurrentPage(data.pagination?.current_page);
+        } catch (err) {
+          console.error(err);
+        } finally {
+            setLoading(false)
+        }
+      };
+    
+      useEffect(() => {
+        fetchBlogPosts();
+      }, []);
+    
+      const handlePrevPage = () => {
+        if (prevPageUrl) fetchBlogPosts(prevPageUrl);
+      };
+    
+      const handleNextPage = () => {
+        if (nextPageUrl) fetchBlogPosts(nextPageUrl);
+      };
+
+    // const blogPost = [
+    //     {
+    //         id: 1,
+    //         img: ChristmasB,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Season of Love and giving: LAPO MFB's christmas Party",
+    //         content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
+    //     },
+    //     {
+    //         id: 2,
+    //         img: Shopper,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
+    //         content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
+    //     },
+    //     {
+    //         id: 3,
+    //         img: Fx,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Recession-proof your finances.",
+    //         content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
+    //     },
+    //     {
+    //         id: 4,
+    //         img: Shopper,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
+    //         content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
+    //     },
+    //     {
+    //         id: 5,
+    //         img: Fx,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Recession-proof your finances.",
+    //         content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
+    //     },
+    //     {
+    //         id: 6,
+    //         img: ChristmasB,
+    //         publishedDate: "Rachel Edache • 04 March 2024",
+    //         title: "Season of Love and giving: LAPO MFB's christmas Party",
+    //         content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
+    //     },
+    // ]
 
       // Calculate total pages
-      const totalPages = Math.ceil(blogPost.length / postsPerPage);
+      
+      const filteredPost = blogPost.filter((item) => {
+        const matchSearch = item.title.toLowerCase().includes(search.toLowerCase() ||  "")
+        return matchSearch
+      })
+
+      const totalPages = Math.ceil(filteredPost.length / postsPerPage);
 
       // Get the current page posts
       const indexOfLastPost = currentPage * postsPerPage;
       const indexOfFirstPost = indexOfLastPost - postsPerPage;
-      const currentPosts = blogPost.slice(indexOfFirstPost, indexOfLastPost);
+      const currentPosts = filteredPost.slice(indexOfFirstPost, indexOfLastPost);
   
       // Change page function
       const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -141,13 +185,15 @@ const Media = () => {
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>All blog posts</p>
 
-                <div className='grid grid-cols-3 gap-[32px]'>
-                    {
+                <div className={`${currentPosts?.length > 0 ? "grid grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
+                    { loading ? 
+                        <p className='text-2xl text-[#000] text-center font-semibold'>Loading Blog...</p> :
+                        currentPosts.length > 0 ?
                         currentPosts.map((item) => (
-                            <div key={item.id} className='flex flex-col gap-[32px]'>
-                                <img src={item.img} alt="event" className='rounded-lg w-[384px] h-[240px]' />
+                            <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-post", {state: item}), window.scrollTo(0,0)}} >
+                                <img src={item.image} alt="event" className='rounded-lg w-[384px] h-[240px]' />
                                 <div className='flex flex-col gap-3'>
-                                    <p className='font-inter text-[#E78020] font-semibold leading-5 text-sm'>{item.publishedDate}</p>
+                                    <p className='font-inter text-[#E78020] font-semibold leading-5 text-sm'>{new Date(item.created_at).toDateString()}</p>
                                     <div className='flex items-start gap-1'>
                                         <p className='font-semibold font-hanken w-[344px] text-[#101828] text-[24px] leading-[32px]'>{item.title}</p>
                                         <FiArrowUpRight className='w-5 h-5 mt-2 text-[#101828]' />
@@ -158,7 +204,8 @@ const Media = () => {
                                 </div>
 
                             </div>
-                        ))
+                        )) : 
+                        <p className='text-2xl text-[#000] text-center font-semibold'>No Blogs Available</p>
                     }
 
                 </div>
