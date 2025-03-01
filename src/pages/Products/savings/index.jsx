@@ -2,18 +2,18 @@ import React,  { useRef, useEffect } from 'react'
 import { IoChevronForward } from 'react-icons/io5'
 import { useLocation } from 'react-router-dom'
 
-import Left from "../../assets/svg/left_brick.svg"
-import Right from "../../assets/svg/right_brick.svg"
-import Stars from "../../assets/svg/stars.svg"
-import Wallet from "../../assets/svg/wallet.svg"
-import Employees from "../../assets/svg/employees.svg"
-import Bubbles from "../../assets/svg/bubbles.svg"
-import Parent from "../../assets/svg/parent.svg"
+import Left from "../../../assets/svg/left_brick.svg"
+import Right from "../../../assets/svg/right_brick.svg"
+import Stars from "../../../assets/svg/stars.svg"
+import Wallet from "../../../assets/svg/wallet.svg"
+import Employees from "../../../assets/svg/employees.svg"
+import Bubbles from "../../../assets/svg/bubbles.svg"
+import Parent from "../../../assets/svg/parent.svg"
 
 
-import SmilingPeople from "../../assets/png/smilingPeople.png"
-import SmallBox from '../../components/SmallBox'
-import BigBox from '../../components/BigBox'
+import SmilingPeople from "../../../assets/png/smilingPeople.png"
+import SmallBox from '../../../components/SmallBox'
+import BigBox from '../../../components/BigBox'
 
 
 

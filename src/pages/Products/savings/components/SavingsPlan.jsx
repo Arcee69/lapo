@@ -2,15 +2,15 @@ import React from 'react'
 import { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
-import Girl from "../../../assets/png/girl_big.png"
+import Girl from "../../../../assets/png/girl_big.png"
 
-import Left from "../../../assets/svg/left_about_spiral.svg"
-import Right from "../../../assets/svg/right_about_spiral.svg"
-import Stars from "../../../assets/svg/stars.svg"
-import StarsA from "../../../assets/svg/star_01.svg"
-import Hex from "../../../assets/svg/hex.svg"
-import Cube from "../../../assets/svg/cube_box.svg"
-import Arrow from "../../../assets/svg/arrow_long.svg"
+import Left from "../../../../assets/svg/left_about_spiral.svg"
+import Right from "../../../../assets/svg/right_about_spiral.svg"
+import Stars from "../../../../assets/svg/stars.svg"
+import StarsA from "../../../../assets/svg/star_01.svg"
+import Hex from "../../../../assets/svg/hex.svg"
+import Cube from "../../../../assets/svg/cube_box.svg"
+import Arrow from "../../../../assets/svg/arrow_long.svg"
 
 const SavingsPlan = () => {
     const [openBenefitDropdown, setOpenBenefitDropdown] = useState(false)

@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import { IoChevronForwardSharp } from 'react-icons/io5'
 import { useLocation } from 'react-router-dom'
 
-import LoanPeople from "../../assets/png/loan_people.png"
-import Phone from "../../assets/png/phone.png"
+import LoanPeople from "../../../assets/png/loan_people.png"
+import Phone from "../../../assets/png/phone.png"
 
-import Left from "../../assets/svg/left_loans_spiral.svg"
-import Right from "../../assets/svg/right_loans_spiral.svg"
-import Stars from "../../assets/svg/stars.svg"
-import LoanBox from '../../components/LoanBox'
+import Left from "../../../assets/svg/left_loans_spiral.svg"
+import Right from "../../../assets/svg/right_loans_spiral.svg"
+import Stars from "../../../assets/svg/stars.svg"
+import LoanBox from '../../../components/LoanBox'
 
 const Loans = () => {
     const sectionRef = useRef(null);
@@ -58,14 +58,14 @@ const Loans = () => {
   return (
     <div className='w-full' ref={loansRef}>
         <section 
-            className='bg-[#941D58] h-[645px] relative overflow-hidden'
+            className='bg-[#941D58] h-[545px] relative overflow-hidden'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='flex items-center justify-between absolute -bottom-24 z-10 -inset-x-44'>
-                <img src={Left} alt='Left' className='' />
+            <div className='flex items-center justify-between absolute -bottom-32 z-10 -inset-x-14'>
                 <img src={Right} alt='Right' className='' />
+                <img src={Left} alt='Left' className='' />
             </div>
 
             <div className='flex flex-col items-center pt-[173px]'>
@@ -130,7 +130,7 @@ const Loans = () => {
                             img={Phone}
                             title="Regular Loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/regular"
                         />
                     </div>
                 </section>

@@ -4,9 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import PageLayout from "../layouts";
 import About from "../pages/About";
-import Loans from "../pages/Products/Loans";
-import Savings from "../pages/Products/Savings";
-import SavingsPlan from "../pages/Products/components/SavingsPlan";
+import Loans from "../pages/Products/loans";
+import Savings from "../pages/Products/savings";
+import SavingsPlan from "../pages/Products/savings/components/SavingsPlan";
 import Cards from "../pages/Digital/Cards";
 import Pos from "../pages/Pos";
 import Faqs from "../pages/Faq";
@@ -16,6 +16,7 @@ import Contact from "../pages/Contact";
 import Media from "../pages/Media";
 import Sustainability from "../pages/Sustainability";
 import ViewBlogPost from "../pages/Media/components/ViewBlogPost";
+import Regular from "../pages/Products/loans/components/Regular";
 
 
 export default function Routers() {
@@ -27,6 +28,7 @@ export default function Routers() {
           <Route path="/about" element={<About />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/products" element={<Loans />} />
+          <Route path="/loans/regular" element={<Regular />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/media" element={<Media />} />
           <Route path="/sustainability" element={<Sustainability />} />
