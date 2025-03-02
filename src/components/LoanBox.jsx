@@ -12,7 +12,7 @@ const LoanBox = ({ img, title, content, link }) => {
         <div className='flex flex-col gap-5'>
             <p className='font-hanken text-[#000000] font-medium text-[24px]'>{title}</p>
             <p className='text-[#000000] text-base leading-6 font-inter'>{content}</p>
-            <div className='flex items-center gap-2 ' onClick={() => navigate(`${link}`)}>
+            <div className='flex items-center cursor-pointer gap-2 ' onClick={() => navigate(`${link}`)}>
                 <p className='text-[#FF5F08] text-base leading-6'>Learn More</p>
                 <IoChevronForwardSharp className="w-5 h-5 text-[#FF5F08]" />
             </div>

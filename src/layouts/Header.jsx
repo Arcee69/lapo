@@ -150,7 +150,7 @@ const Header = () => {
 
                       <div 
                         onClick={() => {
-                          navigate("/products", {
+                          navigate("/loans/regular", {
                             state: {section: "loans"}
                           })
                         }}

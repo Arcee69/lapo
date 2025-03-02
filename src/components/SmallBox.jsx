@@ -9,7 +9,7 @@ const SmallBox = ({ title, subtitle, heading, link }) => {
     const navigate = useNavigate()
 
   return (
-    <div className='w-[284.89px] h-[286.09px] drop-shadow cursor-pointer group bg-[#fff] border-[3px] border-[#4380BE52] hover:border-0 group hover:bg-[#00984C] rounded-[15px] gap-[51px] flex flex-col p-2 '>
+    <div className='w-[284.89px] h-[286.09px] drop-shadow cursor-pointer group bg-[#fff] border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C] rounded-[15px] gap-[51px] flex flex-col p-2 '>
         <div className='flex items-center justify-between'>
             <div className='w-fit h-[32px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded'>
                 <p className='text-xs font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>{heading}</p>

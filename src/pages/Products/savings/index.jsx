@@ -1,6 +1,6 @@
 import React,  { useRef, useEffect } from 'react'
 import { IoChevronForward } from 'react-icons/io5'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import Left from "../../../assets/svg/left_brick.svg"
 import Right from "../../../assets/svg/right_brick.svg"
@@ -22,6 +22,8 @@ const Savings = () => {
     const { state } = useLocation()
 
     const saveRef = useRef(null)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (state?.section === "save" && saveRef.current) {
@@ -133,51 +135,7 @@ const Savings = () => {
             </div>
 
             <div  className='flex flex-col gap-4'>
-                <div className='flex gap-4 items-center'>
-                    <div className='flex flex-col gap-4'>
-                        <div className='flex items-center gap-4'>
-                            <SmallBox 
-                                heading="Savings"
-                                title="Savings Plan Account"
-                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to 
-                                save funds toward a particular project(s) over a specified period of time and 
-                                earn interest on their savings."
-                                link="/products/savings/plan"
-                            />
-                            <SmallBox 
-                                heading="Savings"
-                                title="My Pikin & I Savings <br /> Account"
-                                subtitle="Child-focused savings account with high interest and life insurance. 
-                                A chance for your child to win LAPO MfB Scholarship."
-                            />
-                        </div>
-                        <BigBox 
-                            heading="High Yield Savings"
-                            title="Xpress Savings Account"
-                            subtitle="This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis."
-                        />
-                    </div>
-                    <div className='flex flex-col gap-4'>
-                        <BigBox 
-                            heading="High Yield Savings"
-                            title="Fixed Deposit Account"
-                            subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
-                        />
-                        <div className='flex items-center gap-4'>
-                            <SmallBox 
-                                heading="Savings"
-                                title="Individual Savings"
-                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
-                            />
-                            <SmallBox 
-                                heading="Investment Savings"
-                                title="Social Impact Deposit (SID)"
-                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px]'>
+                <div className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded-[8px]'>
                             <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
@@ -196,6 +154,80 @@ const Savings = () => {
                             interest on their savings.
                         </p>
                         <div className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
+                            <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
+                        </div>
+                    </div>
+                </div>
+                <div className='flex gap-4 items-center'>
+                    <div className='flex flex-col gap-4'>
+                        <div className='flex items-center gap-4'>
+                            <SmallBox 
+                                heading="Savings"
+                                title="Regular Deposit (Savings)"
+                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to 
+                                save funds toward a particular project(s) over a specified period of time and 
+                                earn interest on their savings."
+                                link="/savings/regular"
+                                // link="/products/savings/plan"
+                            />
+                            <SmallBox 
+                                heading="Savings"
+                                title="My Pikin & I Savings <br /> Account"
+                                subtitle="Child-focused savings account with high interest and life insurance. 
+                                A chance for your child to win LAPO MfB Scholarship."
+                                link="/savings/pikin"
+                            />
+                        </div>
+                        <BigBox 
+                            heading="High Yield Savings"
+                            title="Xpress Savings Account"
+                            subtitle="This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis."
+                            link="/savings/xpress"
+                        />
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <BigBox 
+                            heading="High Yield Savings"
+                            title="Fixed Deposit Account"
+                            subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                            link="/savings/fixed"
+                        />
+                        <div className='flex items-center gap-4'>
+                            <SmallBox 
+                                heading="Savings"
+                                title="Individual Savings"
+                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                                link="/savings/individual/savings"
+                            />
+                            <SmallBox 
+                                heading="Investment Savings"
+                                title="Individual Current"
+                                subtitle="This account is designed for individuals that are either in business or employed by private or public companies as salary account"
+                                link="/savings/individual/current"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C]'>
+                    <div className='flex items-center justify-between'>
+                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded-[8px]'>
+                            <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
+                        </div>
+                        <img src={Parent} alt="Parent" className='' />
+                    </div>
+                    <div className='flex flex-col '>
+                        <p 
+                            className='text-[#00984C] group-hover:text-[#fff] font-medium text-[40px] leading-[60px]'
+                        >
+                            Social Impact Deposit (SID)
+                        </p>
+                        <p className='font-inter text-[#000000] w-[830px] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
+                            The Savings Plan Account is designed for individuals and groups who wish to save 
+                            funds toward a particular project(s) over a specified period of time and earn 
+                            interest on their savings.
+                        </p>
+                        <div onClick={() => {navigate("/savings/social"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
                             <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>

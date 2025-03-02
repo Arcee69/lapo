@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IoChevronForwardSharp } from 'react-icons/io5'
 import { useLocation } from 'react-router-dom'
 
@@ -9,14 +9,21 @@ import Left from "../../../assets/svg/left_loans_spiral.svg"
 import Right from "../../../assets/svg/right_loans_spiral.svg"
 import Stars from "../../../assets/svg/stars.svg"
 import LoanBox from '../../../components/LoanBox'
+import axios from 'axios'
 
 const Loans = () => {
+    const [faqCategories, setFaqCategories] = useState([]);
+    const [faqByCategory, setFaqByCategory] = useState([]);
+    const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null); 
 
     const { state } = useLocation()
 
     const loansRef = useRef(null)
+
+    let URL = import.meta.env.VITE_APP_API_URL;
 
     useEffect(() => {
         if (state?.section === "loans" && loansRef.current) {
@@ -54,6 +61,47 @@ const Loans = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Fetch all categories
+    const getFaqCategories = async () => {
+        try {
+            const res = await axios.get(`${URL}/v1/category`);
+            setFaqCategories(res?.data?.data || []);
+        }   catch (err) {
+            console.log(err, "err");
+        }
+    };
+
+    // Find loan category and get its ID
+    useEffect(() => {
+        getFaqCategories();
+    }, []);
+
+    // When categories load, find the loan category
+    useEffect(() => {
+        if (faqCategories?.length > 0) {
+            const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'loans');
+            if (loanCategory) {
+                setSelectedCategoryId(loanCategory.id);
+            }
+        }
+    }, [faqCategories]);
+
+    // Fetch FAQs when category ID is available
+    const getFaqByCategory = async (categoryId) => {
+        try {
+            const res = await axios.get(`${URL}/v1/faq/category/${categoryId}`);
+            setFaqByCategory(res?.data?.data || []);
+        } catch (err) {
+            console.log(err, "err");
+        }
+    };
+
+    useEffect(() => {
+        if (selectedCategoryId) {
+            getFaqByCategory(selectedCategoryId);
+        }
+    }, [selectedCategoryId]);
 
   return (
     <div className='w-full' ref={loansRef}>
@@ -342,44 +390,18 @@ const Loans = () => {
                     </p>
                 </div>
                 <div className='flex flex-col gap-[48px]'>
-                    <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What types of loans?</p>
-                        <p className='font-inter text-[#000000] text-base leading-6'>
-                            We offer a variety of loans including personal, business, SME, agricultural, education, 
-                            and special loans. Each type is designed to meet specific needs. Explore our options to 
-                            find the right fit for you.
-                        </p>
-                    </div>
-                    <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>Who is eligible?</p>
-                        <p className='font-inter text-[#000000] text-base leading-6'>
-                            Eligibility varies by loan type. Generally, applicants must be of legal age and
-                            meet income requirements. Specific criteria can be found in each loan category.
-                        </p>
-                    </div>
-                    <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What are the benefits?</p>
-                        <p className='font-inter text-[#000000] text-base leading-6'>
-                            Our loans offer competitive interest rates, flexible repayment terms, 
-                            and quick processing times. Additionally, certain loans provide tailored 
-                            support for specific sectors. Enjoy peace of mind with our reliable service.
-                        </p>
-                    </div>
-                    <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>How to apply?</p>
-                        <p className='font-inter text-[#000000] text-base leading-6'>
-                            Applying is simple! Start by filling out our online application form. Once submitted, 
-                            our team will review your application and guide you through the next steps.
-                        </p>
-                    </div>
-                    <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What is SUFEN Loan?</p>
-                        <p className='font-inter text-[#000000] text-base leading-6'>
-                            The SUFEN Loan is specifically designed for female entrepreneurs. 
-                            It provides financial support to help women start or grow their businesses. 
-                            We aim to empower women in the business sector.
-                        </p>
-                    </div>
+                    {faqByCategory.length > 0 ? faqByCategory?.map((faqItem) => (
+                        <div key={faqItem.id} className='flex flex-col gap-4'>
+                            <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>
+                                {faqItem.question}
+                            </p>
+                            <p className='font-inter text-[#000000] text-base leading-6'>
+                                {faqItem.answer}
+                            </p>
+                        </div>
+                        )) : (
+                        <p className='text-center font-inter text-[#000]'>No Faq Available</p>
+                    )}
                 </div>
                 <div className='w-[560px] flex flex-col items-center mx-auto gap-4'>
                     <p className='font-hanken text-[#000000] font-semibold text-[32px] leading-[41px]'>Still have questions?</p>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ title, content, savingsComp }) => {
     const [isOpen, setIsOpen] = useState(false);
   
     return (
@@ -13,7 +13,7 @@ const Accordion = ({ title, content }) => {
           <span className="text-[#000000] font-nunito font-semibold text-[18px]">{title}</span>
           <span>{isOpen ? <MdKeyboardArrowDown className="w-5 h-5 text-[#000]" /> : <MdKeyboardArrowDown className="w-5 h-5 text-[#000]" />}</span>
         </button>
-        {isOpen && <div className="p-4 bg-[#FCF7F9]">{content}</div>}
+        {isOpen && <div className={`${savingsComp ? "bg-[#F7FCF9]" : "bg-[#FCF7F9]"} p-4`}>{content}</div>}
       </div>
     );
   };

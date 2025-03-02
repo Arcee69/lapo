@@ -2,8 +2,12 @@ import React from 'react'
 import { IoChevronForward } from 'react-icons/io5'
 
 import Lock from "../assets/svg/lock.svg"
+import { useNavigate } from 'react-router-dom'
 
-const BigBox = ({ title, subtitle, heading }) => {
+const BigBox = ({ title, subtitle, heading, link }) => {
+
+    const navigate = useNavigate()
+
   return (
     <div className='w-[584.89px] h-[500.46px] drop-shadow cursor-pointer group bg-[#fff] hover:border-0 border border-[#4380BE52] group hover:bg-[#00984C] rounded-[15px] gap-[212px] flex flex-col px-4 py-[19px] '>
         <div className='flex items-center justify-between'>
@@ -20,7 +24,7 @@ const BigBox = ({ title, subtitle, heading }) => {
             <p className='font-inter text-[#445D65] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
                 {subtitle}
             </p>
-            <div className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+            <div onClick={() => {navigate(link), window.scrollTo(0,0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
                 <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm'>Learn More</p>
                 <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
             </div>

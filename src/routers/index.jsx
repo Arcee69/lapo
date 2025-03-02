@@ -17,6 +17,13 @@ import Media from "../pages/Media";
 import Sustainability from "../pages/Sustainability";
 import ViewBlogPost from "../pages/Media/components/ViewBlogPost";
 import Regular from "../pages/Products/loans/components/Regular";
+import RegularSavings from "../pages/Products/savings/components/Regular";
+import Pikin from "../pages/Products/savings/components/Pikin";
+import FixedDeposit from "../pages/Products/savings/components/FixedDeposit";
+import IndividualDeposit from "../pages/Products/savings/components/IndividualDeposit";
+import Social from "../pages/Products/savings/components/Social";
+import IndividualCurrent from "../pages/Products/savings/components/IndividualCurrent";
+import Xpress from "../pages/Products/savings/components/Xpress";
 
 
 export default function Routers() {
@@ -33,6 +40,13 @@ export default function Routers() {
           <Route path="/media" element={<Media />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/products/savings" element={<Savings />} />
+          <Route path="/savings/regular" element={<RegularSavings />} />
+          <Route path="/savings/pikin" element={<Pikin />} />
+          <Route path="/savings/fixed" element={<FixedDeposit />} />
+          <Route path="/savings/individual/savings" element={<IndividualDeposit />} />
+          <Route path="/savings/individual/current" element={<IndividualCurrent />} />
+          <Route path="/savings/xpress" element={<Xpress />} />
+          <Route path="/savings/social" element={<Social />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/pos" element={<Pos />} />
           <Route path="/products/savings/plan" element={<SavingsPlan />} />
