@@ -24,6 +24,11 @@ import IndividualDeposit from "../pages/Products/savings/components/IndividualDe
 import Social from "../pages/Products/savings/components/Social";
 import IndividualCurrent from "../pages/Products/savings/components/IndividualCurrent";
 import Xpress from "../pages/Products/savings/components/Xpress";
+import Sme from "../pages/Products/loans/components/Sme";
+import Agricultural from "../pages/Products/loans/components/Agricultural";
+import Asset from "../pages/Products/loans/components/Asset";
+import Education from "../pages/Products/loans/components/Education";
+import Special from "../pages/Products/loans/components/Special";
 
 
 export default function Routers() {
@@ -36,6 +41,11 @@ export default function Routers() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/products" element={<Loans />} />
           <Route path="/loans/regular" element={<Regular />} />
+          <Route path="/loans/sme" element={<Sme />} />
+          <Route path="/loans/agricultural" element={<Agricultural />} />
+          <Route path="/loans/asset" element={<Asset />} />
+          <Route path="/loans/education" element={<Education />} />
+          <Route path="/loans/special" element={<Special />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/media" element={<Media />} />
           <Route path="/sustainability" element={<Sustainability />} />

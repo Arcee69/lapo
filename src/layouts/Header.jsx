@@ -83,14 +83,21 @@ const Header = () => {
                   <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 ">
 
                     <div className='flex flex-col gap-6 w-[286px] '>
-                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Savings</p>
+                      <p 
+                        className='font-medium font-hanken cursor-pointer text-[20px] leading-5 text-[#16181D]'
+                        onClick={() => {
+                          navigate("/products/savings"),
+                          window.scrollTo(0,0)
+                        }}
+                      >
+                        Savings
+                      </p>
 
                       <div 
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                         onClick={() => {
-                          navigate("/products/savings", {
-                            state: {section: "save"}
-                          })
+                          navigate("/savings/xpress"),
+                          window.scrollTo(0, 0)
                         }}
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Xpress Savings Account</p>
@@ -99,9 +106,8 @@ const Header = () => {
 
                       <div 
                          onClick={() => {
-                          navigate("/products/savings", {
-                            state: {section: "save"}
-                          })
+                          navigate("/savings/fixed"),
+                          window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -111,9 +117,8 @@ const Header = () => {
 
                       <div 
                          onClick={() => {
-                          navigate("/products/savings", {
-                            state: {section: "save"}
-                          })
+                          navigate("/savings/pikin"),
+                          window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -123,7 +128,9 @@ const Header = () => {
 
                       <div 
                          onClick={() => {
-                          navigate("/products/savings")
+                          navigate("/products/savings", {
+                            state: {section: "save"}
+                          })
                         }}
                         className='flex items-center cursor-pointer gap-2 w-full'
                       >
@@ -134,13 +141,21 @@ const Header = () => {
                     </div>
 
                     <div className='flex flex-col gap-6 w-[286px]'>
-                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Loans</p>
-
-                      <div 
+                      <p 
+                        className='font-medium font-hanken cursor-pointer text-[20px] leading-5 text-[#16181D]'
                         onClick={() => {
                           navigate("/products", {
                             state: {section: "loans"}
                           })
+                        }}
+                      >
+                        Loans
+                      </p>
+
+                      <div 
+                        onClick={() => {
+                          navigate("/loans/sme"),
+                          window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -150,9 +165,8 @@ const Header = () => {
 
                       <div 
                         onClick={() => {
-                          navigate("/loans/regular", {
-                            state: {section: "loans"}
-                          })
+                          navigate("/loans/regular"),
+                          window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -162,9 +176,8 @@ const Header = () => {
 
                       <div 
                         onClick={() => {
-                          navigate("/products", {
-                            state: {section: "loans"}
-                          })
+                          navigate("/loans/agricultural"),
+                          window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -172,7 +185,14 @@ const Header = () => {
                         <p className='text-[#667085] font-inter text-sm leading-5'>Designed to help farmers achieve better results</p>
                       </div>
 
-                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                      <div 
+                        className='flex items-center cursor-pointer gap-2 w-full'
+                        onClick={() => {
+                          navigate("/products", {
+                            state: {section: "loans"}
+                          })
+                        }}
+                      >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Loans Products</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
                       </div>

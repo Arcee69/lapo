@@ -172,7 +172,7 @@ const Loans = () => {
                             img={Phone}
                             title="SME Loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/sme"
                         />
                         <LoanBox 
                             img={Phone}
@@ -190,13 +190,13 @@ const Loans = () => {
                             img={Phone}
                             title="Agricultural loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/agricultural"
                         />
                         <LoanBox 
                             img={Phone}
                             title="Asset Loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/asset"
                         />
                     </div>
                 </section>
@@ -208,13 +208,13 @@ const Loans = () => {
                             img={Phone}
                             title="Education Loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/education"
                         />
                         <LoanBox 
                             img={Phone}
                             title="Special loan"
                             content="Select from various loan options that suit your needs."
-                            link="#"
+                            link="/loans/special"
                         />
                     </div>
                 </section>
