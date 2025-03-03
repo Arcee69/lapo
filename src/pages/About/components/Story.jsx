@@ -262,7 +262,7 @@ const Story = () => {
                 ref={(el) => (milestoneRefs.current[index] = el)}
                 data-index={index}
                 className={`relative pl-12 mb-8 transition duration-300 ${
-                  activeIndex === index ? "opacity-100 blur-0" : "opacity-50 blur-sm"
+                  activeIndex === index ? "opacity-100 blur-0" : "opacity-100 blur-0"         //"opacity-50 blur-sm"
                 }`}
               >
                 {/* Dot */}

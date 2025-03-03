@@ -16,7 +16,7 @@ const Footer = () => {
       data-aos-duration="1000"
       data-aos-easing="linear"
     >
-      <div className="border border-t-[#E2E2E2] border-x-0 border-b-0 px-[112px] pt-[56.98px] pb-[119.98px]">
+      <div className="border border-t-[#E2E2E2] border-x-0 border-b-0 pl-[21px] pt-[56.98px] pb-[119.98px]">
         <div className="flex items-start gap-[32px]">
           <img src={Logo} alt="Logo" className='w-[153px] h-[50px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
           <div className="flex w-[180px] flex-col gap-4">

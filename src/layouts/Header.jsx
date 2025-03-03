@@ -46,7 +46,7 @@ const Header = () => {
         handleMouseLeave("nil");
       }}
     >
-        <img src={Logo} alt="Logo" className='w-[109px] h-[44px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
+        <img src={Logo} alt="Logo" className='w-auto h-[44px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
         <div className='flex items-center gap-6'>
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
