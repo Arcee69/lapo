@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import Google from "../../assets/svg/google.svg"
 import Apple from "../../assets/svg/apple.svg"
@@ -29,6 +29,8 @@ const MobileApp = () => {
 
     const { state } = useLocation()
     const mobileRef = useRef(null)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (state?.section === "mobile" && mobileRef.current) {
@@ -81,8 +83,8 @@ const MobileApp = () => {
                     </p>
                 </div>
                 <div className='flex gap-5 items-center'>
-                    <img src={Google} alt="Google" className='' />
-                    <img src={Apple} alt="Apple" className='' />
+                    <img src={Apple} alt='Apple' className='cursor-pointer ' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
+                    <img src={Google} alt='Google' className='cursor-pointer' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
                 </div>
                 <div className='flex items-center gap-2'>
                     <img src={Avatar} alt="Avatar" className='w-[152px] h-[40px]' />
@@ -346,8 +348,8 @@ const MobileApp = () => {
                 and loans—all at your fingertips.
                 </p>
                 <div className='flex items-center gap-4'>
-                <img src={Apple} alt='Apple' className='w-[120px] h-[40px]' />
-                <img src={Google} alt='Google' className='w-[120px] h-[40px]'/>
+                    <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
+                    <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
                 </div>
             </div>
             <div className='bg-[#F3F5F4] w-[576px] relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>

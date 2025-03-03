@@ -49,6 +49,7 @@ import Tablet from "../../assets/svg/tablet.svg"
 
 import "./css/styles.css";
 import "./css/card.css";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("savings")
@@ -57,6 +58,8 @@ const Home = () => {
   const handleTabChange = (value) => {
     setActiveTab(value)
   }
+
+  const navigate = useNavigate()
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -598,7 +601,7 @@ const Home = () => {
 
           </div>
 
-          <div className='w-full h-[478px] relative flex justify-between rounded-xl shadow-lg pl-[48px] bg-[#012412] items-center '>
+          <div className='w-full h-[478px] relative flex justify-between overflow-hidden rounded-xl shadow-lg pl-[48px] bg-[#012412] items-center '>
               <div className='absolute left-0 top-0'>
                 <img src={CurveLeft} alt='CurveLeft' className='rounded-tl-xl ' />
               </div>
@@ -620,11 +623,11 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-              <div className='flex absolute bottom-20 right-0'>
-                <img src={PosMachine} alt='PosMachine' className='absolute right-10 z-10 top-20  w-[352px] ' />
-                <img src={Spiral} alt='Spiral' className='w-[450px] relative h-[400px] -bottom-20 -right-5 ' />
-
+              <div className='w-[485px]'>
+                <img src={PosMachine} alt='PosMachine' className='h-[481px]' />
               </div>
+              {/* <div className='flex absolute bottom-20 right-0'>
+              </div> */}
           </div>
 
         </div>
@@ -746,8 +749,8 @@ const Home = () => {
               and loans—all at your fingertips.
             </p>
             <div className='flex items-center gap-4'>
-              <img src={Apple} alt='Apple' className='w-[120px] h-[40px]' />
-              <img src={Google} alt='Google' className='w-[120px] h-[40px]'/>
+              <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
+              <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
             </div>
           </div>
           <div className='bg-[#F3F5F4] w-[576px] relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>

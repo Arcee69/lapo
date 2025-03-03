@@ -6,8 +6,12 @@ import Apple from "../../../assets/svg/apple.svg"
 
 import BackScreen from "../../../assets/png/back_screen.png"
 import FrontScreen from "../../../assets/png/front_screen.png"
+import { useNavigate } from 'react-router-dom'
 
 const Social = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div className='w-full'>
         <section
@@ -230,8 +234,8 @@ const Social = () => {
                     and loans—all at your fingertips.
                     </p>
                     <div className='flex items-center gap-4'>
-                    <img src={Apple} alt='Apple' className='w-[120px] h-[40px]' />
-                    <img src={Google} alt='Google' className='w-[120px] h-[40px]'/>
+                        <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
+                        <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
                     </div>
                 </div>
                 <div className='bg-[#F3F5F4] w-[576px] relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>
