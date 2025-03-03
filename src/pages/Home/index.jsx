@@ -220,7 +220,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center hidden gap-4'>
               <div className='rounded-full flex items-center cursor-pointer justify-center p-3 w-[47.98px] h-[47.98px] border border-[#E2E2E2]'>
                 <FaArrowLeft className='w-5 h-5 text-[#011624]' />
               </div>

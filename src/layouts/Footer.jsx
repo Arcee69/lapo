@@ -24,24 +24,23 @@ const Footer = () => {
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate('/products/savings'), window.scrollTo(0, 0)}}>Savings</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products/cards"), window.scrollTo(0, 0)}}>Cards</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products") }}>Loans <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {}}>E-banking</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Company</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>About us</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Careers</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Find a Branch</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Media</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Contact</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Corporate Governance</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Awards</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Changemakers</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Sustainability</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
-            <p className="font-inter text-[20px] font-semibold text-[#34423B]">Resources</p>
+            <p className="font-inter text-[20px] font-semibold text-[#34423B]">Media</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Blog</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Newsletter</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Events</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Press</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Help centre</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Gallery</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Press Release</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Media Kit</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Social</p>
@@ -51,13 +50,10 @@ const Footer = () => {
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => window.open("https://www.instagram.com/lapo_microfinance_bank", "_blank")}>Instagram</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
-            <p className="font-inter text-[20px] font-semibold text-[#34423B]">Legal</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Terms</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Privacy</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Cookies</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Licenses</p>
-            {/* <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Settings</p> */}
-            {/* <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Contact</p> */}
+            <p className="font-inter text-[20px] font-semibold text-[#34423B]">Contact</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Emails</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Branch Locator</p>
           </div>
         </div>
       </div>
