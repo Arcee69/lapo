@@ -29,6 +29,7 @@ import Agricultural from "../pages/Products/loans/components/Agricultural";
 import Asset from "../pages/Products/loans/components/Asset";
 import Education from "../pages/Products/loans/components/Education";
 import Special from "../pages/Products/loans/components/Special";
+import Events from "../pages/Media/components/Events";
 
 
 export default function Routers() {
@@ -57,6 +58,7 @@ export default function Routers() {
           <Route path="/savings/individual/current" element={<IndividualCurrent />} />
           <Route path="/savings/xpress" element={<Xpress />} />
           <Route path="/savings/social" element={<Social />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/pos" element={<Pos />} />
           <Route path="/products/savings/plan" element={<SavingsPlan />} />

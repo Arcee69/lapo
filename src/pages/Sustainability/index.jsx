@@ -6,6 +6,10 @@ import Stars from "../../assets/svg/stars.svg"
 
 import Overview from './components/Overview'
 import Social from './components/Social'
+import EnvironmentalDimension from './components/EnvironmentalDimension'
+import Principles from './components/Principles'
+import Sdg from './components/Sdg'
+import Badges from './components/Badges'
 
 const Sustainability = () => {
   const [activeTab, setActiveTab] = useState("overview")
@@ -83,11 +87,21 @@ const Sustainability = () => {
         >
           <p className={`${activeTab === "sdgs" ? "text-[#fff]" : "text-[#1E1E1E]"} text-base leading-6 font-inter`}>SDGs</p>
         </div>
+        <div 
+          onClick={() => handleChangeTab("badges")}
+          className={`${activeTab === "badges" ? "bg-[#4380BE]" : "bg-[#FAFBFB]"} cursor-pointer w-[90px] h-[48px] rounded-[15px] border flex items-center justify-center border-[#1E1E1E]`}
+        >
+          <p className={`${activeTab === "badges" ? "text-[#fff]" : "text-[#1E1E1E]"} text-base leading-6 font-inter`}>Badges</p>
+        </div>
       </section>
 
       <>
         {activeTab === "overview" && <Overview handleChangeTab={handleChangeTab} />}
         {activeTab === "social" && <Social />}
+        {activeTab === "environmental" && <EnvironmentalDimension />}
+        {activeTab === "nsbp" && <Principles />}
+        {activeTab === "sdgs" && <Sdg />}
+        {activeTab === "badges" && <Badges />}
       </>
 
     </div>
