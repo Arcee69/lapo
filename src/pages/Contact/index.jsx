@@ -21,7 +21,7 @@ const Contact = () => {
     const fetchBranches = async () => {
         try {
             const res = await axios.get(`${URL}/v1/branch`);
-            const branchesData = res.data.data;
+            const branchesData = res?.data?.data;
             setApiBranches(branchesData);
             
             if (branchesData.length > 0) {
