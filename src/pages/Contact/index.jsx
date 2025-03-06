@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiMessageCircle } from "react-icons/fi";
 import { CiLocationOn, CiMail, CiSearch } from 'react-icons/ci'
 import { LiaPhoneSolid } from "react-icons/lia";
@@ -7,27 +7,67 @@ import { IoIosArrowDown } from 'react-icons/io';
 import Building from "../../assets/png/lapo_building_b.png"
 import Curve from "../../assets/png/curve_top_right.png"
 import Premium from "../../assets/png/premium.png"
+import axios from 'axios';
 
-
-
-const branches = {
-    "Delta": [
-      { name: "Abraka 1", address: "Police Station Road, Opposite Ik Super Market, Abraka, Delta State.", phone: "08150376077", lat: 6.2573, lng: 6.1846 },
-      { name: "Agbaro", lat: 6.0962, lng: 5.6936 },
-      { name: "Agbor 1", lat: 6.2643, lng: 6.2019 },
-      { name: "Agbor 2", lat: 6.2693, lng: 6.2020 }
-    ],
-    "Cross River": [],
-    "Ebonyi": [],
-    "Edo": [],
-    "Ekiti": [],
-    "Enugu": []
-  };
 
 const Contact = () => {
-    const [selectedBranch, setSelectedBranch] = useState(branches["Delta"][0]);
-    const [expandedState, setExpandedState] = useState("Delta");
-    const [search, setSearch] = useState("")
+    const [selectedBranch, setSelectedBranch] = useState(null);
+    const [expandedState, setExpandedState] = useState("");
+    const [search, setSearch] = useState("");
+    const [apiBranches, setApiBranches] = useState([]);
+    
+    const URL = import.meta.env.VITE_APP_API_URL;
+
+    const fetchBranches = async () => {
+        try {
+            const res = await axios.get(`${URL}/v1/branch`);
+            const branchesData = res.data.data;
+            setApiBranches(branchesData);
+            
+            if (branchesData.length > 0) {
+                setSelectedBranch(branchesData[0]);
+                setExpandedState(branchesData[0].state.name);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    useEffect(() => {
+        fetchBranches();
+    }, []);
+
+    // Filter and group branches
+    const filteredBranches = apiBranches?.filter(branch => {
+        const searchTerm = search.toLowerCase();
+        return (
+            branch.state.name.toLowerCase().includes(searchTerm) ||
+            branch.lga.name.toLowerCase().includes(searchTerm) ||
+            branch.name.toLowerCase().includes(searchTerm)
+        );
+    });
+
+    const groupedBranches = filteredBranches.reduce((acc, branch) => {
+        const stateName = branch.state.name;
+        if (!acc[stateName]) acc[stateName] = [];
+        acc[stateName].push(branch);
+        return acc;
+    }, {});
+
+    useEffect(() => {
+        if (filteredBranches.length > 0) {
+            const isSelectedValid = selectedBranch && 
+                filteredBranches.some(b => b.id === selectedBranch.id);
+            if (!isSelectedValid) {
+                setSelectedBranch(filteredBranches[0]);
+                setExpandedState(filteredBranches[0].state.name);
+            }
+        } else {
+            setSelectedBranch(null);
+        }
+    }, [filteredBranches]);
+
+
     
 
   return (
@@ -139,60 +179,79 @@ const Contact = () => {
 
             <div className="flex items-start gap-6 p-4">
                 {/* Left Panel - Branch List */}
-                <div className="w-[533px] flex flex-col bg-gray-100 p-4 rounded-lg">
+                <div className="w-[33.313rem] flex flex-col bg-gray-100 p-4 rounded-lg">
                     <div className='flex items-center rounded-md mb-4 bg-[#F7F9FC] p-2'>
                         <CiSearch className='w-4 h-4 text-[#667085]' />
                         <input 
                             type="text" 
-                            placeholder="Search State, City, Lg, branch" 
-                            className="w-full p-2 bg-[#F7F9FC] text-[#888888] font-hanken text-base  outline-none" 
+                            placeholder="Search State, LGA, branch" 
+                            className="w-full p-2 bg-[#F7F9FC] outline-none" 
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-
                     </div>
                     
-                    {Object.keys(branches).map((state) => (
-                    <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
-                        <button
-                            className={`w-full text-left p-3 font-bold flex items-center justify-between ${expandedState === state ? "bg-[#00984C] text-white rounded-xl" : "bg-[#fff]"}`}
-                            onClick={() => setExpandedState(expandedState === state ? "" : state)}
-                        >
-                           <p>{state}</p>
-                           <IoIosArrowDown className={`${expandedState === state ? "text-[#fff]" : "text-[#000]"} w-3 h-3`} />
-                        </button>   
-                        
-                        {expandedState === state && (
-                        <div className="bg-[#F7FCF9] rounded-md shadow p-2">
-                            {branches[state].map((branch) => (
-                            <div
-                                key={branch.name}
-                                className={`p-2 border-b cursor-pointer ${selectedBranch.name === branch.name ? "bg-green-100" : ""}`}
-                                onClick={() => setSelectedBranch(branch)}
+                    {Object.keys(groupedBranches).map((state) => (
+                        <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
+                            <button
+                                className={`w-full text-left p-3 font-bold flex items-center justify-between ${
+                                    expandedState === state ? "bg-[#00984C] text-white rounded-xl" : "bg-[#fff]"
+                                }`}
+                                onClick={() => setExpandedState(expandedState === state ? "" : state)}
                             >
-                                {branch.name}
-                            </div>
-                            ))}
+                                <p>{state}</p>
+                                <IoIosArrowDown className={`${
+                                    expandedState === state ? "text-[#fff]" : "text-[#000]"
+                                } w-3 h-3`} />
+                            </button>   
+                            
+                            {expandedState === state && (
+                                <div className="bg-[#F7FCF9] rounded-md shadow p-2">
+                                    {groupedBranches[state].map((branch) => (
+                                        <div
+                                            key={branch.id}
+                                            className={`p-2 border-b cursor-pointer ${
+                                                selectedBranch?.id === branch.id ? "bg-green-100" : ""
+                                            }`}
+                                            onClick={() => setSelectedBranch(branch)}
+                                        >
+                                            {branch.name}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                        )}
-                    </div>
                     ))}
                 </div>
 
                 {/* Right Panel - Map & Details */}
-                <div className="w-[795px] relative">
-                    <iframe
-                        title="Google Map"
-                        src={`https://www.google.com/maps?q=${selectedBranch.lat},${selectedBranch.lng}&output=embed`}
-                        className="w-full h-[500px] rounded-lg"
-                    ></iframe>
-
-                    {/* Branch Details */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col">
-                        <h2 className="font-bold text-lg">{selectedBranch.name} Branch</h2>
-                        <p className="flex items-center text-gray-700"><CiLocationOn className="mr-2 text-[#00984C]" /> {selectedBranch.address}</p>
-                        <p className="flex items-center text-gray-700"><LiaPhoneSolid className="mr-2 text-[#00984C]" /> {selectedBranch.phone}</p>
-                    </div>
+                <div className="w-[43.438rem] relative">
+                    {selectedBranch ? (
+                        <>
+                            <iframe
+                                title="Google Map"
+                                src={`https://www.google.com/maps?q=${encodeURIComponent(
+                                    selectedBranch.address
+                                )}&output=embed`}
+                                className="w-[43.438rem] h-[500px] rounded-lg"
+                            />
+                            <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col">
+                                <h2 className="font-bold text-lg">{selectedBranch.name} Branch</h2>
+                                <p className="flex items-center text-gray-700">
+                                    <CiLocationOn className="mr-2 text-[#00984C]" /> 
+                                    {selectedBranch.address}
+                                </p>
+                                <p className="flex items-center text-gray-700">
+                                    <LiaPhoneSolid className="mr-2 text-[#00984C]" /> 
+                                    {selectedBranch.phone_number}
+                                </p>
+                            </div>
+                        </>
+                    ) : (
+                        <div className="w-full h-[500px] rounded-lg bg-gray-100 flex items-center justify-center">
+                            <p className="text-gray-500">No branches found</p>
+                        </div>
+                    )}
                 </div>
             </div>
 
