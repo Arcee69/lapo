@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Left from "../../../assets/svg/left_brick.svg"
 import Right from "../../../assets/svg/right_brick.svg"
@@ -9,9 +9,17 @@ import Apple from "../../../assets/svg/apple.svg"
 
 import BackScreen from "../../../assets/png/back_screen.png"
 import FrontScreen from "../../../assets/png/front_screen.png"
+import axios from 'axios'
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
 const Events = () => {
+    const [gallery, setGallery] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [prevPageUrl, setPrevPageUrl] = useState(null);
+    const [nextPageUrl, setNextPageUrl] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
 
+    const postsPerPage = 6;
 
     const eventsPost = [
         { title: "Fintribe Fair", image: "https://res.cloudinary.com/dairsbzlv/image/upload/v1741213195/man_hoc33g.png", count: 20 },
@@ -21,6 +29,39 @@ const Events = () => {
         { title: "Fintribe Fair", image: "https://res.cloudinary.com/dairsbzlv/image/upload/v1741213195/man_hoc33g.png", count: 20 },
         { title: "ESG 2024", image: "https://res.cloudinary.com/dairsbzlv/image/upload/v1741213214/group_buzkvv.png", count: 20 }
     ];
+
+    const fetchImages = async (url = "https://lapo.smhptech.com/api/v1/gallery") => {
+        setLoading(true)
+        try {
+          const res = await axios.get(url);
+          console.log(res, "addict")
+          const data = res.data;
+    
+          setGallery(data?.data || []);
+          setPrevPageUrl(data.pagination?.prev_page_url);
+          setNextPageUrl(data.pagination?.next_page_url);
+          setCurrentPage(data.pagination?.current_page);
+        } catch (err) {
+          console.error(err);
+        } finally {
+            setLoading(false)
+        }
+      };
+    
+      useEffect(() => {
+        fetchImages();
+      }, []);
+
+      const totalPages = Math.ceil(gallery.length / postsPerPage);
+
+      // Get the current page posts
+      const indexOfLastGallery = currentPage * postsPerPage;
+      const indexOfFirstGallery = indexOfLastGallery - postsPerPage;
+      const currentGallery = gallery.slice(indexOfFirstGallery, indexOfLastGallery);
+  
+      // Change page function
+      const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
   return (
     <div className='w-full'>
@@ -39,7 +80,7 @@ const Events = () => {
                 <div className='flex flex-col items-center gap-4 w-[688px] mx-auto'>
                     <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                         <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 5M+ Nigerians</p>
+                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
                     </div>
                     <div className='flex flex-col gap-6'>
                         <p className='font-hanken capitalize text-[56px] text-center font-medium text-[#FFFFFF] leading-[56px]'>
@@ -75,23 +116,51 @@ const Events = () => {
             <p className='font-hanken text-[48px] font-medium text-[#101828]'>Events Gallery</p>
 
             <div className='grid grid-cols-3 gap-6'>
-                {eventsPost.map((event, index) => (
+                {currentGallery.map((event, index) => (
                     <div key={index} className='relative group overflow-hidden rounded-lg'>
                         <img src={event.image} alt={event.title} className='w-full h-auto object-cover' />
-                        <div className='absolute top-2 right-2 bg-black bg-opacity-50 px-3 py-1 rounded text-white'>{event.count}</div>
-                        <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white'>{event.title}</div>
+                        {/* <div className='absolute top-2 right-2 bg-black bg-opacity-50 px-3 py-1 rounded text-white'>{event.count}</div> */}
+                        <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white'>{event.caption}</div>
                     </div>
                 ))}
             </div>
 
-            <div className='flex justify-between w-full items-center mt-10'>
-                <button className='text-gray-400'>← Previous</button>
-                <div className='flex gap-2'>
-                    {[1, 2, 3, 8, 9, 10].map((page, index) => (
-                        <button key={index} className={`px-3 py-1 rounded ${page === 1 ? 'bg-[#00984C] text-white' : 'text-gray-400'}`}>{page}</button>
+           {/* Pagination */}
+            <div className="flex justify-between w-full items-center py-5">
+                {/* Previous Button */}
+                <button
+                    className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+                    onClick={() => paginate(currentPage - 1)}
+                    disabled={currentPage === 1}
+                >
+                    <FiChevronLeft className="w-4 h-4 mr-1" /> Previous
+                </button>
+
+                {/* Page Numbers */}
+                <div className="flex items-center gap-2">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+                        <button
+                            key={number}
+                            className={`w-8 h-8 rounded-md flex items-center justify-center font-inter text-sm ${
+                                currentPage === number
+                                    ? "bg-[#FEF3F2] text-[#E78020] font-semibold"
+                                    : "text-[#475467]"
+                            }`}
+                            onClick={() => paginate(number)}
+                        >
+                            {number}
+                        </button>
                     ))}
                 </div>
-                <button className='text-gray-400'>Next →</button>
+
+                {/* Next Button */}
+                <button
+                    className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
+                    onClick={() => paginate(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                >
+                    Next <FiChevronRight className="w-4 h-4 ml-1" />
+                </button>
             </div>
         </section>
 

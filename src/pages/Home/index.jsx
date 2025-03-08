@@ -139,12 +139,12 @@ const Home = () => {
             Your Financial Partner <br /> for a Brighter Future
           </p>
           <p className='text-[20px] font-hanken text-[#34423B] w-[650px] leading-[30px]'>
-            Trusted by generations to provide transparent, accessible financial services. 
-            we’re here to support you with solutions that fit your needs.
+            Empowering individuals, businesses, and communities with tailored financial solutions for over 30 years
           </p>
           <div className='flex items-center gap-5'>
             <button
               className='bg-[#E78020] flex flex-col items-center justify-center w-[180px] h-[56px] rounded-[10px]'
+              onClick={() => navigate("/contact-us")}
             >
               <p className='font-hanken text-[#fff] text-base font-semibold'>Join  LAPO</p>
             </button>
@@ -278,6 +278,7 @@ const Home = () => {
                   </div>
                   <button 
                     className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
+                    onClick={() => {navigate("/savings/regular"); window.scrollTo(0, 0)}}
                   >
                     <p className='font-medium text-base font-nunito'>Get Started</p> 
                     <p className='font-medium text-base font-nunito'>→</p>
@@ -335,6 +336,7 @@ const Home = () => {
                    </div>
                    <button 
                      className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
+                     onClick={() => {navigate("/pos"); window.scrollTo(0, 0)}}
                    >
                      <p className='font-medium text-base font-nunito'>Learn More</p> 
                      <p className='font-medium text-base font-nunito'>→</p>
@@ -394,6 +396,7 @@ const Home = () => {
                   </div>
                   <button 
                     className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
+                    onClick={() => {navigate("/digital"); window.screenTo(0, 0)}}
                   >
                     <p className='font-medium text-base font-nunito'>Learn More</p> 
                     <p className='font-medium text-base font-nunito'>→</p>
@@ -451,6 +454,7 @@ const Home = () => {
                   </div>
                   <button 
                     className="mt-[54px] px-6 w-[180px] flex gap-6 items-center py-2 bg-black text-white rounded"
+                    onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}}
                   >
                     <p className='font-medium text-base font-nunito'>Get Started</p> 
                     <p className='font-medium text-base font-nunito'>→</p>
@@ -460,7 +464,7 @@ const Home = () => {
                   <img src={Model} alt='Model' className='w-[346px]' />
                 </div>
               </div>
-           </div> 
+            </div> 
           ) : (
             <div className="h-full flex gap-[32px]" onClick={() => handleTabChange("loans")}>
               <div className='w-[85px] bg-[#34423B] pt-[47px] cursor-pointer flex flex-col rounded-tr-2xl rounded-br-2xl gap-[180px] items-center'>
@@ -498,13 +502,12 @@ const Home = () => {
               <p className='font-semibold font-inter text-[#121212] text-[20px] '>Business on the go</p>
               <div className='flex flex-col gap-[37px]'>
                 <p className='font-inter font-semibold text-[48px] leading-[57px] '>
-                  <span className='text-[#F2761B]'>Zero wait time: </span> 
-                   open personal and business accounts now
+                  <span className='text-[#F2761B]'>Zero wait time. </span> 
+                   Instant Access: 
                 </p>
                 <p className='font-inter font-medium text-[20px] leading-[34px]'>
-                  All your card information is securely <br />
-                  stored in your app to keep your money <br />
-                  safe. No PAN, No Expiry date. No CVV. <br />
+                  Open your personal or business account in minutes and take control of your finances—fast, 
+                  secure, and hassle-free.
                 </p>
               </div>
             </div>
@@ -526,9 +529,7 @@ const Home = () => {
                   <span className='text-[#fff]'>years of empowering Nigerians.</span> 
                 </p>
                 <p className='text-[#6A6A6A] font-inter font-medium text-[20px]'>
-                  All your card information is securely <br />
-                  stored in your app to keep your money <br />
-                  safe. No PAN, No Expiry date. No CVV. <br />
+                  For over three decades, LAPO Microfinance Bank has empowered communities through financial inclusion.
                 </p>
               </div>
             </div>
@@ -547,9 +548,8 @@ const Home = () => {
                   options for you and your business.
                 </p>
                 <p className='font-inter font-medium text-[20px] text-[#6A6A6A] leading-[34px]'>
-                  All your card information is securely <br />
-                  stored in your app to keep your money <br />
-                  safe. No PAN, No Expiry date. No CVV. <br />
+                  Enjoy Loan Products that meets all your life goals from your personal to 
+                  business to education and property.
                 </p>
               </div>
             </div>
@@ -606,19 +606,21 @@ const Home = () => {
                 <img src={CurveLeft} alt='CurveLeft' className='rounded-tl-xl ' />
               </div>
               <div className='flex flex-col gap-[63px] w-[683px]'>
-                <p className='font-semibold font-inter text-[#fff] text-[20px] '>New Kid on the Block</p>
+                <p className='font-semibold font-inter text-[#fff] text-[20px] '>Ready to level up?</p>
                 <div className='flex flex-col gap-[37px]'>
-                  <p className='font-hanken font-semibold text-[#fff] text-[48px] leading-[57px]'>
-                    Fast,
-                    <span className='text-[#1AFF8C]'> Secure, </span> 
-                    and <span className='text-[#F99650]'> Reliable </span>
-                    Payments for Your Business.
+                  <p className='font-hanken font-semibold text-[#fff] text-[28px] leading-[37px]'>
+                    Start accepting payments today Powering your business with speed,
+                    <span className='text-[#1AFF8C]'> Security, </span> 
+                    and <span className='text-[#F99650]'> Reliability </span>
+                  
                   </p>
-                  <ul className='font-hanken pl-10 list-disc text-[20px] text-[#E2E2E2] leading-[34px]'>
-                    <li>Lightning-Fast Transactions</li> 
-                    <li>Affordable Rates & Zero Hidden Charges</li>  
-                    <li>Accepts All Cards & Mobile Transfers</li>  
-                    <li>24/7 Support & Seamless Connectivity</li>  
+                  <ul className='font-hanken pl-5 list-disc text-[18px] text-[#E2E2E2] leading-[34px]'>
+                    <li>
+                      Lightning-Fast Transactions  – Get paid instantly, every time.
+                    </li> 
+                    <li>Affordable & Transparent – No hidden fees, just great rates.</li>  
+                    <li>Universal Payment Acceptance – All cards, mobile transfers, no limits.</li>  
+                    <li>24/7 Support & Seamless Integration – Always on, always connected.</li>  
                    
                   </ul>
                 </div>

@@ -36,7 +36,7 @@ const Sustainability = () => {
 
           <div className='w-[211px] h-[28px] rounded-full gap-1 flex items-center justify-center bg-[#FDF2E9]'>
             <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-            <p className='text-xs font-hanken text-[#E78020]'>Empowering 5M+ Nigerians</p>
+            <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
           </div>
 
           <p className='font-semibold text-[56px] text-center leading-[57px] font-hanken text-[#FAFAFA]'>

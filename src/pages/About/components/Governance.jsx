@@ -360,11 +360,14 @@ const Governance = () => {
                     <p className='font-hanken font-medium text-sm text-[#00954B] leading-[15px]'>Corporate Governance</p>
                 </div>
                 <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
-                    Our Commitment to Financial Inclusion
+                    Making Finance Work for Everyone
                 </p>
                 <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
-                    At LAPO Microfinance Bank, we believe that everyone deserves access to financial services. 
-                    Our philosophy centers on empowering individuals and communities through inclusive financial solutions.
+                    At LAPO Microfinance Bank, we’re committed to breaking financial barriers and ensuring 
+                    that everyone—regardless of background—has access to the financial services they need to thrive. 
+                    From small business owners to everyday individuals, our inclusive financial solutions are designed 
+                    to empower communities, foster growth, and create lasting impact. Because when opportunities are 
+                    accessible to all, we all move forward together.
                 </p>
                 <div className='flex items-center gap-6'>
                 <div className='w-[91px] h-[48px] border border-[#000000] flex items-center justify-center'>

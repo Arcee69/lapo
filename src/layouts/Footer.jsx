@@ -29,18 +29,18 @@ const Footer = () => {
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Company</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>About us</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Careers</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/careers"), window.scroll(0, 0)}}>Careers</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Corporate Governance</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Awards</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Awards</p>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Changemakers</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Sustainability</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/sustainability"), window.scroll(0, 0)}}>Sustainability</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Media</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Blog</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Gallery</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Press Release</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Media Kit</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/blog"), window.scroll(0, 0)}}>Blog</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/events"), window.scroll(0, 0)}}>Gallery</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/blog"), window.scroll(0, 0)}}>Press Release</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/faqs"), window.scroll(0, 0)}}>Faqs</p>
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Social</p>
@@ -51,9 +51,9 @@ const Footer = () => {
           </div>
           <div className="flex w-[180px] flex-col gap-4">
             <p className="font-inter text-[20px] font-semibold text-[#34423B]">Contact</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Emails</p>
+            <a className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E] block" href="mailto:info@lapo-nigeria.org" >Emails</a>
             <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
-            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Branch Locator</p>
+            <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/contact-us"), window.scroll(0, 0)}}>Branch Locator</p>
           </div>
         </div>
       </div>

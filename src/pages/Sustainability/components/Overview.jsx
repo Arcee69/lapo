@@ -55,15 +55,14 @@ const Overview = ({ handleChangeTab }) => {
                     <p className='text-[54px] font-hanken text-[#FFFFFF] leading-[64px]'>People. Planet.<br /> Prosperity</p>
                 </div>
                 <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF] '>
-                LAPO Microfinance Bank Limited is a pro-poor premium Microfinance Bank committed 
-                to improving lives of low income households through creation of access to a range 
-                of financial services delivered on a sustainable basis. It is an offshoot of Lift 
-                Above Poverty Organization (LAPO) a non-profit community development organization 
-                initiated in the late 1980s to address the challenges of lack of access to finance, 
-                poor health, and social exclusion. Although the Bank has metamorphosed as the forerunner 
-                in the microfinance development in the country it was able to drive this process through 
-                its initiation and implementation of a board committee set up in 201 to provide guidance, 
-                mitigation and drive in the field of Environment, Social & Governance; also known as Sustainability
+                    At LAPO Microfinance Bank, we are dedicated to empowering low-income households by providing 
+                    access to sustainable financial services that improve lives and drive economic growth. 
+                    As an offshoot of the Lift Above Poverty Organization (LAPO), our journey began in the late 1980s 
+                    with a mission to tackle financial exclusion, poor health, and social inequalities.
+                    Today, we lead the way in microfinance development, integrating Environmental, Social, and 
+                    Governance (ESG) principles into our operations. Through strategic initiatives and dedicated 
+                    board oversight, we remain committed to fostering financial inclusion while promoting sustainability 
+                    and long-term prosperity for individuals and communities.
                 </p>
 
             </div>
@@ -122,13 +121,14 @@ const Overview = ({ handleChangeTab }) => {
             <div className='flex gap-[40px] items-start'>
             <div className='w-[632px] bg-[#4380BE17] h-[788px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
                 <div className='flex flex-col gap-1'>
-                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Social Dimension</p>
+                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Putting People First</p>
                 <p className='font-inter text-base text-[#101828] leading-6'>
-                    LAPO MfB has deepened its social performance approach by engaging in activities that enhance 
-                    our client protection principles and support, such as Transparency and Responsible pricing. 
-                    Others are Prevention of over-indebtedness, Appropriate product design, Privacy of clients' data, 
-                    and feedback methods, giving LAPO MfB ways to address clients' complaints so that they can be served 
-                    more effectively.
+                    At LAPO Microfinance Bank, our commitment goes beyond financial services—we prioritize the 
+                    well-being of our clients. Through transparency, responsible pricing, and ethical banking practices, 
+                    we ensure fair and accessible financial solutions. We protect clients from over-indebtedness, 
+                    design products that meet their needs, safeguard their data, and provide clear feedback channels 
+                    to address concerns. By putting people first, we create a banking experience built on trust, 
+                    empowerment, and long-term financial stability.
                 </p>
                 </div>
                 <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
@@ -138,7 +138,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Student} alt="Student" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -146,7 +146,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -154,7 +154,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -162,7 +162,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -170,7 +170,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -178,7 +178,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 </div>
@@ -203,13 +203,13 @@ const Overview = ({ handleChangeTab }) => {
 
             <div className='w-[632px] bg-[#4380BE17] h-[526px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
                 <div className='flex flex-col gap-1'>
-                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Environment Dimension.</p>
+                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Our Commitment to a Sustainable Future</p>
                 <p className='font-inter text-base text-[#101828] leading-6'>
-                    LAPO MfB has deepened its social performance approach by engaging in activities that enhance 
-                    our client protection principles and support, such as Transparency and Responsible pricing. 
-                    Others are Prevention of over-indebtedness, Appropriate product design, Privacy of clients' data, 
-                    and feedback methods, giving LAPO MfB ways to address clients' complaints so that they can be served 
-                    more effectively.
+                    At LAPO Microfinance Bank, we recognize the vital role of environmental sustainability in 
+                    building a better future. We integrate eco-friendly practices into our operations, 
+                    promote responsible resource management, and support initiatives that mitigate environmental impact. 
+                    By fostering awareness and adopting sustainable banking solutions, we contribute to a greener planet 
+                    while empowering communities to thrive responsibly.
                 </p>
                 </div>
                 <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
@@ -219,7 +219,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Student} alt="Student" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>International sustainability conference</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -227,7 +227,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Green Clean Lending.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 </div>
@@ -246,11 +246,11 @@ const Overview = ({ handleChangeTab }) => {
                 <div className='flex flex-col gap-1'>
                 <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Nigerian Sustainable Banking Principles (NSBP) & LAPO MfB</p>
                 <p className='font-inter text-base text-[#101828] leading-6'>
-                    LAPO MfB has deepened its social performance approach by engaging in activities that enhance 
-                    our client protection principles and support, such as Transparency and Responsible pricing. 
-                    Others are Prevention of over-indebtedness, Appropriate product design, Privacy of clients' data, 
-                    and feedback methods, giving LAPO MfB ways to address clients' complaints so that they can be served 
-                    more effectively.
+                    LAPO MfB has deepened its social performance approach by engaging in activities 
+                    that enhance our client protection principles and support, such as Transparency and 
+                    Responsible pricing. Others are Prevention of over-indebtedness, Appropriate product design, 
+                    Privacy of clients' data, and feedback methods, giving LAPO MfB ways to address clients' 
+                    complaints so that they can be served more effectively.
                 </p>
                 </div>
                 <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
@@ -260,7 +260,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Student} alt="Student" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -268,7 +268,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -276,7 +276,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -284,7 +284,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -292,7 +292,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -300,7 +300,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 </div>
@@ -339,7 +339,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Student} alt="Student" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -347,7 +347,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -355,7 +355,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -363,7 +363,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -371,7 +371,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
@@ -379,7 +379,7 @@ const Overview = ({ handleChangeTab }) => {
                     <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
                     <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
                     </div>
-                    <MdArrowOutward className='w-4 h-4 text-[#000000]' />
+                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
                 </div>
 
                 </div>

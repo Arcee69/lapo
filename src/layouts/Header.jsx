@@ -296,29 +296,27 @@ const Header = () => {
 
                       <div 
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
-                        // onClick={() => {
-                        //   navigate("/products/savings", {
-                        //     state: {section: "save"}
-                        //   })
-                        // }}
+                        onClick={() => {
+                          navigate("/events");
+                          window.scrollTo(0,0)
+                        }}
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Events</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>A very flexible and convenient savings account</p>
                       </div>
 
                       <div 
-                        //  onClick={() => {
-                        //   navigate("/products/savings", {
-                        //     state: {section: "save"}
-                        //   })
-                        // }}
+                         onClick={() => {
+                          navigate("/blog");
+                          window.scrollTo(0, 0)
+                        }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Articles</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>Earn more interest than traditional savings.</p>
                       </div>
 
-                      <div 
+                      {/* <div 
                          onClick={() => {
                           navigate("/products/savings")
                         }}
@@ -326,7 +324,7 @@ const Header = () => {
                       >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
-                      </div>
+                      </div> */}
 
                     </div>
 
@@ -334,11 +332,10 @@ const Header = () => {
                       <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Gallery</p>
 
                       <div 
-                        // onClick={() => {
-                        //   navigate("/products", {
-                        //     state: {section: "loans"}
-                        //   })
-                        // }}
+                        onClick={() => {
+                          navigate("/events");
+                          window.scrollTo(0, 0)
+                        }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Pictures</p>
@@ -346,23 +343,20 @@ const Header = () => {
                       </div>
 
                       <div 
-                        // onClick={() => {
-                        //   navigate("/products", {
-                        //     state: {section: "loans"}
-                        //   })
-                        // }}
+                        onClick={() => {
+                          navigate("/videos");
+                          window.scrollTo(0, 0)
+                        }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Videos</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>Designed to operate on a group (union) methodology.</p>
                       </div>
 
-                   
-
-                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                      {/* <div className='flex items-center cursor-pointer gap-2 w-full'>
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
-                      </div>
+                      </div> */}
 
                     </div>
 
@@ -393,10 +387,10 @@ const Header = () => {
                         <p className='text-[#667085] font-inter text-sm leading-5'>Shop. Pay. Withdraw</p>
                       </div>
 
-                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                      {/* <div className='flex items-center cursor-pointer gap-2 w-full'>
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
-                      </div>
+                      </div> */}
                     </div>
 
                   </div>
@@ -416,7 +410,7 @@ const Header = () => {
           <button
             className='bg-[#E78020] w-[115px] h-[40px] rounded-lg gap-2 group flex items-center justify-center'
             type='button'
-            onClick={() => navigate("/careers")}
+            onClick={() => navigate("/contact-us")}
           >
             <p
               className='font-medium text-base font-nunito text-[#fff]'

@@ -120,14 +120,14 @@ const Loans = () => {
                 <div className='flex flex-col items-center gap-4 w-[688px] mx-auto'>
                     <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                         <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 5M+ Nigerians</p>
+                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
                     </div>
                     <div className='flex flex-col gap-6'>
                         <p className='font-hanken text-[54px] text-center font-medium text-[#FFFFFF] leading-[64px]'>
                             Get Easy Access Loans to Fund your Business
                         </p>
                         <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF] text-center'>
-                            We provide a range of loans for income-generating activities.
+                            Enjoy flexible Loan options that meets all your life goals from your personal to business to education and property.
                         </p>
                     </div>
                     <button

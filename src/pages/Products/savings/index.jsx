@@ -92,7 +92,7 @@ const Savings = () => {
                 >
                     <img src={Wallet} alt="Wallet" className='w-[68px] h-[68px]' />
                     <p className='font-inter font-bold text-[21px] leading-[30px] text-[#00984C]'>Lowest entry balance</p>
-                    <p className='text-[#445D65] font-inter text-[15px] leading-6'>Identify real talents without the hassle of time-consuming CV screening</p>
+                    <p className='text-[#445D65] font-inter text-[15px] leading-6'>Start saving with as little as possible, making financial security accessible to everyone.</p>
                 </div>
                 <div 
                     className='w-[410px] h-[283px] border border-[#EAEEF2] rounded-[34px] py-[29.5px] px-[41.5px] flex flex-col gap-[17px]'
@@ -100,9 +100,8 @@ const Savings = () => {
                     <img src={Employees} alt="Employees" className='w-[68px] h-[68px]' />
                     <p className='font-inter font-bold text-[21px] leading-[30px] text-[#00984C]'>Easy access to your funds</p>
                     <p className='text-[#445D65] font-inter text-[15px] leading-6'>
-                        Online workforce assessments encourage
-                        your employees to grow and cultivate a
-                        positive team spirit
+                        Enjoy seamless withdrawals through our Mobile App, Debit Card, 
+                        and ATM services whenever you need cash.
                     </p>
                 </div>
                 <div 
@@ -111,7 +110,8 @@ const Savings = () => {
                     <img src={Bubbles} alt="Bubbles" className='w-[68px] h-[68px]' />
                     <p className='font-inter font-bold text-[21px] leading-[30px] text-[#00984C]'>Tailored to your needs</p>
                     <p className='text-[#445D65] font-inter text-[15px] leading-6'>
-                        Choose from various plans tailored to fit your unique financial needs.
+                        Choose from a variety of savings options, whether you’re saving for a child’s future, 
+                        a big investment, or just everyday expenses.
                     </p>
                 </div>
             </div>
@@ -127,10 +127,9 @@ const Savings = () => {
                 </div>
                 <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>7 Ways to grow your future</p>
                 <p className='text-[18px] text-[#000000] w-[947px] mx-auto font-inter text-center leading-[27px]'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Suspendisse varius enim in eros elementum tristique.
-                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, 
-                    ut commodo diam libero vitae erat.
+                    Whether you’re saving for your children’s education, growing your business, 
+                    or preparing for emergencies, our savings accounts are designed to help you 
+                    achieve your financial goals with ease.
                 </p>
             </div>
 

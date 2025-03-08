@@ -13,9 +13,8 @@ import Faqs from "../pages/Faq";
 import Careers from "../pages/Careers";
 import MobileApp from "../pages/Digital/MobileApp";
 import Contact from "../pages/Contact";
-import Media from "../pages/Media";
 import Sustainability from "../pages/Sustainability";
-import ViewBlogPost from "../pages/Media/components/ViewBlogPost";
+import ViewBlogPost from "../pages/Blog/components/ViewBlogPost";
 import Regular from "../pages/Products/loans/components/Regular";
 import RegularSavings from "../pages/Products/savings/components/Regular";
 import Pikin from "../pages/Products/savings/components/Pikin";
@@ -30,6 +29,9 @@ import Asset from "../pages/Products/loans/components/Asset";
 import Education from "../pages/Products/loans/components/Education";
 import Special from "../pages/Products/loans/components/Special";
 import Events from "../pages/Media/components/Events";
+import Resources from "../pages/Resources";
+import Blog from "../pages/Blog";
+import Videos from "../pages/Media/components/Videos";
 
 
 export default function Routers() {
@@ -48,7 +50,8 @@ export default function Routers() {
           <Route path="/loans/education" element={<Education />} />
           <Route path="/loans/special" element={<Special />} />
           <Route path="/contact-us" element={<Contact />} />
-          <Route path="/media" element={<Media />} />
+          <Route path="/media" element={<Events />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/products/savings" element={<Savings />} />
           <Route path="/savings/regular" element={<RegularSavings />} />
@@ -60,11 +63,13 @@ export default function Routers() {
           <Route path="/savings/social" element={<Social />} />
           <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/pos" element={<Pos />} />
           <Route path="/products/savings/plan" element={<SavingsPlan />} />
           <Route path="/digital" element={<MobileApp />} />
           <Route path="/digital/cards" element={<Cards />} />
-          <Route path="/view-post" element={<ViewBlogPost />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/view-blog" element={<ViewBlogPost />} />
         </Route>
       </Routes>
     </div>

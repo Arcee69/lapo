@@ -88,21 +88,17 @@ const Story = () => {
                 <p className='font-hanken text-xs leading-[15px] text-[#00954B]'>History</p>
                 </div>
                 <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
-                    Celebrating 30 Years of Empowering Communities
+                  30 Years of Transformation: Our Journey of Impact and Growth
                 </p>
                 <p className='text-[#444444] font-inter leading-[27px] text-[18px]'>
-                LAPO Microfinance Bank is an off-shoot of the Lift Above Poverty (LAPO) Organization, 
-                a poverty-focused Non-Governmental Organization. It was initiated in the late 1980s in 
-                response to the fall out of the implementation of the Structural Adjustment Program (SAP).
+                  For over three decades, LAPO Microfinance Bank has empowered communities through financial inclusion. 
+                  Founded by the Lift Above Poverty Organization (LAPO) in response to economic challenges, 
+                  we have grown into a trusted institution with over 500 branches across 34 states and the FCT.
                 </p>
                 <p className='text-[#444444] font-inter leading-[27px] text-[18px]'>
-                The Organization was incorporated in April 2007 and licensed to operate as a regulated State 
-                Microfinance Bank by the Central Bank of Nigeria (CBN) in 2010. It became a National Microfinance 
-                Bank in 2012.
-                LAPO Microfinance Bank is an institution that provides a range of financial products and solutions 
-                to assist micro, small and medium enterprises, and members of low-income households in 34 of the 36 
-                states in Nigeria, including the Federal Capital Territory, Abuja and boasts of a broad network of 
-                over 500 branches.
+                  We provide tailored financial solutions for micro, small, and medium enterprises (MSMEs) and 
+                  low-income households, driving growth and economic resilience. Committed to sustainable development, 
+                  we continue to bridge financial gaps and create opportunities nationwide.
                 </p>
             </div>
             <img src={Building} className='' alt='Building' />
@@ -127,11 +123,11 @@ const Story = () => {
                 <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
                   The first choice financial institution committed to improving lives.
                 </p>
-                <p className='text-[#EEEEEE] text-base leading-6'>
+                {/* <p className='text-[#EEEEEE] text-base leading-6'>
                   At LAPO, our vision is to be the go-to financial institution—one that isn’t just about banking, 
                   but about transforming lives. We aim to empower our communities and create lasting change, 
                   making us the first choice for those seeking trust, innovation, and excellence in financial services.
-                </p>
+                </p> */}
               </div>
               <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
           </div>
@@ -141,11 +137,11 @@ const Story = () => {
                 <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
                   Providing Value-Driven and Accessible Financial Services Through Innovation
                 </p>
-                <p className='text-[#EEEEEE] text-base leading-6'>
+                {/* <p className='text-[#EEEEEE] text-base leading-6'>
                   At LAPO, our vision is to be the go-to financial institution—one that isn’t just about banking, 
                   but about transforming lives. We aim to empower our communities and create lasting change, 
                   making us the first choice for those seeking trust, innovation, and excellence in financial services..
-                </p>
+                </p> */}
               </div>
               <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
           </div>
@@ -245,8 +241,10 @@ const Story = () => {
               Key Milestones in Our Journey
             </h2>
             <p className="mt-4 font-inter text-[18px] opacity-90">
-              Since our inception in 1987, we have achieved significant milestones.
-              Each step has reinforced our commitment to financial inclusion and innovation.
+              Since 1987, we’ve been on a mission to make financial services accessible to all. Along the way, 
+              we’ve reached key milestones that reflect our dedication to inclusion, innovation, and impact. 
+              Every achievement brings us closer to a future where individuals and businesses have the financial 
+              tools they need to succeed. Our journey is far from over, and we’re excited about what’s ahead!
             </p>
           </div>
 
@@ -306,8 +304,10 @@ const Story = () => {
             Our Commitment to Financial Inclusion
           </p>
           <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
-            At LAPO Microfinance Bank, we believe that everyone deserves access to financial services. 
-            Our philosophy centers on empowering individuals and communities through inclusive financial solutions.
+            At LAPO Microfinance Bank, we are committed to breaking financial barriers and empowering individuals, 
+            small businesses, and underserved communities with accessible credit, savings, and financial literacy 
+            programs, because when financial inclusion thrives, communities prosper.
+
           </p>
           <div className='flex items-center gap-6'>
             <div className='w-[91px] h-[48px] border border-[#000000] flex items-center justify-center'>
