@@ -94,6 +94,7 @@ const Videos = () => {
                 </div>
                 <button className='text-gray-400'>Next →</button>
             </div>
+            
         </section>
 
         <section
