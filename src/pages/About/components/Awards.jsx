@@ -27,17 +27,18 @@ const Awards = () => {
             <div className='flex items-center gap-2'>
                 <div onClick={() => changeActiveTab(1)} className={`${activeTab === 1 ? "bg-[#00984C] rounded-lg" : "border border-x-0 border-t-0 border-[#34423B4D] "} w-[197px] h-[64px] flex items-center gap-2 justify-center p-2 cursor-pointer`}>
                     <img src={activeTab === 1 ? AwardGreen : AwardGrey} alt='Active' className='w-[21px] h-[26px]'/>
-                    <p className={`${activeTab === 1 ? "text-[#fff]" : "text-[#00984C]"} font-nunito font-semibold leading-7 text-[18px]`}>By Awards</p>
+                    <p className={`${activeTab === 1 ? "text-[#fff]" : "text-[#00984C]"} font-nunito font-semibold leading-7 text-[18px]`}>By Year</p>
                 </div>
                 <div onClick={() => changeActiveTab(2)} className={`${activeTab === 2 ? "bg-[#00984C] rounded-lg" : "border border-x-0 border-t-0 border-[#34423B4D] "} w-[197px] h-[64px] flex items-center gap-2 justify-center p-2 cursor-pointer`}>
                     <img src={activeTab === 2 ? AwardGreen : AwardGrey} alt='Active' className='w-[21px] h-[26px]'/>
-                    <p className={`${activeTab === 2 ? "text-[#fff]" : "text-[#00984C]"} font-nunito font-semibold leading-7 text-[18px]`}>By Year</p>
+                    <p className={`${activeTab === 2 ? "text-[#fff]" : "text-[#00984C]"} font-nunito font-semibold leading-7 text-[18px]`}>By Awards</p>
                 </div>
+                
             </div>
 
             <>
-                {activeTab === 1 && <ByAwards />}
-                {activeTab === 2 && <YearAwarded />}
+                {activeTab === 1 && <YearAwarded />}
+                {activeTab === 2 && <ByAwards />}
             </>
         </section>
 

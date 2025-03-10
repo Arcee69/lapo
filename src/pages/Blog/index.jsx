@@ -135,7 +135,7 @@ const Blog = () => {
             <div className='w-[741px] h-[406px] z-10 flex flex-col gap-5'>
                 <div className='flex items-center justify-center gap-2 bg-[#FAFAFA] w-[204px] rounded-full h-[28px] p-2'>
                     <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-                    <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 5M+ Nigerians</p>
+                    <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 6M+ Nigerians</p>
                 </div>
                 <p className='font-semibold text-[56px] leading-[57px] text-[#FAFAFA] font-hanken'>
                     Season of Love and giving: LAPO MFB's christmas Party

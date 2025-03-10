@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { IoChevronForwardOutline } from 'react-icons/io5';
+import { FaEye } from "react-icons/fa";
+import { PiTarget } from "react-icons/pi";
 
 import Box from '../../../components/Box';
 
@@ -116,18 +118,14 @@ const Story = () => {
         <div className='w-[636px] mx-auto  flex items-center justify-center'>
           <p className='font-hanken text-[54px] leading-[64px] text-center text-[#000]'>Pioneering Nigeria’s Financial Future</p>
         </div>
-        <div className='flex items-center gap-4'>
+
+        {/* <div className='flex items-center gap-4'>
           <div className='bg-[#4380BECC] rounded-[25px] w-6/12 flex flex-col relative gap-[212px] p-6'>
               <p className='text-[#EEEEEE] text-[54px] leading-[64px]'>Vision</p>
               <div className='flex flex-col gap-3'>
                 <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
                   The first choice financial institution committed to improving lives.
                 </p>
-                {/* <p className='text-[#EEEEEE] text-base leading-6'>
-                  At LAPO, our vision is to be the go-to financial institution—one that isn’t just about banking, 
-                  but about transforming lives. We aim to empower our communities and create lasting change, 
-                  making us the first choice for those seeking trust, innovation, and excellence in financial services.
-                </p> */}
               </div>
               <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
           </div>
@@ -137,15 +135,56 @@ const Story = () => {
                 <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
                   Providing Value-Driven and Accessible Financial Services Through Innovation
                 </p>
-                {/* <p className='text-[#EEEEEE] text-base leading-6'>
-                  At LAPO, our vision is to be the go-to financial institution—one that isn’t just about banking, 
-                  but about transforming lives. We aim to empower our communities and create lasting change, 
-                  making us the first choice for those seeking trust, innovation, and excellence in financial services..
-                </p> */}
               </div>
               <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
           </div>
+        </div> */}
+
+          {/* Vision & Mission Cards */}
+        <div className="flex items-center gap-6 w-full max-w-[1200px]">
+          {/* Vision Card */}
+          <div className="bg-[#4380BE] rounded-[25px] w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
+            {/* Icon & Title */}
+            <div className="flex items-center gap-3 text-white text-[30px] font-semibold">
+              <FaEye size={32} strokeWidth={2.5} />
+              Vision
+            </div>
+
+            {/* Text */}
+            <p className="text-white font-inter text-[20px] font-bold leading-[30px]">
+              The first choice financial institution committed to improving lives.
+            </p>
+
+            {/* Fold Effect */}
+            <img
+              src={Curve}
+              alt="Fold Effect"
+              className="absolute top-0 right-0 w-[50px] h-[50px]"
+            />
+          </div>
+
+          {/* Mission Card */}
+          <div className="bg-[#941D58] rounded-[25px] w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
+            {/* Icon & Title */}
+            <div className="flex items-center gap-3 text-white text-[30px] font-semibold">
+              <PiTarget size={32} strokeWidth={2.5} />
+              Mission
+            </div>
+
+            {/* Text */}
+            <p className="text-white font-inter text-[20px] font-bold leading-[30px]">
+              Providing Value-Driven and Accessible Financial Services Through Innovation
+            </p>
+
+            {/* Fold Effect */}
+            <img
+              src={Curve}
+              alt="Fold Effect"
+              className="absolute top-0 right-0 w-[50px] h-[50px]"
+            />
+          </div>
         </div>
+
       </section>
 
       <section
@@ -310,13 +349,16 @@ const Story = () => {
 
           </p>
           <div className='flex items-center gap-6'>
-            <div className='w-[91px] h-[48px] border border-[#000000] flex items-center justify-center'>
-              <p className='font-inter text-[#000000] text-base leading-6'>Learn</p>
-            </div>
-            <div className='flex items-center gap-2'>
-              <p className="font-inter text-base text-[#000000]" >Explore</p>
-              <IoChevronForwardOutline />
-            </div>
+            <button
+              className='bg-[#E78020] flex flex-col items-center justify-center w-[120px] h-[48px] rounded-[10px]'
+            >
+              <p className='font-hanken text-[#fff] text-base font-semibold'>Learn</p>
+            </button>
+            <button
+              className='border-[#E78020] border flex flex-col items-center justify-center w-[120px] h-[48px] rounded-[10px]'
+            >
+              <p className='font-hanken text-[#E78020] text-base font-semibold'>Explore</p>
+            </button>
           </div>
         </div>
         <div data-aos="fade-left">

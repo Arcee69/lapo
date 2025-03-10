@@ -133,7 +133,7 @@ const Home = () => {
         <div className='w-[688px] h-[406px] flex flex-col gap-5'>
           <div className='flex items-center justify-center gap-2 bg-[#E780201A] w-[204px] rounded-full h-[28px] p-2'>
             <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-            <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 5M+ Nigerians</p>
+            <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 6M+ Nigerians</p>
           </div>
           <p className='font-normal text-[60px] leading-[66px] text-[#0E3622] font-hanken'>
             Your Financial Partner <br /> for a Brighter Future
@@ -646,7 +646,7 @@ const Home = () => {
             <div className='bg-[#FDF2E9] w-[105px] flex items-center justify-center p-1 rounded-lg'>
               <p className='text-[#E78020] font-hanken text-xs'>Word of mouth</p>
             </div>
-            <p className='font-hanken text-[40px] leading-[56px] text-[#000000]'>What Our Customers Are Saying</p>
+            <p className='font-hanken text-[40px] leading-[56px] text-[#000000]'>Our Impact Stories</p>
         </div>
         <div className='w-full flex flex-col gap-[32px]'>
           <div className='w-full'>

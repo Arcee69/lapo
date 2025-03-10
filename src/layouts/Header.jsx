@@ -130,7 +130,7 @@ const Header = () => {
                          onClick={() => {
                           navigate("/products/savings", {
                             state: {section: "save"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                         className='flex items-center cursor-pointer gap-2 w-full'
                       >
@@ -146,7 +146,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/products", {
                             state: {section: "loans"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                       >
                         Loans
@@ -190,7 +190,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/products", {
                             state: {section: "loans"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                       >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Loans Products</p>
@@ -206,7 +206,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital", {
                             state: {section: "app"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -218,7 +218,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital/cards", {
                             state: {section: "cards"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -230,7 +230,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital/cards", {
                             state: {section: "cards"}
-                          })
+                          }); window.scrollTo(0, 0)
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -238,10 +238,17 @@ const Header = () => {
                         <p className='text-[#667085] font-inter text-sm leading-5'>Dial *351# to experience easy banking</p>
                       </div>
 
-                      <div className='flex items-center cursor-pointer gap-2 w-full'>
+                      {/* <div 
+                        className='flex items-center cursor-pointer gap-2 w-full'
+                        onClick={() => {
+                          navigate("/digital", {
+                            state: {section: "app"}
+                          }); window.scrollTo(0, 0)
+                        }}
+                      >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Digital Banking Products</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className='flex flex-col gap-6 w-[286px]'>
@@ -251,7 +258,7 @@ const Header = () => {
                           onClick={() => {
                             navigate("/pos", {
                               state: {section: "pos"}
-                            })
+                            }); window.scrollTo(0, 0)
                           }}
                         className='flex items-center cursor-pointer gap-2 w-full'
                       >
@@ -408,14 +415,14 @@ const Header = () => {
         </div>
         <div className='flex items-center gap-[15px]'>
           <button
-            className='bg-[#E78020] w-[115px] h-[40px] rounded-lg gap-2 group flex items-center justify-center'
+            className='bg-[#E78020] w-[125px] h-[40px] rounded-lg gap-2 group flex items-center justify-center'
             type='button'
             onClick={() => navigate("/contact-us")}
           >
             <p
               className='font-medium text-base font-nunito text-[#fff]'
             >
-              Join LAPO
+              Find a Branch
             </p>
           </button>
 

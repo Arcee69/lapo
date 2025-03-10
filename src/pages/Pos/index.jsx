@@ -137,10 +137,10 @@ const Pos = () => {
                                 Give your team the autonomy they need with access to as many cards as they need. 
                                 Authorise purchases with a click. Simple.
                             </p>
-                            <div className='flex items-center gap-2'>
+                            {/* <div className='flex items-center gap-2'>
                                 <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
                                 <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
@@ -152,10 +152,10 @@ const Pos = () => {
                                 Every card comes with configurable spending limits, purchase restrictions, 
                                 and cancellations for each employee and team.
                             </p>
-                            <div className='flex items-center gap-2'>
+                            {/* <div className='flex items-center gap-2'>
                                 <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
                                 <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
@@ -167,10 +167,10 @@ const Pos = () => {
                                 An all-in-one platform that helps you balance everything your team 
                                 need to be happy and your finances in order.
                             </p>
-                            <div className='flex items-center gap-2'>
+                            {/* <div className='flex items-center gap-2'>
                                 <p className='font-inter text-base text-[#E78020] font-medium leading-6'>Learn More</p>
                                 <FaArrowRight className='w-4 h-4 mt-[1px] text-[#E78020]' />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
