@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { FiMessageCircle } from "react-icons/fi";
 import { CiLocationOn, CiMail, CiSearch } from 'react-icons/ci'
 import { LiaPhoneSolid } from "react-icons/lia";
 import { IoIosArrowDown } from 'react-icons/io';
+import { useLocation } from "react-router-dom"
 
 import Building from "../../assets/png/lapo_building_b.png"
 import Curve from "../../assets/png/curve_top_right.png"
@@ -15,10 +16,23 @@ const Contact = () => {
     const [expandedState, setExpandedState] = useState("");
     const [search, setSearch] = useState("");
     const [apiBranches, setApiBranches] = useState([]);
+    const [loading, setLoading] = useState(false)
     
     const URL = import.meta.env.VITE_APP_API_URL;
 
+    const { state } = useLocation()
+
+    const branchRef = useRef(null) 
+
+    useEffect(() => {
+        if (state?.section === "branch" && branchRef.current) {
+            branchRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, [state]);
+
+
     const fetchBranches = async () => {
+        setLoading(true)
         try {
             const res = await axios.get(`${URL}/v1/branch`);
             const branchesData = res?.data?.data;
@@ -30,6 +44,8 @@ const Contact = () => {
             }
         } catch (err) {
             console.log(err);
+        } finally {
+            setLoading(false)
         }
     };
 
@@ -168,6 +184,7 @@ const Contact = () => {
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
+            ref={branchRef}
         >
             <div className='flex flex-col items-center gap-4'>
                 <div className='w-[111px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#E8FFF4]'>
@@ -191,37 +208,44 @@ const Contact = () => {
                         />
                     </div>
                     
-                    {Object.keys(groupedBranches).map((state) => (
-                        <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
-                            <button
-                                className={`w-full text-left p-3 font-bold flex items-center justify-between ${
-                                    expandedState === state ? "bg-[#00984C] text-white rounded-xl" : "bg-[#fff]"
-                                }`}
-                                onClick={() => setExpandedState(expandedState === state ? "" : state)}
-                            >
-                                <p>{state}</p>
-                                <IoIosArrowDown className={`${
-                                    expandedState === state ? "text-[#fff]" : "text-[#000]"
-                                } w-3 h-3`} />
-                            </button>   
-                            
-                            {expandedState === state && (
-                                <div className="bg-[#F7FCF9] rounded-md shadow p-2">
-                                    {groupedBranches[state].map((branch) => (
-                                        <div
-                                            key={branch.id}
-                                            className={`p-2 border-b cursor-pointer ${
-                                                selectedBranch?.id === branch.id ? "bg-green-100" : ""
-                                            }`}
-                                            onClick={() => setSelectedBranch(branch)}
-                                        >
-                                            {branch.name}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                    {loading ?
+                        <p className="font-hanken font-medium text-base">Fetching Branches...</p> 
+                        :
+                        apiBranches.length > 0 ?
+                        Object.keys(groupedBranches).map((state) => (
+                            <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
+                                <button
+                                    className={`w-full text-left p-3 font-bold flex items-center justify-between ${
+                                        expandedState === state ? "bg-[#00984C] text-white rounded-xl" : "bg-[#fff]"
+                                    }`}
+                                    onClick={() => setExpandedState(expandedState === state ? "" : state)}
+                                >
+                                    <p>{state}</p>
+                                    <IoIosArrowDown className={`${
+                                        expandedState === state ? "text-[#fff]" : "text-[#000]"
+                                    } w-3 h-3`} />
+                                </button>   
+                                
+                                {expandedState === state && (
+                                    <div className="bg-[#F7FCF9] rounded-md shadow p-2">
+                                        {groupedBranches[state].map((branch) => (
+                                            <div
+                                                key={branch.id}
+                                                className={`p-2 border-b cursor-pointer ${
+                                                    selectedBranch?.id === branch.id ? "bg-green-100" : ""
+                                                }`}
+                                                onClick={() => setSelectedBranch(branch)}
+                                            >
+                                                {branch.name}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        )) 
+                        :
+                        <p className="font-hanken font-medium text-base">No Branches Available</p> 
+                    }
                 </div>
 
                 {/* Right Panel - Map & Details */}

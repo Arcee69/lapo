@@ -417,7 +417,9 @@ const Header = () => {
           <button
             className='bg-[#E78020] w-[125px] h-[40px] rounded-lg gap-2 group flex items-center justify-center'
             type='button'
-            onClick={() => navigate("/contact-us")}
+            onClick={() => {navigate("/contact-us", {
+              state:{section: "branch" }
+            }), window.scrollTo(0, 0)}}
           >
             <p
               className='font-medium text-base font-nunito text-[#fff]'
