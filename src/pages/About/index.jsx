@@ -67,7 +67,7 @@ const About = () => {
           <p className={`${activeTab === 1 ? "text-[#fff]" : "text-[#00984C]"} font-inter leading-6 text-base`}>The LAPO story</p>
         </div>
         <div onClick={() => changeActiveTab(2)} className={`${activeTab === 2 ? "bg-[#00984C]" : "bg-[#98B3A226] "} w-[221px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
-          <p className={`${activeTab === 2 ? "text-[#fff]" : "text-[#00984C]"} font-inter leading-6 text-base`}>LAPO's Changemakers</p>
+          <p className={`${activeTab === 2 ? "text-[#fff]" : "text-[#00984C]"} font-inter leading-6 text-base`}>Board and Excos</p>
         </div>
         <div onClick={() => changeActiveTab(3)} className={`${activeTab === 3 ? "bg-[#00984C]" : "bg-[#98B3A226] "} w-[221px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
           <p className={`${activeTab === 3 ? "text-[#fff]" : "text-[#00984C]"} font-inter leading-6 text-base`}>Corporate Governance</p>
