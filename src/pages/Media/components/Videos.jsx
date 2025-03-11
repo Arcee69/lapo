@@ -39,7 +39,7 @@ const Videos = () => {
                             A video is worth more
                         </p>
                         <p className='font-hanken text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
-                            Explore on galleries to see videos of past seminars, trainings, meetings and other events
+                            Explore our galleries to see videos of past seminars, trainings, meetings and other events
                         </p>
                     </div>
                     <div className='flex items-center gap-[17px]'>

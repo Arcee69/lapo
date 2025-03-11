@@ -160,13 +160,16 @@ const Changemakers = () => {
                     accessible to all, we all move forward together.
                 </p>
                 <div className='flex items-center gap-6'>
-                <div className='w-[91px] h-[48px] border border-[#000000] flex items-center justify-center'>
-                    <p className='font-inter text-[#000000] text-base leading-6'>Learn</p>
-                </div>
-                <div className='flex items-center gap-2'>
-                    <p className="font-inter text-base text-[#000000]" >Explore</p>
-                    <IoChevronForwardOutline />
-                </div>
+                    <button
+                        className='bg-[#E78020] flex flex-col items-center justify-center w-[120px] h-[48px] rounded-[10px]'
+                    >
+                        <p className='font-hanken text-[#fff] text-base font-semibold'>Learn</p>
+                    </button>
+                    <button
+                        className='border-[#E78020] border flex flex-col items-center justify-center w-[120px] h-[48px] rounded-[10px]'
+                    >
+                        <p className='font-hanken text-[#E78020] text-base font-semibold'>Explore</p>
+                    </button>
                 </div>
             </div>
             <div data-aos="fade-left">

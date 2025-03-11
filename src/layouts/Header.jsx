@@ -252,19 +252,24 @@ const Header = () => {
                     </div>
 
                     <div className='flex flex-col gap-6 w-[286px]'>
-                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>POS Terminal</p>
-
-                      <div 
-                          onClick={() => {
+                      <p 
+                        onClick={() => {
                             navigate("/pos", {
                               state: {section: "pos"}
                             }); window.scrollTo(0, 0)
                           }}
+                        className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'
+                      >
+                        Lapo POS
+                      </p>
+
+                      {/* <div 
+                       
                         className='flex items-center cursor-pointer gap-2 w-full'
                       >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Pos Products</p>
                         <FaArrowRight className='text-[#F99650] w-4 h-4 mt-1' />
-                      </div>
+                      </div> */}
                     </div>
 
                   </div>
