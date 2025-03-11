@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { IoChevronForwardSharp } from 'react-icons/io5'
-import { useLocation } from 'react-router-dom'
+import { IoChevronForwardSharp, IoChevronForward } from 'react-icons/io5'
+import { useLocation, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 import LoanPeople from "../../../assets/png/loan_people.png"
 import Phone from "../../../assets/png/phone.png"
@@ -8,8 +9,12 @@ import Phone from "../../../assets/png/phone.png"
 import Left from "../../../assets/svg/left_loans_spiral.svg"
 import Right from "../../../assets/svg/right_loans_spiral.svg"
 import Stars from "../../../assets/svg/stars.svg"
+import Parent from "../../../assets/svg/parent_loans.svg"
+
 import LoanBox from '../../../components/LoanBox'
-import axios from 'axios'
+import SmallBox from '../../../components/SmallBox'
+import BigBox from '../../../components/BigBox'
+
 
 const Loans = () => {
     const [faqCategories, setFaqCategories] = useState([]);
@@ -20,6 +25,7 @@ const Loans = () => {
     const stepsContainerRef = useRef(null); 
 
     const { state } = useLocation()
+    const navigate = useNavigate()
 
     const loansRef = useRef(null)
 
@@ -142,190 +148,126 @@ const Loans = () => {
 
         <img src={LoanPeople} alt='LoanPeople' className='h-[576px] w-full' />
 
-        <section 
-            className='w-full py-[112px] px-[64px] flex items-start justify-between'
-            data-aos="fade-up" 
-            data-aos-duration="1000" 
-            data-aos-easing="linear"
+        <section
+            className='bg-[#FCF7F9] py-[112px] px-[64px] flex flex-col items-center gap-[40px] '
+            // ref={saveRef}
         >
-            {/* Left Sticky Container */}
-            <div className='w-[340px] flex flex-col gap-6 sticky top-[112px]'>
-                <div className='w-[90px] h-[32px] rounded-lg bg-[#E8FFF4] p-2 flex items-center justify-center'>
-                    <p className='font-hanken text-xs leading-[15px] text-[#00954B]'>LAPO Credit</p>
+            <div className='flex flex-col items-center gap-6'>
+                <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#FFF0E8]'>
+                    <p className='font-hanken font-medium text-sm leading-[15px] text-[#E78020]'>LAPO Loans</p>
                 </div>
-                <p className='font-hanken text-[#000] text-[48px] leading-[57px]'>Loan Products</p>
-                <p className='font-inter text-[18px] text-[#000]'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Suspendisse varius enim in eros elementum tristique. 
-                    Duis cursus, mi quis viverra ornare, 
-                    eros dolor interdum nulla, 
+                <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>Loan Products</p>
+                <p className='text-[18px] text-[#000000] w-[947px] mx-auto font-inter text-center leading-[27px]'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros 
+                    elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, 
                     ut commodo diam libero vitae erat.
                 </p>
             </div>
 
-            {/* Scroll-snapping Right Container */}
-            <div className='w-[956px] h-[calc(100vh-224px)] overflow-y-hidden snap-y snap-mandatory'>
-                {/* Pair 1 */}
-                <section className='h-full snap-start'>
-                    <div className='grid grid-cols-2 gap-6 h-full items-center'>
-                        <LoanBox 
-                            img={Phone}
-                            title="SME Loan"
-                            content="Select from various loan options that suit your needs."
-                            link="/loans/sme"
-                        />
-                        <LoanBox 
-                            img={Phone}
-                            title="Regular Loan"
-                            content="Select from various loan options that suit your needs."
-                            link="/loans/regular"
-                        />
+            <div  className='flex flex-col gap-4'>
+                <div onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}} className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                    <div className='flex items-center justify-between'>
+                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
+                            <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
+                        </div>
+                        <img src={Parent} alt="Parent" className='' />
                     </div>
-                </section>
-
-                {/* Pair 2 */}
-                <section className='h-full snap-start'>
-                    <div className='grid grid-cols-2 gap-6 h-full items-center'>
-                        <LoanBox 
-                            img={Phone}
-                            title="Agricultural loan"
-                            content="Select from various loan options that suit your needs."
-                            link="/loans/agricultural"
-                        />
-                        <LoanBox 
-                            img={Phone}
-                            title="Asset Loan"
-                            content="Select from various loan options that suit your needs."
-                            link="/loans/asset"
-                        />
+                    <div className='flex flex-col '>
+                        <p 
+                            className='text-[#941D58] font-hanken group-hover:text-[#fff] font-medium text-[40px] leading-[60px]'
+                        >
+                            Regular Loan
+                        </p>
+                        <p className='font-inter text-[#000000] w-[830px] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
+                            This loan product is designed to operate on a group (union) methodology.
+                        </p>
+                        <div className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
+                            <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
+                        </div>
                     </div>
-                </section>
-
-                {/* Pair 3 */}
-                <section className='h-full snap-start'>
-                    <div className='grid grid-cols-2 gap-6 h-full items-center'>
-                        <LoanBox 
-                            img={Phone}
+                </div>
+                <div className='flex gap-4 items-center'>
+                    <div className='flex flex-col gap-4'>
+                        <div className='flex items-center gap-4'>
+                            <SmallBox 
+                                heading="Savings"
+                                title="MSME Loan"
+                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to 
+                                save funds toward a particular project(s) over a specified period of time and 
+                                earn interest on their savings."
+                                link="/loans/sme"
+                                location="loans"
+                            />
+                            <SmallBox 
+                                heading="Savings"
+                                title="Asset Loan"
+                                subtitle="Child-focused savings account with high interest and life insurance. 
+                                A chance for your child to win LAPO MfB Scholarship."
+                                link="/loans/asset"
+                                location="loans"
+                            />
+                        </div>
+                        <BigBox 
+                            heading="High Yield Savings"
                             title="Education Loan"
-                            content="Select from various loan options that suit your needs."
+                            subtitle="This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis."
                             link="/loans/education"
-                        />
-                        <LoanBox 
-                            img={Phone}
-                            title="Special loan"
-                            content="Select from various loan options that suit your needs."
-                            link="/loans/special"
+                            location="loans"
                         />
                     </div>
-                </section>
-
-                {/* Pair 4 */}
-                <section className='h-full snap-start'>
-                    <div className='grid grid-cols-2 gap-6 h-full items-center'>
-                        <LoanBox 
-                            img={Phone}
-                            title="SUFEN Loan"
-                            content="Select from various loan options that suit your needs."
-                            link="#"
+                    <div className='flex flex-col gap-4'>
+                        <BigBox 
+                            heading="High Yield Savings"
+                            title="Agricultural Loan"
+                            subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                            link="/loans/agricultural"
+                            location="loans"
                         />
-                        <LoanBox 
-                            img={Phone}
-                            title="Public Sector Loan"
-                            content="Select from various loan options that suit your needs."
-                            link="#"
-                        />
+                        <div className='flex items-center gap-4'>
+                            <SmallBox 
+                                heading="Savings"
+                                title="Special loan"
+                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                                link="/loans/special"
+                                location="loans"
+                            />
+                            <SmallBox 
+                                heading="Investment Savings"
+                                title="Payroll Lending."
+                                subtitle="This account is designed for individuals that are either in business or employed by private or public companies as salary account"
+                                link="/loans/payroll"
+                                location="loans"
+                            />
+                        </div>
                     </div>
-                </section>
+                </div>
+                <div  className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                    <div className='flex items-center justify-between'>
+                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
+                            <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
+                        </div>
+                        <img src={Parent} alt="Parent" className='' />
+                    </div>
+                    <div className='flex flex-col '>
+                        <p 
+                            className='text-[#941D58] group-hover:text-[#fff] font-hanken font-medium text-[40px] leading-[60px]'
+                        >
+                           SUFEN Loan
+                        </p>
+                        <p className='font-inter text-[#000000] w-[830px] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
+                            The Savings Plan Account is designed for individuals and groups who wish to save 
+                            funds toward a particular project(s) over a specified period of time and earn 
+                            interest on their savings.
+                        </p>
+                        <div onClick={() => {navigate("#"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
+                            <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        {/* <section
-            className='px-[64px] py-[112px] gap-[80px] flex flex-col h-[695px] bg-[#941D58]'
-        >
-            <div
-                className='flex items-center flex-col gap-6'
-            >
-                <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
-                    <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
-                </div>
-
-                <p className='font-hanken text-[56px] leading-[67px] text-[#fff]'>
-                    Simple Steps to Secure Your Loan
-                </p>
-
-                <p className='text-[#D9D9D9] font-inter text-[20px] leading-[30px]'>
-                    Our application process is designed to be straightforward and efficient. 
-                    Follow these easy steps to get started on your loan journey.
-                </p>
-            </div>
-
-            <div 
-                className='flex items-start gap-[48px] overflow-x-scroll overflow-y-hidden relative'
-            >
-                <div
-                    className='flex flex-col items-center w-[396px] gap-6'
-                >
-                    <div
-                        className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'
-                    >
-                        <p className='font-hanken font-medium text-[#941D58] text-[32px] leading-[41px]'>1</p>
-                    </div>
-                    <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>Step 1: Choose Your Loan Type</p>
-                    <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                        Select from various loan options that suit your needs.
-                    </p>
-                </div>
-
-                <div className='h-1 bg-[#fff] w-[400px] mt-10 absolute left-52'></div>
-
-                <div
-                    className='flex flex-col items-center w-[396px] gap-6'
-                >
-                    <div
-                        className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'
-                    >
-                        <p className='font-hanken font-medium text-[#941D58] text-[32px] leading-[41px]'>2</p>
-                    </div>
-                    <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>Step 2: Fill Out the Application</p>
-                    <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                        Complete the online application form with accurate details.
-                    </p>
-                </div>
-
-                <div className='h-1 bg-[#fff] w-[400px] mt-10 absolute left-52'></div>
-
-                <div
-                    className='flex flex-col items-center w-[396px] gap-6'
-                >
-                    <div
-                        className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'
-                    >
-                        <p className='font-hanken font-medium text-[#941D58] text-[32px] leading-[41px]'>3</p>
-                    </div>
-                    <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>Step 3: Submit Your Documents</p>
-                    <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                        Upload the required documents for verification.
-                    </p>
-                </div>
-
-                <div className='h-1 bg-[#fff] w-[400px] mt-10 absolute left-52'></div>
-
-                <div
-                    className='flex flex-col items-center w-[396px] gap-6'
-                >
-                    <div
-                        className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'
-                    >
-                        <p className='font-hanken font-medium text-[#941D58] text-[32px] leading-[41px]'>4</p>
-                    </div>
-                    <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>Step 4: Submit Your Documents</p>
-                    <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                        Upload the required documents for verification.
-                    </p>
-                </div>
-
-            </div>
-        </section> */}
 
         <section
             ref={sectionRef}
