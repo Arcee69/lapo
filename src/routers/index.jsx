@@ -28,6 +28,7 @@ import Agricultural from "../pages/Products/loans/components/Agricultural";
 import Asset from "../pages/Products/loans/components/Asset";
 import Education from "../pages/Products/loans/components/Education";
 import Special from "../pages/Products/loans/components/Special";
+import Payroll from "../pages/Products/loans/components/Payroll";
 import Events from "../pages/Media/components/Events";
 import Resources from "../pages/Resources";
 import Blog from "../pages/Blog";
@@ -49,6 +50,7 @@ export default function Routers() {
           <Route path="/loans/asset" element={<Asset />} />
           <Route path="/loans/education" element={<Education />} />
           <Route path="/loans/special" element={<Special />} />
+          <Route path="/loans/payroll" element={<Payroll />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/media" element={<Events />} />
           <Route path="/videos" element={<Videos />} />
