@@ -18,24 +18,42 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180263/cynthia_mue8ye.png'
         },
         {
+            name: 'Aigbe Olotu',
+            position: 'Independent Non-Executive Director',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688653/aigbe_nqygpg.png'
+        },
+        {
             name: 'Bako Gloria',
             position: 'Head, Corporate Services Division.',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180264/bako_lsnbbh.png'
         },
         {
-            name: 'Oluremi Akande rpa.',
-            position: 'Head, Corporate Communications & Branding.',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180255/remi_kusuqa.png'
+            name: 'Angela Omeiza',
+            position: 'Independent Non-Executive Director',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688852/angela_uzs0oz.png'
+        },
+        {
+            name: 'Joshua James',
+            position: 'Non-Executive Director',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689056/josh_dvdzjf.png'
         },
         {
             name: 'Israel Aibuedefe',
             position: 'Head, Business Support Division.',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png'
         },
+    ]
+
+    const excos = [
         {
             name: 'Dorcas Thorpe',
-            position: 'Pending',
+            position: 'Head, Strategy And Transformation',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/dorcas_odwwhe.png'
+        },
+        {
+            name: 'Abel Ovenseri Enoguanmwonsa',
+            position: 'Head, Corporate Services',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689366/abel_s5rsit.png'
         },
         {
             name: 'Emmanuel Igiehon',
@@ -43,8 +61,23 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180248/emma_czmso4.png'
         },
         {
+            name: 'Oluremi Akande rpa.',
+            position: 'Head, Corporate Communications & Branding.',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180255/remi_kusuqa.png'
+        },
+        {
+            name: 'Peggy Idehen',
+            position: 'Hod, Corporate Secretariat',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png'
+        },
+        {
+            name: 'Olasukanmi Subair',
+            position: 'Head, Internal Audit',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689597/ola_q4celz.png'
+        },
+        {
             name: 'Lillian Ehigiamusoe',
-            position: 'Pending',
+            position: 'Head, Operations',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180266/lillian_jpsnd9.png'
         },
     ]
@@ -61,10 +94,10 @@ const Changemakers = () => {
             <div className='w-[960px] mx-auto gap-6 flex flex-col items-center'>
                 <div className='flex items-center justify-center gap-3 flex-col'>
                     <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
-                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Changemakers</p>
+                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Board</p>
                     </div>
                     <p className='font-hanken text-[#000000] text-[54px] leading-[60px]'>
-                        Board and Management
+                        Board of Directors
                     </p>
                 </div>
                 <p className='text-[#444444] font-inter leading-[30px] w-[768px] mx-auto text-center text-[20px]'>
@@ -82,6 +115,47 @@ const Changemakers = () => {
         >
             <div className='grid grid-cols-4 gap-[32px]'>
                 {board.map((item, index) => (
+                    <div className='flex flex-col items-start gap-6 ' key={index}>
+                        <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
+                        <div className='flex flex-col items-start gap-1'>
+                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>{item.name}</p>
+                            <p className='font-inter text-[#6941C6] text-[18px] leading-[28px]'>{item.position}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section
+            className='flex items-center py-[96px] w-full '
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+            <div className='w-[960px] mx-auto gap-6 flex flex-col items-center'>
+                <div className='flex items-center justify-center gap-3 flex-col'>
+                    <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
+                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Excos</p>
+                    </div>
+                    <p className='font-hanken text-[#000000] text-[54px] leading-[60px]'>
+                        Executives
+                    </p>
+                </div>
+                <p className='text-[#444444] font-inter leading-[30px] w-[768px] mx-auto text-center text-[20px]'>
+                    Meet the minds behind our mission to empower communities through 
+                    accessible and sustainable financial solutions.
+                </p>
+            </div>
+        </section>
+
+        <section
+            className='flex items-center pb-[96px] px-[96px] bg-[#fff] w-full '
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+            <div className='grid grid-cols-4 gap-[32px]'>
+                {excos.map((item, index) => (
                     <div className='flex flex-col items-start gap-6 ' key={index}>
                         <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
                         <div className='flex flex-col items-start gap-1'>
