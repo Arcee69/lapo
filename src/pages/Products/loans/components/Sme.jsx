@@ -136,20 +136,34 @@ const Sme = () => {
         <LoanDetails
             img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740886956/happy_guy_pcy0ip.png" 
             listContent={[
-                "No Collateral",
                 "Access To Funds For Business Expansion",
                 "Flexible repayment structure",
                 "Training on basic financial management, business planning and customer relations",
-                "Affordable interest rate",
                 "Expert Financial Advice"
             ]}
-            details={` Big businesses require big loans. The LAPO Microfinance Bank “SME Loan” is a credit 
-                product designed specifically to support Small and Medium Scale Enterprises (SMEs) operators in Nigeria.
-                Irrespective of the sector your enterprise is operating, LAPO MfB is willing to support you with a 
-                credit facility as low as 50,000 and as high as 100 million to expand the enterprise. At an affordable 
-                interest rate, Nigerian MSMEs can now maximize their potentials with our loan scheme for the expansion 
-                of their businesses.
+            details={`
+                    Irrespective of the sector your enterprise is operating, LAPO MfB is willing to support you with 
+                    a credit facility up to N5,000,000 to expand the enterprise..
+                    Big businesses require big loans. The LAPO Microfinance Bank “MSME Loan” is a credit product 
+                    designed specifically to support Micro, Small and Medium Enterprises (MSMEs) operators in Nigeria.
+                    Irrespective of the sector your enterprise is operating, LAPO MfB is willing to support you with a 
+                    credit facility as low as 50,000 and as high as 100 million to expand the enterprise. 
+                    At an affordable interest rate, Nigerian MSMEs can now maximize their potentials with our loan 
+                    scheme for the expansion of their businesses.
             `}
+            featuresContent={[
+                "Facility amount up to N100,000,000",
+                "Methodology: Individual",
+                "Duration: 12 months",
+            ]}
+            documentContent={[
+                "Loan application letter",
+                "Duly completed application form",
+                "2 guarantors",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                "Current utility bill",
+                "4 recent passport-size photographs",
+            ]}
         />
 
         <section

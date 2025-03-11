@@ -101,7 +101,7 @@ const Regular = () => {
     <div className='w-full'>
         <SubLoansHeader 
             title="Regular Loan"
-            subtitle={`The Regular Loan is tailored for micro-business owners engaged in agro-allied activities. This group-based loan offers financial support to enhance business operations, ensuring entrepreneurs can achieve sustainable growth`}
+            subtitle={`This loan product is designed to operate on a group (union) methodology. A union is a self-selected group of people who access loans individually, but have group guarantees. Regular Loan is created to help meet the working capital needs of clients that run small businesses.`}
         />
         <section
             className='bg-[#fff] px-[64px] py-[112px]'
@@ -148,7 +148,22 @@ const Regular = () => {
                     methodology. A union is a self-selected group of people who access
                     loans individually but have group guarantees. Regular Loan is created
                     to help meet the working capital needs of clients that run small
-                    businesses.`}
+                    businesses.`
+                }
+            featuresContent={[
+                    "Facility range: N20,000 (minimum) to N5,000,000 (maximum)",
+                    "Methodology: Individual and group",
+                    "Duration: 1-18 months",
+                    "Grace period: 2 weeks",
+                ]}
+            documentContent={[
+                    "Savings account with LAPO MfB",
+                    "Duly completed application form",
+                    "2 guarantors",
+                    "2 recent passport-size photographs",
+                    "Current utility bill",
+                    "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                ]}
         />
 
         <section

@@ -151,6 +151,20 @@ const Special = () => {
                 higher loans to sustain their business. In the same vein these clients also require monthly 
                 loan repayment frequency as it is more convenient for them.
             `}
+            featuresContent={[
+                "Facility range: N50,000 (minimum) to N150,000 (maximum)",
+                "Methodology: Group",
+                "Duration: 12 months",
+                "Grace period: 1 month",
+            ]}
+            documentContent={[
+                "You must have had an excellent repayment performance while accessing Regular Loan",
+                "Duly completed application form",
+                "2 guarantors",
+                "2 recent passport-size photographs",
+                "Current utility bill",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)"
+            ]}
         />
 
         <section

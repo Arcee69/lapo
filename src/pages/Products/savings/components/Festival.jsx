@@ -3,7 +3,7 @@ import SubSavingsHeader from '../../../../components/SubSavingsHeader'
 import SavingsDetails from '../../../../components/SavingsDetails'
 import axios from 'axios';
 
-const FixedDeposit = () => {
+const Festival = () => {
     const [faqCategories, setFaqCategories] = useState([]);
     const [faqByCategory, setFaqByCategory] = useState([]);
     const [selectedCategoryId, setSelectedCategoryId] = useState(null);
@@ -56,32 +56,42 @@ const FixedDeposit = () => {
   return (
     <div className='w-full'>
         <SubSavingsHeader 
-            title="Fixed Deposit Account"
-            subtitle={`Seize the opportunity to save funds that you do not immediately have need for and in addition, generate high interest on it.`}
+            title="Festival Savings Account"
+            subtitle={`
+                This product is specifically designed for festive period like Christmas, Easter, and Salah. 
+                It gives clients the opportunity to save to increase the stock of their pressing needs for 
+                celebration period.
+            `}
         />
 
         <SavingsDetails
-            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740877464/lock_big_npklwf.png" 
+            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740878412/Phone_girl_gyfeyp.png" 
             details={`
-                This is a savings product available to individuals, unions, clubs, and registered business 
-                organizations. It allows clients to save funds that they do not immediately have need for and 
-                generate interest on it.
+                At LAPO MfB, we recognize your need to start saving now for future investments. 
+                Festival Savings Account is designed to give clients the opportunity to save money for 
+                increasing their stock for sale during business boom associated with celebrations such as Christmas, 
+                Easter, New Year Day, Ramadan, Salah, etc.
             `}
             listContent={[
-                "Highly competitive interest rate",
-                "Available to Individuals, Groups and Associations",
+                "Minimum opening and operating balance is just N200",
+                "Savings Plan Account can be opened at any LAPO MfB branch nationwide",
+                "Very low entry balance",
                 "Easy access to your account",
-                "You are able to secure and grow funds that are not for immediate use",
-                "Expert financial advice"
+                "Payments can be made anywhere nationwide with our Pocket Money banking service",
+                "You are able to secure and grow savings",
+                "Available to individuals and groups",
+                "Expert Financial Advice"
             ]}
             featuresContent={[
-                "High Competitive Interest Rate",
+                "Interest: 30% of Monetary Policy Rate (MPR)"
             ]}
             documentContent={[
-                "Duly completed application form",
-                "2 recent passport-size photographs",
-                "Current utility bill",
-                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                "Three (3) Recent passport photographs",
+                "A valid means of ID: National ID, Driver’s license, Voter's card, International passport & Current University or Polytechnic Student ID Card (For Students) or Letter of Identification from a Notary Public.",
+                "Utility Bill: BEDC Bill, Refuse Disposal Receipt, Water Supply Bill or Store Rent Receipt",
+                "Duly completed Know Your Customer (KYC) procedure and verification report.",
+                "N1,000 initial deposit & minimum account balance.",
+                "Duly completed account opening forms including Mandate Signature Card",
             ]}
         />
 
@@ -206,4 +216,4 @@ const FixedDeposit = () => {
   )
 }
 
-export default FixedDeposit
+export default Festival

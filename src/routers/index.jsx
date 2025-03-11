@@ -6,7 +6,7 @@ import PageLayout from "../layouts";
 import About from "../pages/About";
 import Loans from "../pages/Products/loans";
 import Savings from "../pages/Products/savings";
-import SavingsPlan from "../pages/Products/savings/components/SavingsPlan";
+import Festival from "../pages/Products/savings/components/Festival";
 import Cards from "../pages/Digital/Cards";
 import Pos from "../pages/Pos";
 import Faqs from "../pages/Faq";
@@ -61,11 +61,11 @@ export default function Routers() {
           <Route path="/savings/individual/current" element={<IndividualCurrent />} />
           <Route path="/savings/xpress" element={<Xpress />} />
           <Route path="/savings/social" element={<Social />} />
+          <Route path="/savings/festival" element={<Festival />} />
           <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/pos" element={<Pos />} />
-          <Route path="/products/savings/plan" element={<SavingsPlan />} />
           <Route path="/digital" element={<MobileApp />} />
           <Route path="/digital/cards" element={<Cards />} />
           <Route path="/blog" element={<Blog />} />

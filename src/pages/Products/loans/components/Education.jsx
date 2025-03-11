@@ -168,6 +168,22 @@ const Education = () => {
                         between the need of the child and what the parent can offer in regard to school fees/levies, 
                         uniforms, books and school bus fees.
                     `}
+                    featuresContent={[
+                        "Loan range ‒ NGN 20,000 to NGN 200,000",
+                        "Grace period ‒ 1 Month moratorium (Approximately 30 days after disbursement)",
+                        "Interest rate ‒ 4% Reducing Balance (48% per Annum Reducing Balance)",
+                        "Repayment Mode ‒ Monthly",
+                        "Loan period ‒ Loan can be disbursed all year round",
+                        "Loan purpose — To cover Tution fees, uniforms, Books & Transportation (School Bus).",
+                    ]}
+                    documentContent={[
+                        "Loan application letter",
+                        "Duly completed application form",
+                        "2 guarantors",
+                        "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                        "Current utility bill",
+                        "4 recent passport-size photographs"
+                    ]}
                 />
             </>
         }
@@ -219,6 +235,21 @@ const Education = () => {
                         The loan is structured around classification of school needs such as working capital, 
                         buildings improvement/renovation and procurement of fixed assests that enhances learning.
                     `}
+                    featuresContent={[
+                        "Loan range ‒ NGN 250, 000 to NGN 3, 000, 000",
+                        "Grace period ‒ 3 to 18 months",
+                        "Interest rate ‒ 4% Reducing Balance (48% per Annum Reducing Balance)",
+                        "Repayment Mode ‒ Termly-Repayment shall be according to school cash-flow",
+                        "Loan period ‒ Loan can be disbursed all year round",
+                    ]}
+                    documentContent={[
+                        "Loan application letter",
+                        "Duly completed application form",
+                        "2 guarantors",
+                        "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                        "Current utility bill",
+                        "4 recent passport-size photographs"
+                    ]}
                 />
             </>
         }

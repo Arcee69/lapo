@@ -137,12 +137,11 @@ const Payroll = () => {
             img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740853276/family_tjbggm.png"
             listContent={[
                 "No Collateral",
-                "Access To Funds For Business Expansion",
-                "Access to other business loan products to strengthen client’s enterprise, e.g. Mid-term and Asset loan",
-                "Flexible repayment structure",
+                "No Bank Account opening required. It is a Payroll Lending.",
                 "Training on basic financial management, business planning and customer relations",
-                "Low interest rate",
-                "Expert Financial Advice"
+                "Flexible repayment structure",
+                "Interest: Interest Rate: 2.95% Flat Monthly",
+                "Quick loan in 6 hours",
             ]}
             details={` 
                 LAPO Payroll Lending is a product that offers personal loans through Payroll Lending to 
@@ -152,6 +151,21 @@ const Payroll = () => {
                 LAPO’s  Salary Access Deduction Code, we are guaranteed the monthly repayment as it is 
                 deducted at source.
             `}
+            featuresContent={[
+                "Facility range: NGN 20,000 - 3,000,000",
+                "Methodology: Individual",
+                "Duration: 1- 12 Months",
+                "No personal Guarantor is required for this loan",
+                "Client must be a Civil Servant under State or Federal Government establishment",
+            ]}
+            documentContent={[
+                "Duly completed application form",
+                "Client must have at least two years left in public service.",
+                "2 recent passport-size photographs",
+                "Last three months’ pay slip",
+                "Last three months bank statement",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+            ]}
         />
 
         <section

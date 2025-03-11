@@ -134,7 +134,7 @@ const Savings = () => {
             </div>
 
             <div  className='flex flex-col gap-4'>
-                <div className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C]'>
+                <div onClick={() => {navigate("/savings/festival"); window.scrollTo(0, 0)}} className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded-[8px]'>
                             <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
@@ -168,7 +168,6 @@ const Savings = () => {
                                 save funds toward a particular project(s) over a specified period of time and 
                                 earn interest on their savings."
                                 link="/savings/regular"
-                                // link="/products/savings/plan"
                             />
                             <SmallBox 
                                 heading="Savings"

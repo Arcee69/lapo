@@ -73,6 +73,17 @@ const RegularSavings = () => {
                 "Available to individuals and groups",
                 "Expert financial advice"
             ]}
+            featuresContent={[
+                "Interest: 30% of Monetary Policy Rate (MPR)"
+            ]}
+            documentContent={[
+                "Three (3) Recent passport photographs",
+                "N1,000 initial deposit & minimum account balance.",
+                "Duly completed account opening forms ",
+                "A valid means of ID: National ID, Driver’s license, Voter's card, International passport & Current University or Polytechnic Student ID Card (For Students) or Letter of Identification from a Notary Public.",
+                "Utility Bill: BEDC Bill, Refuse Disposal Receipt, Water Supply Bill or Store Rent Receipt",
+                "Duly completed Know Your Customer (KYC) procedure and verification report."
+            ]}
         />
 
 <section 

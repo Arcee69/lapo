@@ -6,7 +6,7 @@ import Box from "../assets/svg/box_purple.svg"
 import Features from "../assets/svg/features_purple.svg"
 import { details } from "motion/react-client";
 
-const LoanDetails = ({ img, listContent, details }) => {
+const LoanDetails = ({ img, listContent, details, featuresContent, documentContent }) => {
     return (
         <section 
             className="flex flex-col lg:flex-row gap-8 p-6 pb-[138px] max-w-6xl mx-auto"
@@ -39,11 +39,31 @@ const LoanDetails = ({ img, listContent, details }) => {
                 />
                 <Accordion 
                     title={<div className="flex items-center gap-1"><img src={Box} alt="Box" className="w-6 h-6"/> <p className="text-[#000000] font-semibold font-nunito text-[18px]">Features</p></div>}
-                    content={<p>Details about features...</p>} 
+                    content={
+                      Array.isArray(featuresContent) ? (
+                        <ul className="text-[#16181D] font-inter font-medium text-base space-y-2">
+                          {featuresContent.map((point, i) => (
+                            <li key={i}>• {point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{item.featuresContent}</p>
+                      )
+                  }
                 />
                 <Accordion 
                     title={<div className="flex items-center gap-1"><img src={Features} alt="Features" className="w-6 h-6"/> <p className="text-[#000000] font-semibold font-nunito text-[18px]">Documents</p></div>}
-                    content={<p>Required documents...</p>} 
+                    content={
+                      Array.isArray(documentContent) ? (
+                        <ul className="text-[#16181D] font-inter font-medium text-base space-y-2">
+                          {documentContent.map((point, i) => (
+                            <li key={i}>• {point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{item.documentContent}</p>
+                      )
+                  }
                 />
             </div>
     

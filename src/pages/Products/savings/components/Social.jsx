@@ -77,6 +77,17 @@ const Social = () => {
                 "Available to individuals and groups",
                 "Expert financial advice"
             ]}
+            featuresContent={[
+                "",
+            ]}
+            documentContent={[
+                "Duly completed SID deposit agreement form",
+                "Two (2) Recent passport photograph",
+                "Two (2) Mandate signature cards",
+                "Minimum deposit for Social Impact Deposit (SID) is N200,000 (When the deposit is up to N10,000,000 and above, client will be given the opportunity to nominate one child for direct LAPO scholarship)",
+                "Valid means of identification for individuals, clubs and registered business mentioned earlier. ",
+                "Minimum duration  is 180 days (6 months)",
+            ]}
         />
 
         <section 

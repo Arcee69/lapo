@@ -144,10 +144,25 @@ const Asset = () => {
                 "Low Interest Rate",
                 "Expert Financial Advice"
             ]}
-            details={` The Asset Loan is designed to help clients, starting from the second stage of group loans, 
+            details={`The Asset Loan is designed to help clients, starting from the second stage of group loans, 
                 acquire productive assets such as generators, refrigerators, and delivery vehicles, 
                 thereby boosting operational efficiency.
             `}
+            featuresContent={[
+                "Facility range: N20,000 (minimum) to N5,000,000 (maximum)",
+                "Methodology: Individual and group",
+                "Duration: 1- 18 Months",
+                "Grace period: 2 weeks",
+        
+            ]}
+            documentContent={[
+                "Savings account with LAPO MfB",
+                "Duly completed application form",
+                "2 guarantors",
+                "2 recent passport-size photographs",
+                "Current utility bill",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+            ]}
         />
 
         <section

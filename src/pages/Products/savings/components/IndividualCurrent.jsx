@@ -83,6 +83,16 @@ const IndividualCurrent = () => {
                 "You are able to secure and grow savings",
                 "Expert Financial Advice"
             ]}
+            featuresContent={[
+                "",
+            ]}
+            documentContent={[
+                "Duly completed account opening forms ",
+                "Three (3) Recent passport photographs",
+                "A valid means of ID: National ID, Driver’s license, Voter's card or International passport",
+                "Utility Bill: BEDC Bill, Refuse Disposal Receipt, Water Supply Bill or Store Rent Receipt.",
+                "Duly completed Know Your Customer (KYC) procedure and verification report.",
+            ]}
         />
 
         <section 

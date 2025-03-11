@@ -80,6 +80,20 @@ const Pikin = () => {
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "Expert financial advice"
             ]}
+            featuresContent={[
+                "Interest on Savings : 4.05% per annum",
+                "A chance for your Child / Ward to win LAPO MfB LTD Scholarship",
+                "Available to both New & Existing Groups and Individuals Clients",
+                "Minimum Monthly Accumulated Savings of N5,000",
+            ]}
+            documentContent={[
+                // "N200 Initial deposit & minimum account balance.",
+                "Duly completed account opening forms ",
+                "Four (4) Recent passport photographs of the parent and two (2) of the child/ward",
+                "A valid means of ID: Parent / Guardian - National ID, Driver’s license, Voter's card or International passport",
+                "Utility Bill: BEDC Bill, Refuse Disposal Receipt, Water Supply Bill or Store Rent Receipt.",
+                "Duly completed account opening forms including Mandate Signature Card",
+            ]}
         />
 
 <section 

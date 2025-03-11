@@ -3,22 +3,23 @@ import { IoChevronForward } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
 
 import Lock from "../assets/svg/lock.svg"
+import LockLoan from "../assets/svg/lock_loan.svg"
 
-const SmallBox = ({ title, subtitle, heading, link }) => {
+const SmallBox = ({ title, subtitle, heading, link, location }) => {
 
     const navigate = useNavigate()
 
   return (
-    <div className='w-[284.89px] h-[286.09px] drop-shadow cursor-pointer group bg-[#fff] border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C] rounded-[15px] gap-[51px] flex flex-col p-2 '>
+    <div className={`${location === "loans" ? "border-[#BE438029] hover:bg-[#941D58]" : "border-[#4380BE52]  hover:bg-[#00984C]"} w-[284.89px] h-[286.09px] drop-shadow cursor-pointer bg-[#fff] border-[3px] group rounded-[15px] gap-[51px] flex flex-col p-2 hover:border-0 `}>
         <div className='flex items-center justify-between'>
-            <div className='w-fit h-[32px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded'>
-                <p className='text-xs font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>{heading}</p>
+            <div className={`${location === "loans" ? "bg-[#C65B900D] group-hover:bg-[#941D58]" : "bg-[#F7F9FC] group-hover:bg-[#00984C] "} w-fit h-[32px] flex items-center p-2 justify-center rounded`}>
+                <p className={`${location === "loans" ? "text-[#941D58]" : "text-[#00984C]"} text-xs font-hanken group-hover:text-[#fff] leading-[15px]`}>{heading}</p>
             </div>
-            <img src={Lock} alt="Lock" className='' />
+            <img src={location === "loans" ? LockLoan : Lock} alt="Lock" className='' />
         </div>
         <div className='flex flex-col '>
             <p 
-                className='text-[#00984C] group-hover:text-[#fff] font-medium text-[20px] leading-[30px]'
+                className={`${location === "loans" ? "text-[#941D58]" : "text-[#00984C]"} font-hanken group-hover:text-[#fff] font-medium text-[20px] leading-[30px]`}
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             <p className='font-inter text-[#445D65] group-hover:text-[#FFFFFF] text-xs leading-[18px]'>

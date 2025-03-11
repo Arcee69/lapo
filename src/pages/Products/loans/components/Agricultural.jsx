@@ -101,7 +101,7 @@ const Agricultural = () => {
     <div className='w-full'>
         <SubLoansHeader 
             title="Agricultural  Loan"
-            subtitle={`The Agricultural Loan provides financial assistance to medium-scale farmers, enabling them to enhance production and invest in essential farming resources.`}
+            subtitle={`Agricultural financing is designed to help farmers achieve better results through the provision of agricultural loans. Loan size is between ₦30,000- ₦5,000,000`}
         />
         <section
             className='bg-[#fff] px-[64px] py-[112px]'
@@ -148,6 +148,20 @@ const Agricultural = () => {
                 the agricultural financing is designed to help farmers achieve better results through the provision 
                 of agricultural loans. Loan size is between ₦50,000- ₦500,000
             `}
+            featuresContent={[
+                "Facility range: N50,000 (minimum) to N5,000,000 (maximum)",
+                "Methodology: Individual, group and corporate",
+                "Duration: 1-12 months",
+                "Grace period: 30-60 days",
+                "Prospective clients must be practicing farmers with verifiable evidence of existing farm investments.",
+            ]}
+            documentContent={[
+                "Duly completed application form",
+                "2 guarantors",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+                "Current utility bill",
+                "4 recent passport-size photographs",
+            ]}
         />
 
         <section

@@ -77,6 +77,15 @@ const Xpress = () => {
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "Expert Financial Advice"
             ]}
+            featuresContent={[
+                "High Competitive Interest Rate",
+            ]}
+            documentContent={[
+                "Duly completed application form",
+                "2 recent passport-size photographs",
+                "Current utility bill",
+                "A valid means of ID (national ID, driver's license, voter's card or international passport)",
+            ]}
         />
 
         <section 
