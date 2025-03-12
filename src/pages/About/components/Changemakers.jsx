@@ -9,7 +9,7 @@ const Changemakers = () => {
     const board = [
         {
             name: 'Godwin Ehigiamusoe',
-            position: 'Founder/CEO',
+            position: 'Chairman',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180268/godwin_lbdsau.png'
         },
         {
@@ -222,7 +222,7 @@ const Changemakers = () => {
             data-aos-easing="linear"
         >
             <div className='flex flex-col gap-4 w-[601px]' data-aos="fade-right">
-                <p className='font-hanken font-medium text-base leading-[24px]'>The Changemakers</p>
+                <p className='font-hanken font-medium text-base leading-[24px]'>Board and Execs</p>
                 <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
                     Making Finance Work for Everyone
                 </p>

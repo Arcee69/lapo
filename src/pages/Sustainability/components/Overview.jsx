@@ -119,89 +119,39 @@ const Overview = ({ handleChangeTab }) => {
             </div>
 
             <div className='flex gap-[40px] items-start'>
-            <div className='w-[632px] bg-[#4380BE17] h-[788px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
-                <div className='flex flex-col gap-1'>
-                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Putting People First</p>
-                <p className='font-inter text-base text-[#101828] leading-6'>
-                    At LAPO Microfinance Bank, our commitment goes beyond financial services—we prioritize the 
-                    well-being of our clients. Through transparency, responsible pricing, and ethical banking practices, 
-                    we ensure fair and accessible financial solutions. We protect clients from over-indebtedness, 
-                    design products that meet their needs, safeguard their data, and provide clear feedback channels 
-                    to address concerns. By putting people first, we create a banking experience built on trust, 
-                    empowerment, and long-term financial stability.
-                </p>
-                </div>
-                <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Student} alt="Student" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
+                <div className='w-[632px] bg-[#4380BE17] h-[373.36px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
+                    <div className='flex flex-col gap-1'>
+                        <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Putting People First</p>
+                        <p className='font-inter text-base text-[#101828] leading-6'>
+                            At LAPO Microfinance Bank, our commitment goes beyond financial services—we prioritize the 
+                            well-being of our clients. Through transparency, responsible pricing, and ethical banking practices, 
+                            we ensure fair and accessible financial solutions. We protect clients from over-indebtedness, 
+                            design products that meet their needs, safeguard their data, and provide clear feedback channels 
+                            to address concerns. By putting people first, we create a banking experience built on trust, 
+                            empowerment, and long-term financial stability.
+                        </p>
                     </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
+                    
+                    <button
+                        className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                        type='button'
+                        onClick={() => {handleChangeTab('social'); window.scrollTo(0, 0)}}
+                    >
+                    <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
+                    <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
+                    </button>
                 </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
+                <div className='w-[600px]  h-[373.36px]'>
+                    <img src={Help} alt="Help" className="rounded-[18.65px] h-[373.36px] w-full" />
                 </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                </div>
-                <button
-                    className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
-                    type='button'
-                    onClick={() => {handleChangeTab('social'); window.scrollTo(0, 0)}}
-                >
-                <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
-                <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
-                </button>
-            </div>
-            <div className='w-[600px] h-[780px]'>
-                <img src={Help} alt="Help" className="" />
-            </div>
             </div>
 
             <div className='flex gap-[40px] items-start'>
-            <div className='w-[600px] h-[526px]'>
-                <img src={Wind} alt="Wind" className="" />
+            <div className='w-[600px] h-[373.36px]'>
+                <img src={Wind} alt="Wind" className="rounded-[18.65px] h-[373.36px] w-full" />
             </div>
 
-            <div className='w-[632px] bg-[#4380BE17] h-[526px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
+            <div className='w-[632px] bg-[#4380BE17] h-[373.36px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
                 <div className='flex flex-col gap-1'>
                 <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Our Commitment to a Sustainable Future</p>
                 <p className='font-inter text-base text-[#101828] leading-6'>
@@ -212,37 +162,19 @@ const Overview = ({ handleChangeTab }) => {
                     while empowering communities to thrive responsibly.
                 </p>
                 </div>
-                <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Student} alt="Student" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>International sustainability conference</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Green Clean Lending.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                </div>
+           
                 <button
-                className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                    className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
                 >
-                <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
-                <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
+                    <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
+                    <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
                 </button>
             </div>
             
             </div>
 
             <div className='flex gap-[40px] items-start'>
-            <div className='w-[632px] bg-[#4380BE17] h-[835px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
+            <div className='w-[632px] bg-[#4380BE17] h-[401.36px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
                 <div className='flex flex-col gap-1'>
                 <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Nigerian Sustainable Banking Principles (NSBP) & LAPO MfB</p>
                 <p className='font-inter text-base text-[#101828] leading-6'>
@@ -253,141 +185,40 @@ const Overview = ({ handleChangeTab }) => {
                     complaints so that they can be served more effectively.
                 </p>
                 </div>
-                <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Student} alt="Student" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                </div>
+                
                 <button
-                className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                    className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
                 >
-                <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
-                <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
+                    <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
+                    <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
                 </button>
             </div>
-            <div className='w-[600px] h-[835px]'>
-                <img src={Plant} alt="Plant" className="" />
+            <div className='w-[600px] h-[401.36px]'>
+                <img src={Plant} alt="Plant" className="rounded-[18.65px] h-[401.36px] w-full" />
             </div>
             </div>
 
             <div className='flex gap-[40px] items-start'>
-            <div className='w-[600px] h-[780px]'>
-                <img src={Recycle} alt="Recycle" className="" />
+            <div className='w-[600px] h-[353.36px]'>
+                <img src={Recycle} alt="Recycle" className="rounded-[18.65px] h-[353.36px] w-full" />
             </div>
 
-            <div className='w-[632px] bg-[#4380BE17] h-[788px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
+            <div className='w-[632px] bg-[#4380BE17] h-[353.36px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
                 <div className='flex flex-col gap-1'>
-                <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Sustainable Development Goals</p>
-                <p className='font-inter text-base text-[#101828] leading-6'>
-                    LAPO MfB has deepened its social performance approach by engaging in activities that enhance 
-                    our client protection principles and support, such as Transparency and Responsible pricing. 
-                    Others are Prevention of over-indebtedness, Appropriate product design, Privacy of clients' data, 
-                    and feedback methods, giving LAPO MfB ways to address clients' complaints so that they can be served 
-                    more effectively.
-                </p>
-                </div>
-                <div className='bg-[#FFFFFF] flex flex-col mt-[22px]'>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Student} alt="Student" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>LAPO Scholarship Scheme.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Toolbox} alt="Toolbox" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Skills Acquisition.</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Intervention</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Integration Programme</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
-                <div className='flex items-center justify-between py-4 px-5 border border-x-0 border-t-0 border-b-[#34423B4D]'>
-                    <div className='flex gap-3 items-center'>
-                    <img src={Biohazard} alt="Biohazard" className='w-5 h-5' />
-                    <p className='font-nunito text-[#000000] font-semibold text-[18px]'>Health Awareness</p>
-                    </div>
-                    {/* <MdArrowOutward className='w-4 h-4 text-[#000000]' /> */}
-                </div>
-
+                    <p className='font-medium text-[#101828] text-[32px] leading-[48px] font-hanken'>Sustainable Development Goals</p>
+                    <p className='font-inter text-base text-[#101828] leading-6'>
+                        LAPO MfB has deepened its social performance approach by engaging in activities that enhance 
+                        our client protection principles and support, such as Transparency and Responsible pricing. 
+                        Others are Prevention of over-indebtedness, Appropriate product design, Privacy of clients' data, 
+                        and feedback methods, giving LAPO MfB ways to address clients' complaints so that they can be served 
+                        more effectively.
+                    </p>
                 </div>
                 <button
-                className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                    className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
                 >
-                <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
-                <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
+                    <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
+                    <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
                 </button>
             </div>
             

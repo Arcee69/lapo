@@ -308,7 +308,7 @@ const Home = () => {
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
                   <div className='flex flex-col w-full'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
-                      7 Ways to Grow Your Savings
+                      7 Ways to Grow Your <br /> Savings
                     </h2>
                     <div className='flex flex-col w-full'>
                       {savingsPlan.map((item, index) => (
@@ -328,7 +328,7 @@ const Home = () => {
                       onClick={() => {navigate("/savings/regular"); window.scrollTo(0, 0)}}
                     >
                       <p className='font-medium text-base font-nunito'>Get Started</p> 
-                      <p className='font-medium text-base font-nunito'>→</p>
+                      {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
                   <div className='w-full lg:w-[320px]'>
@@ -359,7 +359,7 @@ const Home = () => {
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
                   <div className='flex flex-col w-full'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
-                      Payment Solution to fuel your growth
+                      Payment Solution To Fuel Your Growth
                     </h2>
                     <div className='flex flex-col w-full'>
                       {posPlan.map((item, index) => (
@@ -379,7 +379,7 @@ const Home = () => {
                       onClick={() => {navigate("/pos"); window.scrollTo(0, 0)}}
                     >
                       <p className='font-medium text-base font-nunito'>Get Started</p> 
-                      <p className='font-medium text-base font-nunito'>→</p>
+                      {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
@@ -410,7 +410,7 @@ const Home = () => {
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
                   <div className='flex flex-col w-full'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
-                      Payment Solution to fuel your growth
+                      Payment Solution To Fuel Your Growth
                     </h2>
                     <div className='flex flex-col w-full'>
                       {digitalPlan.map((item, index) => (
@@ -430,7 +430,7 @@ const Home = () => {
                       onClick={() => {navigate("/digital"); window.scrollTo(0, 0)}}
                     >
                       <p className='font-medium text-base font-nunito'>Learn More</p> 
-                      <p className='font-medium text-base font-nunito'>→</p>
+                      {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
@@ -461,7 +461,7 @@ const Home = () => {
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
                   <div className='flex flex-col w-full'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
-                      Uninterrupted Funds Supply
+                      Uninterrupted Funds <br /> Supply
                     </h2>
                     <div className='flex flex-col w-full'>
                       {loanPlan.map((item, index) => (
@@ -481,7 +481,7 @@ const Home = () => {
                       onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}}
                     >
                       <p className='font-medium text-base font-nunito'>Learn More</p> 
-                      <p className='font-medium text-base font-nunito'>→</p>
+                      {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
                   <div className='w-full lg:w-[346px]'>
@@ -599,7 +599,7 @@ const Home = () => {
                 <img src={SecondBoy} alt='SecondBoy' className='w-[120px] h-[120px] relative -right-24 -top-16 rounded-xl' /> 
               </div>
               <div className='flex flex-col gap-[28px]'>
-                  <p className='font-hanken font-medium text-[#121212] text-[32px] leading-[44px]'>USSD Payement Options</p>
+                  <p className='font-hanken font-medium text-[#121212] text-[32px] leading-[44px]'>USSD Payment Options</p>
                   <ul className='font-hanken text-[20px] leading-[34px] pl-8 list-disc text-[#6A6A6A]'>
                     <li>Transfer</li>
                     <li>Bills Payment</li>

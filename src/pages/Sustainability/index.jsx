@@ -25,14 +25,17 @@ const Sustainability = () => {
         style={{
           backgroundImage: `url(${SusBg})`,
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
+          backgroundRepeat: "no-repeat",
+          position: "relative",
         }}
         className='flex flex-col items-center justify-center h-[619px]'
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
       >
-        <div className='flex flex-col items-center w-[741px] h-[253px] gap-[4px]'>
+        <div className="absolute inset-0 bg-black/40" />
+
+        <div className='flex flex-col items-center w-[741px] h-[253px] gap-[4px] relative z-10'>
 
           <div className='w-[211px] h-[28px] rounded-full gap-1 flex items-center justify-center bg-[#FDF2E9]'>
             <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />

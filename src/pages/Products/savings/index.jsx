@@ -45,15 +45,15 @@ const Savings = () => {
                 <img src={Right} alt='Right' className='' />
             </div>
 
-            <div className='flex flex-col items-center pt-[173px] pb-[80px]'>
+            <div className='flex flex-col items-center pt-[100px] pb-[80px]'> {/* pt-[173px] */}
                 <div className='flex flex-col items-center gap-4 w-[688px] mx-auto'>
                     <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                         <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 5M+ Nigerians</p>
+                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
                     </div>
                     <div className='flex flex-col gap-6'>
                         <p className='font-hanken text-[56px] text-center font-medium text-[#FFFFFF] leading-[56px]'>
-                            Save for Tomorrow, Start Today
+                            Save for Tomorrow, <br />Start Today
                         </p>
                         <p className='font-hanken text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
                             Join countless satisfied customers who have taken the first step towards a secure 
