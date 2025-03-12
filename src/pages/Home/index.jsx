@@ -334,7 +334,7 @@ const Home = () => {
                               <img src={item.img} alt='OneStar' className='w-6 h-6' />
                               <p className='font-nunito text-[18px] font-semibold'>{item.text}</p>
                             </div>
-                            <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
+                            {/* <IoIosArrowDown className='w-5 h-5 text-[#34423B]' /> */}
                           </div>
                       </div>
                       ))}
@@ -385,7 +385,7 @@ const Home = () => {
                               <img src={item.img} alt='OneStar' className='w-6 h-6' />
                               <p className='font-nunito text-[18px] font-semibold'>{item.text}</p>
                             </div>
-                            <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
+                            {/* <IoIosArrowDown className='w-5 h-5 text-[#34423B]' /> */}
                           </div>
                       </div>
                       ))}
@@ -436,7 +436,7 @@ const Home = () => {
                               <img src={item.img} alt='OneStar' className='w-6 h-6' />
                               <p className='font-nunito text-[18px] font-semibold'>{item.text}</p>
                             </div>
-                            <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
+                            {/* <IoIosArrowDown className='w-5 h-5 text-[#34423B]' /> */}
                           </div>
                       </div>
                       ))}
@@ -487,7 +487,7 @@ const Home = () => {
                               <img src={item.img} alt='OneStar' className='w-6 h-6' />
                               <p className='font-nunito text-[18px] font-semibold'>{item.text}</p>
                             </div>
-                            <IoIosArrowDown className='w-5 h-5 text-[#34423B]' />
+                            {/* <IoIosArrowDown className='w-5 h-5 text-[#34423B]' /> */}
                           </div>
                       </div>
                       ))}

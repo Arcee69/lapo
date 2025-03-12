@@ -9,13 +9,21 @@ import { details } from "motion/react-client";
 const LoanDetails = ({ img, listContent, details, featuresContent, documentContent }) => {
     return (
         <section 
-            className="flex flex-col lg:flex-row gap-8 p-6 pb-[138px] max-w-6xl mx-auto"
+            className="flex flex-col lg:flex-row gap-8 p-6 pt-[66px] lg:pt-[154px] pb-[138px] max-w-6xl mx-auto"
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
+           {/* Right Section - Image */}
+           <div className="flex-1 lg:hidden ">
+              <img
+                  src={img} 
+                  alt="Group Meeting"
+                  className="w-full h-auto rounded-lg"
+              />
+            </div>
             {/* Left Section - Loan Details */}
-            <div className="flex-1 pr-[63px]  border-[1px] border-l-0 border-y-0 border-r-[#BAE2CE]">
+            <div className="flex-1 lg:pr-[63px] lg:border-[1px] lg:border-l-0 lg:border-y-0 lg:border-r-[#BAE2CE]">
                 <h2 className="text-[32px] font-hanken text-[#101828] font-medium">Details</h2>
                 <p className="text-[#445D65] leading-6 text-base font-inter mt-2">
                    {details}
@@ -73,12 +81,12 @@ const LoanDetails = ({ img, listContent, details, featuresContent, documentConte
             </div>
     
             {/* Right Section - Image */}
-            <div className="flex-1">
-            <img
-                src={img} // Replace with actual path
-                alt="Group Meeting"
-                className="w-full h-auto rounded-lg"
-            />
+            <div className="hidden lg:flex flex-1 ">
+              <img
+                  src={img} 
+                  alt="Group Meeting"
+                  className="w-full h-auto rounded-lg"
+              />
             </div>
         </section>
     );

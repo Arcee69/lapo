@@ -39,7 +39,7 @@ const SubSavingsHeader = ({title, subtitle }) => {
                         <p className='text-[#F99650] font-hanken font-medium text-base leading-7'>Get Started</p>
                     </button>
                     <button
-                        className='w-[120px] lg:w-[180px] h-[44px] w-[182px] lg:h-[56px] flex items-center justify-center border border-[#fff] rounded-lg'
+                        className='w-[120px] lg:w-[180px] h-[44px] lg:h-[56px] flex items-center justify-center border border-[#fff] rounded-lg'
                     >
                         <p className='text-[#fff] font-medium text-base leading-7'>Learn More</p>
                     </button>

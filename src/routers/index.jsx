@@ -45,7 +45,7 @@ export default function Routers() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/products" element={<Loans />} />
           <Route path="/loans/regular" element={<Regular />} />
-          <Route path="/loans/sme" element={<Sme />} />
+          <Route path="/loans/msme" element={<Sme />} />
           <Route path="/loans/agricultural" element={<Agricultural />} />
           <Route path="/loans/asset" element={<Asset />} />
           <Route path="/loans/education" element={<Education />} />

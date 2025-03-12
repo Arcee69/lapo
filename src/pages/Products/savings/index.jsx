@@ -98,7 +98,7 @@ const Savings = () => {
             <div className='w-[110px] h-[32px] bg-[#E8FFF4] rounded-lg p-1 flex items-center justify-center'>
                 <p className='text-[#00954B] font-medium font-hanken text-sm leading-[15px]'>LAPO Savings</p>
             </div>
-            <p className='text-[#000] font-hanken font-medium text-[32px] text-center lg:text-[54px] leading-[46px]'> Unlock Your Financial Potential with Our Savings</p>
+            <p className='text-[#000] font-hanken font-medium text-[32px] text-center lg:text-[54px] leading-[46px]'>Unlock Your Financial Potential with Our Savings</p>
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div 
                     className='w-full lg:w-[410px] h-[283px] border border-[#EAEEF2] rounded-[34px] py-[29.5px] px-[41.5px] flex flex-col gap-[17px]'

@@ -117,22 +117,22 @@ const Loans = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='flex items-center justify-between absolute -bottom-32 z-10 -inset-x-14'>
+            <div className='flex items-center justify-between absolute -bottom-32 -z-10 -inset-x-14'>
                 <img src={Right} alt='Right' className='' />
-                <img src={Left} alt='Left' className='' />
+                <img src={Left} alt='Left' className='hidden md:block' />
             </div>
 
-            <div className='flex flex-col items-center pt-[173px]'>
-                <div className='flex flex-col items-center gap-4 w-[688px] mx-auto'>
+            <div className='flex flex-col items-center px-5 lg:px-0 pt-[173px]'>
+                <div className='flex flex-col items-center gap-4 lg:w-[688px] mx-auto'>
                     <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                         <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
                         <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
                     </div>
                     <div className='flex flex-col gap-6'>
-                        <p className='font-hanken text-[54px] text-center font-medium text-[#FFFFFF] leading-[64px]'>
+                        <p className='font-hanken text-[32px] lg:text-[54px] text-center font-medium text-[#FFFFFF] leading-[32px] lg:leading-[64px]'>
                             Get Easy Access Loans to Fund your Business
                         </p>
-                        <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF] text-center'>
+                        <p className='font-inter text-base leading-[100%] lg:text-[18px] lg:leading-[27px] text-[#FFFFFF] text-center'>
                             Enjoy flexible Loan options that meets all your life goals from your personal to business to education and property.
                         </p>
                     </div>
@@ -146,18 +146,18 @@ const Loans = () => {
 
         </section>
 
-        <img src={LoanPeople} alt='LoanPeople' className='h-[576px] w-full' />
+        <img src={LoanPeople} alt='LoanPeople' className='h-[297.55px] lg:h-[576px] w-full' />
 
         <section
-            className='bg-[#FCF7F9] py-[112px] px-[64px] flex flex-col items-center gap-[40px] '
+            className='bg-[#FCF7F9] py-[61px] lg:py-[112px] px-5 lg:px-[64px] flex flex-col items-center gap-[40px] '
             // ref={saveRef}
         >
             <div className='flex flex-col items-center gap-6'>
                 <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#FFF0E8]'>
                     <p className='font-hanken font-medium text-sm leading-[15px] text-[#E78020]'>LAPO Loans</p>
                 </div>
-                <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>Loan Products</p>
-                <p className='text-[18px] text-[#000000] w-[947px] mx-auto font-inter text-center leading-[27px]'>
+                <p className='font-hanken text-[#000000] text-[32px] leading-[120%] lg:text-[54px] lg:leading-[64px]'>Loan Products</p>
+                <p className='text-[18px] text-[#000000] lg:w-[947px] mx-auto font-inter text-center leading-[27px]'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros 
                     elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, 
                     ut commodo diam libero vitae erat.
@@ -165,38 +165,38 @@ const Loans = () => {
             </div>
 
             <div  className='flex flex-col gap-4'>
-                <div onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}} className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                <div onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
-                            <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
+                            <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />
                     </div>
                     <div className='flex flex-col '>
                         <p 
-                            className='text-[#941D58] font-hanken group-hover:text-[#fff] font-medium text-[40px] leading-[60px]'
+                            className='text-[#941D58] font-hanken group-hover:text-[#fff] font-medium text-[20px] leading-[100%] lg:text-[40px] lg:leading-[60px]'
                         >
                             Regular Loan
                         </p>
-                        <p className='font-inter text-[#000000] w-[830px] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
+                        <p className='font-inter text-[#000000] lg:w-[830px] group-hover:text-[#FFFFFF] leading-[150%] lg:text-[20px] lg:leading-[30px]'>
                             This loan product is designed to operate on a group (union) methodology.
                         </p>
                         <div className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
-                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
+                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-4 items-center'>
+                <div className='flex flex-col lg:flex-row gap-4 items-center'>
                     <div className='flex flex-col gap-4'>
-                        <div className='flex items-center gap-4'>
+                        <div className='flex flex-col lg:flex-row items-center gap-4'>
                             <SmallBox 
                                 heading="Savings"
                                 title="MSME Loan"
                                 subtitle="The Savings Plan Account is designed for individuals and groups who wish to 
                                 save funds toward a particular project(s) over a specified period of time and 
                                 earn interest on their savings."
-                                link="/loans/sme"
+                                link="/loans/msme"
                                 location="loans"
                             />
                             <SmallBox 
@@ -224,7 +224,7 @@ const Loans = () => {
                             link="/loans/agricultural"
                             location="loans"
                         />
-                        <div className='flex items-center gap-4'>
+                        <div className='flex flex-col lg:flex-row items-center gap-4'>
                             <SmallBox 
                                 heading="Savings"
                                 title="Special loan"
@@ -242,26 +242,26 @@ const Loans = () => {
                         </div>
                     </div>
                 </div>
-                <div  className='w-full h-[330px] bg-[#fff] py-[10px] px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                <div  className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
-                            <p className='text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
+                            <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>High Yield Savings</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />
                     </div>
-                    <div className='flex flex-col '>
+                    <div className='flex flex-col'>
                         <p 
-                            className='text-[#941D58] group-hover:text-[#fff] font-hanken font-medium text-[40px] leading-[60px]'
+                            className='text-[#941D58] group-hover:text-[#fff] font-hanken font-medium text-[20px] leading-[100%] lg:text-[40px] lg:leading-[60px]'
                         >
                            SUFEN Loan
                         </p>
-                        <p className='font-inter text-[#000000] w-[830px] group-hover:text-[#FFFFFF] text-[20px] leading-[30px]'>
+                        <p className='font-inter text-[#000000] lg:w-[830px] group-hover:text-[#FFFFFF] text-sm leading-[150%] lg:text-[20px] lg:leading-[30px]'>
                             The Savings Plan Account is designed for individuals and groups who wish to save 
                             funds toward a particular project(s) over a specified period of time and earn 
                             interest on their savings.
                         </p>
                         <div onClick={() => {navigate("#"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
-                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-[19px]'>Learn More</p>
+                            <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>
                     </div>
@@ -271,17 +271,17 @@ const Loans = () => {
 
         <section
             ref={sectionRef}
-            className='px-[64px] py-[112px] gap-[80px] flex flex-col h-[695px] bg-[#941D58]'
+            className='px-5 lg:px-[64px] py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
         >
             {/* Header section unchanged */}
             <div className='flex items-center flex-col gap-6'>
                 <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
-                <p className='font-hanken text-[56px] leading-[67px] text-[#fff]'>
+                <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
                     Simple Steps to Secure Your Loan
                 </p>
-                <p className='text-[#D9D9D9] font-inter text-[20px] leading-[30px]'>
+                <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>
                     Our application process is designed to be straightforward and efficient. 
                     Follow these easy steps to get started on your loan journey.
                 </p>
@@ -290,44 +290,44 @@ const Loans = () => {
             {/* Steps container with hidden scrollbar */}
             <div 
                 ref={stepsContainerRef}
-                className='flex items-start gap-[48px] overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+                className='flex flex-col lg:flex-row items-start gap-[48px] overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
             >
                 {[1, 2, 3, 4].map((step, index) => (
                     <div
                         key={step}
-                        className='flex flex-col items-center w-[396px] gap-6 flex-shrink-0'
+                        className='flex flex-row items-start lg:flex-col lg:items-center lg:w-[396px] gap-6 flex-shrink-0'
                     >
-                        <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
-                            <p className='font-hanken font-medium text-[#941D58] text-[32px] leading-[41px]'>{step}</p>
+                        <div className='w-[60px] h-[40px] lg:w-[80px] lg:h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
+                            <p className='font-hanken font-medium text-[#941D58] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
                         </div>
-                        <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>
-                            Step {step}: {index === 3 ? 'Get Approved' : 'Choose Your Loan Type'}
-                        </p>
-                        <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
-                            {index === 3 ? 
-                                'Receive your loan approval and access funds quickly.' : 
-                                'Select from various loan options that suit your needs.'
-                            }
-                        </p>
+                        <div className="flex flex-col items-start lg:items-center gap-2">
+                            <p className='font-hanken font-medium text-base leading-[130%] lg:text-[20px] lg:leading-[26px] text-[#fff]'>
+                                Step {step}: {index === 3 ? 'Get Approved' : 'Choose Your Loan Type'}
+                            </p>
+                            <p className='font-inter text-[#D9D9D9] text-base leading-[150%] lg:text-[20px] lg:leading-[30px] lg:text-center'>
+                                {index === 3 ? 
+                                    'Receive your loan approval and access funds quickly.' : 
+                                    'Select from various loan options that suit your needs.'
+                                }
+                            </p>
+                        </div>
                     </div>
                 ))}
-
-         
             </div>
         </section>
 
         <section 
-            className='bg-[#fff] py-[112px] flex flex-col '
+            className='bg-[#fff] py-[88px] lg:py-[112px] flex flex-col '
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         > 
-            <div className='w-[768px] flex flex-col mx-auto gap-[80px]'>
+            <div className='lg:w-[768px] px-5 lg:px-0 flex flex-col mx-auto gap-[80px]'>
                 <div
                     className='flex flex-col gap-6 items-center'
                 >
-                    <p className='font-hanken font-medium text-[48px] leading-[57px] '>FAQs</p>
-                    <p className='font-inter text-[#000000] text-[18px] leading-[27px]'>
+                    <p className='font-hanken font-medium text-[32px] leading-[120%] lg:text-[48px] lg:leading-[57px] '>FAQs</p>
+                    <p className='font-inter text-[#000000] text-base leading-[150%] lg:text-[18px] lg:leading-[27px]'>
                         Find answers to your questions about our loan offerings and application process.
                     </p>
                 </div>
@@ -341,11 +341,11 @@ const Loans = () => {
                                 {faqItem.answer}
                             </p>
                         </div>
-                        )) : (
+                    )) : (
                         <p className='text-center font-inter text-[#000]'>No Faq Available</p>
                     )}
                 </div>
-                <div className='w-[560px] flex flex-col items-center mx-auto gap-4'>
+                <div className='w-full lg:w-[560px] flex flex-col items-center mx-auto gap-4'>
                     <p className='font-hanken text-[#000000] font-semibold text-[32px] leading-[41px]'>Still have questions?</p>
                     <p className='text-[18px] text-[#000000] leading-[27px]'>We're here to help you!</p>
                     <button
@@ -363,17 +363,17 @@ const Loans = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[768px] h-[189px] flex flex-col items-center gap-6'>
-                <p className='font-hanken text-[48px] leading-[57px] text-[#FFFFFF]'>Apply for Your Loan Today</p>
-                <p className='font-hanken text-[18px] leading-[27px] text-[#FFFFFF]'>
+            <div className='lg:w-[768px] h-[189px] flex flex-col items-center gap-6'>
+                <p className='font-hanken text-[32px] leading-[120%] text-center lg:text-[48px] lg:leading-[57px] text-[#FFFFFF]'>Apply for Your Loan Today</p>
+                <p className='font-hanken text-center text-base lg:text-[18px] leading-[150%] lg:leading-[27px] text-[#FFFFFF]'>
                     Explore our diverse loan options tailored for personal, business, and educational needs.
                 </p>
                 <div className='flex items-center gap-4'>
                     <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
-                        <p className='font-hanken text-[#000000] font-medium text-base leading-6'>Contact Us</p>
+                        <p className='font-hanken text-[#000000] font-medium  text-[13px] lg:text-base leading-6'>Contact Us</p>
                     </div>
-                    <div className='bg-[#000000] w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
-                        <p className='font-hanken font-medium text-[#fff]'>Download the LAPO App</p>
+                    <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                        <p className='font-hanken font-medium text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
                     </div>
                 </div>
             </div>
