@@ -58,8 +58,8 @@ const YearAwarded = () => {
     return (
         <div className='w-full flex flex-col gap-[32px]'>
             <div className='flex flex-col gap-5'>
-                <p className='font-hanken text-[32px] leading-[44px] text-[#101828]'>Year Awarded</p>
-                <div className='grid grid-cols-6 gap-2'>
+                <p className='font-hanken text-[24px] lg:text-[32px] leading-[44px] text-[#101828]'>Year Awarded</p>
+                <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2'>
                     {uniqueYears.map(year => (
                         <div 
                             key={year}
@@ -86,7 +86,7 @@ const YearAwarded = () => {
             </div>
 
             <div className='flex flex-col gap-5'>
-                <p className='font-hanken text-[32px] leading-[44px] text-[#101828]'>Awards</p>
+                <p className='font-hanken text-[24px] lg:text-[32px] leading-[44px] text-[#101828]'>Awards</p>
                 <div className='bg-[#FCFAF9] rounded-[20px] p-[40px] flex flex-col gap-[15px]'>
                     {filteredAwards.length === 0 ? (
                         <p className="text-center text-gray-500">No awards found for this year</p>

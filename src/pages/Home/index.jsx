@@ -10,6 +10,7 @@ import Lenis from "@studio-freight/lenis";
 
 
 import HomeBg from "../../assets/png/home_bg.png"
+import MobileHomeBg from "../../assets/png/mobile_home_bg.png"
 import Girl from "../../assets/png/girl.png"
 import CurveLeft from "../../assets/png/curve_left.png"
 import CurveRight from "../../assets/png/curve_right.png"
@@ -53,6 +54,21 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("savings")
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   const cardsRef = useRef([]);
 
   const handleTabChange = (value) => {

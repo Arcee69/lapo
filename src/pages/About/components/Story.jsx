@@ -80,7 +80,7 @@ const Story = () => {
   return (
     <div className='w-full'>
         <section
-            className='flex flex-col px-[64px] py-[112px] gap-[80px]'
+            className='flex flex-col px-5 py-[64px] lg:px-[64px] lg:py-[112px] gap-[80px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
@@ -89,10 +89,10 @@ const Story = () => {
                 <div className='w-[63px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
                 <p className='font-hanken text-xs leading-[15px] text-[#00954B]'>History</p>
                 </div>
-                <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
+                <p className='font-hanken text-[#000000] text-[28px] lg:text-[54px] leading-[120%] lg:leading-[64px]'>
                   30 Years of Transformation: Our Journey of Impact and Growth
                 </p>
-                <p className='text-[#444444] font-inter leading-[27px] text-[18px]'>
+                <p className='text-[#444444] font-inter leading-[150%] lg:leading-[27px] text-base lg:text-[18px]'>
                   For over three decades, LAPO Microfinance Bank has empowered communities through financial inclusion. 
                   Founded by the Lift Above Poverty Organization (LAPO) in response to economic challenges, 
                   we have grown into a trusted institution with over 500 branches across 34 states and the FCT.
@@ -107,7 +107,7 @@ const Story = () => {
       </section>
 
       <section
-        className='bg-[#FAFBFB] py-[112px] px-[64px] gap-[48px] flex flex-col items-center justify-center'
+        className='bg-[#FAFBFB] py-[112px] px-5 lg:px-[64px] gap-[48px] flex flex-col items-center justify-center'
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
@@ -115,35 +115,14 @@ const Story = () => {
         <div className='w-[138px] flex items-center justify-center p-2 bg-[#E8FFF4] rounded-[6px]'>
           <p className='font-hanken text-xs leading-[15px]'>The LAPO Philosophy</p>
         </div>
-        <div className='w-[636px] mx-auto  flex items-center justify-center'>
-          <p className='font-hanken text-[54px] leading-[64px] text-center text-[#000]'>Pioneering Nigeria’s Financial Future</p>
+        <div className='lg:w-[636px] mx-auto flex items-center justify-center'>
+          <p className='font-hanken text-[28px] lg:text-[54px] leading-[120%] lg:leading-[64px] text-center text-[#000]'>Pioneering Nigeria’s Financial Future</p>
         </div>
 
-        {/* <div className='flex items-center gap-4'>
-          <div className='bg-[#4380BECC] rounded-[25px] w-6/12 flex flex-col relative gap-[212px] p-6'>
-              <p className='text-[#EEEEEE] text-[54px] leading-[64px]'>Vision</p>
-              <div className='flex flex-col gap-3'>
-                <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
-                  The first choice financial institution committed to improving lives.
-                </p>
-              </div>
-              <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
-          </div>
-          <div className='bg-[#941D58CC] rounded-[25px] w-6/12 flex flex-col relative gap-[212px] p-6'>
-              <p className='text-[#EEEEEE] text-[54px] leading-[64px]'>Mission</p>
-              <div className='flex flex-col gap-3'>
-                <p className='font-inter font-bold text-[24px] leading-[29px] text-[#EEEEEE]'>
-                  Providing Value-Driven and Accessible Financial Services Through Innovation
-                </p>
-              </div>
-              <img src={Curve} alt='Curve' className='absolute top-0 right-0 w-[77px] h-[48px]' />
-          </div>
-        </div> */}
-
           {/* Vision & Mission Cards */}
-        <div className="flex items-center gap-6 w-full max-w-[1200px]">
+        <div className="flex flex-col lg:flex-row items-center gap-6 w-full lg:max-w-[1200px]">
           {/* Vision Card */}
-          <div className="bg-[#4380BE] rounded-[25px] w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
+          <div className="bg-[#4380BE] rounded-[25px] w-full lg:w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
             {/* Icon & Title */}
             <div className="flex items-center gap-3 text-white text-[30px] font-semibold">
               <FaEye size={32} strokeWidth={2.5} />
@@ -164,7 +143,7 @@ const Story = () => {
           </div>
 
           {/* Mission Card */}
-          <div className="bg-[#941D58] rounded-[25px] w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
+          <div className="bg-[#941D58] rounded-[25px] w-full lg:w-1/2 p-8 relative shadow-lg flex flex-col justify-between min-h-[250px]">
             {/* Icon & Title */}
             <div className="flex items-center gap-3 text-white text-[30px] font-semibold">
               <PiTarget size={32} strokeWidth={2.5} />
@@ -193,12 +172,12 @@ const Story = () => {
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <p className='text-[#000000] font-hanken text-[48px] leading-[57px]'>Core Values</p>
+        <p className='text-[#000000] font-hanken text-[32px] lg:text-[48px] leading-[120%] lg:leading-[57px]'>Core Values</p>
         <div className='flex flex-col items-center gap-[55px] '>
-          <div className='flex items-start justify-center pl-14'>
+          <div className='flex flex-col lg:flex-row items-start gap-10 lg:gap-0 lg:justify-center lg:pl-14'>
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t lg:border-t-0 border-b-0 border-r lg:border-r-0 rounded-[9px] p-5"
               img={People}
               alt="People"
               title="People First"
@@ -206,7 +185,7 @@ const Story = () => {
             /> 
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r lg:border-r-0 rounded-[9px] p-5"
               img={Integrity}
               alt="Integrity"
               title="Integrity"
@@ -214,7 +193,7 @@ const Story = () => {
             />
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r lg:border-r-0 rounded-[9px] p-5"
               img={Sustainability}
               alt="Sustainability"
               title="Commitment to Sustainability"
@@ -222,7 +201,7 @@ const Story = () => {
             />
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r lg:border-r-0 rounded-[9px] p-5"
               img={Excellence}
               alt="Excellence"
               title="Excellence"
@@ -231,10 +210,10 @@ const Story = () => {
 
           </div>
 
-          <div className='flex justify-center px-[234px] items-start'>
+          <div className='flex flex-col lg:flex-row gap-10 lg:gap-0 lg:justify-center lg:px-[234px] items-start'>
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 lg:border-b rounded-[9px] p-5"
               img={Passion}
               alt="Passion"
               title="Passion & Commitment"
@@ -242,7 +221,7 @@ const Story = () => {
             />
 
             <Box 
-              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 rounded-[9px] p-5"
+              className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 lg:border-b rounded-[9px] p-5"
               img={Teamwork}
               alt="Teamwork"
               title="Enterprise & Teamwork"
@@ -265,7 +244,7 @@ const Story = () => {
       
 
       <section
-        className="bg-[#00984C] px-16 py-28 text-white"
+        className="bg-[#00984C] px-5 lg:px-16 py-28 text-white"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-easing="linear"
@@ -276,10 +255,10 @@ const Story = () => {
             <span className="bg-[#E8FFF4] text-[#00954B] w-[82px] h-[32px] font-hanken px-3 py-1 rounded-[6px] text-sm">
               Milestones
             </span>
-            <h2 className="text-[54px] leading-[64px] font-normal font-hanken mt-4">
+            <h2 className="text-[32px] lg:text-[54px] leading-[120%] lg:leading-[64px] font-normal font-hanken mt-4">
               Key Milestones in Our Journey
             </h2>
-            <p className="mt-4 font-inter text-[18px] opacity-90">
+            <p className="mt-4 font-inter text-base lg:text-[18px] opacity-90">
               Since 1987, we’ve been on a mission to make financial services accessible to all. Along the way, 
               we’ve reached key milestones that reflect our dedication to inclusion, innovation, and impact. 
               Every achievement brings us closer to a future where individuals and businesses have the financial 
@@ -307,7 +286,7 @@ const Story = () => {
 
                 {/* Year */}
                 <h3
-                  className={`text-[40px] leading-[48px] font-bold font-hanken ${
+                  className={`text-[32px] lg:text-[40px] leading-[120%] lg:leading-[48px] font-bold font-hanken ${
                     activeIndex === index ? "text-[#F99650]" : "opacity-50"
                   }`}
                 >
@@ -315,13 +294,13 @@ const Story = () => {
                 </h3>
 
                 {/* Title */}
-                <h4 className="text-[32px] leading-[41px] font-hanken text-[#FFFFFF] font-medium mt-4">
+                <h4 className="text-[24px] lg:text-[32px] leading-[130%] lg:leading-[41px] font-hanken text-[#FFFFFF] font-medium mt-4">
                   {milestone.title}
                 </h4>
 
                 {/* Description */}
                 {milestone.description && (
-                  <p className="mt-[32px] text-[18px] font-inter opacity-80">
+                  <p className="mt-[32px] text-base lg:text-[18px] font-inter opacity-80">
                     {milestone.description}
                   </p>
                 )}
@@ -332,14 +311,14 @@ const Story = () => {
       </section>
 
       <section
-        className='flex items-center px-[64px] justify-between py-[112px]'
+        className='flex flex-col lg:flex-row items-center px-5 lg:px-[64px] gap-[80px] lg:gap-0 justify-between py-[112px]'
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
       >
-        <div className='flex flex-col gap-4 w-[601px]' data-aos="fade-right">
+        <div className='flex flex-col gap-4 lg:w-[601px]' data-aos="fade-right">
           <p className='font-hanken font-medium text-base leading-[24px]'>Board and Execs</p>
-          <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
+          <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[120%] lg:leading-[64px]'>
             Our Commitment to Financial Inclusion
           </p>
           <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
@@ -362,7 +341,7 @@ const Story = () => {
           </div>
         </div>
         <div data-aos="fade-left">
-          <img src={Groupies} alt='Groupies' className='rounded-[25px] w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />
+          <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />
         </div>
       </section>
 

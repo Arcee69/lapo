@@ -62,7 +62,7 @@ const Changemakers = () => {
         },
         {
             name: 'Oluremi Akande rpa.',
-            position: 'Head, Corporate Communications & Branding.',
+            position: 'Head, Corporate Communications ',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180255/remi_kusuqa.png'
         },
         {
@@ -91,16 +91,16 @@ const Changemakers = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[960px] mx-auto gap-6 flex flex-col items-center'>
-                <div className='flex items-center justify-center gap-3 flex-col'>
+            <div className='lg:w-[960px] mx-auto gap-6 flex flex-col px-5 lg:px-0 items-center'>
+                <div className='flex items-center justify-center gap-3  flex-col'>
                     <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
                         <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Board</p>
                     </div>
-                    <p className='font-hanken text-[#000000] text-[54px] leading-[60px]'>
+                    <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[32px] lg:leading-[60px]'>
                         Board of Directors
                     </p>
                 </div>
-                <p className='text-[#444444] font-inter leading-[30px] w-[768px] mx-auto text-center text-[20px]'>
+                <p className='text-[#444444] font-inter leading-[30px] lg:w-[768px] mx-auto text-center text-base lg:text-[20px]'>
                     Meet the minds behind our mission to empower communities through 
                     accessible and sustainable financial solutions.
                 </p>
@@ -108,12 +108,12 @@ const Changemakers = () => {
         </section>
 
         <section
-            className='flex items-center pb-[96px] px-[96px] bg-[#fff] w-full '
+            className='flex flex-col lg:flex-row items-center pb-[96px] px-5 lg:px-[96px] bg-[#fff] w-full '
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='grid grid-cols-4 gap-[32px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]'>
                 {board.map((item, index) => (
                     <div className='flex flex-col items-start gap-6 ' key={index}>
                         <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
@@ -132,16 +132,16 @@ const Changemakers = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[960px] mx-auto gap-6 flex flex-col items-center'>
+            <div className='lg:w-[960px] mx-auto gap-6 px-5 lg:px-0 flex flex-col items-center'>
                 <div className='flex items-center justify-center gap-3 flex-col'>
                     <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
                         <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Excos</p>
                     </div>
-                    <p className='font-hanken text-[#000000] text-[54px] leading-[60px]'>
+                    <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[32px] lg:leading-[60px]'>
                         Executives
                     </p>
                 </div>
-                <p className='text-[#444444] font-inter leading-[30px] w-[768px] mx-auto text-center text-[20px]'>
+                <p className='text-[#444444] font-inter leading-[30px] lg:w-[768px] mx-auto text-center text-base lg:text-[20px]'>
                     Meet the minds behind our mission to empower communities through 
                     accessible and sustainable financial solutions.
                 </p>
@@ -149,14 +149,14 @@ const Changemakers = () => {
         </section>
 
         <section
-            className='flex items-center pb-[96px] px-[96px] bg-[#fff] w-full '
+            className='flex flex-col lg:flex-row items-center pb-[96px] px-5 lg:px-[96px] bg-[#fff] w-full'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='grid grid-cols-4 gap-[32px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]'>
                 {excos.map((item, index) => (
-                    <div className='flex flex-col items-start gap-6 ' key={index}>
+                    <div className='flex flex-col items-start mx-auto gap-6 ' key={index}>
                         <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
                         <div className='flex flex-col items-start gap-1'>
                             <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>{item.name}</p>
@@ -168,7 +168,7 @@ const Changemakers = () => {
         </section>
 
         <section
-            className='bg-[#FAFBFB] py-[96px] px-[80px] flex w-full'
+            className='bg-[#FAFBFB] py-[96px] px-5 lg:px-[80px] flex w-full'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
@@ -216,14 +216,14 @@ const Changemakers = () => {
         </section>
 
         <section
-            className='flex items-center px-[64px] justify-between py-[112px]'
+            className='flex flex-col lg:flex-row lg:items-center px-5 gap-[80px] lg:gap-0 lg:px-[64px] justify-between py-[112px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='flex flex-col gap-4 w-[601px]' data-aos="fade-right">
+            <div className='flex flex-col gap-4 lg:w-[601px]' data-aos="fade-right">
                 <p className='font-hanken font-medium text-base leading-[24px]'>Board and Execs</p>
-                <p className='font-hanken text-[#000000] text-[54px] leading-[64px]'>
+                <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[120%] lg:leading-[64px]'>
                     Making Finance Work for Everyone
                 </p>
                 <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
@@ -247,7 +247,7 @@ const Changemakers = () => {
                 </div>
             </div>
             <div data-aos="fade-left">
-                <img src={Groupies} alt='Groupies' className='rounded-[25px] w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />
+                <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />
             </div>
         </section>
 

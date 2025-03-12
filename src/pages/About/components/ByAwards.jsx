@@ -59,13 +59,13 @@ const ByAwards = () => {
     return (
         <div className='w-full'>
             <div className='flex flex-col gap-5'>
-                <p className='font-hanken text-[32px] leading-[44px] text-[#101828]'>Awards</p>
-                <div className='bg-[#FCFAF9] rounded-[20px] p-[40px] flex flex-col gap-[15px]'>
+                <p className='font-hanken text-[24px] lg:text-[32px] leading-[44px] text-[#101828]'>Awards</p>
+                <div className='bg-[#FCFAF9] rounded-[20px] p-5 lg:p-[40px] flex flex-col gap-[15px]'>
                     {/* Render each award group dynamically */}
                     {awardsList.map((award, index) => (
                         <div 
                             key={award.name}
-                            className={`flex items-center rounded-lg drop-shadow bg-[#FFFFFF] gap-[22px] px-6 py-[20px] ${
+                            className={`flex items-center rounded-lg drop-shadow bg-[#FFFFFF]  gap-[22px] px-6 py-[20px] ${
                                 // Apply side-by-side layout for specific indices if needed
                                 index % 3 === 1 ? 'flex-row' : ''
                             }`}
@@ -74,14 +74,14 @@ const ByAwards = () => {
                                 <img 
                                     src={getIcon(award.name)} 
                                     alt="Award" 
-                                    className='w-[102px] h-[102px]' 
+                                    className='w-[40px] h-[40px] lg:w-[102px] lg:h-[102px]' 
                                 />
-                                <p className="inline-block bg-gradient-to-b text-[#D35400] to-[#F99650] bg-clip-text text-transparent font-bold text-[73px]">
+                                <p className="inline-block bg-gradient-to-b text-[#D35400] to-[#F99650] bg-clip-text text-transparent font-bold text-[50px] lg:text-[73px]">
                                     {award.count}
                                 </p>
                             </div>
-                            <div className='flex flex-col gap-3'>
-                                <p className='font-hanken text-[#0F2145] font-bold leading-6 text-[18px]'>
+                            <div className='flex flex-col ml-5 lg:ml-0 gap-3'>
+                                <p className='font-hanken text-[#0F2145] font-bold leading-6 text-sm lg:text-[18px]'>
                                     {award.name}
                                 </p>
                                 <p className='font-inter text-[#43526E] text-xs'>
@@ -93,7 +93,7 @@ const ByAwards = () => {
                                 <img 
                                     src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740192262/shape_ssfamp.png" 
                                     alt='Shape' 
-                                    className='absolute right-0 bottom-0 w-[418px] h-[118px]' 
+                                    className='absolute right-0 bottom-0 w-[418px] -z-20 h-[118px]' 
                                 />
                             )}
                         </div>
