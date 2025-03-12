@@ -195,7 +195,7 @@ const Story = () => {
       >
         <p className='text-[#000000] font-hanken text-[48px] leading-[57px]'>Core Values</p>
         <div className='flex flex-col items-center gap-[55px] '>
-          <div className='flex items-start justify-center'>
+          <div className='flex items-start justify-center pl-14'>
 
             <Box 
               className="w-[324px] h-[210px] border border-[#F99650] border-dashed border-t-0 border-b-0 border-r-0 p-5"
