@@ -90,20 +90,20 @@ const Contact = () => {
     <div className='w-full'>
         
         <section
-            className='flex flex-col h-[350px] px-[80px] items-center gap-6 pt-[176px]'
+            className='flex flex-col h-[350px] px-5 lg:px-[80px] items-center gap-6 pt-[176px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='flex flex-col items-center gap-4 w-[960px] mx-auto'>
+            <div className='flex flex-col items-center gap-4 w-[311px] lg:w-[960px] mx-auto'>
                 <div className='w-[90px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                     <p className='text-xs font-hanken text-[#E78020]'>Contact Us</p>
                 </div>
                 <div className='flex flex-col gap-6'>
-                    <p className='font-hanken text-[56px] text-center font-medium text-[#101828] leading-[60px]'>
+                    <p className='font-hanken text-[32px] leading-[32px] lg:text-[56px] text-center font-medium text-[#101828] lg:leading-[60px]'>
                         We’d love to hear from you
                     </p>
-                    <p className='font-inter text-[20px] leading-[30px] text-[#667085] text-center'>
+                    <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#667085] text-center'>
                         Our friendly team is always here to chat.
                     </p>
                 </div>  
@@ -120,83 +120,85 @@ const Contact = () => {
         </section>
 
         <section
-            className='bg-[#fff] px-[112px] flex items-center gap-6 pt-[64px] pb-[96px]'
+            className='bg-[#fff] px-5 lg:px-[112px] flex items-center gap-6 pt-[64px] pb-[96px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
-                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
-                    <CiMail className='w-5 h-5 text-[#fff]' />
-                </div>
-                <div className='flex flex-col gap-5  mt-[64px]'>
-                    <div className='flex flex-col gap-2'>
-                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get instant response</p>
-                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team.</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                    <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                    <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                        <CiMail className='w-5 h-5 text-[#fff]' />
                     </div>
-                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>Use our Chatbot</p>
-                </div>
-            </div>
-            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
-                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
-                    <FiMessageCircle className='w-5 h-5 text-[#fff]' />
-                </div>
-                <div className='flex flex-col gap-5  mt-[64px]'>
-                    <div className='flex flex-col gap-2'>
-                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Chat to support</p>
-                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>We’re here to help.</p>
+                    <div className='flex flex-col gap-5  mt-[64px]'>
+                        <div className='flex flex-col gap-2'>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get instant response</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team.</p>
+                        </div>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>Use our Chatbot</p>
                     </div>
-                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> info@lapo-nigeria.org</p>
                 </div>
-            </div>
-            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
-                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
-                    <CiLocationOn className='w-5 h-5 text-[#fff]' />
-                </div>
-                <div className='flex flex-col gap-5  mt-[64px]'>
-                    <div className='flex flex-col gap-2'>
-                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Head Office</p>
-                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Visit our office HQ.</p>
+                <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                    <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                    <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                        <FiMessageCircle className='w-5 h-5 text-[#fff]' />
                     </div>
-                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>LAPO PLACE, 15A Ikorodu-Ososun Road, Maryland, Ikeja, Lagos, Nigeria.</p>
-                </div>
-            </div>
-            <div className='w-[286px] h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
-                <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
-                    <LiaPhoneSolid className='w-5 h-5 text-[#fff]' />
-                </div>
-                <div className='flex flex-col gap-5  mt-[64px]'>
-                    <div className='flex flex-col gap-2'>
-                        <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Call us</p>
-                        <p className='font-inter text-[#FFFFFF] text-base leading-6'>Mon-Fri from 8am to 5pm.</p>
+                    <div className='flex flex-col gap-5  mt-[64px]'>
+                        <div className='flex flex-col gap-2'>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Chat to support</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>We’re here to help.</p>
+                        </div>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> info@lapo-nigeria.org</p>
                     </div>
-                    <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>+1 (555) 000-0000</p>
+                </div>
+                <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                    <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                    <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                        <CiLocationOn className='w-5 h-5 text-[#fff]' />
+                    </div>
+                    <div className='flex flex-col gap-5  mt-[64px]'>
+                        <div className='flex flex-col gap-2'>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Head Office</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>Visit our office HQ.</p>
+                        </div>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>LAPO PLACE, 15A Ikorodu-Ososun Road, Maryland, Ikeja, Lagos, Nigeria.</p>
+                    </div>
+                </div>
+                <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
+                    <img src={Curve} alt="Curve" className='absolute -right-2 w-[77px] h-[66px] -top-1 rounded-tr-[2rem]' />
+                    <div className='w-[48px] h-[48px] rounded-[10px] bg-[#00B85C] p-2 flex items-center justify-center'>
+                        <LiaPhoneSolid className='w-5 h-5 text-[#fff]' />
+                    </div>
+                    <div className='flex flex-col gap-5  mt-[64px]'>
+                        <div className='flex flex-col gap-2'>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Call us</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>Mon-Fri from 8am to 5pm.</p>
+                        </div>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>+1 (555) 000-0000</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section
-            className='flex items-center flex-col gap-[96px] bg-[#fff] '
+            className='flex items-center lg:pb-[62px] flex-col gap-[27px] lg:gap-[96px] bg-[#fff] '
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
             ref={branchRef}
         >
-            <div className='flex flex-col items-center gap-4'>
+            <div className='flex flex-col px-5 lg:px-0 items-center lg:gap-4'>
                 <div className='w-[111px] h-[32px] rounded-[6px] gap-1 flex items-center justify-center bg-[#E8FFF4]'>
                     <p className='text-xs font-hanken text-[#00954B]'>Find a branch</p>
                 </div>
-                <p className='font-inter font-semibold text-[#101828] leading-[60px] text-[48px] tracking-[-2%]'>Branch Locator</p>
-                <p className='font-inter text-[#667085] leading-[30px] text-[20px]'>Find our nearest branch for convenient and accessible banking services.</p>
+                <p className='font-inter font-semibold text-[#101828] leading-[100px] lg:leading-[60px] text-[32px] lg:text-[48px] tracking-[-2%]'>Branch Locator</p>
+                <p className='font-inter text-[#667085] leading-[30px] text-center text-base lg:text-[20px]'>Find our nearest branch for convenient and accessible banking services.</p>
             </div>
 
-            <div className="flex items-start gap-6 p-4">
+            <div className="flex flex-col w-full lg:flex-row items-start gap-6 p-4">
                 {/* Left Panel - Branch List */}
-                <div className="w-[33.313rem] flex flex-col bg-gray-100 p-4 rounded-lg">
+                <div className="w-full lg:w-[33.313rem] flex flex-col bg-gray-100 p-4 rounded-lg">
                     <div className='flex items-center rounded-md mb-4 bg-[#F7F9FC] p-2'>
                         <CiSearch className='w-4 h-4 text-[#667085]' />
                         <input 
@@ -249,7 +251,7 @@ const Contact = () => {
                 </div>
 
                 {/* Right Panel - Map & Details */}
-                <div className="w-[43.438rem] relative">
+                <div className="md:w-[43.438rem] relative mx-auto">
                     {selectedBranch ? (
                         <>
                             <iframe
@@ -257,7 +259,7 @@ const Contact = () => {
                                 src={`https://www.google.com/maps?q=${encodeURIComponent(
                                     selectedBranch.address
                                 )}&output=embed`}
-                                className="w-[43.438rem] h-[500px] rounded-lg"
+                                className="md:w-[43.438rem] h-[500px] rounded-lg"
                             />
                             <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col">
                                 <h2 className="font-bold text-lg">{selectedBranch.name} Branch</h2>
@@ -282,21 +284,21 @@ const Contact = () => {
         </section>
 
         <section
-            className='bg-[#FBFAF9] px-[80px] py-[96px] flex items-center gap-[64px]'
+            className='bg-[#FBFAF9] px-5 lg:px-[80px] py-[96px] flex flex-col lg:flex-row items-center gap-[64px]'
             data-aos="fade-up" 
-            data-aos-duration="1000" 
+            data-aos-duration="1000"     
             data-aos-easing="linear"
         >
-            <div className='flex flex-col gap-6 w-[576px]'>
-                <p className='font-semibold text-[48px] whitespace-nowrap leading-[60px] text-[#101828] font-hanken'>
+            <div className='flex flex-col gap-6 w-[311px] lg:w-[576px]'>
+                <p className='font-semibold text-[32px] lg:text-[48px] lg:whitespace-nowrap leading-[100%] lg:leading-[60px] text-[#101828] font-hanken'>
                     Premium customer support
                 </p>
-                <p className='text-[#667085] font-inter text-[20px] leading-[30px]'>
+                <p className='text-[#667085] font-inter text-base lg:text-[20px] leading-[30px]'>
                     Enjoy the personalized service you need at LAPO Microfinance Bank, 
                     including long-term business financial planning and extended-hours 
                     access to our specialized business service team.
                 </p>
-                <ul className='pl-5 list-disc text-[#6A6A6A] text-[20px] font-hanken leading-[25px]'>
+                <ul className='pl-5 list-disc text-[#6A6A6A] text-base lg:text-[20px] font-hanken leading-[25px]'>
                     <li>One combined monthly statement for all of your business accounts</li>
                     <li>Extended-hours access to our specialized business service team</li>
                 </ul>
@@ -306,7 +308,7 @@ const Contact = () => {
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>
             </div>
-            <div className='w-[576px]'>
+            <div className='lg:w-[576px]'>
                 <img 
                     src={Premium} 
                     alt="Premium" 
