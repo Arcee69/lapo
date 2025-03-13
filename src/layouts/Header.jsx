@@ -160,7 +160,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>MSME Loan</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Big businesses require big loans.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Loans to grow your business</p>
                       </div>
 
                       <div 
@@ -211,7 +211,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Mobile App</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>The latest industry news.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Bank on the go</p>
                       </div>
 
                       <div 
@@ -262,7 +262,7 @@ const Header = () => {
                       >
                         Lapo POS
                       </p>
-
+                      <p className='text-[#667085] font-inter text-sm leading-5'>Payment Solution to fuel your growth</p>
                       {/* <div 
                        
                         className='flex items-center cursor-pointer gap-2 w-full'
@@ -314,7 +314,7 @@ const Header = () => {
                         }}
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Events</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>A very flexible and convenient savings account</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Learn about our events</p>
                       </div>
 
                       <div 
@@ -325,7 +325,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Articles</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Earn more interest than traditional savings.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Read articles to keep you up-to-date.</p>
                       </div>
 
                       {/* <div 
@@ -351,7 +351,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Pictures</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Big businesses require big loans.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>View pictures from our archive</p>
                       </div>
 
                       <div 
@@ -362,7 +362,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Videos</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Designed to operate on a group (union) methodology.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Watch and learn more about our impact stories.</p>
                       </div>
 
                       {/* <div className='flex items-center cursor-pointer gap-2 w-full'>
@@ -388,15 +388,15 @@ const Header = () => {
                       </div>
 
                       <div 
-                        // onClick={() => {
-                        //   navigate("/digital/cards", {
-                        //     state: {section: "cards"}
-                        //   })
-                        // }}
+                        onClick={() => {
+                          navigate("/resources", {
+                            state: {section: "resources"}
+                          })
+                        }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
-                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Media Kits</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Shop. Pay. Withdraw</p>
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Resources</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>See our yearly reports, brand kits and more</p>
                       </div>
 
                       {/* <div className='flex items-center cursor-pointer gap-2 w-full'>

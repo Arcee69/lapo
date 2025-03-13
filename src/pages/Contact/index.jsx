@@ -133,10 +133,10 @@ const Contact = () => {
                     </div>
                     <div className='flex flex-col gap-5  mt-[64px]'>
                         <div className='flex flex-col gap-2'>
-                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get instant response</p>
-                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team.</p>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Send us an Email</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>We're here to help</p>
                         </div>
-                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>Use our Chatbot</p>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>info@lapo-nigeria.org</p>
                     </div>
                 </div>
                 <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
@@ -146,8 +146,8 @@ const Contact = () => {
                     </div>
                     <div className='flex flex-col gap-5  mt-[64px]'>
                         <div className='flex flex-col gap-2'>
-                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Chat to support</p>
-                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>We’re here to help.</p>
+                            <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get Instant response</p>
+                            <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team</p>
                         </div>
                         <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> info@lapo-nigeria.org</p>
                     </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                             <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Call us</p>
                             <p className='font-inter text-[#FFFFFF] text-base leading-6'>Mon-Fri from 8am to 5pm.</p>
                         </div>
-                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>+1 (555) 000-0000</p>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> +234 8139840230</p>
                     </div>
                 </div>
             </div>
