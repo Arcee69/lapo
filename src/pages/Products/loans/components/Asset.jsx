@@ -166,7 +166,7 @@ const Asset = () => {
             ]}
         />
 
-<section
+        <section
             // ref={sectionRef}
             className='px-5  py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
         >

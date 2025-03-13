@@ -68,7 +68,7 @@ const Awards = () => {
             className='flex flex-col lg:flex-row items-center justify-center gap-[64px]'
             >
                 <div className='lg:w-[576px] flex flex-col gap-6'>
-                    <p className='font-medium font-hanken text-[48px] leading-[60px]'>
+                    <p className='font-medium font-hanken text-[32px] lg:text-[48px] leading-[60px]'>
                         Bank On the Go – Anytime, Anywhere!
                     </p>
                     <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
