@@ -33,7 +33,7 @@ const Footer = () => {
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/careers"), window.scroll(0, 0)}}>Careers</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Corporate Governance</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Awards</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Changemakers</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Board and Excos</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/sustainability"), window.scroll(0, 0)}}>Sustainability</p>
             </div>
             <div className="flex w-[180px] flex-col gap-4">
