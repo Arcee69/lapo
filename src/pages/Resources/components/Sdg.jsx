@@ -44,7 +44,7 @@ const Sdg = ({ sdgRef }) => {
             <h2 className="text-[24px] font-medium font-hanken text-[#0E3622]">SDG Resources</h2>
             <p  className="text-[#2E8B57] font-inter cursor-pointer font-medium text-sm">View all SDG Resources</p>
         </div>
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {
                 sdg.map((item, index) => (
                     <div key={index} className='gap-6 p-6 flex flex-col shadow-md'>

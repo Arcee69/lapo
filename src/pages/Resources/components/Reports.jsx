@@ -44,7 +44,7 @@ const Reports = ({ reportRef }) => {
             <h2 className="text-[24px] font-medium font-hanken text-[#0E3622]">Annual Reports</h2>
             <p  className="text-[#2E8B57] font-inter cursor-pointer font-medium text-sm">View all Annual Reports</p>
         </div>
-        <div className='grid grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
                 reports.map((item, index) => (
                     <div key={index} className='gap-6 p-6 flex flex-col shadow-md'>

@@ -67,7 +67,7 @@ const Featured = ({ featuredRef }) => {
             <h2 className="text-[24px] font-medium font-hanken text-[#0E3622]">Featured Resources</h2>
             {/* <p  className="text-green-600 text-sm">View all {section}</p> */}
         </div>
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {
                 resources.map((item, index) => (
                     <div key={index} className='gap-6 p-6 flex flex-col shadow-md'>
