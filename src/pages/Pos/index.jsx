@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
 
@@ -12,9 +12,16 @@ import NDIC from "../../assets/svg/ndic.svg"
 import Dollar from "../../assets/svg/dollar.svg"
 import Lightning from "../../assets/svg/lightning.svg"
 import Tracker from "../../assets/svg/tracker.svg"
+import axios from 'axios'
 
 
 const Pos = () => {
+    const [faqCategories, setFaqCategories] = useState([]);
+    const [faqByCategory, setFaqByCategory] = useState([]);
+    const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+
+    let URL = import.meta.env.VITE_APP_API_URL;
+
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null);
 
@@ -61,6 +68,49 @@ const Pos = () => {
     }, []);
 
 
+     // Fetch all categories
+        const getFaqCategories = async () => {
+        try {
+            const res = await axios.get(`${URL}/v1/category`);
+            setFaqCategories(res?.data?.data || []);
+            } catch (err) {
+                console.log(err, "err");
+            }
+        };
+        
+        // Find loan category and get its ID
+        useEffect(() => {
+            getFaqCategories();
+        }, []);
+    
+        // When categories load, find the loan category
+        useEffect(() => {
+        if (faqCategories?.length > 0) {
+            const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'pos');
+            if (loanCategory) {
+                setSelectedCategoryId(loanCategory.id);
+            }
+        }
+        }, [faqCategories]);
+        
+        
+        // Fetch FAQs when category ID is available
+        const getFaqByCategory = async (categoryId) => {
+            try {
+                const res = await axios.get(`${URL}/v1/faq/category/${categoryId}`);
+                setFaqByCategory(res?.data?.data || []);
+            } catch (err) {
+                console.log(err, "err");
+            }
+        };
+    
+        useEffect(() => {
+            if (selectedCategoryId) {
+                getFaqByCategory(selectedCategoryId);
+            }
+        }, [selectedCategoryId]);
+
+
   return (
     <div className='w-full' ref={posRef}>
 
@@ -70,32 +120,32 @@ const Pos = () => {
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat"
             }}
-            className='h-[832px]  flex flex-col items-start pl-[64px] pt-[213px]'
+            className='h-[658px] lg:h-[832px]  flex flex-col items-start pl-5 lg:pl-[64px] pt-[118px] lg:pt-[213px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
 
-            <div className='w-[550px] h-[406px] flex flex-col gap-5'>
+            <div className='w-[310px] lg:w-[550px] h-[406px] flex flex-col gap-5'>
                 <div className='flex items-center justify-center gap-2 bg-[#FFFFFFCF] w-[204px] rounded-full h-[28px] p-2'>
                     <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
                     <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 5M+ Nigerians</p>
                 </div>
-                <p className='text-[56px] font-semibold leading-[57.6px] text-[#fff] font-hanken'>
+                <p className='text-[32px] lg:text-[56px] font-semibold leading-[30px] lg:leading-[57.6px] text-[#fff] font-hanken'>
                     Fast, <span className='text-[#1AFF8C]'>Secure</span>, and <span className='text-[#F99650]'>Reliable</span> Payments for Your Business.
                 </p>
-                <p className='text-[20px] font-hanken text-[#fff] w-[550px] leading-[30px]'>
+                <p className='text-base lg:text-[20px] font-hanken text-[#fff] lg:w-[550px] leading-[22px] lg:leading-[30px]'>
                     Trusted by generations to provide transparent, accessible financial services. 
                     we’re here to support you with solutions that fit your needs.
                 </p>
                 <div className='flex items-center gap-5'>
                     <button
-                        className='bg-[#E78020] flex flex-col items-center justify-center w-[211px] h-[56px] rounded-[10px]'
+                        className='bg-[#E78020] flex flex-col items-center justify-center w-[300px] lg:w-[211px] h-[56px] rounded-[10px]'
                     >
                         <p className='font-hanken text-[#fff] text-base font-semibold'>Apply For a LAPO POS</p>
                     </button>
                     <button
-                        className='border-[#FFFFFF] border flex flex-col items-center justify-center w-[182px] h-[56px] rounded-[10px]'
+                        className='border-[#FFFFFF] border flex flex-col items-center justify-center w-[200px] lg:w-[182px] h-[56px] rounded-[10px]'
                     >
                         <p className='font-hanken text-[#FFFFFF] text-base font-semibold'>Learn More</p>
                     </button>
@@ -110,29 +160,32 @@ const Pos = () => {
         </section>
 
         <section
-            className='bg-[#fff] flex flex-col gap-[64px] py-[92px] px-[80px]'
+            className='bg-[#fff] flex flex-col gap-[64px] py-[53px] px-[32px] lg:py-[92px] lg:px-[80px]'
         >
             <div className='flex flex-col gap-3'>
                 <div className='bg-[#FDF2E9] rounded-[6px] flex items-center flex-col justify-center p-2 h-[32px] w-[172px]'>
                     <p className='text-[#E78020] font-hanken font-medium text-sm leading-[15px]'>Why Choose Our POS?</p>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <p className='font-hanken font-medium text-[48px] leading-[62px] tracking-[-2%]'>
-                        Financial software to fuel your growth
+                    <p className='font-hanken font-medium text-[28px] leading-[100%] lg:text-[48px] lg:leading-[62px] tracking-[-2%]'>
+                        Payment Solution to fuel your growth
                     </p>
-                    <p className='font-inter text-[20px] leading-[30px] text-[#667085] '>
+                    <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#667085] '>
                         Spend smarter, lower your bills, get cashback on everything you buy, 
                         and unlock credit to grow your business.
                     </p>
                 </div>
             </div>
 
-            <div className='flex items-start gap-[64px]'>
-                <div className='flex flex-col gap-[48px] w-[576px]'>
+            <div className='flex flex-col lg:flex-row items-start gap-[64px]'>
+                <div className='lg:hidden block'>
+                    <img src={Terminal} alt='Terminal' className='' />
+                </div>
+                <div className='flex flex-col gap-[48px] lg:w-[576px]'>
                     <div className='flex items-start gap-4'>
                         <img src={Lightning} alt='Lightning' className=''/>
                         <div className='flex flex-col gap-4 mt-2'>
-                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>Modern, User-Friendly POS Terminals</p>
+                            <p className='font-inter text-[#101828] font-medium text-[18px] leading-[28px] lg:text-[20px] lg:leading-[30px]'>Modern, User-Friendly POS Terminals</p>
                             <p className='text-[#667085] font-inter text-base leading-6 '>
                                 Give your team the autonomy they need with access to as many cards as they need. 
                                 Authorise purchases with a click. Simple.
@@ -147,7 +200,7 @@ const Pos = () => {
                     <div className='flex items-start gap-4'>
                         <img src={Dollar} alt='Dollar' className=''/>
                         <div className='flex flex-col gap-4 mt-2'>
-                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>No Hidden Charges</p>
+                            <p className='font-inter text-[#101828] font-medium text-[18px] leading-[28px] lg:text-[20px] lg:leading-[30px]'>No Hidden Charges</p>
                             <p className='text-[#667085] font-inter text-base leading-6 '>
                                 Every card comes with configurable spending limits, purchase restrictions, 
                                 and cancellations for each employee and team.
@@ -162,7 +215,7 @@ const Pos = () => {
                     <div className='flex items-start gap-4'>
                         <img src={Tracker} alt='Tracker' className=''/>
                         <div className='flex flex-col gap-4 mt-2'>
-                            <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>Real-Time Sales Tracking & Reporting</p>
+                            <p className='font-inter text-[#101828] font-medium text-[18px] leading-[28px] lg:text-[20px] lg:leading-[30px]'>Real-Time Sales Tracking & Reporting</p>
                             <p className='text-[#667085] font-inter text-base leading-6 '>
                                 An all-in-one platform that helps you balance everything your team 
                                 need to be happy and your finances in order.
@@ -175,17 +228,17 @@ const Pos = () => {
                     </div>
                 </div>
 
-                <div className='w-[576px]'>
+                <div className='w-[576px] hidden lg:block'>
                     <img src={Terminal} alt='Terminal' className='' />
                 </div>
             </div>
         </section>
 
-        <section
+        {/* <section
             ref={sectionRef}
             className='px-[64px] py-[112px] gap-[80px] flex flex-col h-[695px] bg-[#1E1E1E]'
         >
-            {/* Header section unchanged */}
+            {/* Header section unchanged 
             <div className='flex items-center flex-col gap-6'>
                 <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
@@ -199,7 +252,7 @@ const Pos = () => {
                 </p>
             </div>
 
-            {/* Steps container with hidden scrollbar */}
+            {/* Steps container with hidden scrollbar 
             <div 
                 ref={stepsContainerRef}
                 className='flex items-start gap-[48px] overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
@@ -225,46 +278,98 @@ const Pos = () => {
                     </div>
                 ))}
             </div>
-        </section>
+        </section> */}
 
         <section
-            className='bg-[#F7F9FC] py-[96px] px-[80px] gap-6 flex flex-col items-center'
+            // ref={sectionRef}
+            className='px-5 py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#1E1E1E]'
+        >
+            {/* Header section unchanged */}
+            <div className='flex lg:items-center flex-col gap-6'>
+                <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
+                    <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
+                </div>
+                <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
+                    Simple Steps to Getting your POS
+                </p>
+                <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>
+                    Our application process is designed to be straightforward and efficient. 
+                    Follow these easy steps to get started on your loan journey.
+                </p>
+            </div>
+
+            {/* Steps container with hidden scrollbar */}
+            <div 
+                // ref={stepsContainerRef}
+                className='flex flex-col lg:flex-row items-start gap-[38px] lg:mx-auto overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+            >
+                {[1, 2, 3].map((step, index) => (
+                    <div
+                        key={step}
+                        className='flex flex-row items-start lg:flex-col lg:items-center lg:w-[296px] gap-6 flex-shrink-0'
+                    >
+                        <div className='w-[50px] h-[40px] lg:w-[80px] lg:h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
+                            <p className='font-hanken font-medium text-[#000] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
+                        </div>
+                        <div className="flex flex-col items-start lg:items-center gap-2">
+                            <p className='font-hanken font-medium text-base whitespace-nowrap leading-[130%] lg:text-[20px] lg:leading-[26px] text-[#fff]'>
+                                Step {step}: {index === 0 ? 'Request a POS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
+                            </p>
+                            <p className='font-inter text-[#D9D9D9] text-base leading-[150%] lg:text-[20px] lg:leading-[30px] lg:text-center'>
+                                {   
+                                    index === 0 ? 'Sign up online or visit our branch.' : 
+                                    index === 1 ? 'We’ll send it to your business location.' :
+                                    index === 2 ? 'Seamless transactions, happy customers!' : 
+                                    'Select from various loan options that suit your needs.'
+                                }
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+
+
+        <section
+            className='bg-[#F7F9FC] py-[96px] px-5 lg:px-[80px] gap-6 flex flex-col items-center'
         >
             <img src={FiveStars} alt="FiveStars" className='w-[116px] h-[20px]' />
-            <p className='font-hanken font-medium italic text-[72px] leading-[93.82px] tracking-[-2%] text-center'>
+            <p className='font-hanken font-medium italic text-[30px] leading-[32px] lg:text-[72px] lg:leading-[93.82px] tracking-[-2%] text-center'>
                 “This POS transformed how we handle payments! Quick, reliable, and easy to use. 
             </p>
-            <div className='flex flex-col '>
-
+            <div className='flex flex-col items-center gap-[4px]'>
+                <p className='font-medium text-[#101828] text-[18px] font-inter leading-[28px]'>— Ladidi WUraola</p>
+                <p className='text-[#667085] font-inter text-base leading-[24px]'>Business Owner</p>
             </div>
 
         </section>
         
         <section
-            className='bg-[#00984C] h-[471px] flex justify-center py-[112px] items-center'
+            className='bg-[#00984C] h-[471px] px-5 lg:px-0 flex justify-center py-[107px] lg:py-[112px] items-center'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[768px] flex flex-col items-center gap-6'>
-                <p className='font-hanken text-[48px] text-center leading-[57px] text-[#FFFFFF]'>
+            <div className='lg:w-[768px] flex flex-col items-center gap-6'>
+                <p className='font-hanken text-[32px] lg:text-[48px] text-center leading-[120%] lg:leading-[57px] text-[#FFFFFF]'>
                     Unlock new financial possibilities with us
                 </p>
-                <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF]'>
+                <p className='font-inter text-base leading-[150%] text-center lg:text-[18px] lg:leading-[27px] text-[#FFFFFF]'>
                     Explore our diverse saving options tailored for personal, business, and educational needs.  
                 </p>
                 <div className='flex items-center gap-4'>
                     <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
-                        <p className='font-hanken text-[#000000] font-medium text-base leading-6'>Contact Us</p>
+                        <p className='font-hanken text-[#000000] font-medium text-[13px] lg:text-base leading-6'>Contact Us</p>
                     </div>
-                    <div className='bg-[#000000] w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
-                        <p className='font-hanken font-medium text-[#fff]'>Download the LAPO App</p>
+                    <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section 
+        {/* <section 
             className='bg-[#fff] py-[112px] flex flex-col '
             data-aos="fade-up" 
             data-aos-duration="1000" 
@@ -319,6 +424,47 @@ const Pos = () => {
                     </div>
                 </div>
                 <div className='w-[560px] flex flex-col items-center mx-auto gap-4'>
+                    <p className='font-hanken text-[#000000] font-semibold text-[32px] leading-[41px]'>Still have questions?</p>
+                    <p className='text-[18px] text-[#000000] leading-[27px]'>We're here to help you!</p>
+                    <button
+                        className='w-[104px] h-[48px] p-2 bg-black rounded-lg'
+                    >
+                        <p className='text-[#fff] font-hanken font-medium leading-6 text-base'>Contact</p>
+                    </button>
+                </div>
+            </div>
+        </section> */}
+
+        <section 
+            className='bg-[#fff] py-[88px] lg:py-[112px] flex flex-col '
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        > 
+            <div className='lg:w-[768px] px-5 lg:px-0 flex flex-col mx-auto gap-[80px]'>
+                <div
+                    className='flex flex-col gap-6 items-center'
+                >
+                    <p className='font-hanken font-medium text-[32px] leading-[120%] lg:text-[48px] lg:leading-[57px] '>FAQs</p>
+                    <p className='font-inter text-[#000000] text-base leading-[150%] lg:text-[18px] lg:leading-[27px]'>
+                        Find answers to your questions about our POS Terminal and application process.
+                    </p>
+                </div>
+                <div className='flex flex-col gap-[48px]'>
+                    {faqByCategory.length > 0 ? faqByCategory?.map((faqItem) => (
+                        <div key={faqItem.id} className='flex flex-col gap-4'>
+                            <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>
+                                {faqItem.question}
+                            </p>
+                            <p className='font-inter text-[#000000] text-base leading-6'>
+                                {faqItem.answer}
+                            </p>
+                        </div>
+                    )) : (
+                        <p className='text-center font-inter text-[#000]'>No Faq Available</p>
+                    )}
+                </div>
+                <div className='w-full lg:w-[560px] flex flex-col items-center mx-auto gap-4'>
                     <p className='font-hanken text-[#000000] font-semibold text-[32px] leading-[41px]'>Still have questions?</p>
                     <p className='text-[18px] text-[#000000] leading-[27px]'>We're here to help you!</p>
                     <button
