@@ -321,7 +321,7 @@ const Special = () => {
         <section
             className='bg-[#FBFAF9] px-5 lg:px-[80px] py-[96px] flex flex-col lg:flex-row items-center gap-[64px]'
             data-aos="fade-up" 
-            data-aos-duration="1000" 
+            data-aos-duration="1000"     
             data-aos-easing="linear"
         >
             <div className='flex flex-col gap-6 w-[311px] lg:w-[576px]'>

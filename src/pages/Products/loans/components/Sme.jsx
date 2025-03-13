@@ -21,7 +21,7 @@ const Sme = () => {
     const [selectedCategoryId, setSelectedCategoryId] = useState(null);
 
     const navigate = useNavigate()
-    
+
     let URL = import.meta.env.VITE_APP_API_URL;
 
     const sectionRef = useRef(null);
@@ -169,7 +169,7 @@ const Sme = () => {
             ]}
         />
 
-<section
+        <section
             // ref={sectionRef}
             className='px-5  py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
         >
