@@ -126,21 +126,21 @@ const Blog = () => {
                 backgroundRepeat: "no-repeat",
                 position: "relative" 
             }}
-                className='h-[619px] flex flex-col items-start pl-[64px] pt-[183px]'
+                className='h-[619px] flex flex-col items-start pl-5 lg:pl-[64px] pt-[119px] lg:pt-[183px]'
                 data-aos="fade-up" 
                 data-aos-duration="1000" 
                 data-aos-easing="linear"
         >
             <div className="absolute inset-0 bg-[#000] opacity-20"></div> 
-            <div className='w-[741px] h-[406px] z-10 flex flex-col gap-5'>
+            <div className='lg:w-[741px] h-[406px] z-10 flex flex-col gap-5'>
                 <div className='flex items-center justify-center gap-2 bg-[#FAFAFA] w-[204px] rounded-full h-[28px] p-2'>
                     <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
                     <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 6M+ Nigerians</p>
                 </div>
-                <p className='font-semibold text-[56px] leading-[57px] text-[#FAFAFA] font-hanken'>
+                <p className='font-semibold text-[32px] leading-[35px] lg:text-[56px] lg:leading-[57px] text-[#FAFAFA] font-hanken'>
                     Season of Love and giving: LAPO MFB's christmas Party
                 </p>
-                <p className='text-[20px] font-hanken text-[#FFFFFF] w-[650px] leading-[30px]'>
+                <p className='text-base lg:text-[20px] font-hanken text-[#FFFFFF] lg:w-[650px] leading-[30px]'>
                     Love was in the air at LAPO MFB as we came together to celebrate the yuletide with 
                     a heartwarming party filled with joy, laughter, and camaraderie. 
                 </p>
@@ -156,12 +156,12 @@ const Blog = () => {
         </section>
 
         <section
-            className='bg-[#fff] py-[96px] px-[80px] flex flex-col gap-[64px]'
+            className='bg-[#fff] py-[96px] px-5 lg:px-[80px] flex flex-col gap-[64px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='flex items-center justify-between'>
+            <div className='flex flex-col lg:flex-row gap-5 lg:gap-0 items-center justify-between'>
                 <div className='flex items-center p-2 gap-1.5 w-[320px] rounded-lg border border-[#D0D5DD]'>
                     <CiSearch  className='w-4 h-4 text-[#D0D5DD]'/>
                     <input 
@@ -185,7 +185,7 @@ const Blog = () => {
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>All blog posts</p>
 
-                <div className={`${currentPosts?.length > 0 ? "grid grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
+                <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
                     { loading ? 
                         <p className='text-2xl text-[#000] text-center font-semibold'>Loading Blog...</p> :
                         currentPosts.length > 0 ?
@@ -195,7 +195,7 @@ const Blog = () => {
                                 <div className='flex flex-col gap-3'>
                                     <p className='font-inter text-[#E78020] font-semibold leading-5 text-sm'>{new Date(item.created_at).toDateString()}</p>
                                     <div className='flex items-start gap-1'>
-                                        <p className='font-semibold font-hanken w-[344px] text-[#101828] text-[24px] leading-[32px]'>{item.title}</p>
+                                        <p className='font-semibold font-hanken w-[344px] text-[#101828] text-[20px] lg:text-[24px] leading-[32px]'>{item.title}</p>
                                         <FiArrowUpRight className='w-5 h-5 mt-2 text-[#101828]' />
                                     </div>
                                     <p className='text-base text-[#667085] leading-6 font-inter'>
@@ -256,24 +256,24 @@ const Blog = () => {
         </section>
 
         <section
-            className='bg-[#00984C] h-[471px] flex justify-center py-[112px] items-center'
+            className='bg-[#00984C] h-[471px] px-5 lg:px-0 flex justify-center py-[107px] lg:py-[112px] items-center'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <div className='w-[768px] flex flex-col items-center gap-6'>
-                <p className='font-hanken text-[48px] text-center leading-[57px] text-[#FFFFFF]'>
+            <div className='lg:w-[768px] flex flex-col items-center gap-6'>
+                <p className='font-hanken text-[32px] lg:text-[48px] text-center leading-[120%] lg:leading-[57px] text-[#FFFFFF]'>
                     Unlock new financial possibilities with us
                 </p>
-                <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF]'>
+                <p className='font-inter text-base leading-[150%] text-center lg:text-[18px] lg:leading-[27px] text-[#FFFFFF]'>
                     Explore our diverse saving options tailored for personal, business, and educational needs.  
                 </p>
                 <div className='flex items-center gap-4'>
                     <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
-                        <p className='font-hanken text-[#000000] font-medium text-base leading-6'>Contact Us</p>
+                        <p className='font-hanken text-[#000000] font-medium text-[13px] lg:text-base leading-6'>Contact Us</p>
                     </div>
-                    <div className='bg-[#000000] w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
-                        <p className='font-hanken font-medium text-[#fff]'>Download the LAPO App</p>
+                    <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
                     </div>
                 </div>
             </div>

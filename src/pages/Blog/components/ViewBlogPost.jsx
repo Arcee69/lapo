@@ -9,14 +9,14 @@ const ViewBlogPost = () => {
     const navigate = useNavigate()
 
   return (
-    <div className='w-full flex flex-col items-start gap-5 pt-[186px] pb-[49px] px-[112px]'>
+    <div className='w-full flex flex-col items-start gap-5 pt-[186px] pb-[49px] px-5 lg:px-[112px]'>
         <button onClick={() => {navigate(-1), window.scrollTo(0, 0)}} className='bg-[#000] w-[100px] flex items-center justify-center h-[44px] rounded-lg'>
             <p className='text-[#fff] font-inter text-lg'>Back</p>
         </button>
         <div className='flex flex-col  items-start gap-[64px]'>
-            <p className='font-hanken font-semibold text-[#101828] text-[48px] leading-[60px]'>{state.title}</p>
+            <p className='font-hanken font-semibold text-[#101828] text-[32px] lg:text-[48px] leading-[44px] lg:leading-[60px]'>{state.title}</p>
             <div className='flex flex-col gap-[32px] items-start  w-full'>
-                <img src={state.image} className='h-[516px]' alt='PostImage'/>
+                <img src={state.image} className='lg:h-[516px]' alt='PostImage'/>
                 <div className='flex flex-col gap-3'>
                     <p className='text-[#7F56D9] font-inter font-semibold text-[14px]'>Published On</p>
                     <p className='text-[#101828] text-[18px] font-medium'>{new Date(state.created_at).toDateString()}</p> 
