@@ -10,12 +10,12 @@ const Changemakers = () => {
         {
             name: 'Godwin Ehigiamusoe',
             position: 'Chairman',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180268/godwin_lbdsau.png'
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960790/chairman_uiyhij.png'
         },
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180263/cynthia_mue8ye.png'
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960823/MD_jin9cy.jpg'
         },
         {
             name: 'Aigbe Olotu',
@@ -116,7 +116,7 @@ const Changemakers = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]'>
                 {board.map((item, index) => (
                     <div className='flex flex-col items-start gap-6 ' key={index}>
-                        <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
+                        <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px]' />
                         <div className='flex flex-col items-start gap-1'>
                             <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>{item.name}</p>
                             <p className='font-inter text-[#6941C6] text-[18px] leading-[28px]'>{item.position}</p>
@@ -157,7 +157,7 @@ const Changemakers = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]'>
                 {excos.map((item, index) => (
                     <div className='flex flex-col items-start mx-auto gap-6 ' key={index}>
-                        <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px] rounded-t-[15px]' />
+                        <img src={item.image} alt={item.name} className='w-[296px] h-[296px] object-cover rounded-t-[15px]' />
                         <div className='flex flex-col items-start gap-1'>
                             <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>{item.name}</p>
                             <p className='font-inter text-[#6941C6] text-[18px] leading-[28px]'>{item.position}</p>

@@ -63,7 +63,7 @@ const Footer = () => {
       <div className="mx-[31px] border border-t-[#E2E2E2] border-b-0 border-x-0 py-[32px] pb-[27px] flex flex-col lg:flex-row lg:items-center justify-between">
         <p className="text-[13px] font-inter text-[#011624]">© 2025 LAPO. All rights reserved.</p>
         <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[48px]">
-          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Privacy Policy</p>
+          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/privacy"), window.scrollTo(0, 0)}}>Privacy Policy</p>
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Terms of Service</p>
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Cookies Settings</p>
         </div>

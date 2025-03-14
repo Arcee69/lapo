@@ -33,6 +33,8 @@ import Events from "../pages/Media/components/Events";
 import Resources from "../pages/Resources";
 import Blog from "../pages/Blog";
 import Videos from "../pages/Media/components/Videos";
+import Media from "../pages/Media";
+import Privacy from "../pages/Privacy";
 
 
 export default function Routers() {
@@ -72,6 +74,7 @@ export default function Routers() {
           <Route path="/digital/cards" element={<Cards />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/view-blog" element={<ViewBlogPost />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Route>
       </Routes>
     </div>

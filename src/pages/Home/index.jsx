@@ -197,7 +197,7 @@ const Home = () => {
 
       <section 
         style={{
-          backgroundImage: `url(${HomeBg})`,
+          backgroundImage: `url(https://res.cloudinary.com/dairsbzlv/image/upload/v1741961225/home_bg_itrvxk.png)`,
           backgroundSize:"cover",
           backgroundRepeat: "no-repeat"
         }}
