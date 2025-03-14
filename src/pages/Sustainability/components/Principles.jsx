@@ -98,14 +98,14 @@ const Principles = () => {
   return (
     <div className='w-full'>
       <div 
-        className='pb-[70px] pt-[40px] flex flex-col px-[100px] gap-[30px]'
+        className='pb-[70px] pt-[40px] flex flex-col px-5 lg:px-[100px] gap-[30px]'
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
       >
-        <div className="bg-[#F8F9FA] rounded-[20px] w-full h-[16.125rem] p-5 gap-[44px] flex-col flex">
+        <div className="bg-[#F8F9FA] rounded-[20px] w-full lg:h-[16.125rem] p-5 gap-[44px] flex-col flex">
           <div className="border border-[#4380BE66] p-3 border-x-0 border-t-0">
-            <p className="font-hanken text-[54px] text-[#1E1E1E] leading-[38px]">Nigeria's Sustainable Banking Principles</p>
+            <p className="font-hanken text-[32px] lg:text-[54px] text-[#1E1E1E] leading-[38px]">Nigeria's Sustainable Banking Principles</p>
           </div>
           <div className="flex flex-col gap-[15px]">
             <p className="text-[#333333] text-base leading-[25.6px] font-hanken">
@@ -117,10 +117,10 @@ const Principles = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {
             principlesData.map((item, index) => (
-              <div key={index} className='h-[30.813rem] shadow flex flex-col items-start gap-5'>
+              <div key={index} className='h-auto lg:h-[30.813rem] shadow flex flex-col items-start gap-5'>
                 <div className='bg-[#4380BE] h-auto p-[14px] w-full'>
                   <p className='font-bold text-[#fff] text-[19px] '>{item.title}</p>
                 </div>
@@ -150,124 +150,115 @@ const Principles = () => {
       </div>
 
       <section
-        className='bg-[#00984C] h-[471px] flex justify-center py-[112px] items-center'
-        data-aos="fade-up" 
-        data-aos-duration="1000" 
-        data-aos-easing="linear"
-      >
-        <div className='w-[768px] flex flex-col items-center gap-6'>
-            <p className='font-hanken text-[48px] text-center leading-[57px] text-[#FFFFFF]'>
-                Unlock new financial possibilities with us
-            </p>
-            <p className='font-inter text-[18px] leading-[27px] text-[#FFFFFF]'>
-                Explore our diverse saving options tailored for personal, business, and educational needs.  
-            </p>
-            <div className='flex items-center gap-4'>
-                <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
-                    <p className='font-hanken text-[#000000] font-medium text-base leading-6'>Contact Us</p>
+                className='bg-[#00984C] h-[471px] px-5 lg:px-0 flex justify-center py-[107px] lg:py-[112px] items-center'
+                data-aos="fade-up" 
+                data-aos-duration="1000" 
+                data-aos-easing="linear"
+            >
+                <div className='lg:w-[768px] flex flex-col items-center gap-6'>
+                    <p className='font-hanken text-[32px] lg:text-[48px] text-center leading-[120%] lg:leading-[57px] text-[#FFFFFF]'>
+                        Unlock new financial possibilities with us
+                    </p>
+                    <p className='font-inter text-base leading-[150%] text-center lg:text-[18px] lg:leading-[27px] text-[#FFFFFF]'>
+                        Explore our diverse saving options tailored for personal, business, and educational needs.  
+                    </p>
+                    <div className='flex items-center gap-4'>
+                        <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
+                            <p className='font-hanken text-[#000000] font-medium text-[13px] lg:text-base leading-6'>Contact Us</p>
+                        </div>
+                        <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                            <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
+                        </div>
+                    </div>
                 </div>
-                <div className='bg-[#000000] w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
-                    <p className='font-hanken font-medium text-[#fff]'>Download the LAPO App</p>
-                </div>
-            </div>
-        </div>
       </section>
       
       <section
-        data-aos="fade-up" 
-        data-aos-duration="1000" 
-        data-aos-easing="linear"
-        className='flex flex-col items-center gap-[41px] py-[112px] px-[74px]'
+          className='px-5 lg:px-[120px] py-[96px] lg:py-[112px] flex flex-col gap-[41px] items-center'
+          data-aos="fade-up" 
+          data-aos-duration="1000" 
+          data-aos-easing="linear"
       >
-        <p className='font-hanken text-[54px] leading-[51px] text-[#1E1E1E]'>More About Our Impact</p>
-        <div className='flex items-center gap-[30px]'>
-          <div className='drop-shadow-md w-[366px] h-[324px] flex flex-col items-start gap-[30px] px-2.5 pb-6 bg-[#ffff] rounded-lg'>
-              <img 
-                  src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238686/wind_p3xnl2.png"
-                  alt='Wind'
-                  className='h-[152px] w-[346px] object-cover'
-              />
-              <div className='flex flex-col gap-[9px] items-start'>
-                  <p className='font-hanken text-[18px] font-medium leading-5'>Environment Dimension.</p>
-                  <p className='font-inter text-sm leading-[22px] text-[#6C757D]'>
-                      Grow your business with our flexible financing 
-                      options designed for entrepreneurs and SMEs.
-                  </p>
-                  <div className='flex items-center gap-2'>
-                      <p className='text-[#006A4E] font-inter text-base leading-[25px]'>Learn More</p>
-                      <CgArrowLongRight className='w-5 h-5 text-[#006A4E]'/>
+          <p className='text-[32px] lg:text-[54px] font-hanken leading-[51px] text-[#1E1E1E]'>More About Our Impact</p>
+          <div className='flex flex-col lg:flex-row items-start gap-[30px]'>
+              <div className='flex flex-col shadow-md rounded-lg w-[21.438rem] mx-auto lg:w-[22.9rem] h-auto lg:h-[324px]'>
+                  <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238686/wind_p3xnl2.png"
+                      alt='Savings' 
+                      className='w-full h-[152px] object-cover rounded-t-lg' 
+                  />
+                  <div className='flex flex-col p-5 gap-3'>
+                      <p className="text-[#333333] font-hanken font-bold text-[18px]">Environment Dimension.</p>
+                      <p className='font-inter text-[#6C757D] text-sm'> 
+                          Grow your business with our flexible financing 
+                          options designed for entrepreneurs and SMEs.
+                      </p>
+                      <p onClick={() => {navigate("/sustainability"); window.scrollTo(0, 0)}} className='text-[#006A4E] cursor-pointer text-base'>Learn More</p>
+                  </div>
+              </div>
+              <div className='flex flex-col shadow-md rounded-lg w-[21.438rem] mx-auto lg:w-[22.9rem] h-auto lg:h-[324px]'>
+                  <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238685/plant_jnxuhq.png"
+                      alt='Savings' 
+                      className='w-full object-cover h-[152px] rounded-t-lg' 
+                  />
+                  <div className='flex flex-col p-5 gap-3'>
+                      <p className="text-[#333333] font-hanken font-bold text-[18px]">Nigerian Sustainable Banking Principles (NSBP) & LAPO MfB</p>
+                      <p className='font-inter text-[#6C757D] text-sm'> 
+                          Fund your education or your children's schooling 
+                          with our affordable education financing
+                      </p>
+                      <p onClick={() => {navigate("/sustainability"); window.scrollTo(0, 0)}} className='text-[#006A4E] cursor-pointer text-base'>Learn More</p>
+                  </div>
+              </div>
+              <div className='flex flex-col shadow-md rounded-lg w-[21.438rem] mx-auto lg:w-[22.9rem] h-auto lg:h-[324px]'>
+                  <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238685/recycle_ntjphp.png"
+                      alt='Savings' 
+                      className='w-full h-[152px] object-cover rounded-t-lg' 
+                  />
+                  <div className='flex flex-col p-5 gap-3'>
+                      <p className="text-[#333333] font-hanken font-bold text-[18px]">Badges</p>
+                      <p className='font-inter text-[#6C757D] text-sm'> 
+                          Transform your living space with affordable financing for renovations and improvements.
+                      </p>
+                      <p onClick={() => {navigate("/sustainability"); window.scrollTo(0, 0)}} className='text-[#006A4E] cursor-pointer text-base'>Learn More</p>
                   </div>
               </div>
           </div>
-          <div className='drop-shadow-md w-[366px] h-[324px] flex flex-col items-start gap-[30px] px-2.5 pb-6 bg-[#ffff] rounded-lg'>
-              <img 
-                  src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238685/plant_jnxuhq.png"
-                  alt='Wind'
-                  className='h-[152px] w-[346px] object-cover'
-              />
-              <div className='flex flex-col gap-[9px] items-start'>
-                  <p className='font-hanken text-[18px] font-medium leading-5'>Nigerian Sustainable Banking Principles (NSBP) & LAPO MfB</p>
-                  <p className='font-inter text-sm leading-[22px] text-[#6C757D]'>
-                      Fund your education or your children's schooling 
-                      with our affordable education financing.
-                  </p>
-                  <div className='flex items-center gap-2'>
-                      <p className='text-[#006A4E] font-inter text-base leading-[25px]'>Learn More</p>
-                      <CgArrowLongRight className='w-5 h-5 text-[#006A4E]'/>
-                  </div>
-              </div>
-          </div>
-          <div className='drop-shadow-md w-[366px] h-[324px] flex flex-col items-start gap-[30px] px-2.5 pb-6 bg-[#ffff] rounded-lg'>
-              <img 
-                  src="https://res.cloudinary.com/dairsbzlv/image/upload/v1740238685/recycle_ntjphp.png"
-                  alt='Wind'
-                  className='h-[152px] w-[346px] object-cover'
-              />
-              <div className='flex flex-col gap-[9px] items-start'>
-                  <p className='font-hanken text-[18px] font-medium leading-5'>Badges</p>
-                  <p className='font-inter text-sm leading-[22px] text-[#6C757D]'>
-                      Transform your living space with affordable financing for renovations and improvements.
-                  </p>
-                  <div className='flex items-center gap-2'>
-                      <p className='text-[#006A4E] font-inter text-base leading-[25px]'>Learn More</p>
-                      <CgArrowLongRight className='w-5 h-5 text-[#006A4E]'/>
-                  </div>
-              </div>
-          </div>
-        </div>
       </section>
       
       <section
-        className='w-full px-[80px] py-[96px] h-[512px] overflow-hidden'
-        data-aos="fade-up" 
-        data-aos-duration="1000"
-        data-aos-easing="linear"
+          className='w-full px-5 lg:px-[80px] py-[96px] lg:h-[512px] overflow-hidden'
+          data-aos="fade-up" 
+          data-aos-duration="1000"
+          data-aos-easing="linear"
       >
-        <div
-          className='flex items-center justify-center gap-[64px]'
-        >
-          <div className='w-[576px] flex flex-col gap-6'>
-              <p className='font-medium font-hanken text-[48px] leading-[60px]'>
-                Bank On the Go – Anytime, Anywhere!
+          <div
+              className='flex flex-col lg:flex-row items-center justify-center gap-[64px]'
+          >
+              <div className='lg:w-[576px] flex flex-col gap-6'>
+              <p className='font-medium font-hanken text-[32px] lg:text-[48px] leading-[60px]'>
+                  Bank On the Go – Anytime, Anywhere!
               </p>
-              <p className='text-[#667085] text-[20px] font-nunito leading-[30px] w-[480px]'>
-              Download LAPO's mobile app for seamless banking, savings, 
-              and loans—all at your fingertips.
+              <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
+                  Download LAPO's mobile app for seamless banking, savings, 
+                  and loans—all at your fingertips.
               </p>
               <div className='flex items-center gap-4'>
                   <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
                   <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
               </div>
-          </div>
-          <div className='bg-[#F3F5F4] w-[576px] relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>
-              <div className='w-[274px] relative left-10 -bottom-20'>
-              <img src={BackScreen} alt='BackScreen' className='' />
               </div>
-              <div className='w-[281px] relative right-4 -bottom-10 z-10'>
-              <img src={FrontScreen} alt='FrontScreen' className=''  />
+              <div className='bg-[#F3F5F4] w-full lg:w-[576px] h-[512px] lg:h-auto relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>
+              <div className='w-[274px] hidden lg:block lg:relative left-10 -bottom-20'>
+                  <img src={BackScreen} alt='BackScreen' className='' />
+              </div>
+              <div className='w-[281px] mx-auto relative lg:right-4 -bottom-10 z-10'>
+                  <img src={FrontScreen} alt='FrontScreen' className=''  />
+              </div>
               </div>
           </div>
-        </div>
       </section>
 
     </div>

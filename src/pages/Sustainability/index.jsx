@@ -90,12 +90,12 @@ const Sustainability = () => {
         >
           <p className={`${activeTab === "sdgs" ? "text-[#fff]" : "text-[#1E1E1E]"} whitespace-nowrap text-base leading-6 font-inter`}>SDGs</p>
         </div>
-        <div 
+        {/* <div 
           onClick={() => handleChangeTab("badges")}
           className={`${activeTab === "badges" ? "bg-[#4380BE]" : "bg-[#FAFBFB]"} cursor-pointer w-full lg:w-[90px] h-[48px] p-4 lg:p-0 rounded-[15px] border flex items-center justify-center border-[#1E1E1E]`}
         >
           <p className={`${activeTab === "badges" ? "text-[#fff]" : "text-[#1E1E1E]"} whitespace-nowrap text-base leading-6 font-inter`}>Badges</p>
-        </div>
+        </div> */}
       </section>
 
       <>
@@ -104,7 +104,7 @@ const Sustainability = () => {
         {activeTab === "environmental" && <EnvironmentalDimension />}
         {activeTab === "nsbp" && <Principles />}
         {activeTab === "sdgs" && <Sdg />}
-        {activeTab === "badges" && <Badges />}
+        {/* {activeTab === "badges" && <Badges />} */}
       </>
 
     </div>
