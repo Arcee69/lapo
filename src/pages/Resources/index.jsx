@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import axios from "axios"
 
 import Left from "../../assets/svg/left_brick.svg"
 import Right from "../../assets/svg/right_brick.svg"
@@ -20,6 +21,8 @@ import { useNavigate } from 'react-router-dom'
 
 const Resources = () => {
     const [activeTab, setActiveTab] = useState("featured")
+    const [loading, setLoading] = useState(false)
+    const [resources, setResources] = useState([])
 
     const handleTabChange = (value) => {
         setActiveTab(value)
@@ -33,6 +36,31 @@ const Resources = () => {
     const brochuresRef = useRef(null); 
     const formsRef = useRef(null); 
     const sdgRef = useRef(null); 
+
+    const fetchResources = async () => {
+        setLoading(true)
+        try {
+            const res = await axios.get("https://lapo.smhptech.com/api/v1/resource")
+            console.log(res, "apache")
+            setResources(res?.data?.data)
+        } catch (err) {
+            console.log(err, "err")
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        fetchResources()
+    }, [])
+
+    const filteredResources = {
+        featured: resources,
+        reports: resources.filter(r => r.category === 'annual_report'),
+        brochures: resources.filter(r => r.category === 'brochure'),
+        forms: resources.filter(r => r.category === 'form'),
+        sdg: resources.filter(r => r.category === 'sdg_badge'),
+      };
 
     return (
         <div className='w-full'>
@@ -86,7 +114,7 @@ const Resources = () => {
                             className={`${activeTab === "featured" ? "border-[#00984C] border-l-[3px] rounded-lg border-t-0 border-r-0 bg-[#F9FBFA]" : "border-x-0 border-t-0"} w-full lg:w-[14.5rem] h-[52px] p-3 flex border items-center gap-2 cursor-pointer`}>
                             <p className={`${activeTab === "featured" ? "text-[#00984C]" : ""} whitespace-nowrap font-hanken text-[18px] leading-5`}>All Resources </p>
                             <div className={`${activeTab === "featured" ? "" : "bg-[#E5E7EB]"} rounded-full flex items-center justify-center p-1 w-[22px] h-[18px]`}>
-                                <p className={`${activeTab === "featured" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>11</p>
+                                <p className={`${activeTab === "featured" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>{resources?.length || 0}</p>
                             </div>
                         </div>
                         <div 
@@ -99,7 +127,7 @@ const Resources = () => {
                         className={`${activeTab === "reports" ? "border-[#00984C] border-l-[3px] border-t-0 rounded-lg border-r-0 bg-[#F9FBFA]" : "border-x-0 border-t-0"} w-[14.5rem] h-[52px] p-3 flex border items-center gap-2 cursor-pointer`}>
                             <p className={`${activeTab === "reports" ? "text-[#00984C]" : ""} whitespace-nowrap font-hanken text-[18px] leading-5`}>Annual Reports</p>
                             <div className={`${activeTab === "reports" ? "" : "bg-[#E5E7EB]"} rounded-full flex items-center justify-center p-1 w-[22px] h-[18px]`}>
-                                <p className={`${activeTab === "reports" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>3</p>
+                                <p className={`${activeTab === "reports" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>{resources?.filter(r => r.category === 'annual_report')?.length}</p>
                             </div>
                         </div>
                         <div 
@@ -113,7 +141,7 @@ const Resources = () => {
                             className={`${activeTab === "brochures" ? "border-[#00984C] border-l-[3px] border-t-0 rounded-lg border-r-0 bg-[#F9FBFA]" : "border-x-0 border-t-0"} w-full lg:w-[14.5rem] h-[52px] p-3 flex border items-center gap-2 cursor-pointer`}>
                             <p className={`${activeTab === "brochures" ? "text-[#00984C]" : ""} font-hanken whitespace-nowrap text-[18px] leading-5`}>Brochures </p>
                             <div className={`${activeTab === "brochures" ? "" : "bg-[#E5E7EB]"} rounded-full flex items-center justify-center p-1 w-[22px] h-[18px]`}>
-                                <p className={`${activeTab === "brochures" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>1</p>
+                                <p className={`${activeTab === "brochures" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>{resources?.filter(r => r.category === 'brochure')?.length}</p>
                             </div>
                         </div>
                         <div 
@@ -127,7 +155,7 @@ const Resources = () => {
                             className={`${activeTab === "forms" ? "border-[#00984C] border-l-[3px] border-t-0 rounded-lg border-r-0 bg-[#F9FBFA]" : "border-x-0 border-t-0"} w-full lg:w-[14.5rem] h-[52px] p-3 flex border items-center gap-2 cursor-pointer`}>
                             <p className={`${activeTab === "forms" ? "text-[#00984C]" : ""} font-hanken whitespace-nowrap text-[18px] leading-5`}>Forms </p>
                             <div className={`${activeTab === "forms" ? "" : "bg-[#E5E7EB]"} rounded-full flex items-center justify-center p-1 w-[22px] h-[18px]`}>
-                                <p className={`${activeTab === "forms" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>1</p>
+                                <p className={`${activeTab === "forms" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>{resources?.filter(r => r.category === 'form')?.length}</p>
                             </div>
                         </div>
                         <div onClick={() => {
@@ -140,7 +168,7 @@ const Resources = () => {
                         className={`${activeTab === "sdg" ? "border-[#00984C] border-l-[3px] border-t-0 rounded-lg border-r-0 bg-[#F9FBFA]" : "border-x-0 border-t-0"} w-full lg:w-[14.5rem] h-[52px] p-3 flex border items-center gap-2 cursor-pointer`}>
                             <p className={`${activeTab === "sdg" ? "text-[#00984C]" : ""} font-hanken whitespace-nowrap text-[18px] leading-5`}>SDG Resources</p>
                             <div className={`${activeTab === "sdg" ? "" : "bg-[#E5E7EB]"} rounded-full flex items-center justify-center p-1 w-[22px] h-[18px]`}>
-                                <p className={`${activeTab === "sdg" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>5</p>
+                                <p className={`${activeTab === "sdg" ? "text-[#00984C]" : "text-[#374151]"} font-inter text-[12px]`}>{resources?.filter(r => r.category === 'sdg_badge')?.length}</p>
                             </div>
                         </div>
                     </div>
@@ -148,11 +176,11 @@ const Resources = () => {
 
                  {/* Main Content */}
                 <div className="w-full lg:w-3/4 lg:p-4 gap-[48px] flex flex-col">
-                    <Featured featuredRef={featuredRef} />
-                    <Reports reportRef={reportRef} />
-                    <Brochures brochuresRef={brochuresRef}/>
-                    <Forms formsRef={formsRef}/>
-                    <Sdg sdgRef={sdgRef}/>
+                    <Featured featuredRef={featuredRef} data={filteredResources.featured} loading={loading}/>
+                    <Reports reportRef={reportRef} data={filteredResources.reports}  loading={loading}/>
+                    <Brochures brochuresRef={brochuresRef}  data={filteredResources.brochures}  loading={loading}/>
+                    <Forms formsRef={formsRef} data={filteredResources.forms}  loading={loading}/>
+                    <Sdg sdgRef={sdgRef} data={filteredResources.sdg}  loading={loading} />
                 </div>
             </section>
             
