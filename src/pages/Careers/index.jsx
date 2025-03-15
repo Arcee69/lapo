@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { MdArrowOutward } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
+import axios from "axios"
 
 import BackScreen from "../../assets/png/back_screen.png"
 import FrontScreen from "../../assets/png/front_screen.png"
@@ -25,10 +26,28 @@ import Sustainability from "../../assets/svg/sustainability.svg"
 import Box from '../../components/Box'
 
 const Careers = () => {
-    const [statusFilter, setStatusFilter] = useState("")
+    const [roleFilter, setRoleFilter] = useState("")
+    const [statesOptions, setStatesOptions] = useState([]);
     const [search, setSearch] = useState("")
     const [location, setLocation] = useState("")
+    const [jobs, setJobs] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [prevPageUrl, setPrevPageUrl] = useState(null);
+    const [nextPageUrl, setNextPageUrl] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
 
+    const getStates = async () => {
+        try {
+            const res = await axios.get("https://lapo.smhptech.com/api/v1/state")
+            setStatesOptions(res?.data.data)
+        } catch (err) {
+            console.log(err, "err")
+        }
+    }
+
+    useEffect(() => {
+        getStates()
+    }, [])
 
     const items = [
         {
@@ -44,6 +63,45 @@ const Careers = () => {
           title: 'Capacity Building'
         }
       ];
+
+
+    const fetchJobs = async (url = "https://lapo.smhptech.com/api/v1/job") => {
+        setLoading(true)
+        try {
+          const res = await axios.get(url);
+          const data = res.data;
+    
+          setJobs(data?.data || []);
+          setPrevPageUrl(data.pagination?.prev_page_url);
+          setNextPageUrl(data.pagination?.next_page_url);
+          setCurrentPage(data.pagination?.current_page);
+        } catch (err) {
+          console.error(err);
+        } finally {
+            setLoading(false)
+        }
+      };
+
+
+      const filteredJobs = jobs.filter((item) => {
+        const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase() || "");
+        const matchesLocation = item.state.name.toLowerCase().includes(location.toLowerCase() || "");
+        const matchesRole = item.role.toLowerCase().includes(roleFilter.toLowerCase() || "");
+
+        return matchesSearch && matchesLocation && matchesRole
+      })
+    
+      useEffect(() => {
+        fetchJobs();
+      }, []);
+    
+    const handlePrevPage = () => {
+        if (prevPageUrl) fetchJobs(prevPageUrl);
+    };
+    
+    const handleNextPage = () => {
+        if (nextPageUrl) fetchJobs(nextPageUrl);
+    };
 
 
   return (
@@ -87,20 +145,27 @@ const Careers = () => {
                         </div>
 
                         <select
-                            value={statusFilter}
-                            onChange={(e) => setStatusFilter(e.target.value)}
+                            value={roleFilter}
+                            onChange={(e) => setRoleFilter(e.target.value)}
                             className="flex items-center justify-between p-2 w-full lg:w-[224px] outline-none border border-[#D0D5DD] rounded-lg"
                         >
-                            {/* <option value="">Status</option> */}
-                            <option value="true">Role</option>
+                            <option value="">Role</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Product">Product</option>
+                            <option value="Operation">Operation</option>
                         </select>
                         <select
                             value={location}
                             onChange={(e) => setLocation(e.target.value)}
                             className="flex items-center justify-between p-2 w-full lg:w-[224px] outline-none border border-[#D0D5DD] rounded-lg"
                         >
-                            {/* <option value="">Status</option> */}
-                            <option value="true">Location</option>
+                            <option value="">Location</option>
+                            {
+                                statesOptions?.map((item) => (
+                                    <option key={item.id} value={item.name}>{item.name}</option> 
+                                ))
+                            }
                         </select>
            
                     </div>
@@ -118,110 +183,39 @@ const Careers = () => {
                 </p>
             </div>
 
-            <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
-                <div className="flex flex-col gap-2">
-                    <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">Design</p>
-                    <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">Product Designer</p>
-                    <div className="flex gap-6">
-                        <div className="flex items-center gap-2">
-                            <CiLocationOn className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Remote</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <IoTimeOutline className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Full-time</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden lg:flex items-center gap-2">
-                    <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
-                    <MdArrowOutward className="text-[#F99650] w-5 h-5" />
-                </div>
-            </div>
+            {/* <div className="flex flex-col">
 
-            <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
-                <div className="flex flex-col gap-2">
-                    <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">Software Development</p>
-                    <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">Engineering Manager</p>
-                    <div className="flex gap-6">
-                        <div className="flex items-center gap-2">
-                            <CiLocationOn className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Remote</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <IoTimeOutline className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Full-time</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden lg:flex items-center gap-2">
-                    <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
-                    <MdArrowOutward className="text-[#F99650] w-5 h-5" />
-                </div>
-            </div>
+            </div> */}
 
-            <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
-                <div className="flex flex-col gap-2">
-                    <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">Customer Success</p>
-                    <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">Customer Success Manager</p>
-                    <div className="flex gap-6">
-                        <div className="flex items-center gap-2">
-                            <CiLocationOn className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Remote</p>
+            {
+                loading ? 
+                <p className='text-2xl font-inter text-[#000] text-center font-semibold mt-10'>Loading...</p>
+                : filteredJobs.length > 0 ?
+                filteredJobs?.map((item) => (
+                    <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
+                        <div className="flex flex-col gap-2">
+                            <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">{item.role}</p>
+                            <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">{item.title}</p>
+                            <div className="flex gap-6">
+                                <div className="flex items-center gap-2">
+                                    <CiLocationOn className="w-5 h-5 text-[#667085]" />
+                                    <p className="text-[#667085] font-inter font-medium capitalize text-base">{item.work_type}</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <IoTimeOutline className="w-5 h-5 text-[#667085]" />
+                                    <p className="text-[#667085] font-inter font-medium capitalize text-base">{item.employment_type}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <IoTimeOutline className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Full-time</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden lg:flex items-center gap-2">
-                    <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
-                    <MdArrowOutward className="text-[#F99650] w-5 h-5" />
-                </div>
-            </div>
-
-            <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
-                <div className="flex flex-col gap-2">
-                    <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">Sales</p>
-                    <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">Account Executive</p>
-                    <div className="flex gap-6">
-                        <div className="flex items-center gap-2">
-                            <CiLocationOn className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Remote</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <IoTimeOutline className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Full-time</p>
+                        <div className="hidden lg:flex cursor-pointer items-center gap-2" onClick={() => window.open(item.link, "_blank")}>
+                            <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
+                            <MdArrowOutward className="text-[#F99650] w-5 h-5" />
                         </div>
                     </div>
-                </div>
-                <div className="hidden lg:flex items-center gap-2">
-                    <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
-                    <MdArrowOutward className="text-[#F99650] w-5 h-5" />
-                </div>
-            </div>
-
-            <div className="border border-[#EAECF0] p-6 w-full lg:w-[768px] mx-auto h-[144px] rounded-lg flex items-start justify-between">
-                <div className="flex flex-col gap-2">
-                    <p className="text-[#F99650] font-inter font-semibold text-sm leading-[20px]">Marketing</p>
-                    <p className="text-[#101828] font-inter font-medium text-[18px] leading-[28px]">SEO Marketing Manager</p>
-                    <div className="flex gap-6">
-                        <div className="flex items-center gap-2">
-                            <CiLocationOn className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Remote</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <IoTimeOutline className="w-5 h-5 text-[#667085]" />
-                            <p className="text-[#667085] font-inter font-medium text-base">Full-time</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden lg:flex items-center gap-2">
-                    <p className="text-[#F99650] font-inter font-medium text-base leading-6">View job</p>
-                    <MdArrowOutward className="text-[#F99650] w-5 h-5" />
-                </div>
-            </div>
+                ))
+                :
+                <p className='text-2xl text-[#000] text-center font-semibold mt-10'>No Jobs Available</p>
+            }
 
         </section>
 
