@@ -347,38 +347,38 @@ const EnvironmentalDimension = () => {
           </div>
       </section>
       
-        <section
-            className='w-full px-5 lg:px-[80px] py-[96px] lg:h-[512px] overflow-hidden'
-            data-aos="fade-up" 
-            data-aos-duration="1000"
-            data-aos-easing="linear"
-        >
-            <div
-                className='flex flex-col lg:flex-row items-center justify-center gap-[64px]'
-            >
-                <div className='lg:w-[576px] flex flex-col gap-6'>
-                <p className='font-medium font-hanken text-[32px] lg:text-[48px] leading-[60px]'>
-                    Bank On the Go – Anytime, Anywhere!
-                </p>
-                <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
-                    Download LAPO's mobile app for seamless banking, savings, 
-                    and loans—all at your fingertips.
-                </p>
-                <div className='flex items-center gap-4'>
-                    <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
-                    <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
-                </div>
-                </div>
-                <div className='bg-[#F3F5F4] w-full lg:w-[576px] h-[512px] lg:h-auto relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>
-                <div className='w-[274px] hidden lg:block lg:relative left-10 -bottom-20'>
-                    <img src={BackScreen} alt='BackScreen' className='' />
-                </div>
-                <div className='w-[281px] mx-auto relative lg:right-4 -bottom-10 z-10'>
-                    <img src={FrontScreen} alt='FrontScreen' className=''  />
-                </div>
-                </div>
-            </div>
-        </section>
+      <section
+          className='w-full px-5 lg:px-[80px] py-[96px] lg:h-[512px] overflow-hidden'
+          data-aos="fade-up" 
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+      >
+          <div
+              className='flex flex-col lg:flex-row items-center justify-center gap-[64px]'
+          >
+              <div className='lg:w-[576px] flex flex-col gap-6'>
+              <p className='font-medium font-hanken text-[32px] lg:text-[48px] leading-[60px]'>
+                  Bank On the Go – Anytime, Anywhere!
+              </p>
+              <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
+                  Download LAPO's mobile app for seamless banking, savings, 
+                  and loans—all at your fingertips.
+              </p>
+              <div className='flex items-center gap-4'>
+                  <img src={Apple} alt='Apple' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://apps.apple.com/ng/app/lapo-mobile-app/id6448030325", "_blank")} />
+                  <img src={Google} alt='Google' className='w-[120px] cursor-pointer h-[40px]' onClick={() => window.open("https://play.google.com/store/apps/details?id=com.digicore.lapo", "_blank")}/>
+              </div>
+              </div>
+              <div className='bg-[#F3F5F4] w-full lg:w-[576px] h-[512px] lg:h-auto relative overflow-hidden flex items-center rounded-tl-[30px] rounded-tr-[30px]'>
+              <div className='w-[274px] hidden lg:block lg:relative left-10 -bottom-20'>
+                  <img src={BackScreen} alt='BackScreen' className='' />
+              </div>
+              <div className='w-[281px] mx-auto relative lg:right-4 -bottom-10 z-10'>
+                  <img src={FrontScreen} alt='FrontScreen' className=''  />
+              </div>
+              </div>
+          </div>
+      </section>
 
     </div>
   )
