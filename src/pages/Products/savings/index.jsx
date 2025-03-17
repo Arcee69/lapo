@@ -35,12 +35,16 @@ const Savings = () => {
     const { state } = useLocation()
 
     const saveRef = useRef(null)
+    const productRef = useRef(null)
 
     const navigate = useNavigate()
 
     useEffect(() => {
         if (state?.section === "save" && saveRef.current) {
             saveRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "product" && productRef.current) {
+            productRef.current.scrollIntoView({ behavior: "smooth" });
         }
       }, [state]);
 
@@ -75,15 +79,20 @@ const Savings = () => {
                     </div>
                     <div className='flex items-center gap-[17px]'>
                         <button
-                            className='w-[160px] lg:w-[180px] h-[43px] lg:h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
+                            className='w-[160px] lg:w-[180px] h-[43px] z-10 lg:h-[56px] flex items-center cursor-pointer justify-center bg-[#fff] rounded-lg'
+                            type='button'
+                            onClick={() => {
+                                navigate("/products/savings", {state: {section: "product"}}), 
+                                window.scrollTo(0, 0)
+                            }}
                         >
-                            <p className='text-[#F99650] font-medium text-base leading-7' >Get Started</p>
+                            <p className='text-[#F99650] font-medium text-base leading-7'>Learn More</p>
                         </button>
-                        <button
+                        {/* <button
                             className='w-[160px] lg:w-[182px] h-[43px] lg:h-[54px] border-[#FFFFFF] border flex items-center justify-center rounded-lg'
                         >
-                            <p className='text-[#FFFFFF] font-medium text-base leading-7'>Learn More</p>
-                        </button>
+                            <p className='text-[#FFFFFF] font-medium text-base leading-7'></p>
+                        </button> */}
 
                     </div>
                 </div>
@@ -132,13 +141,13 @@ const Savings = () => {
 
         <section
             className='bg-[#F7F9FC] py-[51px] lg:py-[112px] px-5 lg:px-[64px] flex flex-col items-center gap-[40px] '
-            ref={saveRef}
+            ref={productRef}
         >
             <div className='flex flex-col items-center gap-6'>
                 <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#E8FFF4]'>
                     <p className='font-hanken font-medium text-sm leading-[15px] text-[#00954B]'>LAPO Savings</p>
                 </div>
-                <p className='font-hanken text-[#000000] text-[32px] text-center lg:text-[54px] leading-[120%] lg:leading-[64px]'>7 Ways to grow your future</p>
+                <p className='font-hanken text-[#000000] text-[32px] text-center capitalize lg:text-[54px] leading-[120%] lg:leading-[64px]'>7 Ways to grow your future</p>
                 <p className='text-base lg:text-[18px] text-[#000000] w-full lg:w-[947px] mx-auto font-inter text-center leading-[150%] lg:leading-[27px]'>
                     Whether you’re saving for your children’s education, growing your business, 
                     or preparing for emergencies, our savings accounts are designed to help you 
@@ -146,7 +155,7 @@ const Savings = () => {
                 </p>
             </div>
 
-            <div  className='flex flex-col gap-4'>
+            <div  className='flex flex-col gap-4' ref={productRef}>
                 <div onClick={() => {navigate("/savings/festival"); window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] px-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group border-[3px] border-[#4380BE52] hover:border-0 hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC] group-hover:bg-[#00984C] justify-center rounded-[8px]'>
@@ -158,14 +167,12 @@ const Savings = () => {
                         <p 
                             className='text-[#00984C] group-hover:text-[#fff] font-medium text-[20px] leading-[100%] lg:text-[40px] lg:leading-[60px]'
                         >
-                            Festival Savings
+                            Xpress Savings Account
                         </p>
                         <p className='font-inter text-[#000000] w-full lg:w-[830px] group-hover:text-[#FFFFFF] text-sm leading-[150%] lg:text-[20px] lg:leading-[30px]'>
-                            The Savings Plan Account is designed for individuals and groups who wish to save 
-                            funds toward a particular project(s) over a specified period of time and earn 
-                            interest on their savings.
+                            This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis.
                         </p>
-                        <div className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                        <div onClick={() => {navigate("/savings/xpress"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 cursor-pointer w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
                             <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>
@@ -192,9 +199,11 @@ const Savings = () => {
                         </div>
                         <BigBox 
                             heading="High Yield Savings"
-                            title="Xpress Savings Account"
-                            subtitle="This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis."
-                            link="/savings/xpress"
+                            title="Festival Savings"
+                            subtitle="The Savings Plan Account is designed for individuals and groups who wish to save 
+                            funds toward a particular project(s) over a specified period of time and earn 
+                            interest on their savings."
+                            link="/savings/festival"
                         />
                     </div>
                     <div className='flex flex-col gap-4'>
