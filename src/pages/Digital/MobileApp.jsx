@@ -306,7 +306,7 @@ const MobileApp = () => {
                 <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
-                <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
+                <p className='font-hanken text-[32px] leading-[120%] capitalize lg:text-[56px] lg:leading-[67px] text-[#fff]'>
                     How to register on the LAPO Mobile App
                 </p>
             </div>
