@@ -52,7 +52,7 @@ const Savings = () => {
     <div className='w-full'>
 
         <section
-            className='bg-[#00984C] h-auto pt-[100px] relative overflow-hidden'
+            className='bg-[#00984C] h-auto pt-[120px] relative overflow-hidden'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
