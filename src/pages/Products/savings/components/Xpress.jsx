@@ -141,17 +141,25 @@ const Xpress = () => {
             data-aos-easing="linear"
         >
             <div className='lg:w-[768px] flex flex-col items-center gap-6'>
-                <p className='font-hanken text-[32px] lg:text-[48px] text-center leading-[120%] lg:leading-[57px] text-[#FFFFFF]'>
+                <p className='font-hanken text-[32px] capitalize lg:text-[48px] text-center leading-[120%] lg:leading-[57px] text-[#FFFFFF]'>
                     Unlock new financial possibilities with us
                 </p>
                 <p className='font-inter text-base leading-[150%] text-center lg:text-[18px] lg:leading-[27px] text-[#FFFFFF]'>
                     Explore our diverse saving options tailored for personal, business, and educational needs.  
                 </p>
                 <div className='flex items-center gap-4'>
-                    <div className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'>
+                    <div 
+                        className='bg-[#fff] w-[128px] h-[48px] cursor-pointer rounded-[8px] p-2 flex items-center justify-center'
+                        onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
+                    >
                         <p className='font-hanken text-[#000000] font-medium text-[13px] lg:text-base leading-6'>Contact Us</p>
                     </div>
-                    <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
+                    <div 
+                        className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'
+                        onClick={() => {navigate("/digital", {
+                            state: {section: "app"}
+                          }); window.scrollTo(0, 0)}}
+                    >
                         <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
                     </div>
                 </div>
