@@ -103,7 +103,7 @@ const Faqs = () => {
             <div className='w-full flex flex-col gap-5 border-0 lg:border lg:border-t-0 lg:border-b-0 lg:border-l-0 lg:border-r-[#75341236] pr-5 lg:pb-[337px]'>
                 <p className='font-hanken text-[#101828] font-medium leading-[44px] text-[36px]'>Table of content</p>
                 <div className='flex flex-col'>
-                    {faqCategory.map(category => (
+                    {faqCategory?.map(category => (
                     <div 
                         key={category.id}
                         onClick={() => setActiveTab(category.id)}
@@ -123,7 +123,7 @@ const Faqs = () => {
 
             {/* FAQ Content */}
             <div className='lg:w-[663px] flex flex-col gap-2.5'>
-            {faqCategory.length > 0 && (
+            {faqCategory?.length > 0 && (
                 <p className='text-[#101828] text-[36px] font-medium capitalize leading-[44px] tracking-[-2%] font-hanken'>
                 {faqCategory.find(c => c.id === activeTab)?.name}
                 </p>
