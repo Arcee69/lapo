@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 import SubLoansHeader from '../../../../components/SubLoansHeader'
 
@@ -21,6 +22,8 @@ const Education = () => {
     const [activeTab, setActiveTab] = useState("fees")
 
     let URL = import.meta.env.VITE_APP_API_URL;
+
+    const navigate = useNavigate()
 
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null); 
@@ -429,6 +432,7 @@ const Education = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>

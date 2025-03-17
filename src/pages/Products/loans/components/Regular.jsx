@@ -342,6 +342,7 @@ const Regular = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>

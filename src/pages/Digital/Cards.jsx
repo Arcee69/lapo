@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import Card from "../../assets/png/cards_transparent.png"
 import CardMain from "../../assets/png/card_main.png"
@@ -17,8 +17,11 @@ const Cards = () => {
 
     const { state } = useLocation()
 
+    const navigate = useNavigate()
+
     const cardsRef = useRef(null)
     const ussdRef = useRef(null)
+    const detailsRef = useRef(null)
 
     useEffect(() => {
         if (state?.section === "cards" && cardsRef.current) {
@@ -26,6 +29,9 @@ const Cards = () => {
         }
         if (state?.section === "ussd" && ussdRef.current) {
             ussdRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "details" && detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
 
@@ -54,14 +60,15 @@ const Cards = () => {
                     <div className='flex items-center gap-[17px]'>
                         <button
                             className='w-[160px] lg:w-[183px] h-[54px] flex items-center justify-center bg-[#fff] rounded-lg'
+                            onClick={() => {navigate("/digital/cards", {state: {section: "details" }}); window.scrollTo(0, 0)}}
                         >
-                            <p className='text-[#F99650] font-medium text-base leading-7'>Get your Card today</p>
+                            <p className='text-[#F99650] font-medium text-base leading-7'>Learn More</p>
                         </button>
-                        <button
+                        {/* <button
                             className='w-[160px] lg:w-[182px] h-[54px] border-[#FFFFFF] border flex items-center justify-center rounded-lg'
                         >
                             <p className='text-[#FFFFFF] font-medium text-base leading-7'>Learn More</p>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 <div className='w-full mx-auto mt-[64px]'>
@@ -75,6 +82,7 @@ const Cards = () => {
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
+            ref={detailsRef}
         >
             <div className='flex flex-col items-center justify-center gap-3'>
                 <div className='bg-[#E8FFF4] w-[75px] flex items-center justify-center flex-col h-[32px] rounded-[6px]'>
@@ -252,6 +260,7 @@ const Cards = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>

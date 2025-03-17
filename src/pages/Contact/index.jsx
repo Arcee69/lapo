@@ -3,7 +3,7 @@ import { FiMessageCircle } from "react-icons/fi";
 import { CiLocationOn, CiMail, CiSearch } from 'react-icons/ci'
 import { LiaPhoneSolid } from "react-icons/lia";
 import { IoIosArrowDown } from 'react-icons/io';
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 import Building from "../../assets/png/lapo_building_b.png"
 import Curve from "../../assets/png/curve_top_right.png"
@@ -21,6 +21,7 @@ const Contact = () => {
     const URL = import.meta.env.VITE_APP_API_URL;
 
     const { state } = useLocation()
+    const navigate = useNavigate()
 
     const branchRef = useRef(null) 
 
@@ -304,6 +305,7 @@ const Contact = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>

@@ -8,6 +8,7 @@ import Premium from "../../assets/png/premium.png"
 import Left from "../../assets/svg/left_about_spiral.svg"
 import Right from "../../assets/svg/right_about_spiral.svg"
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Faqs = () => {
     const [search, setSearch] = useState("")
@@ -17,6 +18,8 @@ const Faqs = () => {
     const [openFaqs, setOpenFaqs] = useState({});
 
     let URL = import.meta.env.VITE_APP_API_URL;
+
+    const navigate = useNavigate()
 
     // Fetch FAQ categories
     useEffect(() => {
@@ -273,6 +276,7 @@ const Faqs = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>

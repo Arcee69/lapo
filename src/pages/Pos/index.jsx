@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
+import axios from 'axios'
 
 import PosBanner from "../../assets/png/pos_banner.png"
 import Terminal from "../../assets/png/terminal.png"
@@ -12,7 +13,7 @@ import NDIC from "../../assets/svg/ndic.svg"
 import Dollar from "../../assets/svg/dollar.svg"
 import Lightning from "../../assets/svg/lightning.svg"
 import Tracker from "../../assets/svg/tracker.svg"
-import axios from 'axios'
+
 
 
 const Pos = () => {
@@ -22,16 +23,22 @@ const Pos = () => {
 
     let URL = import.meta.env.VITE_APP_API_URL;
 
+    const navigate = useNavigate()
+
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null);
 
     const { state } = useLocation() 
 
     const posRef = useRef(null)
+    const detailsRef = useRef(null)
 
     useEffect(() => {
-        if (state?.section === "loans" && posRef.current) {
+        if (state?.section === "pos" && posRef.current) {
             posRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "details" && detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: "smooth" });
         }
       }, [state]);
 
@@ -129,7 +136,7 @@ const Pos = () => {
             <div className='w-[310px] lg:w-[550px] h-[406px] flex flex-col gap-5'>
                 <div className='flex items-center justify-center gap-2 bg-[#FFFFFFCF] w-[204px] rounded-full h-[28px] p-2'>
                     <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
-                    <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 5M+ Nigerians</p>
+                    <p className='font-hanken font-medium text-[#E78020] text-xs'>Empowering 6M+ Nigerians</p>
                 </div>
                 <p className='text-[32px] lg:text-[56px] font-semibold leading-[30px] lg:leading-[57.6px] text-[#fff] font-hanken'>
                     Fast, <span className='text-[#1AFF8C]'>Secure</span>, and <span className='text-[#F99650]'>Reliable</span> Payments for Your Business.
@@ -141,14 +148,16 @@ const Pos = () => {
                 <div className='flex items-center gap-5'>
                     <button
                         className='bg-[#E78020] flex flex-col items-center justify-center w-[300px] lg:w-[211px] h-[56px] rounded-[10px]'
+                        type='button'
+                        onClick={() => {navigate("/pos", {state: {section: "details" }}); window.scrollTo(0, 0)}}
                     >
-                        <p className='font-hanken text-[#fff] text-base font-semibold'>Apply For a LAPO POS</p>
+                        <p className='font-hanken text-[#fff] text-base font-semibold'>Learn More</p>
                     </button>
-                    <button
+                    {/* <button
                         className='border-[#FFFFFF] border flex flex-col items-center justify-center w-[200px] lg:w-[182px] h-[56px] rounded-[10px]'
                     >
                         <p className='font-hanken text-[#FFFFFF] text-base font-semibold'>Learn More</p>
-                    </button>
+                    </button> */}
                 </div>
                 <div className='flex items-center gap-2 mt-3'>
                     <p className='text-xs font-hanken text-[#fff] font-medium capitalize'>licensed by </p>
@@ -161,13 +170,14 @@ const Pos = () => {
 
         <section
             className='bg-[#fff] flex flex-col gap-[64px] py-[53px] px-[32px] lg:py-[92px] lg:px-[80px]'
+            ref={detailsRef}
         >
             <div className='flex flex-col gap-3'>
                 <div className='bg-[#FDF2E9] rounded-[6px] flex items-center flex-col justify-center p-2 h-[32px] w-[172px]'>
                     <p className='text-[#E78020] font-hanken font-medium text-sm leading-[15px]'>Why Choose Our POS?</p>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <p className='font-hanken font-medium text-[28px] leading-[100%] lg:text-[48px] lg:leading-[62px] tracking-[-2%]'>
+                    <p className='font-hanken font-medium capitalize text-[28px] leading-[100%] lg:text-[48px] lg:leading-[62px] tracking-[-2%]'>
                         Payment Solution to fuel your growth
                     </p>
                     <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#667085] '>
@@ -289,7 +299,7 @@ const Pos = () => {
                 <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
-                <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
+                <p className='font-hanken text-[32px] capitalize leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
                     Simple Steps to Getting your POS
                 </p>
                 <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>

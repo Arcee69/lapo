@@ -11,6 +11,7 @@ import Collateral from "../../../../assets/svg/collateral.svg"
 import Duration from "../../../../assets/svg/duration.svg"
 
 import LoanDetails from '../../../../components/LoanDetails'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -23,6 +24,8 @@ const Agricultural = () => {
 
     const sectionRef = useRef(null);
     const stepsContainerRef = useRef(null); 
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -338,6 +341,7 @@ const Agricultural = () => {
                 </ul>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
+                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
                 >
                     <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
                 </button>
