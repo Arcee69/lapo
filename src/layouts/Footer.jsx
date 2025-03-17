@@ -25,7 +25,13 @@ const Footer = () => {
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate('/products/savings'), window.scrollTo(0, 0)}}>Savings</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products/cards"), window.scrollTo(0, 0)}}>Cards</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products") }}>Loans <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {}}>E-banking</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" 
+                onClick={() => {navigate("/digital", {
+                            state: {section: "app"}
+                          }); window.scrollTo(0, 0)}}
+              >
+                E-banking
+              </p>
             </div>
             <div className="flex w-[180px] flex-col gap-4">
               <p className="font-inter text-[20px] font-semibold text-[#34423B]">Company</p>

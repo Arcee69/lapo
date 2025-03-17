@@ -218,7 +218,7 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital", {
                             state: {section: "app"}
-                          }); window.scrollTo(0, 0);
+                          }); window.scrollTo(0, 0),
                           handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
@@ -268,17 +268,29 @@ const Header = () => {
 
                     <div className='flex flex-col gap-6 w-[286px]'>
                       <p 
+                        className='font-medium font-hanken cursor-pointer text-[20px] leading-5 text-[#16181D]'
+                        onClick={() => {
+                          navigate("/pos", {
+                            state: {section: "pos"}
+                          }); window.scrollTo(0, 0)
+                          handleMouseLeave("products")
+                        }}
+                      >
+                        POS Terminal
+                      </p>
+
+                      <div 
                         onClick={() => {
                             navigate("/pos", {
                               state: {section: "pos"}
                             }); window.scrollTo(0, 0)
                             handleMouseLeave("products")
                           }}
-                        className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'
+                        className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
-                        Lapo POS
-                      </p>
-                      <p className='text-[#667085] font-inter text-sm leading-5'>Payment Solution to fuel your growth</p>
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Lapo POS</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Payment Solution to fuel your growth</p>
+                      </div>
                       {/* <div 
                        
                         className='flex items-center cursor-pointer gap-2 w-full'
