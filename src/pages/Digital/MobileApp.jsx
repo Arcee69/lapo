@@ -162,7 +162,11 @@ const MobileApp = () => {
                 <div className='flex flex-col lg:flex-row lg:items-start md:items-center gap-[32px] lg:gap-[100px]'>
                     <div className='flex flex-col gap-6'>
                         <div className='bg-[#FFFFFF] rounded-[17px] md:w-[400px] h-[400px] overflow-hidden'>
-                            <img src={Transfer} alt="Transfer" className='' />
+                            <img 
+                                src="https://res.cloudinary.com/dairsbzlv/image/upload/v1742216447/transfer_b_swdixa.png"
+                                alt="Transfer" 
+                                className='' 
+                            />
                         </div>
                         <div className='flex flex-col gap-[7px]'>
                             <p className='font-inter text-[#fff] text-[24px] lg:text-[30px] leading-[36px]'>Easy Transfers</p>
@@ -171,11 +175,17 @@ const MobileApp = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='bg-[#C2D280] md:w-[400px] h-[540px] rounded-[17px] flex flex-col gap-[253px] p-[32px]'>
-                        <img src={Mask} alt="Mask" className='w-[80px] h-[80px]' />
-                        <div className='flex flex-col gap-[15px]'>
-                            <p className='font-inter text-[24px] lg:text-[31px] leading-[36px] text-[#1E1E1E]'>Loan Access</p>
-                            <p className='text-[#1E1E1E] font-inter text-[15px] leading-6'>
+                    <div className='flex flex-col gap-6'>
+                        <div className='bg-[#C2D280] rounded-[17px] md:w-[400px] h-[400px] overflow-hidden'>
+                            <img 
+                                src="https://res.cloudinary.com/dairsbzlv/image/upload/v1742216447/transfer_b_swdixa.png" 
+                                alt="Transfer" 
+                                className='' 
+                            />
+                        </div>
+                        <div className='flex flex-col gap-[7px]'>
+                            <p className='font-inter text-[#fff] text-[24px] lg:text-[30px] leading-[36px]'>Loan Access</p>
+                            <p className='font-inter text-[15px] text-[#C7C9CA] leading-6'>
                                 Apply for loans in minutes and track your repayments with ease.
                             </p>
                         </div>
@@ -183,11 +193,13 @@ const MobileApp = () => {
                 </div>
 
                 <div className='flex flex-col  lg:flex-row items-center gap-[32px] lg:gap-[100px]'>
-                    <div className='bg-[#00984C] md:w-[400px] h-[540px] rounded-[17px] flex flex-col gap-[253px] p-[32px]'>
-                        <img src={Love} alt="Love" className='w-[80px] h-[80px]' />
-                        <div className='flex flex-col gap-[15px]'>
-                            <p className='font-inter text-[24px] lg:text-[31px] leading-[36px] text-[#FFFFFF]'>Savings & Investment</p>
-                            <p className='text-[#FFFFFF] font-inter text-[15px] leading-6'>
+                    <div className='flex flex-col gap-6'>
+                        <div className='bg-[#00984C] rounded-[17px] md:w-[400px] h-[400px] overflow-hidden'>
+                            <img src="https://res.cloudinary.com/dairsbzlv/image/upload/v1742216447/transfer_b_swdixa.png" alt="Transfer" className='' />
+                        </div>
+                        <div className='flex flex-col gap-[7px]'>
+                            <p className='font-inter text-[#fff] text-[24px] lg:text-[30px] leading-[36px]'>Savings & Investment</p>
+                            <p className='font-inter text-[15px] text-[#C7C9CA] leading-6'>
                                 Grow your wealth with flexible savings options, all in one place.
                             </p>
                         </div>
