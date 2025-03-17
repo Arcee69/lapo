@@ -2,9 +2,12 @@ import React from 'react'
 
 import Groupies from "../../../assets/png/groupies.png"
 import { IoChevronForwardOutline } from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
 
 const Changemakers = () => {
 
+
+    const navigate = useNavigate()
 
     const board = [
         {
@@ -198,17 +201,18 @@ const Changemakers = () => {
                 </div>
                 <div className='flex items-center gap-3'>
                     <button
-                        className='border-[#D0D5DD] drop-shadow border flex items-center justify-center w-[200px] h-[48px] rounded-[10px] bg-[#fff]'
+                        className='drop-shadow flex items-center justify-center w-[200px] h-[48px] rounded-[10px] bg-[#E78020]'
                         type='button'
+                        onClick={() => {navigate('/careers'), window.scrollTo(0, 0)}}
                     >
-                        <p className='font-inter font-medium text-base text-[#344054] leading-6'>Join us at LAPO MFB</p>
+                        <p className='font-inter font-medium text-base  text-[#fff] leading-6'>Join us at LAPO MFB</p>
                     </button>
-                    <button
+                    {/* <button
                         className='drop-shadow flex items-center justify-center w-[109px] bg-[#E78020] rounded-[10px] h-[48px]'
                         type='button'
                     >
                         <p className='font-inter text-base font-medium text-[#fff] leading-6'>About us</p>
-                    </button>
+                    </button> */}
                 </div>
 
             </div>

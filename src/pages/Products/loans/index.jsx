@@ -270,8 +270,8 @@ const Loans = () => {
         </section>
 
         <section
-            ref={sectionRef}
-            className='px-5 lg:px-[64px] py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
+            // ref={sectionRef}
+            className='px-5  py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
         >
             {/* Header section unchanged */}
             <div className='flex items-center flex-col gap-6'>
@@ -289,13 +289,13 @@ const Loans = () => {
 
             {/* Steps container with hidden scrollbar */}
             <div 
-                ref={stepsContainerRef}
-                className='flex flex-col lg:flex-row items-start gap-[48px] overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+                // ref={stepsContainerRef}
+                className='flex flex-col lg:flex-row items-start gap-[38px] lg:mx-auto overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
             >
                 {[1, 2, 3, 4].map((step, index) => (
                     <div
                         key={step}
-                        className='flex flex-row items-start lg:flex-col lg:items-center lg:w-[396px] gap-6 flex-shrink-0'
+                        className='flex flex-row items-start lg:flex-col lg:items-center lg:w-[296px] gap-6 flex-shrink-0'
                     >
                         <div className='w-[60px] h-[40px] lg:w-[80px] lg:h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
                             <p className='font-hanken font-medium text-[#941D58] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
