@@ -246,7 +246,7 @@ const Loans = () => {
                         </div>
                     </div>
                 </div>
-                <div  className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                {/* <div  className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>Individual and Group Loans</p>
@@ -264,12 +264,12 @@ const Loans = () => {
                             funds toward a particular project(s) over a specified period of time and earn 
                             interest on their savings.
                         </p>
-                        <div onClick={() => {navigate("#"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                        <div onClick={() => {navigate("#"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'>
                             <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
 
