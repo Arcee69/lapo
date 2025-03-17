@@ -167,7 +167,7 @@ const Loans = () => {
                 </div>
                 <p className='font-hanken text-[#000000] text-[32px] leading-[120%] lg:text-[54px] lg:leading-[64px]'>Loan Products</p>
                 <p className='text-[18px] text-[#000000] lg:w-[947px] mx-auto font-inter text-center leading-[27px]'>
-                    Loans can be a valuable financial tool for achieving your goals.Our loan options are designed to provide you with all the help you need
+                    Loans can be a valuable financial tool for achieving your goals. Our loan options are designed to provide you with all the help you need
                 </p>
             </div>
 
