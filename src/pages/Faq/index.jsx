@@ -75,7 +75,7 @@ const Faqs = () => {
                 <div className='flex flex-col items-center gap-4 lg:w-[960px] mx-auto'>
                     <p className='text-base font-inter font-semibold leading-6 text-[#EAECF0]'>FAQs</p>
                     <div className='flex flex-col gap-6'>
-                        <p className='font-hanken text-[32px] leading-[32px] lg:text-[56px] text-center font-medium text-[#FFFFFF] lg:leading-[60px]'>
+                        <p className='font-hanken text-[32px] capitalize leading-[32px] lg:text-[56px] text-center font-medium text-[#FFFFFF] lg:leading-[60px]'>
                             Frequently asked questions
                         </p>
                         <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
