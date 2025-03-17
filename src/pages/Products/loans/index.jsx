@@ -22,6 +22,7 @@ const Loans = () => {
     const [selectedCategoryId, setSelectedCategoryId] = useState(null);
 
     const sectionRef = useRef(null);
+    const productRef = useRef(null);
     const stepsContainerRef = useRef(null); 
 
     const { state } = useLocation()
@@ -34,6 +35,9 @@ const Loans = () => {
     useEffect(() => {
         if (state?.section === "loans" && loansRef.current) {
             loansRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "products" && productRef.current) {
+            productRef.current.scrollIntoView({ behavior: "smooth" });
         }
       }, [state]);
 
@@ -112,7 +116,7 @@ const Loans = () => {
   return (
     <div className='w-full' ref={loansRef}>
         <section 
-            className='bg-[#941D58] h-[545px] relative overflow-hidden'
+            className='bg-[#941D58] h-[545px] lg:h-[585px] relative overflow-hidden'
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
@@ -122,7 +126,7 @@ const Loans = () => {
                 <img src={Left} alt='Left' className='hidden md:block' />
             </div>
 
-            <div className='flex flex-col items-center px-5 lg:px-0 pt-[173px]'>
+            <div className='flex flex-col items-center px-5 lg:px-0 pt-[213px]'> {/* pt-[173px] */}
                 <div className='flex flex-col items-center gap-4 lg:w-[688px] mx-auto'>
                     <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
                         <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
@@ -138,8 +142,13 @@ const Loans = () => {
                     </div>
                     <button
                         className='w-[245px] h-[59px] flex items-center justify-center bg-[#fff] rounded-lg'
+                        type='button'
+                        onClick={() => {
+                            navigate("/products", {state: {section: "products"}}), 
+                            window.scrollTo(0, 0)
+                        }}
                     >
-                        <p className='text-[#F99650] font-medium text-base leading-7' >Start your loan application</p>
+                        <p className='text-[#F99650] font-medium text-base leading-7'>Start your loan application</p>
                     </button>
                 </div>
             </div>
@@ -150,7 +159,7 @@ const Loans = () => {
 
         <section
             className='bg-[#FCF7F9] py-[61px] lg:py-[112px] px-5 lg:px-[64px] flex flex-col items-center gap-[40px] '
-            // ref={saveRef}
+            ref={productRef}
         >
             <div className='flex flex-col items-center gap-6'>
                 <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#FFF0E8]'>

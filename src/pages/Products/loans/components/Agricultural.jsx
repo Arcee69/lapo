@@ -102,6 +102,7 @@ const Agricultural = () => {
         <SubLoansHeader 
             title="Agricultural  Loan"
             subtitle={`Agricultural financing is designed to help farmers achieve better results through the provision of agricultural loans. Loan size is between ₦30,000- ₦5,000,000`}
+            link="/loans/agricultural"
         />
         <section
             className='bg-[#fff] px-5 lg:px-[64px] py-[39px] lg:py-[112px]'

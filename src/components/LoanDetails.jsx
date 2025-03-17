@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Accordion from "./Accordion";
 
 import Star from "../assets/svg/star_purple.svg"
 import Box from "../assets/svg/box_purple.svg"
 import Features from "../assets/svg/features_purple.svg"
-import { details } from "motion/react-client";
+
 
 const LoanDetails = ({ img, listContent, details, featuresContent, documentContent }) => {
+
+  const { state } = useLocation()
+  const detailsRef = useRef(null)
+
+  useEffect(() => {
+    if (state?.section === "details" && detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
+
     return (
         <section 
             className="flex flex-col lg:flex-row gap-8 p-6 pt-[66px] lg:pt-[154px] pb-[138px] max-w-6xl mx-auto"
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
+            ref={detailsRef}
         >
            {/* Right Section - Image */}
            <div className="flex-1 lg:hidden ">
@@ -75,9 +87,9 @@ const LoanDetails = ({ img, listContent, details, featuresContent, documentConte
                 />
             </div>
     
-            <button className="mt-6 bg-black font-hanken text-white px-6 py-3 rounded-lg">
+            {/* <button className="mt-6 bg-black font-hanken text-white px-6 py-3 rounded-lg">
                 Get Started →
-            </button>
+            </button> */}
             </div>
     
             {/* Right Section - Image */}
@@ -85,7 +97,7 @@ const LoanDetails = ({ img, listContent, details, featuresContent, documentConte
               <img
                   src={img} 
                   alt="Group Meeting"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-[689px] rounded-lg"
               />
             </div>
         </section>

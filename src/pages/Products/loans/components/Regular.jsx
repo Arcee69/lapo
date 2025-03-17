@@ -105,6 +105,7 @@ const Regular = () => {
         <SubLoansHeader 
             title="Regular Loan"
             subtitle={`This loan product is designed to operate on a group (union) methodology. A union is a self-selected group of people who access loans individually, but have group guarantees. Regular Loan is created to help meet the working capital needs of clients that run small businesses.`}
+            link="/loans/regular"
         />
         <section
             className='bg-[#fff] px-5 lg:px-[64px] py-[39px] lg:py-[112px]'

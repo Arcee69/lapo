@@ -112,6 +112,7 @@ const Education = () => {
                 the cash flow of clients' businesses. 
                 Education Finance Loan is categorised under two main product offerings.
             `}
+            link="/loans/education"
         />
         <div className='flex items-center justify-center gap-4 bg-[#FAFBFB] py-[32px]'>
             <div onClick={() => handleChangeTab("fees")} className={`${activeTab === "fees" ? "bg-[#941D58]" : "border border-[#E2E2E2]"} w-[182px] cursor-pointer rounded-[15px] h-[48px] flex items-center justify-center p-2`}>

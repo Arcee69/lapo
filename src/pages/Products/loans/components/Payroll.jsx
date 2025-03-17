@@ -102,6 +102,7 @@ const Payroll = () => {
         <SubLoansHeader 
             title="Payroll Lending."
             subtitle={`Exclusively for civil servants at federal and state levels, the Public Sector Loan provides financial solutions with convenient repayment plans through payroll deductions, facilitating access to funds without the need for guarantors.`}
+            link="/loans/payroll"
         />
         <section
             className='bg-[#fff] px-5 lg:px-[64px] py-[39px] lg:py-[112px]'

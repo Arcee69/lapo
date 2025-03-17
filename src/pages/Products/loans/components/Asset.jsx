@@ -103,6 +103,7 @@ const Asset = () => {
         <SubLoansHeader 
             title="Asset Loan"
             subtitle={`Asset loan as the name implies is targeted to help existing clients of LAPO MfB purchase assets such as generator, refrigerator, grinding machines etc. that will further enhance the productivity of their enterprise.`}
+            link="/loans/asset"
         />
         <section
             className='bg-[#fff] px-5 lg:px-[64px] py-[39px] lg:py-[112px]'
