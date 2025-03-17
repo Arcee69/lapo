@@ -62,6 +62,7 @@ const Pikin = () => {
         <SubSavingsHeader 
             title="My Pikin & I Savings Account"
             subtitle={`Saving money for your child’s future is as important as raising them well. My Pikin is a savings account designed to provide clients the opportunity to save towards the welfare of their children/dependents.`}
+            link="/savings/pikin"
         />
 
         <SavingsDetails

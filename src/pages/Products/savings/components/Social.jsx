@@ -62,6 +62,7 @@ const Social = () => {
         <SubSavingsHeader 
             title="Social Impact Deposit (SID)"
             subtitle={`The Social Impact Deposit (SID) Account is a unique offering by LAPO Microfinance Bank, designed to empower economically active individuals while promoting social responsibility.`}
+            link="/savings/social"
         />
 
         <SavingsDetails

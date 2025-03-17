@@ -1,10 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Left from "../assets/svg/left_loans_spiral.svg"
 import Right from "../assets/svg/right_loans_spiral.svg"
 import Stars from "../assets/svg/stars.svg"
 
-const SubSavingsHeader = ({title, subtitle }) => {
+const SubSavingsHeader = ({title, subtitle, link }) => {
+
+    const navigate = useNavigate()
 
   return (
     <section 
@@ -33,15 +36,16 @@ const SubSavingsHeader = ({title, subtitle }) => {
                     </p>
                 </div>
                 <div className='flex items-center z-10 gap-[17px]'>
-                    <button
+                    {/* <button
                         className='w-[120px] h-[44px] lg:w-[180px] lg:h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
                     >
                         <p className='text-[#F99650] font-hanken font-medium text-base leading-7'>Get Started</p>
-                    </button>
+                    </button> */}
                     <button
-                        className='w-[120px] lg:w-[180px] h-[44px] lg:h-[56px] flex items-center justify-center border border-[#fff] rounded-lg'
+                        className='w-[120px] lg:w-[180px] h-[44px] lg:h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
+                        onClick={() => navigate(link, {state: {section: "details"}})}
                     >
-                        <p className='text-[#fff] font-medium text-base leading-7'>Learn More</p>
+                        <p className='text-[#F99650] font-medium text-base leading-7'>Learn More</p>
                     </button>
 
                 </div>

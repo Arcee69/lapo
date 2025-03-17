@@ -68,6 +68,7 @@ const IndividualDeposit = () => {
                 funds over time. individuals and groups who wish to save funds toward a particular project(s) 
                 over a specified period of time and earn interest on their savings.
             `}
+            link="/savings/individual/savings"
         />
 
         <SavingsDetails

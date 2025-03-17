@@ -156,7 +156,7 @@ const Savings = () => {
             </div>
 
             <div  className='flex flex-col gap-4' ref={productRef}>
-                <div onClick={() => {navigate("/savings/festival"); window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] px-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group border-[3px] border-[#4380BE52] hover:border-0 hover:bg-[#00984C]'>
+                <div onClick={() => {navigate("/savings/xpress"), window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] px-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group border-[3px] border-[#4380BE52] hover:border-0 hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
                         <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC] group-hover:bg-[#00984C] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
@@ -172,7 +172,7 @@ const Savings = () => {
                         <p className='font-inter text-[#000000] w-full lg:w-[830px] group-hover:text-[#FFFFFF] text-sm leading-[150%] lg:text-[20px] lg:leading-[30px]'>
                             This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis.
                         </p>
-                        <div onClick={() => {navigate("/savings/xpress"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 cursor-pointer w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
+                        <div  className='bg-[#FFFFFF] flex items-center gap-1 cursor-pointer w-[127px] rounded h-[37px] py-2 group-hover:px-4'> {/* #FF5F08 */}
                             <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>

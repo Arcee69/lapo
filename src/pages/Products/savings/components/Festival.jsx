@@ -66,6 +66,7 @@ const Festival = () => {
                 It gives clients the opportunity to save to increase the stock of their pressing needs for 
                 celebration period.
             `}
+            link="/savings/festival"
         />
 
         <SavingsDetails

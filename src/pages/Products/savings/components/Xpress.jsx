@@ -64,6 +64,7 @@ const Xpress = () => {
             subtitle={`
                 With a minimum opening deposit of NGN 1, 000 you can start taking important steps to secure your financial future.
             `}
+            link="/savings/xpress"
         />
 
         <SavingsDetails

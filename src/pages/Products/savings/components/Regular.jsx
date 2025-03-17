@@ -62,7 +62,8 @@ const RegularSavings = () => {
         <SubSavingsHeader 
             title="Regular Deposit (Savings)"
             subtitle={`The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings.`}
-        />
+            link="/savings/regular"
+        />  
 
         <SavingsDetails
             img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740874233/save_dcyh0e.png" 

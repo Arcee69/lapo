@@ -62,6 +62,7 @@ const FixedDeposit = () => {
         <SubSavingsHeader 
             title="Fixed Deposit Account"
             subtitle={`Seize the opportunity to save funds that you do not immediately have need for and in addition, generate high interest on it.`}
+            link="/savings/fixed"
         />
 
         <SavingsDetails
