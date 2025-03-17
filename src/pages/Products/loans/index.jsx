@@ -211,8 +211,7 @@ const Loans = () => {
                             <SmallBox 
                                 heading="Savings"
                                 title="Asset Loan"
-                                subtitle="Child-focused savings account with high interest and life insurance. 
-                                A chance for your child to win LAPO MfB Scholarship."
+                                subtitle="Asset loan as the name implies is targeted to help existing clients of LAPO MfB purchase assets."
                                 link="/loans/asset"
                                 location="loans"
                             />
@@ -220,7 +219,7 @@ const Loans = () => {
                         <BigBox 
                             heading="High Yield Savings"
                             title="Education Loan"
-                            subtitle="This is a very flexible and convenient savings account designed for clients to save money on a voluntary basis."
+                            subtitle="Loans provided to enhance the quality of education. It supports parents to meet education expenses for the children and owners of educational institutions to enhance their facilities."
                             link="/loans/education"
                             location="loans"
                         />
@@ -229,7 +228,7 @@ const Loans = () => {
                         <BigBox 
                             heading="High Yield Savings"
                             title="Agricultural Loan"
-                            subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                            subtitle="Agricultural financing is designed to help farmers achieve better results through the provision of agricultural loans."
                             link="/loans/agricultural"
                             location="loans"
                         />
@@ -237,14 +236,14 @@ const Loans = () => {
                             <SmallBox 
                                 heading="Savings"
                                 title="Special loan"
-                                subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
+                                subtitle="LAPO MFB Special loan product was developed to meet the credit needs of existing regular loan clients who require bigger loan sizes to strengthen their businesses."
                                 link="/loans/special"
                                 location="loans"
                             />
                             <SmallBox 
                                 heading="Investment Savings"
                                 title="Payroll Lending."
-                                subtitle="This account is designed for individuals that are either in business or employed by private or public companies as salary account"
+                                subtitle="LAPO Payroll Lending is a product that offers personal loans through Payroll Lending to Civil Servants at the State and Federal levels"
                                 link="/loans/payroll"
                                 location="loans"
                             />

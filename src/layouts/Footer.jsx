@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
             <div className="flex w-[180px] flex-col gap-4">
               <p className="font-inter text-[20px] font-semibold text-[#34423B]">Contact</p>
-              <a className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E] block" href="mailto:info@lapo-nigeria.org" >Emails</a>
+              <a className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E] block" href="mailto:info@lapo-nigeria.org" >Email</a>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" 
                 onClick={() => {navigate("/contact-us", {state: {section: "branch"}}), window.scroll(0, 0)}}
