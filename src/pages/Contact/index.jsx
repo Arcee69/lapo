@@ -101,7 +101,7 @@ const Contact = () => {
                     <p className='text-xs font-hanken text-[#E78020]'>Contact Us</p>
                 </div>
                 <div className='flex flex-col gap-6'>
-                    <p className='font-hanken text-[32px] leading-[32px] lg:text-[56px] text-center font-medium text-[#101828] lg:leading-[60px]'>
+                    <p className='font-hanken text-[32px] capitalize leading-[32px] lg:text-[56px] text-center font-medium text-[#101828] lg:leading-[60px]'>
                         We’d love to hear from you
                     </p>
                     <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#667085] text-center'>

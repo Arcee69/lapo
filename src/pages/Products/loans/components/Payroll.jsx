@@ -137,7 +137,7 @@ const Payroll = () => {
         </section>
 
         <LoanDetails
-            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740853276/family_tjbggm.png"
+            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740886956/happy_guy_pcy0ip.png"
             listContent={[
                 "No Collateral",
                 "No Bank Account opening required. It is a Payroll Lending.",

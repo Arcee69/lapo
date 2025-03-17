@@ -138,7 +138,7 @@ const Special = () => {
         </section>
 
         <LoanDetails
-            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740853276/family_tjbggm.png" 
+            img="https://res.cloudinary.com/dairsbzlv/image/upload/v1740886956/happy_guy_pcy0ip.png" 
             listContent={[
                 "No Collateral",
                 "Access to other business loan products to strengthen client’s enterprise, e.g. Mid-term and Asset loan",
