@@ -141,14 +141,14 @@ const Loans = () => {
                         </p>
                     </div>
                     <button
-                        className='w-[245px] h-[59px] flex items-center justify-center bg-[#fff] rounded-lg'
+                        className='w-[180px] h-[59px] flex items-center justify-center bg-[#fff] rounded-lg'
                         type='button'
                         onClick={() => {
                             navigate("/products", {state: {section: "products"}}), 
                             window.scrollTo(0, 0)
                         }}
                     >
-                        <p className='text-[#F99650] font-medium text-base leading-7'>Start your loan application</p>
+                        <p className='text-[#F99650] font-medium text-base leading-7'>Learn More</p>
                     </button>
                 </div>
             </div>
