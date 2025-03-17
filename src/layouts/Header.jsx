@@ -408,19 +408,14 @@ const Header = () => {
                     </div>
 
                     <div className='flex flex-col gap-6 w-[389px]'>
-                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Press Release</p>
+                      <p className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'>Resources</p>
 
-                      <div 
-                        // onClick={() => {
-                        //   navigate("/digital", {
-                        //     state: {section: "app"}
-                        //   })
-                        // }}
+                      {/* <div 
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>LAPO Mfb News</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>The latest industry news.</p>
-                      </div>
+                      </div> */}
 
                       <div 
                         onClick={() => {

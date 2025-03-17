@@ -214,7 +214,7 @@ const Contact = () => {
                     {loading ?
                         <p className="font-hanken font-medium text-base">Fetching Branches...</p> 
                         :
-                        apiBranches.length > 0 ?
+                        apiBranches?.length > 0 ?
                         Object.keys(groupedBranches).map((state) => (
                             <div key={state} className="mb-2 border border-x-0 border-t-0 border-[#34423B4D]">
                                 <button
