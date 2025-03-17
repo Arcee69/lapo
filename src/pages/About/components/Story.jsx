@@ -327,7 +327,7 @@ const Story = () => {
             programs, because when financial inclusion thrives, communities prosper.
 
           </p>
-          <div className='flex items-center gap-6'>
+          {/* <div className='flex items-center gap-6'>
             <button
               className='bg-[#E78020] flex flex-col items-center justify-center w-[120px] h-[48px] rounded-[10px]'
             >
@@ -338,7 +338,7 @@ const Story = () => {
             >
               <p className='font-hanken text-[#E78020] text-base font-semibold'>Explore</p>
             </button>
-          </div>
+          </div> */}
         </div>
         <div data-aos="fade-left">
           <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />

@@ -220,12 +220,18 @@ const Home = () => {
           <div className='flex items-center gap-5'>
             <button
               className='bg-[#E78020] flex flex-col items-center justify-center w-[102.86px] lg:w-[180px] h-[32px] lg:h-[56px] rounded-[10px]'
-              onClick={() => navigate("/contact-us")}
+              onClick={() =>   {navigate("/digital", {
+                state: {section: "app"}
+              }); window.scrollTo(0, 0)}}
             >
               <p className='font-hanken text-[#fff] text-[10px] lg:text-base font-semibold'>Join  LAPO</p>
             </button>
             <button
               className='border-[#E78020] border flex flex-col items-center justify-center w-[102.86px] lg:w-[180px] h-[32px] lg:h-[56px] rounded-[10px]'
+              type='button'
+              onClick={() => {navigate("/about"); 
+                window.scrollTo(0, 0)
+              }} 
             >
               <p className='font-hanken text-[#E78020] text-[10px] lg:text-base font-semibold'>Learn More</p>
             </button>
@@ -341,7 +347,7 @@ const Home = () => {
                     </div>
                     <button 
                       className="mt-8 lg:mt-[54px] px-6 w-full lg:w-[180px] flex gap-6 items-center justify-center py-2 bg-black text-white rounded"
-                      onClick={() => {navigate("/savings/regular"); window.scrollTo(0, 0)}}
+                      onClick={() => {navigate("/products/savings"), window.scrollTo(0,0)}}
                     >
                       <p className='font-medium text-base font-nunito'>Get Started</p> 
                       {/* <p className='font-medium text-base font-nunito'>→</p> */}

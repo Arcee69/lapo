@@ -18,10 +18,14 @@ const Cards = () => {
     const { state } = useLocation()
 
     const cardsRef = useRef(null)
+    const ussdRef = useRef(null)
 
     useEffect(() => {
         if (state?.section === "cards" && cardsRef.current) {
             cardsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "ussd" && ussdRef.current) {
+            ussdRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
 
@@ -160,6 +164,7 @@ const Cards = () => {
             data-aos="fade-up" 
             data-aos-duration="1000" 
             data-aos-easing="linear"
+            ref={ussdRef}
         >
             <div className='flex flex-col items-center lg:w-[768px] justify-center gap-3'>
                 <div className='bg-[#E8FFF4] w-[75px] flex items-center justify-center flex-col h-[32px] rounded-[6px]'>

@@ -162,9 +162,11 @@ const Overview = ({ handleChangeTab }) => {
                             while empowering communities to thrive responsibly.
                         </p>
                     </div>
-            
+                    
                     <button
                         className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                        type='button'
+                        onClick={() => {handleChangeTab('environmental'); window.scrollTo(0, 0)}}
                     >
                         <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
                         <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
@@ -189,9 +191,11 @@ const Overview = ({ handleChangeTab }) => {
                         complaints so that they can be served more effectively.
                     </p>
                     </div>
-                    
+
                     <button
                         className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                        type='button'
+                        onClick={() => {handleChangeTab('nsbp'); window.scrollTo(0, 0)}}
                     >
                         <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
                         <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
@@ -220,6 +224,8 @@ const Overview = ({ handleChangeTab }) => {
                     </div>
                     <button
                         className='bg-[#4380BE] w-[180px] h-[48px] rounded-[10px] mt-[28px] flex items-center justify-between px-[22px] py-2.5'
+                        type='button'
+                        onClick={() => {handleChangeTab('sdgs'); window.scrollTo(0, 0)}}
                     >
                         <p className='font-hanken font-bold text-[#FFFFFF] text-base'>Learn More</p>
                         <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>

@@ -33,6 +33,7 @@ const Header = () => {
       setShowMediaDropdown(false);
     } else if (menu === "nil") {
       setShowProductsDropdown(false);
+      setShowMediaDropdown(false);
     }
   };
 
@@ -59,7 +60,9 @@ const Header = () => {
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer'  
               onClick={() => {navigate("/about"); 
-              window.scrollTo(0, 0)}}
+              window.scrollTo(0, 0);
+              handleMouseLeave("nil")
+            }}
             >
               About Us
             </p>
@@ -87,7 +90,8 @@ const Header = () => {
                         className='font-medium font-hanken cursor-pointer text-[20px] leading-5 text-[#16181D]'
                         onClick={() => {
                           navigate("/products/savings"),
-                          window.scrollTo(0,0)
+                          window.scrollTo(0,0),
+                          handleMouseLeave("products")
                         }}
                       >
                         Savings
@@ -97,7 +101,8 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                         onClick={() => {
                           navigate("/savings/xpress"),
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0),
+                          handleMouseLeave("products")
                         }}
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Xpress Savings Account</p>
@@ -118,7 +123,8 @@ const Header = () => {
                       <div 
                          onClick={() => {
                           navigate("/savings/pikin"),
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0),
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -130,7 +136,8 @@ const Header = () => {
                          onClick={() => {
                           navigate("/products/savings", {
                             state: {section: "save"}
-                          }); window.scrollTo(0, 0)
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                         className='flex items-center cursor-pointer gap-2 w-full'
                       >
@@ -146,7 +153,8 @@ const Header = () => {
                         onClick={() => {
                           navigate("/products", {
                             state: {section: "loans"}
-                          }); window.scrollTo(0, 0)
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                       >
                         Loans
@@ -155,7 +163,8 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/loans/msme"),
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0),
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -166,7 +175,8 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/loans/regular"),
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0),
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -177,7 +187,8 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/loans/agricultural"),
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0),
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -190,7 +201,8 @@ const Header = () => {
                         onClick={() => {
                           navigate("/products", {
                             state: {section: "loans"}
-                          }); window.scrollTo(0, 0)
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                       >
                         <p className='text-[#F99650] font-inter whitespace-nowrap text-base leading-6 font-medium'>View all Loans Products</p>
@@ -206,7 +218,8 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital", {
                             state: {section: "app"}
-                          }); window.scrollTo(0, 0)
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -218,7 +231,8 @@ const Header = () => {
                         onClick={() => {
                           navigate("/digital/cards", {
                             state: {section: "cards"}
-                          }); window.scrollTo(0, 0)
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -229,8 +243,9 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/digital/cards", {
-                            state: {section: "cards"}
-                          }); window.scrollTo(0, 0)
+                            state: {section: "ussd"}
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("products")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -257,6 +272,7 @@ const Header = () => {
                             navigate("/pos", {
                               state: {section: "pos"}
                             }); window.scrollTo(0, 0)
+                            handleMouseLeave("products")
                           }}
                         className='font-medium font-hanken text-[20px] leading-5 text-[#16181D]'
                       >
@@ -279,8 +295,11 @@ const Header = () => {
 
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
-              onClick={() => {navigate("/sustainability"); 
-              window.scrollTo(0, 0)}}
+              onClick={() => {
+                navigate("/sustainability"); 
+                window.scrollTo(0, 0);
+                handleMouseLeave("nil")
+            }}
             >
               Sustainability
             </p>
@@ -310,7 +329,8 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                         onClick={() => {
                           navigate("/events");
-                          window.scrollTo(0,0)
+                          window.scrollTo(0,0);
+                          handleMouseLeave("media")
                         }}
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Events</p>
@@ -320,7 +340,8 @@ const Header = () => {
                       <div 
                          onClick={() => {
                           navigate("/blog");
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0);
+                          handleMouseLeave("media")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -346,7 +367,8 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/events");
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0);
+                          handleMouseLeave("media")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -357,7 +379,8 @@ const Header = () => {
                       <div 
                         onClick={() => {
                           navigate("/videos");
-                          window.scrollTo(0, 0)
+                          window.scrollTo(0, 0);
+                          handleMouseLeave("media")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -391,7 +414,8 @@ const Header = () => {
                         onClick={() => {
                           navigate("/resources", {
                             state: {section: "resources"}
-                          })
+                          }); window.scrollTo(0, 0);
+                          handleMouseLeave("media")
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
@@ -413,7 +437,9 @@ const Header = () => {
             <p 
               className='font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer'  
               onClick={() => {navigate("/contact-us"); 
-              window.scrollTo(0, 0)}}
+              window.scrollTo(0, 0);
+              handleMouseLeave("nil")
+            }}
             >
               Contact Us
             </p>
@@ -424,7 +450,9 @@ const Header = () => {
             type='button'
             onClick={() => {navigate("/contact-us", {
               state:{section: "branch" }
-            }), window.scrollTo(0, 0)}}
+            }), window.scrollTo(0, 0);
+            handleMouseLeave("nil")
+          }}
           >
             <p
               className='font-medium text-base font-nunito text-[#fff]'

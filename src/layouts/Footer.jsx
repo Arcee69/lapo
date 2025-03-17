@@ -54,7 +54,11 @@ const Footer = () => {
               <p className="font-inter text-[20px] font-semibold text-[#34423B]">Contact</p>
               <a className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E] block" href="mailto:info@lapo-nigeria.org" >Emails</a>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]">Support</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/contact-us"), window.scroll(0, 0)}}>Branch Locator</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" 
+                onClick={() => {navigate("/contact-us", {state: {section: "branch"}}), window.scroll(0, 0)}}
+              > 
+                Branch Locator
+              </p>
             </div>
           </div>
         </div>
