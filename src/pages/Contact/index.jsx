@@ -39,9 +39,9 @@ const Contact = () => {
             const branchesData = res?.data?.data;
             setApiBranches(branchesData);
             
-            if (branchesData.length > 0) {
+            if (branchesData?.length > 0) {
                 setSelectedBranch(branchesData[0]);
-                setExpandedState(branchesData[0].state.name);
+                setExpandedState(branchesData[0]?.state?.name);
             }
         } catch (err) {
             console.log(err);
