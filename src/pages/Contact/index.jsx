@@ -64,7 +64,7 @@ const Contact = () => {
         );
     });
 
-    const groupedBranches = filteredBranches.reduce((acc, branch) => {
+    const groupedBranches = filteredBranches?.reduce((acc, branch) => {
         const stateName = branch.state.name;
         if (!acc[stateName]) acc[stateName] = [];
         acc[stateName].push(branch);
@@ -72,9 +72,9 @@ const Contact = () => {
     }, {});
 
     useEffect(() => {
-        if (filteredBranches.length > 0) {
+        if (filteredBranches?.length > 0) {
             const isSelectedValid = selectedBranch && 
-                filteredBranches.some(b => b.id === selectedBranch.id);
+                filteredBranches?.some(b => b.id === selectedBranch.id);
             if (!isSelectedValid) {
                 setSelectedBranch(filteredBranches[0]);
                 setExpandedState(filteredBranches[0].state.name);
