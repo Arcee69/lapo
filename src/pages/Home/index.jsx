@@ -8,8 +8,6 @@ import 'swiper/css/pagination';
 import { useTransform, motion, useScroll } from "motion/react";
 import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
-// import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
-
 
 import HomeBg from "../../assets/png/home_bg.png"
 import MobileHomeBg from "../../assets/png/mobile_home_bg.png"
@@ -19,7 +17,8 @@ import CurveRight from "../../assets/png/curve_right.png"
 import PhoneA from "../../assets/png/phone_a.png"
 import Spiral from "../../assets/png/spiral.png"
 import People from "../../assets/png/people.png"
-import PhoneB from "../../assets/png/phone_b.png"
+import PhoneB from "../../assets/png/loan_phone.PNG"
+// import PhoneB from "../../assets/png/phone_b.png"
 import Grandma from "../../assets/png/grandma.png"
 import FirstBoy from "../../assets/png/first_boy.png"
 import SecondBoy from "../../assets/png/second_boy.png"
@@ -632,7 +631,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='w-full h-[900px] lg:h-[478px] relative flex flex-col lg:flex-row overflow-hidden justify-between rounded-tl-xl shadow-lg pl-5 lg:pl-[48px] border border-[#fcfcfc] items-center '>
+          <div className='w-full h-[900px] md:h-[478px] relative flex flex-col md:flex-row overflow-hidden justify-between rounded-tl-xl shadow-lg pl-5 lg:pl-[48px] border border-[#fcfcfc] items-center '>
             <div className='flex flex-col gap-[63px] mt-14 lg:mt-0 lg:w-[683px]'>
               <p className='font-semibold font-inter text-[#121212] text-[20px] '>Uninterrupted Funds Supply</p>
               <div className='flex flex-col gap-[37px]'>
@@ -646,10 +645,11 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className='flex absolute bottom-20 right-0'>
-              <img src={PhoneB} alt='PhoneB' className='absolute right-10 z-10 -top-36 lg:-top-28 w-[352px] ' />
+            <img src={PhoneB} alt='PhoneB' className='lg:absolute mb-10 md:mb-0 right-0 -z-10 w-[452px] h-[400px] object-contain' />
+            {/* <div className='flex absolute bottom-20 right-0'>
+              <img src={PhoneB} alt='PhoneB' className='absolute right-10 z-10 w-[352px] h-auto' /> {/*  -top-36 lg:-top-28 
               <img src={Spiral} alt='Spiral' className='w-[397px] relative lg:-bottom-14 ' />
-            </div>
+            </div> */}
             <div className='absolute bottom-0 right-0'>
               <img src={CurveRight} alt='CurveRight' className='rounded-br-xl ' />
             </div>

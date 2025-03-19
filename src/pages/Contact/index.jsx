@@ -9,6 +9,7 @@ import Building from "../../assets/png/lapo_building_b.png"
 import Curve from "../../assets/png/curve_top_right.png"
 import Premium from "../../assets/png/premium.png"
 import axios from 'axios';
+import { RiWhatsappFill } from 'react-icons/ri';
 
 
 const Contact = () => {
@@ -150,7 +151,9 @@ const Contact = () => {
                             <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Get Instant response</p>
                             <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team</p>
                         </div>
-                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> info@lapo-nigeria.org</p>
+                        <p onClick={() => window.open("https://tinyurl.com/lapomfbwhatsapp")} className='font-inter text-[#FFFFFF] font-medium text-base cursor-pointer leading-6'> 
+                            <RiWhatsappFill className='w-10 h-10 bg-primary' />
+                        </p>
                     </div>
                 </div>
                 <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>
