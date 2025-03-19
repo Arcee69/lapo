@@ -49,10 +49,10 @@ const About = () => {
             </div>
         </div>
 
-        <div className='flex items-end gap-[21px] absolute bottom-0 left-[24px] md:left-[124px] lg:-right-[74px] '>
-          <img src={AboutA} alt='AboutA' className='w-[10.4rem] h-[120.06px] md:w-4/12 lg:h-[213px] z-20' />
-          <img src={AboutB} alt='AboutB' className='w-[10.4rem] h-[120.06px] md:w-4/12 lg:h-[213px] z-20' />
-          <img src={AboutC} alt='AboutC' className='w-[10.4rem] h-[120.06px] md:w-3/12 lg:h-[213px] z-20' />
+        <div className='flex items-end gap-[21px] absolute bottom-0 left-[24px] md:left-[124px] lg:left-auto lg:-right-[1%] '> {/*  */}
+          <img src={AboutA} alt='AboutA' className='w-[10.4rem] h-[120.06px] md:w-4/12 lg:w-auto lg:h-[213px] z-20' />
+          <img src={AboutB} alt='AboutB' className='w-[10.4rem] h-[120.06px] md:w-4/12 lg:w-auto lg:h-[213px] z-20' />
+          <img src={AboutC} alt='AboutC' className='w-[10.4rem] h-[120.06px] md:w-4/12 lg:w-auto lg:h-[213px] z-20' />
         </div>
 
       </section>
