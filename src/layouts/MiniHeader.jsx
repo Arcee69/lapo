@@ -20,7 +20,7 @@ const MiniHeader = () => {
   return (
     <div className='w-full fixed z-30'>
         <div className='w-[100%] h-[58px] bg-[#fff] py-[16px] px-[20px] flex justify-between items-center'>
-            <img src={Logo} alt='logo' className='w-[69px] h-[28px]' onClick={() => navigate("/")}/>
+            <img src={Logo} alt='logo' className='w-auto h-[44px]' onClick={() => navigate("/")}/>
             <div className='flex items-center gap-2 ' >
               {/* <CiSearch className='w-5 h-5 text-[#002244]'/> */}
               {open ?

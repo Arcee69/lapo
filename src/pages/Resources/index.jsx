@@ -56,10 +56,10 @@ const Resources = () => {
 
     const filteredResources = {
         featured: resources,
-        reports: resources.filter(r => r.category === 'annual_report'),
-        brochures: resources.filter(r => r.category === 'brochure'),
-        forms: resources.filter(r => r.category === 'form'),
-        sdg: resources.filter(r => r.category === 'sdg_badge'),
+        reports: resources?.filter(r => r.category === 'annual_report'),
+        brochures: resources?.filter(r => r.category === 'brochure'),
+        forms: resources?.filter(r => r.category === 'form'),
+        sdg: resources?.filter(r => r.category === 'sdg_badge'),
       };
 
     return (

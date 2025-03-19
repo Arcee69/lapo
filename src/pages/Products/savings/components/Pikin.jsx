@@ -101,7 +101,7 @@ const Pikin = () => {
             ]}
         />
 
-<section 
+        <section 
             className='bg-[#fff] py-[88px] lg:py-[112px] flex flex-col '
             data-aos="fade-up" 
             data-aos-duration="1000" 
@@ -135,6 +135,8 @@ const Pikin = () => {
                     <p className='text-[18px] text-[#000000] leading-[27px]'>We're here to help you!</p>
                     <button
                         className='w-[104px] h-[48px] p-2 bg-black rounded-lg'
+                        type='button'
+                        onClick={() => {navigate("/contact-us"), window.scrollTo(0, 0)}}
                     >
                         <p className='text-[#fff] font-hanken font-medium leading-6 text-base'>Contact</p>
                     </button>

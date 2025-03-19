@@ -1,4 +1,4 @@
-import React,  { useEffect, useState } from 'react'
+import React,  { useEffect, useRef, useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
@@ -9,7 +9,7 @@ import Fx from "../../assets/png/fx.png"
 
 import Stars from "../../assets/svg/stars.svg"
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 const Blog = () => {
@@ -22,8 +22,17 @@ const Blog = () => {
     const [statusFilter, setStatusFilter] = useState("")
     const postsPerPage = 6;
 
-    const navigate = useNavigate()
+     const { state } = useLocation() 
 
+    const navigate = useNavigate()
+    const blogRef = useRef(null)
+
+    useEffect(() => {
+        if (state?.section === "blog" && blogRef.current) {
+            blogRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state])
+ 
     const fetchBlogPosts = async (url = "https://lapo.smhptech.com/api/v1/post") => {
         setLoading(true)
         try {
@@ -146,7 +155,9 @@ const Blog = () => {
                 </p>
                 <div className='flex items-center gap-5'>
                     <button
-                    className='bg-[#E78020] flex flex-col items-center justify-center w-[126px] h-[56px] rounded-[10px]'
+                        className='bg-[#E78020] flex flex-col items-center justify-center w-[126px] h-[56px] rounded-[10px]'
+                        type='button'
+                        onClick={() => {navigate("/blog", {state: {section: "blog"}}), window.scrollTo(0, 0) }}
                     >
                     <p className='font-hanken text-[#fff] text-base font-semibold'>Read More</p>
                     </button>
@@ -182,7 +193,7 @@ const Blog = () => {
                 </select>
             </div>
 
-            <div className='flex flex-col gap-[32px]'>
+            <div className='flex flex-col gap-[32px]' ref={blogRef}>
                 <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>All blog posts</p>
 
                 <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>

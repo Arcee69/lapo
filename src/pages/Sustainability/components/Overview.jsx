@@ -141,8 +141,8 @@ const Overview = ({ handleChangeTab }) => {
                     <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
                     </button>
                 </div>
-                <div className='lg:w-[600px] w-full lg:h-[373.36px]'>
-                    <img src={Help} alt="Help" className="rounded-[18.65px] h-[373.36px] w-full" />
+                <div className='lg:w-[600px] w-full lm:h-auto lg:h-[373.36px]'>
+                    <img src={Help} alt="Help" className="rounded-[18.65px] h-auto lg:h-[373.36px] w-full" />
                 </div>
             </div>
 
@@ -173,8 +173,8 @@ const Overview = ({ handleChangeTab }) => {
                     </button>
                 </div>
 
-                <div className='lg:hidden w-full md:h-[373.36px]'>
-                    <img src={Wind} alt="Wind" className="rounded-[18.65px] md:h-[373.36px] w-full" />
+                <div className='lg:hidden w-full  lm:h-auto md:h-[373.36px]'>
+                    <img src={Wind} alt="Wind" className="rounded-[18.65px] md:h-[373.36px] lm:h-auto w-full" />
                 </div>
             
             </div>
@@ -201,8 +201,8 @@ const Overview = ({ handleChangeTab }) => {
                         <CgArrowLongRight className='w-5 h-5 text-[#fff]'/>
                     </button>
                 </div>
-                <div className='lg:w-[600px] w-full lg:h-[401.36px] md:h-[373.36px]'>
-                    <img src={Plant} alt="Plant" className="rounded-[18.65px] md:h-[373.36px] lg:h-[401.36px] w-full" />
+                <div className='lg:w-[600px] w-full lm:h-auto lg:h-[401.36px] md:h-[373.36px]'>
+                    <img src={Plant} alt="Plant" className="rounded-[18.65px] md:h-[373.36px] lm:h-auto lg:h-[401.36px] w-full" />
                 </div>
             </div>
 
@@ -232,11 +232,11 @@ const Overview = ({ handleChangeTab }) => {
                     </button>
                 </div>
 
-                <div className='lg:hidden w-full md:h-[373.36px] h-[450px]'>
+                <div className='lg:hidden w-full md:h-[373.36px] lm:h-auto h-[450px]'>
                     <img 
                         src="https://res.cloudinary.com/dairsbzlv/image/upload/v1741887469/recycle_mobile_ceu3dd.png" 
                         alt="Recycle" 
-                        className="rounded-[18.65px] md:h-[373.36px] h-[450px] w-full" 
+                        className="rounded-[18.65px] md:h-[373.36px] lm:h-auto w-full" 
                     />
                 </div>
             

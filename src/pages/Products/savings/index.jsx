@@ -99,7 +99,7 @@ const Savings = () => {
             </div>
         </section>
 
-        <img src={SmilingPeople} alt='SmilingPeople' className='h-[297.55px] lg:h-[576px] w-full relative -top-2' />
+        <img src={SmilingPeople} alt='SmilingPeople' className='h-auto lg:h-[576px] w-full relative -top-2' />
 
         <section
             className='flex flex-col items-center px-5 lg:px-[75px] py-[112px] gap-[32px]'

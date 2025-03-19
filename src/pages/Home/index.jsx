@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useTransform, motion, useScroll } from "motion/react";
 import Lenis from "@studio-freight/lenis";
+import YouTube from 'react-youtube';
+// import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 
 import HomeBg from "../../assets/png/home_bg.png"
@@ -55,6 +57,7 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const [activeTab, setActiveTab] = useState("savings")
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -131,6 +134,48 @@ const Home = () => {
       return () => window.removeEventListener("scroll", handleScroll);
     });
   }, []);
+
+
+      //Swiper Ref
+      const swiperRef = useRef(null);
+      const players = useRef({});
+    
+      // Initialize YouTube API
+      useEffect(() => {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        window.onYouTubeIframeAPIReady = () => {
+          document.querySelectorAll('iframe[src*="youtube.com"]').forEach((frame, index) => {
+            // Add a small delay to ensure iframe is ready
+            setTimeout(() => {
+              players.current[index] = new window.YT.Player(frame, {
+                events: {
+                  'onStateChange': (event) => handlePlayerStateChange(event, index)
+                }
+              });
+            }, 500);
+          });
+        };
+      }, []);
+    
+      const handlePlayerStateChange = (event, index) => {
+        // Video started playing
+        if (event.data === window.YT.PlayerState.PLAYING) {
+          if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.autoplay.stop();
+          }
+        }
+        // Video paused or ended
+        if (event.data === window.YT.PlayerState.PAUSED || 
+            event.data === window.YT.PlayerState.ENDED) {
+          if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.autoplay.start();
+          }
+        }
+      };
 
   const savingsPlan = [
     {
@@ -583,7 +628,7 @@ const Home = () => {
             </div>
 
             <div className='w-full lg:w-6/12 '>
-              <img src={People} alt='People' className='w-full h-[320px] lg:h-[512px] rounded-tr-lg rounded-br-lg'/>
+              <img src={People} alt='People' className='w-full h-auto lg:h-[512px] rounded-tr-lg rounded-br-lg'/>
             </div>
           </div>
 
@@ -610,7 +655,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='flex flex-col lg:flex-row items-center gap-[18px]'>
+          <div className='flex flex-col lm:flex-row items-center gap-[18px]'>
             <div className='w-full lg:w-6/12 h-[571px] shadow-lg flex flex-col relative items-center justify-center rounded-lg gap-[32px]'>
               <div className='absolute left-0 top-0'>
                 <img src={CurveLeft} alt='CurveLeft' className='rounded-tl-xl ' />
@@ -663,9 +708,7 @@ const Home = () => {
                   
                   </p>
                   <ul className='font-hanken pl-5 list-disc text-[18px] text-[#E2E2E2] leading-[34px]'>
-                    <li>
-                      Lightning-Fast Transactions  – Get paid instantly, every time.
-                    </li> 
+                    <li>Lightning-Fast Transactions  – Get paid instantly, every time.</li> 
                     <li>Affordable & Transparent – No hidden fees, just great rates.</li>  
                     <li>Universal Payment Acceptance – All cards, mobile transfers, no limits.</li>  
                     <li>24/7 Support & Seamless Integration – Always on, always connected.</li>  
@@ -699,97 +742,45 @@ const Home = () => {
         <div className='w-full flex flex-col gap-[32px]'>
           <div className='w-full'>
             <Swiper
-              modules={[Autoplay]} 
+              ref={swiperRef}
+              modules={[Autoplay]}
               spaceBetween={32}
-              // slidesPerView={'3'}
               grabCursor={true}
-              autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false, 
-                  }}
+              // autoplay={{
+              //   delay: 3000,
+              //   disableOnInteraction: true,
+              // }}
               loop={true}
               breakpoints={{
-                // when window width is >= 0px (mobile)
-                0: {
-                  slidesPerView: 1,
-                },
-                // when window width is >= 768px (tablet)
-                768: {
-                  slidesPerView: 2,
-                },
-                // when window width is >= 1024px (desktop)
-                1024: {
-                  slidesPerView: 3,
-                },
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
               }}
-             
             >
-                                              {/* Individual Card */}
-              <SwiperSlide>
-                <iframe 
-                  width="450" 
-                  height="300" 
-                  src="https://www.youtube.com/embed/X8zt2HeyfWU?si=x3kx-nZT7rksqvHj" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen></iframe>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <iframe 
-                  width="450" 
-                  height="300" 
-                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740324812/3045a841-cd2e-4f58-a3c0-6f54b0d0bf17_prgzj3.mp4" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen></iframe>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <iframe 
-                  width="450" 
-                  height="300" 
-                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325190/Testimonial_3_bdcxcn.mp4" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen></iframe>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <iframe 
-                  width="450" 
-                  height="300" 
-                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325370/6421573a-07d3-4e4c-9927-8045526d4d20_nvpdmc.mp4" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen></iframe>
-               
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <iframe 
-                  width="450" 
-                  height="300" 
-                  src="https://res.cloudinary.com/dairsbzlv/video/upload/v1740325569/c6233548-0776-42e9-a5a7-20d9732767f5_kz3gxo.mp4" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen></iframe>
-               
-              </SwiperSlide>
-            
+              {[
+                'X8zt2HeyfWU',
+                '_PtBrw5hBLQ',
+                'SSl_B4BQhfo',
+                'MrVD-59wDY8',
+                '4BYPdMqG-wA'
+              ].map((videoId, index) => (
+                <SwiperSlide key={videoId}>
+                  <div className="aspect-video w-full">
+                    <iframe
+                      width="100%"
+                      height="300"
+                      src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=${encodeURIComponent(window.location.origin)}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      id={`player-${index}`}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
-          
         </div>
       </section>
 

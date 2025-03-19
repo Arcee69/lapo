@@ -74,7 +74,7 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png'
         },
         {
-            name: 'Olasukanmi Subair',
+            name: 'Olasunkanmi Subair',
             position: 'Head, Internal Audit',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689597/ola_q4celz.png'
         },
