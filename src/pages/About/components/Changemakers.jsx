@@ -36,7 +36,7 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688852/angela_uzs0oz.png'
         },
         {
-            name: 'Joshua James',
+            name: 'Joshua James Etopidiok',
             position: 'Non-Executive Director',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689056/josh_dvdzjf.png'
         },
