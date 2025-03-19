@@ -341,7 +341,7 @@ const Story = () => {
           </div> */}
         </div>
         <div data-aos="fade-left">
-          <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110' />
+          <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform ' />
         </div>
       </section>
 
