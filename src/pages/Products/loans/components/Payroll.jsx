@@ -172,50 +172,50 @@ const Payroll = () => {
         />
 
         <section
-                    // ref={sectionRef}
-                    className='px-5  py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
-                >
-                    {/* Header section unchanged */}
-                    <div className='flex items-center flex-col gap-6'>
-                        <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
-                            <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
-                        </div>
-                        <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
-                            Simple Steps to Secure Your Loan
-                        </p>
-                        <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>
-                            Our application process is designed to be straightforward and efficient. 
-                            Follow these easy steps to get started on your loan journey.
-                        </p>
-                    </div>
+            // ref={sectionRef}
+            className='px-5  py-[112px] gap-[80px] flex flex-col h-auto lg:h-[695px] bg-[#941D58]'
+        >
+            {/* Header section unchanged */}
+            <div className='flex items-center flex-col gap-6'>
+                <div className='w-[85px] h-[32px] p-2 rounded-lg flex items-center justify-center bg-[#fff]'>
+                    <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
+                </div>
+                <p className='font-hanken text-[32px] leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
+                    Simple Steps to Secure Your Loan
+                </p>
+                <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>
+                    Our application process is designed to be straightforward and efficient. 
+                    Follow these easy steps to get started on your loan journey.
+                </p>
+            </div>
         
                     {/* Steps container with hidden scrollbar */}
-                    <div 
-                        // ref={stepsContainerRef}
-                        className='flex flex-col lg:flex-row items-start gap-[38px] lg:mx-auto overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+            <div 
+                // ref={stepsContainerRef} flex flex-col lg:flex-row items-start lg:mx-auto
+                className='grid grid-cols-1 lg:grid-cols-4 gap-[18px]  overflow-x-hidden overflow-y-hidden relative scrollbar-hide'
+            >
+                {[1, 2, 3, 4].map((step, index) => (
+                    <div
+                        key={step}
+                        className='flex flex-row items-start lg:flex-col lg:items-center gap-6 flex-shrink-0' //lg:w-[296px]
                     >
-                        {[1, 2, 3, 4].map((step, index) => (
-                            <div
-                                key={step}
-                                className='flex flex-row items-start lg:flex-col lg:items-center lg:w-[296px] gap-6 flex-shrink-0'
-                            >
-                                <div className='w-[60px] h-[40px] lg:w-[80px] lg:h-[80px] rounded-full flex items-center justify-center bg-[#fff]'>
-                                    <p className='font-hanken font-medium text-[#941D58] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
-                                </div>
-                                <div className="flex flex-col items-start lg:items-center gap-2">
-                                    <p className='font-hanken font-medium text-base leading-[130%] lg:text-[20px] lg:leading-[26px] text-[#fff]'>
-                                        Step {step}: {index === 3 ? 'Get Approved' : 'Choose Your Loan Type'}
-                                    </p>
-                                    <p className='font-inter text-[#D9D9D9] text-base leading-[150%] lg:text-[20px] lg:leading-[30px] lg:text-center'>
-                                        {index === 3 ? 
-                                            'Receive your loan approval and access funds quickly.' : 
-                                            'Select from various loan options that suit your needs.'
-                                        }
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                        <div className='w-[60px] h-[40px] lg:w-[60px] lg:h-[60px] rounded-full flex items-center justify-center bg-[#fff]'>
+                            <p className='font-hanken font-medium text-[#941D58] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
+                        </div>
+                        <div className="flex flex-col items-start lg:items-center gap-2">
+                            <p className='font-hanken font-medium text-base leading-[130%] lg:text-[18px] lg:leading-[26px] text-[#fff]'>
+                                Step {step}: {index === 3 ? 'Get Approved' : 'Choose Your Loan Type'}
+                            </p>
+                            <p className='font-inter text-[#D9D9D9] text-base leading-[150%]  lg:leading-[30px] lg:text-center'>
+                                {index === 3 ? 
+                                    'Receive your loan approval and access funds quickly.' : 
+                                    'Select from various loan options that suit your needs.'
+                                }
+                            </p>
+                        </div>
                     </div>
+                ))}
+            </div>
         </section>
                         
         <section 
