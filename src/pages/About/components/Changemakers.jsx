@@ -70,7 +70,7 @@ const Changemakers = () => {
         },
         {
             name: 'Peggy Idehen',
-            position: 'Hod, Corporate Secretariat',
+            position: 'Head, Corporate Secretariat',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png'
         },
         {
