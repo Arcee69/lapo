@@ -261,19 +261,19 @@ const Contact = () => {
                             <iframe
                                 title="Google Map"
                                 src={`https://www.google.com/maps?q=${encodeURIComponent(
-                                    selectedBranch.address
+                                    selectedBranch?.address
                                 )}&output=embed`}
                                 className="md:w-[43.438rem] h-[500px] rounded-lg"
                             />
                             <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col">
-                                <h2 className="font-bold text-lg">{selectedBranch.name} Branch</h2>
+                                <h2 className="font-bold text-lg">{selectedBranch?.name} Branch</h2>
                                 <p className="flex items-center text-gray-700">
                                     <CiLocationOn className="mr-2 text-[#00984C]" /> 
-                                    {selectedBranch.address}
+                                    {selectedBranch?.address}
                                 </p>
                                 <p className="flex items-center text-gray-700">
                                     <LiaPhoneSolid className="mr-2 text-[#00984C]" /> 
-                                    {selectedBranch.phone_number}
+                                    {selectedBranch?.phone_number}
                                 </p>
                             </div>
                         </>
