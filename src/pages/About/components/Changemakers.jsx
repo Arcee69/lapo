@@ -27,7 +27,7 @@ const Changemakers = () => {
         },
         {
             name: 'Bako Gloria',
-            position: 'Head, Corporate Services Division.',
+            position: 'Executive Director, Corporate Services Division.',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180264/bako_lsnbbh.png'
         },
         {
@@ -42,7 +42,7 @@ const Changemakers = () => {
         },
         {
             name: 'Israel Aibuedefe',
-            position: 'Head, Business Support Division.',
+            position: 'Executive Director, Business Support Division.',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png'
         },
     ]
