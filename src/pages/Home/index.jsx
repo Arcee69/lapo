@@ -241,9 +241,10 @@ const Home = () => {
 
       <section 
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/dairsbzlv/image/upload/v1741961225/home_bg_itrvxk.png)`,
-          backgroundSize:"cover",
-          backgroundRepeat: "no-repeat"
+          backgroundImage: `linear-gradient(to right, white, transparent), ${isMobile ? "url(https://res.cloudinary.com/dairsbzlv/image/upload/v1742991774/mobile_bg_jwv8yc.png)" : "url(https://res.cloudinary.com/dairsbzlv/image/upload/v1741961225/home_bg_itrvxk.png)"}`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+       
         }}
         className='h-[558px] lg:h-[732px] bg-[#fff] flex flex-col items-start px-5 lg:pl-[64px] pt-[150px] lg:pt-[213px]'
         data-aos="fade-up" 
