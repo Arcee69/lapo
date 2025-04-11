@@ -28,6 +28,8 @@ const Resources = () => {
         setActiveTab(value)
     }
 
+    let URL = import.meta.env.VITE_APP_API_URL;
+
     const navigate = useNavigate()
     
 
@@ -40,7 +42,7 @@ const Resources = () => {
     const fetchResources = async () => {
         setLoading(true)
         try {
-            const res = await axios.get("https://lapo.smhptech.com/api/v1/resource")
+            const res = await axios.get(`${URL}/v1/resource`)
             console.log(res, "apache")
             setResources(res?.data?.data)
         } catch (err) {

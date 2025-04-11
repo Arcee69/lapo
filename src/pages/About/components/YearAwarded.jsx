@@ -21,9 +21,11 @@ const YearAwarded = () => {
         { bg: 'bg-[#F1ECEF]', border: '#761A48' }
     ]
 
+    let URL = import.meta.env.VITE_APP_API_URL;
+
     const icons = [Medal, Graph, MoneyBag]
 
-    const fetchAward = async (url = "https://lapo.smhptech.com/api/v1/award") => {
+    const fetchAward = async (url = `${URL}/v1/award`) => {
         setLoading(true)
         try {
             const res = await axios.get(url)

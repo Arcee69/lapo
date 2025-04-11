@@ -16,8 +16,10 @@ const Badges = () => {
     const [nextPageUrl, setNextPageUrl] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 6;
+    
+    let URL = import.meta.env.VITE_APP_API_URL;
 
-    const fetchBlogPosts = async (url = "https://lapo.smhptech.com/api/v1/post") => {
+    const fetchBlogPosts = async (url = `${URL}/v1/post`) => {
       setLoading(true)
       try {
         const res = await axios.get(url);

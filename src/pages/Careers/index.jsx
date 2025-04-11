@@ -36,9 +36,11 @@ const Careers = () => {
     const [nextPageUrl, setNextPageUrl] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
 
+    const URL = import.meta.env.VITE_APP_API_URL
+
     const getStates = async () => {
         try {
-            const res = await axios.get("https://lapo.smhptech.com/api/v1/state")
+            const res = await axios.get(`${URL}/v1/state`)
             setStatesOptions(res?.data.data)
         } catch (err) {
             console.log(err, "err")
@@ -65,7 +67,7 @@ const Careers = () => {
       ];
 
 
-    const fetchJobs = async (url = "https://lapo.smhptech.com/api/v1/job") => {
+    const fetchJobs = async (url = `${URL}/v1/job`) => {
         setLoading(true)
         try {
           const res = await axios.get(url);

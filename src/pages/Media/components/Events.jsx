@@ -20,6 +20,7 @@ const Events = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const postsPerPage = 6;
+    const URL = import.meta.env.VITE_APP_API_URL;
 
     const eventsPost = [
         { title: "Fintribe Fair", image: "https://res.cloudinary.com/dairsbzlv/image/upload/v1741213195/man_hoc33g.png", count: 20 },
@@ -30,7 +31,7 @@ const Events = () => {
         { title: "ESG 2024", image: "https://res.cloudinary.com/dairsbzlv/image/upload/v1741213214/group_buzkvv.png", count: 20 }
     ];
 
-    const fetchImages = async (url = "https://lapo.smhptech.com/api/v1/gallery") => {
+    const fetchImages = async (url = `${URL}/v1/gallery`) => {
         setLoading(true)
         try {
           const res = await axios.get(url);
@@ -58,6 +59,8 @@ const Events = () => {
       const indexOfLastGallery = currentPage * postsPerPage;
       const indexOfFirstGallery = indexOfLastGallery - postsPerPage;
       const currentGallery = gallery.slice(indexOfFirstGallery, indexOfLastGallery);
+
+      console.log(currentGallery, "currentGallery")
   
       // Change page function
       const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -115,7 +118,7 @@ const Events = () => {
             <p className='font-hanken text-[32px] lg:text-[48px] font-medium text-[#101828]'>Events Gallery</p>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {currentGallery.map((event, index) => (
+                {currentGallery?.map((event, index) => (
                     <div key={index} className='relative group overflow-hidden rounded-lg'>
                         <img src={event.image} alt={event.title} className='w-full h-auto object-cover' />
                         {/* <div className='absolute top-2 right-2 bg-black bg-opacity-50 px-3 py-1 rounded text-white'>{event.count}</div> */}
