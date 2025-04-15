@@ -449,8 +449,8 @@ const Home = () => {
                       {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
-                  <div className='w-full lg:w-[380px]'>
-                    <img src={POS} alt='POS' className='lg:max-w-[434px] rounded-tl-[18px] rounded-bl-[18px] h-full' />
+                  <div className='w-full  lg:w-[380px]'>
+                    <img src={POS} alt='POS' className='w-full lg:max-w-[434px] h-[50vh] rounded-tl-[18px] rounded-bl-[18px]' />
                   </div>
                 </div>
               </div>
@@ -501,7 +501,7 @@ const Home = () => {
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
-                    <img src={Happy} alt='Happy' className='lg:max-w-[434px] rounded-tl-[18px]  rounded-bl-[18px] h-full' />
+                    <img src={Happy} alt='Happy' className='lg:max-w-[434px] rounded-tl-[18px] h-[50vh] rounded-bl-[18px]' />
                   </div>
                 </div>
               </div>
