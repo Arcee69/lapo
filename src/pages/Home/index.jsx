@@ -9,8 +9,7 @@ import { useTransform, motion, useScroll } from "motion/react";
 import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
 
-import HomeBg from "../../assets/png/home_bg.png"
-import MobileHomeBg from "../../assets/png/mobile_home_bg.png"
+
 import Girl from "../../assets/png/girl.png"
 import CurveLeft from "../../assets/png/curve_left.png"
 import CurveRight from "../../assets/png/curve_right.png"
@@ -25,7 +24,6 @@ import SecondBoy from "../../assets/png/second_boy.png"
 import Card from "../../assets/png/card.png"
 import PosMachine from "../../assets/png/pos_machine.png"
 import POS from "../../assets/png/pos_machine_a.png"
-import Nurse from "../../assets/png/nurse.png"
 import BackScreen from "../../assets/png/back_screen.png"
 import FrontScreen from "../../assets/png/front_screen.png"
 import Happy from "../../assets/png/happy_girl.png"
@@ -424,11 +422,11 @@ const Home = () => {
                   </p>
                 </div>
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
-                  <div className='flex flex-col w-full'>
+                  <div className='flex flex-col w-full lg:w-[398px]'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
                       Payment Solution To Fuel Your Growth
                     </h2>
-                    <div className='flex flex-col w-full'>
+                    <div className='flex flex-col w-full '>
                       {posPlan.map((item, index) => (
                         <div key={index} className='border border-t-0 border-x-0 border-b-[#34423B4D] p-4 w-full lg:w-[398px] flex flex-col gap-1.5'>
                           <div className='flex items-center justify-between'>
@@ -449,8 +447,8 @@ const Home = () => {
                       {/* <p className='font-medium text-base font-nunito'>→</p> */}
                     </button>
                   </div>
-                  <div className='w-full  lg:w-[380px]'>
-                    <img src={POS} alt='POS' className='w-full lg:max-w-[434px] h-[50vh] rounded-tl-[18px] rounded-bl-[18px]' />
+                  <div className='w-full lg:w-[380px]'>
+                    <img src={POS} alt='POS' className='w-full lg:max-w-[434px]  h-[50vh] lg:h-min rounded-tl-[18px] rounded-bl-[18px]' />
                   </div>
                 </div>
               </div>
@@ -475,7 +473,7 @@ const Home = () => {
                   </p>
                 </div>
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
-                  <div className='flex flex-col w-full'>
+                  <div className='flex flex-col w-full lg:w-[398px]'>
                     <h2 className="font-hanken text-[24px] lg:text-[32px] text-[#101828] font-semibold">
                       Payment Solution To Fuel Your Growth
                     </h2>
@@ -501,7 +499,7 @@ const Home = () => {
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
-                    <img src={Happy} alt='Happy' className='lg:max-w-[434px] rounded-tl-[18px] h-[50vh] rounded-bl-[18px]' />
+                    <img src={Happy} alt='Happy' className='w-full lg:max-w-[434px] rounded-tl-[18px] h-[50vh] lg:h-auto rounded-bl-[18px]' />
                   </div>
                 </div>
               </div>
