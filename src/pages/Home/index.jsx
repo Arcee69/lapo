@@ -10,7 +10,6 @@ import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
 
 
-import Girl from "../../assets/png/girl.png"
 import CurveLeft from "../../assets/png/curve_left.png"
 import CurveRight from "../../assets/png/curve_right.png"
 import PhoneA from "../../assets/png/phone_a.png"
@@ -23,10 +22,8 @@ import FirstBoy from "../../assets/png/first_boy.png"
 import SecondBoy from "../../assets/png/second_boy.png"
 import Card from "../../assets/png/card.png"
 import PosMachine from "../../assets/png/pos_machine.png"
-import POS from "../../assets/png/pos_machine_a.png"
 import BackScreen from "../../assets/png/back_screen.png"
 import FrontScreen from "../../assets/png/front_screen.png"
-import Happy from "../../assets/png/happy_girl.png"
 import Model from "../../assets/png/model.png"
 
 import Stars from "../../assets/svg/stars.svg"
@@ -397,7 +394,11 @@ const Home = () => {
                     </button>
                   </div>
                   <div className='w-full lg:w-[320px]'>
-                    <img src={Girl} alt='Girl' className='w-full max-w-[320px] lg:w-[320px] mx-auto' />
+                    <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744710021/girl_z7qvwk.png" 
+                      alt='Girl' 
+                      className='w-full max-w-[320px] lg:w-[320px] mx-auto' 
+                    />
                   </div>
                 </div>
               </div>
@@ -448,7 +449,11 @@ const Home = () => {
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
-                    <img src={POS} alt='POS' className='w-full lg:max-w-[434px]  h-[50vh] lg:h-min rounded-tl-[18px] rounded-bl-[18px]' />
+                    <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744710147/pos_machine_a_xdpwmh.png" 
+                      alt='POS' 
+                      className='w-full lg:max-w-[434px]  h-[50vh] lg:h-min rounded-tl-[18px] rounded-bl-[18px]' 
+                    />
                   </div>
                 </div>
               </div>
@@ -499,7 +504,11 @@ const Home = () => {
                     </button>
                   </div>
                   <div className='w-full lg:w-[380px]'>
-                    <img src={Happy} alt='Happy' className='w-full lg:max-w-[434px] rounded-tl-[18px] h-[50vh] lg:h-auto rounded-bl-[18px]' />
+                    <img 
+                      src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744710322/happy_girl_ywbw79.png" 
+                      alt='Happy' 
+                      className='w-full lg:max-w-[434px] rounded-tl-[18px] h-[50vh] lg:h-auto rounded-bl-[18px]' 
+                    />
                   </div>
                 </div>
               </div>

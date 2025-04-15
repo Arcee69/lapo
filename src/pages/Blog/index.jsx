@@ -2,10 +2,6 @@ import React,  { useEffect, useRef, useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
-import Christmas from "../../assets/png/christmas.png"
-import ChristmasB from "../../assets/png/christmas_b.png"
-import Shopper from "../../assets/png/shopper.png"
-import Fx from "../../assets/png/fx.png"
 
 import Stars from "../../assets/svg/stars.svg"
 import axios from 'axios'
@@ -132,7 +128,7 @@ const Blog = () => {
     <div className='w-full'>
         <section 
             style={{
-                backgroundImage: `url(${Christmas})`,
+                backgroundImage: `url(https://res.cloudinary.com/dairsbzlv/image/upload/v1744710874/christmas_y06gtu.png)`,
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat",
                 position: "relative" 

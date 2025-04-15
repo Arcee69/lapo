@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import Card from "../../assets/png/cards_transparent.png"
 import CardMain from "../../assets/png/card_main.png"
 import Code from "../../assets/png/code.png"
 import Premium from "../../assets/png/premium.png"
@@ -72,7 +71,11 @@ const Cards = () => {
                     </div>
                 </div>
                 <div className='w-full mx-auto mt-[64px]'>
-                    <img src={Card} alt="Card" className='w-[1000px] mx-auto' />
+                    <img 
+                        src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744710529/cards_transparent_sa51pb.png" 
+                        alt="Card" 
+                        className='w-[1000px] mx-auto' 
+                    />
                 </div>
             </div>
         </section>

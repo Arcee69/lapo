@@ -5,7 +5,6 @@ import { LiaPhoneSolid } from "react-icons/lia";
 import { IoIosArrowDown } from 'react-icons/io';
 import { useLocation, useNavigate } from "react-router-dom"
 
-import Building from "../../assets/png/lapo_building_b.png"
 import Curve from "../../assets/png/curve_top_right.png"
 import Premium from "../../assets/png/premium.png"
 import axios from 'axios';
@@ -118,7 +117,11 @@ const Contact = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <img src={Building} className='' alt='Building' />
+            <img 
+                src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744711061/lapo_building_b_weohyz.png" 
+                className='' 
+                alt='Building' 
+            />
         </section>
 
         <section
