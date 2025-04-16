@@ -4,11 +4,13 @@ import { CiLocationOn, CiMail, CiSearch } from 'react-icons/ci'
 import { LiaPhoneSolid } from "react-icons/lia";
 import { IoIosArrowDown } from 'react-icons/io';
 import { useLocation, useNavigate } from "react-router-dom"
+import axios from 'axios';
+// import { RiWhatsappFill } from 'react-icons/ri';
+import { FaWhatsapp  } from "react-icons/fa";
 
 import Curve from "../../assets/png/curve_top_right.png"
 import Premium from "../../assets/png/premium.png"
-import axios from 'axios';
-import { RiWhatsappFill } from 'react-icons/ri';
+import Whatsapp from "../../assets/png/whatsapp_logo.png"
 
 
 const Contact = () => {
@@ -155,7 +157,8 @@ const Contact = () => {
                             <p className='font-inter text-[#FFFFFF] text-base leading-6'>Speak to our friendly team</p>
                         </div>
                         <p onClick={() => window.open("https://tinyurl.com/lapomfbwhatsapp")} className='font-inter text-[#FFFFFF] font-medium text-base cursor-pointer leading-6'> 
-                            <RiWhatsappFill className='w-10 h-10 bg-primary' />
+                            <FaWhatsapp  className='w-10 h-10 ' />
+                            {/* <img src={Whatsapp} alt="Whatsapp" className='w-10 h-10 ' /> */}
                         </p>
                     </div>
                 </div>
@@ -182,7 +185,7 @@ const Contact = () => {
                             <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Call us</p>
                             <p className='font-inter text-[#FFFFFF] text-base leading-6'>Mon-Fri from 8am to 5pm.</p>
                         </div>
-                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> +234 8139840230</p>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'> +2348139840230</p>
                     </div>
                 </div>
             </div>

@@ -232,15 +232,17 @@ const Home = () => {
   ]
 
   return (
-    <div className='w-full '>
+    <div className='w-full'>
 
       <section 
         style={{
           backgroundImage: `linear-gradient(to right, white, transparent), ${isMobile ? "url(https://res.cloudinary.com/dairsbzlv/image/upload/v1742991774/mobile_bg_jwv8yc.png)" : "url(https://res.cloudinary.com/dairsbzlv/image/upload/v1741961225/home_bg_itrvxk.png)"}`,
+          // backgroundSize: isMobile ? "contain" : "cover",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          // ...(isMobile && { height: `calc(100vw * 1.779)` })  //h-[558px]
         }}
-        className='h-[558px] lg:h-[732px] bg-[#fff] flex flex-col items-start px-5 lg:pl-[64px] pt-[150px] lg:pt-[213px]'
+        className=' lg:h-[732px] bg-[#fff] flex flex-col items-start px-5 mt-10 lg:mt-0 lg:pl-[64px] pt-[60px] lg:pt-[213px]'
         data-aos="fade-up" 
         data-aos-duration="1000" 
         data-aos-easing="linear"
