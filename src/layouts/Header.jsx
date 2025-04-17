@@ -71,8 +71,7 @@ const Header = () => {
               <div
                 onMouseEnter={() => handleMouseEnter("products")}
                 className='block font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
-                onClick={() => {navigate("/products"); 
-                window.scrollTo(0, 0)}}
+               
               >
                 Products
               </div>
@@ -320,8 +319,7 @@ const Header = () => {
               <div
                 onMouseEnter={() => handleMouseEnter("media")}
                 className='block font-nunito font-medium text-base hover:border-[4px] hover:border-x-0 hover:border-t-0 hover:border-[#EC994B] hover:text-[#00954B] hover:font-bold text-[#10281D] cursor-pointer' 
-                onClick={() => {navigate("/media"); 
-                window.scrollTo(0, 0)}}
+              
               >
                 Media
               </div>
