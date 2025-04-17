@@ -195,11 +195,11 @@ const Blog = () => {
             </div>
 
             <div className='flex flex-col gap-[32px]' ref={blogRef}>
-                <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>{location.pathname === "/press-release" ? "All Press Release" : "All Articles"}</p>
+                <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>{location.pathname === "/press-release" ? "All Press Releases" : "All Articles"}</p>
 
                 <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
                     { loading ? 
-                        <p className='text-2xl text-[#000] text-center font-semibold'>Loading Blog...</p> :
+                        <p className='text-2xl text-[#000] text-center font-semibold'>Loading Post...</p> :
                         currentPosts.length > 0 ?
                         currentPosts.map((item) => (
                             <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-blog", {state: item}), window.scrollTo(0,0)}} >
@@ -217,7 +217,7 @@ const Blog = () => {
 
                             </div>
                         )) : 
-                        <p className='text-2xl text-[#000] text-center font-semibold'>No Blogs Available</p>
+                        <p className='text-2xl text-[#000] text-center font-semibold'>No Post Available</p>
                     }
 
                 </div>
