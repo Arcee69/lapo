@@ -45,9 +45,9 @@ const Footer = () => {
             </div>
             <div className="flex w-[180px] flex-col gap-4">
               <p className="font-inter text-[20px] font-semibold text-[#34423B]">Media</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/blog"), window.scroll(0, 0)}}>Blog</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/articles"), window.scroll(0, 0)}}>Articles</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/gallery/pictures"), window.scroll(0, 0)}}>Gallery</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/blog"), window.scroll(0, 0)}}>Press Release</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/press-release"), window.scroll(0, 0)}}>Press Release</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/faqs"), window.scroll(0, 0)}}>FAQs</p>
             </div>
             <div className="flex w-[180px] flex-col gap-4">

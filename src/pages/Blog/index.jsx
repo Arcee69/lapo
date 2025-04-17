@@ -19,11 +19,14 @@ const Blog = () => {
     const postsPerPage = 6;
 
      const { state } = useLocation() 
+     const location = useLocation()
 
      let URL = import.meta.env.VITE_APP_API_URL;
 
     const navigate = useNavigate()
     const blogRef = useRef(null)
+
+    
 
     useEffect(() => {
         if (state?.section === "blog" && blogRef.current) {
@@ -192,7 +195,7 @@ const Blog = () => {
             </div>
 
             <div className='flex flex-col gap-[32px]' ref={blogRef}>
-                <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>All blog posts</p>
+                <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>{location.pathname === "/press-release" ? "All Press Release" : "All Articles"}</p>
 
                 <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
                     { loading ? 

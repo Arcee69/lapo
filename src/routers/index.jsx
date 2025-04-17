@@ -72,8 +72,9 @@ export default function Routers() {
           <Route path="/pos" element={<Pos />} />
           <Route path="/digital" element={<MobileApp />} />
           <Route path="/digital/cards" element={<Cards />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/view-blog" element={<ViewBlogPost />} />
+          <Route path="/press-release" element={<Blog />} />
+          <Route path="/articles" element={<Blog />} />
+          <Route path="/view-post" element={<ViewBlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
         </Route>
       </Routes>

@@ -340,7 +340,7 @@ const Header = () => {
                       <div 
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                         onClick={() => {
-                          navigate("/blog");
+                          navigate("/press-release");
                           window.scrollTo(0,0);
                           handleMouseLeave("media")
                         }}
@@ -352,7 +352,7 @@ const Header = () => {
 
                       <div 
                          onClick={() => {
-                          navigate("/blog");
+                          navigate("/articles");
                           window.scrollTo(0, 0);
                           handleMouseLeave("media")
                         }}
