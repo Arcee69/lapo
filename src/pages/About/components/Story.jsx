@@ -5,9 +5,8 @@ import { PiTarget } from "react-icons/pi";
 
 import Box from '../../../components/Box';
 
-import Building from "../../../assets/png/group.png"
+
 import Curve from "../../../assets/png/curve_about.png"
-import Groupies from "../../../assets/png/groupies.png"
 
 import People from "../../../assets/svg/people.svg"
 import Integrity from "../../../assets/svg/integrity.svg"
@@ -103,7 +102,11 @@ const Story = () => {
                   we continue to bridge financial gaps and create opportunities nationwide.
                 </p>
             </div>
-            <img src={Building} className='' alt='Building' />
+            <img 
+              src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744807795/group_nut42n.png" 
+              className='' 
+              alt='Group' 
+            />
       </section>
 
       <section
@@ -341,7 +344,10 @@ const Story = () => {
           </div> */}
         </div>
         <div data-aos="fade-left">
-          <img src={Groupies} alt='Groupies' className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform ' />
+          <img 
+            src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744807813/groupies_oaj4gv.png" 
+            alt='Groupies' 
+            className='rounded-[25px] lg:w-[531px] cursor-pointer transition-transform duration-300 ease-in-out transform ' />
         </div>
       </section>
 

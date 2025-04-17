@@ -76,7 +76,7 @@ const Sme = () => {
     // When categories load, find the loan category
     useEffect(() => {
     if (faqCategories?.length > 0) {
-        const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'loans');
+        const loanCategory = faqCategories?.find(cat => cat.name === 'MSME Loans');
         if (loanCategory) {
             setSelectedCategoryId(loanCategory.id);
         }

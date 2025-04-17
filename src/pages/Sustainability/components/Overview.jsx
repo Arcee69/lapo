@@ -3,10 +3,8 @@ import CountUp from 'react-countup';
 import { CgArrowLongRight } from 'react-icons/cg'
 import { MdArrowOutward } from 'react-icons/md'
 
-import Gift from "../../../assets/png/gift.png"
 import Curve from "../../../assets/png/curve_left.png"
 import Help from "../../../assets/png/help.png"
-import Wind from "../../../assets/png/wind.png"
 import Plant from "../../../assets/png/plant.png"
 import Recycle from "../../../assets/png/recycle.png"
 
@@ -69,7 +67,11 @@ const Overview = ({ handleChangeTab }) => {
 
             </div>
             <div className='lg:w-[665px] lg:h-[704px] rounded-tr-[24px] rounded-br-[24px]'>
-                <img src={Gift} alt="Gift" className='w-full h-full' />
+                <img 
+                    src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744807335/gift_gdepcf.png" 
+                    alt="Gift" 
+                    className='w-full h-full' 
+                />
             </div>
         </section>
 
@@ -148,7 +150,11 @@ const Overview = ({ handleChangeTab }) => {
 
             <div className='flex gap-[40px] flex-col lg:flex-row items-start'>
                 <div className='hidden lg:block w-[600px] h-[373.36px]'>
-                    <img src={Wind} alt="Wind" className="rounded-[18.65px] h-[373.36px] w-full" />
+                    <img 
+                        src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744807498/wind_ynblia.png" 
+                        alt="Wind" 
+                        className="rounded-[18.65px] h-[373.36px] w-full" 
+                    />
                 </div>
 
                 <div className='lg:w-[632px] bg-[#4380BE17] lg:h-[373.36px] px-[31.5px] pt-[32px] pb-[47.98px] rounded-[15px] border-[#BACEE2]'>
@@ -174,7 +180,11 @@ const Overview = ({ handleChangeTab }) => {
                 </div>
 
                 <div className='lg:hidden w-full  lm:h-auto md:h-[373.36px]'>
-                    <img src={Wind} alt="Wind" className="rounded-[18.65px] md:h-[373.36px] lm:h-auto w-full" />
+                    <img 
+                        src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744807498/wind_ynblia.png" 
+                        alt="Wind" 
+                        className="rounded-[18.65px] md:h-[373.36px] lm:h-auto w-full" 
+                    />
                 </div>
             
             </div>

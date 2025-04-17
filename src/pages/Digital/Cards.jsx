@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import CardMain from "../../assets/png/card_main.png"
-import Code from "../../assets/png/code.png"
+
 import Premium from "../../assets/png/premium.png"
 
 import Money from "../../assets/svg/money.svg"
@@ -186,7 +186,11 @@ const Cards = () => {
                 </p>
             </div>
 
-            <img src={Code} className="lg:w-[990px] mx-auto" alt='Code' />
+            <img 
+                src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744806856/code_rfpv3s.png" 
+                className="lg:w-[990px] mx-auto" 
+                alt='Code' 
+            />
 
             <div className='grid grid-cols-1 md:grid-cols-2 px-[32px] lg:px-0 lg:grid-cols-4 gap-[32px]'>
                 <div className='flex flex-col gap-5'>

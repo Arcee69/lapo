@@ -29,7 +29,7 @@ import Asset from "../pages/Products/loans/components/Asset";
 import Education from "../pages/Products/loans/components/Education";
 import Special from "../pages/Products/loans/components/Special";
 import Payroll from "../pages/Products/loans/components/Payroll";
-import Events from "../pages/Media/components/Events";
+import PicturesGallery from "../pages/Media/components/Pictures";
 import Resources from "../pages/Resources";
 import Blog from "../pages/Blog";
 import Videos from "../pages/Media/components/Videos";
@@ -54,8 +54,8 @@ export default function Routers() {
           <Route path="/loans/special" element={<Special />} />
           <Route path="/loans/payroll" element={<Payroll />} />
           <Route path="/contact-us" element={<Contact />} />
-          <Route path="/media" element={<Events />} />
-          <Route path="/videos" element={<Videos />} />
+          <Route path="/media" element={<PicturesGallery />} />
+          <Route path="/gallery/videos" element={<Videos />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/products/savings" element={<Savings />} />
           <Route path="/savings/regular" element={<RegularSavings />} />
@@ -66,7 +66,7 @@ export default function Routers() {
           <Route path="/savings/xpress" element={<Xpress />} />
           <Route path="/savings/social" element={<Social />} />
           <Route path="/savings/festival" element={<Festival />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/gallery/pictures" element={<PicturesGallery />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/pos" element={<Pos />} />

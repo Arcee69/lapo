@@ -143,7 +143,7 @@ const Contact = () => {
                             <p className='font-inter font-semibold text-[#FFFFFF] text-[20px] leading-[30px]'>Send us an Email</p>
                             <p className='font-inter text-[#FFFFFF] text-base leading-6'>We're here to help</p>
                         </div>
-                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>info@lapo-nigeria.org</p>
+                        <p className='font-inter text-[#FFFFFF] font-medium text-base leading-6'>customersupport@lapo-nigeria.org</p>
                     </div>
                 </div>
                 <div className='h-[314px] bg-[#00984C] rounded-[10px] overflow-hidden relative p-6'>

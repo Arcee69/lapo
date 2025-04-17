@@ -48,8 +48,11 @@ import "./css/styles.css";
 import "./css/card.css";
 import { useNavigate } from 'react-router-dom';
 
+const tabsOrder = ["savings", "pos", "digital banking", "loans"];
+
 const Home = () => {
-  const [activeTab, setActiveTab] = useState("savings")
+  const [activeTab, setActiveTab] = useState(tabsOrder[0]);
+  const activeTabRef = useRef(activeTab);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const [swiperInstance, setSwiperInstance] = useState(null);
 
@@ -67,6 +70,22 @@ const Home = () => {
 
 
   const cardsRef = useRef([]);
+
+  // Keep ref updated with current activeTab
+  useEffect(() => {
+    activeTabRef.current = activeTab;
+  }, [activeTab]);
+
+  // Auto-rotate tabs
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentIndex = tabsOrder.indexOf(activeTabRef.current);
+      const nextIndex = (currentIndex + 1) % tabsOrder.length;
+      setActiveTab(tabsOrder[nextIndex]);
+    }, 5000); // Change tab every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleTabChange = (value) => {
     setActiveTab(value)

@@ -90,7 +90,7 @@ const Loans = () => {
     // When categories load, find the loan category
     useEffect(() => {
         if (faqCategories?.length > 0) {
-            const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'loans');
+            const loanCategory = faqCategories?.find(cat => cat.name === 'Loans');
             if (loanCategory) {
                 setSelectedCategoryId(loanCategory.id);
             }

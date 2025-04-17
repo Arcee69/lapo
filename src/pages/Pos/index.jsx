@@ -93,7 +93,7 @@ const Pos = () => {
         // When categories load, find the loan category
         useEffect(() => {
         if (faqCategories?.length > 0) {
-            const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'pos');
+            const loanCategory = faqCategories?.find(cat => cat.name === 'POS Terminal');
             if (loanCategory) {
                 setSelectedCategoryId(loanCategory.id);
             }

@@ -62,6 +62,7 @@ const Agricultural = () => {
     const getFaqCategories = async () => {
     try {
         const res = await axios.get(`${URL}/v1/category`);
+        console.log(res, "cake")
         setFaqCategories(res?.data?.data || []);
         } catch (err) {
             console.log(err, "err");
@@ -76,13 +77,12 @@ const Agricultural = () => {
     // When categories load, find the loan category
     useEffect(() => {
     if (faqCategories?.length > 0) {
-        const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'loans');
+        const loanCategory = faqCategories?.find(cat => cat.name === "Agricultural Loans");
         if (loanCategory) {
             setSelectedCategoryId(loanCategory.id);
         }
     }
     }, [faqCategories]);
-    
     
     // Fetch FAQs when category ID is available
     const getFaqByCategory = async (categoryId) => {
@@ -99,6 +99,8 @@ const Agricultural = () => {
             getFaqByCategory(selectedCategoryId);
         }
     }, [selectedCategoryId]);
+
+    console.log(faqByCategory, "faqByCategory")
 
   return (
     <div className='w-full'>
@@ -233,7 +235,7 @@ const Agricultural = () => {
                     </p>
                 </div>
                 <div className='flex flex-col gap-[48px]'>
-                    {faqByCategory.length > 0 ? faqByCategory?.map((faqItem) => (
+                    {faqByCategory?.length > 0 ? faqByCategory?.map((faqItem) => (
                         <div key={faqItem.id} className='flex flex-col gap-4'>
                             <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>
                                 {faqItem.question}

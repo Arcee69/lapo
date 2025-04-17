@@ -4,10 +4,6 @@ import { Autoplay, Pagination } from 'swiper/modules'; // Updated import
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import Food from "../../assets/png/food.png"
-import Fashion from "../../assets/png/fashion.png"
-import Livestock from "../../assets/png/livestock.png"
-
 import Left from "../../assets/svg/left_about_spiral.svg"
 import Right from "../../assets/svg/right_about_spiral.svg"
 import Story from './components/Story'
@@ -90,12 +86,12 @@ const About = () => {
               }}
             >
               {[
-                Food,
-                Fashion,
-                Livestock,
-                Food,
-                Fashion,
-                Livestock,
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807111/food_ecjkvc.png",
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807105/fashion_cgcnxo.png",
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807110/livestock_qcwero.png",
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807111/food_ecjkvc.png",
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807105/fashion_cgcnxo.png",
+                "https://res.cloudinary.com/dairsbzlv/image/upload/v1744807110/livestock_qcwero.png",
               ].map((item, index) => (
                 <SwiperSlide key={index}>
                   <img src={item} alt='people' className='mx-2.5 md:mx-0 w-[95%] md:w-full' />

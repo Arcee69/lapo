@@ -32,7 +32,7 @@ const IndividualCurrent = () => {
         // When categories load, find the loan category
         useEffect(() => {
         if (faqCategories?.length > 0) {
-            const loanCategory = faqCategories?.find(cat => cat.name.toLowerCase() === 'loans');
+            const loanCategory = faqCategories?.find(cat => cat.name === 'Individual Current Account');
             if (loanCategory) {
                 setSelectedCategoryId(loanCategory.id);
             }

@@ -340,13 +340,14 @@ const Header = () => {
                       <div 
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                         onClick={() => {
-                          navigate("/events");
+                          navigate("/blog");
                           window.scrollTo(0,0);
                           handleMouseLeave("media")
                         }}
                       >
-                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Events</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Learn about our events</p>
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Press Release</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Read about the breaking news of the Bank
+                        </p>
                       </div>
 
                       <div 
@@ -358,7 +359,7 @@ const Header = () => {
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Articles</p>
-                        <p className='text-[#667085] font-inter text-sm leading-5'>Read articles to keep you up-to-date.</p>
+                        <p className='text-[#667085] font-inter text-sm leading-5'>Read about our articles to keep you up to date</p>
                       </div>
 
                       {/* <div 
@@ -378,7 +379,7 @@ const Header = () => {
 
                       <div 
                         onClick={() => {
-                          navigate("/events");
+                          navigate("/gallery/pictures");
                           window.scrollTo(0, 0);
                           handleMouseLeave("media")
                         }}
@@ -390,7 +391,7 @@ const Header = () => {
 
                       <div 
                         onClick={() => {
-                          navigate("/videos");
+                          navigate("/gallery/videos");
                           window.scrollTo(0, 0);
                           handleMouseLeave("media")
                         }}
