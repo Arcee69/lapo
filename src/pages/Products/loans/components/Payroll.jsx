@@ -203,12 +203,18 @@ const Payroll = () => {
                             <p className='font-hanken font-medium text-[#941D58] text-[20px] leading-[130%] lg:text-[32px] lg:leading-[41px]'>{step}</p>
                         </div>
                         <div className="flex flex-col items-start lg:items-center gap-2">
-                            <p className='font-hanken font-medium text-base leading-[130%] lg:text-[18px] lg:leading-[26px] text-[#fff]'>
-                                Step {step}: {index === 3 ? 'Get Approved' : 'Choose Your Loan Type'}
+                            <p className='font-hanken font-medium text-base capitalize leading-[130%] lg:text-[18px] lg:leading-[26px] text-[#fff]'>
+                                Step {step}: {
+                                    index === 1 ? 'Choose your loan amount' : 
+                                    index === 2 ? 'Choose repayment plan' :
+                                    index === 3 ? 'Submit for approval' : 'Choose Your Loan Type'
+                                }
                             </p>
                             <p className='font-inter text-[#D9D9D9] text-base leading-[150%]  lg:leading-[30px] lg:text-center'>
-                                {index === 3 ? 
-                                    'Receive your loan approval and access funds quickly.' : 
+                                {
+                                    index === 1 ? 'Select your eligible amount' : 
+                                    index === 2 ? 'Repayment plan from month 2 to 12' :
+                                    index === 3 ? 'Wait to get approval' : 
                                     'Select from various loan options that suit your needs.'
                                 }
                             </p>
