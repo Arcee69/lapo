@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import { useTransform, motion, useScroll } from "motion/react";
 import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
+import axios from "axios"
 
 import ModalPop from "../../components/modal/ModalPop"
 
@@ -46,6 +47,8 @@ import Lock from "../../assets/svg/lock_b.svg"
 import Multiple from "../../assets/svg/multiple.svg"
 import Tablet from "../../assets/svg/tablet.svg"
 
+import Pop from "./component/Pop"
+
 import "./css/styles.css";
 import "./css/card.css";
 import { useNavigate } from 'react-router-dom';
@@ -57,6 +60,8 @@ const Home = () => {
   const activeTabRef = useRef(activeTab);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const [swiperInstance, setSwiperInstance] = useState(null);
+  const [openModal, setOpenModal] = useState(false)
+  const [popMedia, setPopMedia] = useState()
 
   useEffect(() => {
     const handleResize = () => {
@@ -251,6 +256,35 @@ const Home = () => {
       text: "No Hidden Charges"
     },
   ]
+
+  let URL = import.meta.env.VITE_APP_API_URL;
+    
+    const getPop = async (url = `${URL}/v1/pop`) => {
+        try {
+          const res = await axios.get(url);
+          console.log(res, "addict")
+          const data = res.data;
+    
+          setPopMedia(data?.data || []);
+        } catch (err) {
+          console.error(err);
+        } finally {
+            setLoading(false)
+        }
+      };
+
+      useEffect(() => {
+        getPop()
+      }, [])
+
+
+  useEffect(() => {
+    if(popMedia?.media) {
+      setOpenModal(true)
+    } else {
+      setOpenModal(false)
+    }
+  }, [popMedia?.media])
 
   return (
     <div className='w-full'>
@@ -847,8 +881,8 @@ const Home = () => {
         </div>
       </section>
 
-      <ModalPop>
-
+      <ModalPop isOpen={openModal}>
+          <Pop handleClose={() => setOpenModal(false)} popMedia={popMedia} />
       </ModalPop>
 
     </div>
