@@ -43,7 +43,7 @@ const Governance = () => {
                     <span className='mt-5 block'>
                         The Board and its committees regularly review governance policies to reflect changes in 
                         regulations and best practices. Performance is assessed through compliance reviews with 
-                        CBN and FRCN codes.
+                        Central Bank of Nigeria and Financial Reporting Council of Nigeria codes.
                     </span>
                     <span className='mt-5 block'>
                         The Bank believes sound corporate practices are essential for transparency, 
@@ -61,7 +61,7 @@ const Governance = () => {
         >
 
             <div className='bg-[#F9FBFA] flex items-start gap-6 p-8 border-[7px] border-[#00954B] rounded-tl-2xl rounded-bl-2xl border-y-0 border-r-0'>
-                {openDropdownOne ? <img src={Multiply} alt='Multiply' className='w-8 h-8 cursor-pointer' onClick={handleTabOne} /> : <img src={Plus} alt='Plus' className='w-8 h-8 cursor-pointer' onClick={handleTabOne} />}
+                {openDropdownOne ? <img src={Multiply} alt='Multiply' className='w-8 h-8 cursor-pointer'  /> : <img src={Plus} alt='Plus' className='w-8 h-8 cursor-pointer'  />} {/* onClick={handleTabOne} onClick={handleTabOne}*/}
                 <div className='flex flex-col items-start gap-4'>
                     <p className='font-inter text-[#101828] text-[20px] lg:text-[28px] leading-7'>
                         The Board

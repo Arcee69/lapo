@@ -17,23 +17,8 @@ const Changemakers = () => {
         },
         {
             name: 'Cynthia Ikponmwosa',
-            position: 'Managing Director',
+            position: 'Managing Director/CEO',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960823/MD_jin9cy.jpg'
-        },
-        {
-            name: 'Aigbe Olotu',
-            position: 'Independent Non-Executive Director',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688653/aigbe_nqygpg.png'
-        },
-        {
-            name: 'Bako Gloria',
-            position: 'Executive Director, Corporate Services Division.',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180264/bako_lsnbbh.png'
-        },
-        {
-            name: 'Angela Omeiza',
-            position: 'Independent Non-Executive Director',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688852/angela_uzs0oz.png'
         },
         {
             name: 'Joshua James Etopidiok',
@@ -41,22 +26,47 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689056/josh_dvdzjf.png'
         },
         {
+            name: 'Aigbe Olotu',
+            position: 'Independent Non-Executive Director',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688653/aigbe_nqygpg.png'
+        },
+        {
+            name: 'Angela Omeiza',
+            position: 'Independent Non-Executive Director',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688852/angela_uzs0oz.png'
+        },
+        {
             name: 'Israel Aibuedefe',
             position: 'Executive Director, Business Support Division.',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png'
+        },
+        {
+            name: 'Bako Gloria',
+            position: 'Executive Director, Corporate Services Division.',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180264/bako_lsnbbh.png'
         },
     ]
 
     const excos = [
         {
-            name: 'Dorcas Thorpe',
-            position: 'Head, Strategy And Transformation',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/dorcas_odwwhe.png'
+            name: 'Cynthia Ikponmwosa',
+            position: 'Managing Director/CEO',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960823/MD_jin9cy.jpg'
         },
         {
-            name: 'Abel Ovenseri Enoguanmwonsa',
-            position: 'Head, Corporate Services',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689366/abel_s5rsit.png'
+            name: 'Israel Aibuedefe',
+            position: 'Executive Director, Business Support Division.',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png'
+        },
+        {
+            name: 'Bako Gloria',
+            position: 'Executive Director, Corporate Services Division.',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180264/bako_lsnbbh.png'
+        },
+        {
+            name: 'Lillian Ehigiamusoe',
+            position: 'Head, Operations',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180266/lillian_jpsnd9.png'
         },
         {
             name: 'Emmanuel Igiehon',
@@ -64,14 +74,14 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180248/emma_czmso4.png'
         },
         {
-            name: 'Oluremi Akande rpa.',
-            position: 'Head, Corporate Communications ',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180255/remi_kusuqa.png'
-        },
-        {
             name: 'Peggy Idehen',
             position: 'Head, Corporate Secretariat',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png'
+        },
+        {
+            name: 'Oluremi Akande rpa.',
+            position: 'Head, Corporate Communications ',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180255/remi_kusuqa.png'
         },
         {
             name: 'Olasunkanmi Subair',
@@ -79,10 +89,16 @@ const Changemakers = () => {
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689597/ola_q4celz.png'
         },
         {
-            name: 'Lillian Ehigiamusoe',
-            position: 'Head, Operations',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180266/lillian_jpsnd9.png'
+            name: 'Abel Ovenseri Enoguanmwonsa',
+            position: 'Head, Corporate Services',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689366/abel_s5rsit.png'
         },
+        {
+            name: 'Dorcas Thorpe',
+            position: 'Head, Strategy And Transformation',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/dorcas_odwwhe.png'
+        },
+      
     ]
 
   return (
@@ -182,7 +198,7 @@ const Changemakers = () => {
                         <div className='bg-[#FDF2E9] rounded-[6px] w-[91px] p-1 h-[32px] flex items-center justify-center'>
                             <p className='font-hanken text-[#E78020] text-sm font-medium leading-[15px]'>Our People</p>
                         </div>
-                        <p className='font-hanken text-[54px] leading-[44px] text-[#101828]'>We’re just getting started</p>
+                        <p className='font-hanken text-[54px] leading-[44px] text-[#101828]'>We are just getting started</p>
                     </div>
                     <p className='font-inter text-[20px] text-[#667085] leading-[30px]'>
                         Our people are at the center of everything we do to deliver innovative services to the 
@@ -226,12 +242,11 @@ const Changemakers = () => {
             data-aos-easing="linear"
         >
             <div className='flex flex-col gap-4 lg:w-[601px]' data-aos="fade-right">
-                <p className='font-hanken font-medium text-base leading-[24px]'>Board and Execs</p>
                 <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[120%] lg:leading-[64px]'>
                     Making Finance Work for Everyone
                 </p>
                 <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
-                    At LAPO Microfinance Bank, we’re committed to breaking financial barriers and ensuring 
+                    At LAPO Microfinance Bank, we are committed to breaking financial barriers and ensuring 
                     that everyone—regardless of background—has access to the financial services they need to thrive. 
                     From small business owners to everyday individuals, our inclusive financial solutions are designed 
                     to empower communities, foster growth, and create lasting impact. Because when opportunities are 

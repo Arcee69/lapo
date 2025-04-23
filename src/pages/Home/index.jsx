@@ -34,6 +34,7 @@ import OneStar from "../../assets/svg/one_star.svg"
 import Cube from "../../assets/svg/cube.svg"
 import Box from "../../assets/svg/box.svg"
 import CBN from "../../assets/svg/cbn.svg"
+import NDPR from "../../assets/png/ndpr.jpg"
 import NDIC from "../../assets/svg/ndic.svg"
 import Google from "../../assets/svg/google.svg"
 import Apple from "../../assets/svg/apple.svg"
@@ -215,7 +216,7 @@ const Home = () => {
   const posPlan = [
     {
       img: Lightning,
-      text: "Modern, User-Friendly POS Terminals"
+      text: "Modern, User-Friendly PoS Terminals"
     },
     {
       img: Dollar,
@@ -320,7 +321,7 @@ const Home = () => {
                 state: {section: "app"}
               }); window.scrollTo(0, 0)}}
             >
-              <p className='font-hanken text-[#fff] text-[10px] lg:text-base font-semibold'>Join  LAPO</p>
+              <p className='font-hanken text-[#fff] text-[10px] lg:text-base font-semibold'>Join LAPO MfB</p>
             </button>
             <button
               className='border-[#E78020] border flex flex-col items-center justify-center w-[102.86px] lg:w-[180px] h-[32px] lg:h-[56px] rounded-[10px]'
@@ -335,6 +336,7 @@ const Home = () => {
           <div className='flex items-center gap-2 mt-3'>
             <p className='text-xs font-nunito text-[#34423B] font-medium'>Licensed by </p>
             <img src={CBN} alt='cbn_logo' className='w-[22px] h-[28px]' />
+            <img src={NDPR} alt='ndpr_logo' className='w-[32px] h-[32px]' />
             <p className='text-xs font-nunito text-[#34423B] font-medium'> insured by </p>
             <img src={NDIC} alt='ndic_logo' className='w-[70px] h-[28px]' />
           </div>
@@ -376,7 +378,7 @@ const Home = () => {
                 <p 
                   className={`${activeTab === "pos" ? "text-[#FFFFFF]" : "text-[#011624] "}  font-semibold font-hanken group-hover:text-[#fff] text-base`}
                 >
-                  POS
+                  PoS
                 </p>
               </div>
               <div 
@@ -469,13 +471,13 @@ const Home = () => {
               </div>
             )}
 
-            {/* POS */}
+            {/* PoS */}
             {activeTab === "pos" ? (
               <div className="w-full lg:w-auto h-full flex flex-col lg:flex-row gap-[32px] cursor-pointer justify-start" onClick={() => handleTabChange("pos")}>
                 <div className='w-full lg:w-[85px] lg:h-auto h-[60px] bg-[#E78020]  lg:pt-[47px] pt-2  flex lg:flex-col flex-row gap-4 lg:gap-[180px] items-center justify-center lg:justify-start'>
                   <p className='font-inter text-[#fff] text-xs'>02</p>
                   <p className='font-semibold font-hanken text-[#fff] text-[16px] lg:text-[20px] lg:[writing-mode:vertical-rl] lg:rotate-180'>
-                    POS
+                    PoS
                   </p>
                 </div>
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-1 items-center px-4 lg:px-0'>
@@ -507,7 +509,7 @@ const Home = () => {
                   <div className='w-full lg:w-[380px]'>
                     <img 
                       src="https://res.cloudinary.com/dairsbzlv/image/upload/v1744710147/pos_machine_a_xdpwmh.png" 
-                      alt='POS' 
+                      alt='PoS' 
                       className='w-full lg:max-w-[434px]  h-[50vh] lg:h-min rounded-tl-[18px] rounded-bl-[18px]' 
                     />
                   </div>
@@ -518,7 +520,7 @@ const Home = () => {
                 <div className='w-full lg:w-[85px] lg:h-auto h-[60px] bg-[#E78020] lg:pt-[47px] pt-2 flex lg:flex-col flex-row gap-4 lg:gap-[180px] items-center justify-center lg:justify-start'>
                   <p className='font-inter text-[#fff] text-xs'>02</p>
                   <p className='font-semibold font-hanken text-[#fff] text-[16px] lg:text-[20px] lg:[writing-mode:vertical-rl] lg:rotate-180'>
-                    POS
+                    PoS
                   </p>
                 </div>
               </div>
@@ -641,8 +643,8 @@ const Home = () => {
         data-aos-easing="linear"
       >
         <div className='flex flex-col items-center gap-2 lg:w-[636px] mx-auto'>
-          <div className='w-[128px] h-[32px] flex items-center justify-center rounded-md bg-[#E8FFF4]'>
-            <p className='font-hanken text-xs text-[#00954B] font-medium'>The Lapo advantage</p>
+          <div className='w-[148px] h-[32px] flex items-center justify-center rounded-md bg-[#E8FFF4]'>
+            <p className='font-hanken text-xs  text-[#00954B] font-medium'>The Lapo MfB Advantage</p>
           </div>
           <p className='font-hanken text-[32px] lg:text-[54px] font-medium leading-[120%] lg:leading-[64px] text-center'>
             Unlock Your Financial Potential
@@ -704,7 +706,7 @@ const Home = () => {
                   options for you and your business.
                 </p>
                 <p className='font-inter font-medium text-[20px] text-[#6A6A6A] leading-[34px]'>
-                  Enjoy Loan Products that meets all your life goals from your personal to 
+                  Enjoy Loan Products that meet all your life goals from your personal to 
                   business to education and property.
                 </p>
               </div>
@@ -862,7 +864,7 @@ const Home = () => {
               Bank On the Go – Anytime, Anywhere!
             </p>
             <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
-              Download LAPO's mobile app for seamless banking, savings, 
+              Download LAPO MfB mobile app for seamless banking, savings, 
               and loans—all at your fingertips.
             </p>
             <div className='flex items-center gap-4'>

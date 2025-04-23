@@ -132,7 +132,7 @@ const Savings = () => {
                     <img src={Bubbles} alt="Bubbles" className='w-[68px] h-[68px]' />
                     <p className='font-inter font-bold text-[21px] leading-[30px] text-[#00984C]'>Tailored to your needs</p>
                     <p className='text-[#445D65] font-inter text-[15px] leading-6'>
-                        Choose from a variety of savings options, whether you’re saving for a child’s future, 
+                        Choose from a variety of savings options, whether you are saving for a child’s future, 
                         a big investment, or just everyday expenses.
                     </p>
                 </div>
@@ -158,7 +158,7 @@ const Savings = () => {
             <div  className='flex flex-col gap-4' ref={productRef}>
                 <div onClick={() => {navigate("/savings/xpress"), window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] px-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group border-[3px] border-[#4380BE52] hover:border-0 hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
-                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC] group-hover:bg-[#00984C] justify-center rounded-[8px]'>
+                        <div className='w-auto invisible h-[40px] flex items-center p-2 bg-[#F7F9FC] group-hover:bg-[#00984C] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />
@@ -182,7 +182,7 @@ const Savings = () => {
                     <div className='flex flex-col gap-4'>
                         <div className='flex flex-col lg:flex-row items-center gap-4'>
                             <SmallBox 
-                                heading="Savings"
+                                heading=""
                                 title="Regular Deposit (Savings)"
                                 subtitle="The Savings Plan Account is designed for individuals and groups who wish to 
                                 save funds toward a particular project(s) over a specified period of time and 
@@ -190,7 +190,7 @@ const Savings = () => {
                                 link="/savings/regular"
                             />
                             <SmallBox 
-                                heading="Savings"
+                                heading=""
                                 title="My Pikin & I Savings <br /> Account"
                                 subtitle="Child-focused savings account with high interest and life insurance. 
                                 A chance for your child to win LAPO MfB Scholarship."
@@ -198,7 +198,7 @@ const Savings = () => {
                             />
                         </div>
                         <BigBox 
-                            heading="High Yield Savings"
+                            heading=""
                             title="Festival Savings"
                             subtitle="The Savings Plan Account is designed for individuals and groups who wish to save 
                             funds toward a particular project(s) over a specified period of time and earn 
@@ -208,20 +208,20 @@ const Savings = () => {
                     </div>
                     <div className='flex flex-col gap-4'>
                         <BigBox 
-                            heading="High Yield Savings"
+                            heading=""
                             title="Fixed Deposit Account"
                             subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
                             link="/savings/fixed"
                         />
                         <div className='flex flex-col lg:flex-row items-center gap-4'>
                             <SmallBox 
-                                heading="Savings"
+                                heading=""
                                 title="Individual Savings"
                                 subtitle="The Savings Plan Account is designed for individuals and groups who wish to save funds toward a particular project(s) over a specified period of time and earn interest on their savings."
                                 link="/savings/individual/savings"
                             />
                             <SmallBox 
-                                heading="Investment Savings"
+                                heading=""
                                 title="Individual Current"
                                 subtitle="This account is designed for individuals that are either in business or employed by private or public companies as salary account"
                                 link="/savings/individual/current"
@@ -231,7 +231,7 @@ const Savings = () => {
                 </div>
                 <div className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] px-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#4380BE52] hover:border-0  hover:bg-[#00984C]'>
                     <div className='flex items-center justify-between'>
-                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded-[8px]'>
+                        <div className='w-auto invisible h-[40px] flex items-center p-2 bg-[#F7F9FC]  group-hover:bg-[#00984C] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#00984C] leading-[15px]'>High Yield Savings</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />

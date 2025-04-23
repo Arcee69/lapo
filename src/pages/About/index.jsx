@@ -55,7 +55,7 @@ const About = () => {
                   <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>The LAPO story</p>
                 </div>
                 <div onClick={() => changeActiveTab(2)} className={`${activeTab === 2 ? "bg-[#00B259]" : "bg-[#007A3D]"} flex-shrink-0 w-auto lg:w-[221px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
-                  <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>Board and Excos</p>
+                  <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>Board and Executives</p>
                 </div>
                 <div onClick={() => changeActiveTab(3)} className={`${activeTab === 3 ? "bg-[#00B259]" : "bg-[#007A3D]"} flex-shrink-0 w-auto lg:w-[221px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
                   <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>Corporate Governance</p>

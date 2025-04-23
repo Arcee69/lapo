@@ -102,7 +102,7 @@ const FixedDeposit = () => {
                 >
                     <p className='font-hanken font-medium text-[32px] leading-[120%] lg:text-[48px] lg:leading-[57px] '>FAQs</p>
                     <p className='font-inter text-[#000000] text-base leading-[150%] lg:text-[18px] lg:leading-[27px]'>
-                        Find answers to your questions about our loan offerings and application process.
+                        Find answers to your questions about our savings offerings and application process.
                     </p>
                 </div>
                 <div className='flex flex-col gap-[48px]'>

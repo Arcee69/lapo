@@ -192,7 +192,7 @@ const Story = () => {
               img={Integrity}
               alt="Integrity"
               title="Integrity"
-              content=" We believe in doing the right thing—always. Transparency, honesty, and strong ethical standards guide every decision and interaction."
+              content=" We believe in doing the right thing always. Transparency, honesty, and strong ethical standards guide every decision and interaction."
             />
 
             <Box 
@@ -262,10 +262,10 @@ const Story = () => {
               Key Milestones in Our Journey
             </h2>
             <p className="mt-4 font-inter text-base lg:text-[18px] opacity-90">
-              Since 1987, we’ve been on a mission to make financial services accessible to all. Along the way, 
-              we’ve reached key milestones that reflect our dedication to inclusion, innovation, and impact. 
+              Since 1987, we have been on a mission to make financial services accessible to all. Along the way, 
+              we have reached key milestones that reflect our dedication to inclusion, innovation, and impact. 
               Every achievement brings us closer to a future where individuals and businesses have the financial 
-              tools they need to succeed. Our journey is far from over, and we’re excited about what’s ahead!
+              tools they need to succeed. Our journey is far from over, and we are excited about what’s ahead!
             </p>
           </div>
 
@@ -320,7 +320,6 @@ const Story = () => {
         data-aos-easing="linear"
       >
         <div className='flex flex-col gap-4 lg:w-[601px]' data-aos="fade-right">
-          <p className='font-hanken font-medium text-base leading-[24px]'>Board and Execs</p>
           <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[120%] lg:leading-[64px]'>
             Our Commitment to Financial Inclusion
           </p>
