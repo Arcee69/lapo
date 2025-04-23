@@ -53,17 +53,25 @@ const PicturesGallery = () => {
         fetchImages();
       }, []);
 
-      const totalPages = Math.ceil(gallery?.length / postsPerPage);
+      const handlePrevPage = () => {
+        if (prevPageUrl) fetchImages(prevPageUrl);
+      };
+    
+      const handleNextPage = () => {
+        if (nextPageUrl) fetchImages(nextPageUrl);
+      };
 
-      // Get the current page posts
-      const indexOfLastGallery = currentPage * postsPerPage;
-      const indexOfFirstGallery = indexOfLastGallery - postsPerPage;
-      const currentGallery = gallery?.slice(indexOfFirstGallery, indexOfLastGallery);
+    //   const totalPages = Math.ceil(gallery?.length / postsPerPage);
 
-      console.log(currentGallery, "currentGallery")
+    //   // Get the current page posts
+    //   const indexOfLastGallery = currentPage * postsPerPage;
+    //   const indexOfFirstGallery = indexOfLastGallery - postsPerPage;
+    //   const currentGallery = gallery?.slice(indexOfFirstGallery, indexOfLastGallery);
+
+    //   console.log(currentGallery, "currentGallery")
   
-      // Change page function
-      const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    //   // Change page function
+    //   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
   return (
@@ -118,7 +126,7 @@ const PicturesGallery = () => {
             <p className='font-hanken text-[32px] lg:text-[48px] font-medium text-[#101828]'>Pictures Gallery</p>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {currentGallery?.map((event, index) => (
+                {gallery?.map((event, index) => (
                     <div key={index} className='relative group overflow-hidden rounded-lg'>
                         <img src={event.image} alt={event.caption} className='w-full min-h-[400px] object-cover' />
                         {/* <div className='absolute top-2 right-2 bg-black bg-opacity-50 px-3 py-1 rounded text-white'>{event.count}</div> */}
@@ -128,8 +136,30 @@ const PicturesGallery = () => {
             </div>
 
            {/* Pagination */}
-            <div className="flex justify-between w-full items-center py-5">
-                {/* Previous Button */}
+           <div className="flex justify-center items-center gap-4 mt-10">
+            <button
+                onClick={handlePrevPage}
+                disabled={!prevPageUrl}
+                className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                !prevPageUrl && "opacity-50 cursor-not-allowed"
+                }`}
+            >
+                Previous
+            </button>
+            <p className="text-[#222222] font-bold">Page {currentPage}</p>
+            <button
+                onClick={handleNextPage}
+                disabled={!nextPageUrl}
+                className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                !nextPageUrl && "opacity-50 cursor-not-allowed"
+                }`}
+            >
+                Next
+            </button>
+        </div>
+
+            {/* <div className="flex justify-between w-full items-center py-5">
+                {/* Previous Button 
                 <button
                     className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
                     onClick={() => paginate(currentPage - 1)}
@@ -138,7 +168,7 @@ const PicturesGallery = () => {
                     <FiChevronLeft className="w-4 h-4 mr-1" /> Previous
                 </button>
 
-                {/* Page Numbers */}
+                {/* Page Numbers 
                 <div className="flex items-center gap-2">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
                         <button
@@ -155,7 +185,7 @@ const PicturesGallery = () => {
                     ))}
                 </div>
 
-                {/* Next Button */}
+                {/* Next Button 
                 <button
                     className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
                     onClick={() => paginate(currentPage + 1)}
@@ -163,7 +193,7 @@ const PicturesGallery = () => {
                 >
                     Next <FiChevronRight className="w-4 h-4 ml-1" />
                 </button>
-            </div>
+            </div> */}
         </section>
 
         <section

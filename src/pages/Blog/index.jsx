@@ -169,7 +169,7 @@ const Blog = () => {
                         <p className='text-2xl text-[#000] text-center font-semibold'>Loading Post...</p> :
                         currentPosts.length > 0 ?
                         currentPosts.map((item) => (
-                            <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-blog", {state: item}), window.scrollTo(0,0)}} >
+                            <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-post", {state: item}), window.scrollTo(0,0)}} >
                                 <img src={item.image} alt="event" className='rounded-lg w-[384px] h-[240px]' />
                                 <div className='flex flex-col gap-3'>
                                     <p className='font-inter text-[#E78020] font-semibold leading-5 text-sm'>{new Date(item.created_at).toDateString()}</p>
