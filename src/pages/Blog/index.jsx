@@ -167,8 +167,8 @@ const Blog = () => {
                 <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
                     { loading ? 
                         <p className='text-2xl text-[#000] text-center font-semibold'>Loading Post...</p> :
-                        currentPosts.length > 0 ?
-                        currentPosts.map((item) => (
+                        currentPosts?.length > 0 ?
+                        currentPosts?.map((item) => (
                             <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-post", {state: item}), window.scrollTo(0,0)}} >
                                 <img src={item.image} alt="event" className='rounded-lg w-[384px] h-[240px]' />
                                 <div className='flex flex-col gap-3'>
