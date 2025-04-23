@@ -9,6 +9,8 @@ import { useTransform, motion, useScroll } from "motion/react";
 import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
 
+import ModalPop from "../../components/modal/ModalPop"
+
 
 import CurveLeft from "../../assets/png/curve_left.png"
 import CurveRight from "../../assets/png/curve_right.png"
@@ -844,6 +846,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <ModalPop>
+
+      </ModalPop>
 
     </div>
   )

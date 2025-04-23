@@ -54,7 +54,7 @@ const Blog = () => {
     
       useEffect(() => {
         fetchBlogPosts();
-      }, []);
+      }, [location.pathname]);
     
       const handlePrevPage = () => {
         if (prevPageUrl) fetchBlogPosts(prevPageUrl);
@@ -64,57 +64,24 @@ const Blog = () => {
         if (nextPageUrl) fetchBlogPosts(nextPageUrl);
       };
 
-    // const blogPost = [
-    //     {
-    //         id: 1,
-    //         img: ChristmasB,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Season of Love and giving: LAPO MFB's christmas Party",
-    //         content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
-    //     },
-    //     {
-    //         id: 2,
-    //         img: Shopper,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
-    //         content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
-    //     },
-    //     {
-    //         id: 3,
-    //         img: Fx,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Recession-proof your finances.",
-    //         content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
-    //     },
-    //     {
-    //         id: 4,
-    //         img: Shopper,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Microfinancing in Nigeria: The Key to Empowering Small Businesses in the Future.",
-    //         content: "As a developing country, Nigeria has a significant number of small businesses operating in various sectors of the economy. "
-    //     },
-    //     {
-    //         id: 5,
-    //         img: Fx,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Recession-proof your finances.",
-    //         content: " Financial planning will help you identify your goals and create a strategy for achieving them. But just how exactly do you set financial goals? And how far in the future can you realistically plan them? "
-    //     },
-    //     {
-    //         id: 6,
-    //         img: ChristmasB,
-    //         publishedDate: "Rachel Edache • 04 March 2024",
-    //         title: "Season of Love and giving: LAPO MFB's christmas Party",
-    //         content: "Love was in the air at LAPO MFB as we came together to celebrate the yuletide with a heartwarming party filled with joy, laughter, and camaraderie. "
-    //     },
-    // ]
+   
 
       // Calculate total pages
-      
       const filteredPost = blogPost.filter((item) => {
-        const matchSearch = item.title.toLowerCase().includes(search.toLowerCase() ||  "")
-        return matchSearch
-      })
+        const matchCategory = location.pathname === "/press-release" 
+          ? item.category === "press" 
+          : location.pathname === "/articles" 
+          ? item.category === "article" 
+          : true;
+        
+        const matchSearch = item.title.toLowerCase().includes(search.toLowerCase());
+        return matchCategory && matchSearch;
+      });
+
+    //   const filteredPost = blogPost.filter((item) => {
+    //     const matchSearch = item.title.toLowerCase().includes(search.toLowerCase() ||  "")
+    //     return matchSearch
+    //   })
 
       const totalPages = Math.ceil(filteredPost.length / postsPerPage);
 

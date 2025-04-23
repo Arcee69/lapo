@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import Left from "../../../assets/svg/left_brick.svg"
 import Right from "../../../assets/svg/right_brick.svg"
@@ -12,8 +13,44 @@ import FrontScreen from "../../../assets/png/front_screen.png"
 
 const Videos = () => {
     const [loading, setLoading] = useState(false)
+    const [vid, setVid] = useState([])
+    const [prevPageUrl, setPrevPageUrl] = useState(null);
+    const [nextPageUrl, setNextPageUrl] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
 
-    const videosPost = []
+    const postsPerPage = 6;
+    const URL = import.meta.env.VITE_APP_API_URL;
+
+    const getVids = async (url = `${URL}/v1/video`) => {
+        setLoading(true)
+        try {
+          const res = await axios.get(url);
+          console.log(res, "addict")
+          const data = res.data;
+    
+          setVid(data?.data || []);
+          setPrevPageUrl(data.pagination?.prev_page_url);
+          setNextPageUrl(data.pagination?.next_page_url);
+          setCurrentPage(data.pagination?.current_page);
+        } catch (err) {
+          console.error(err);
+        } finally {
+            setLoading(false)
+        }
+      };
+    
+      useEffect(() => {
+        getVids();
+      }, []);
+    
+      const handlePrevPage = () => {
+        if (prevPageUrl) getVids(prevPageUrl);
+      };
+    
+      const handleNextPage = () => {
+        if (nextPageUrl) getVids(nextPageUrl);
+      };
+  
 
   return (
     <div className='w-full'>
@@ -42,7 +79,7 @@ const Videos = () => {
                             Explore our galleries to see videos of past seminars, trainings, meetings and other events
                         </p>
                     </div>
-                    <div className='hidden lg:flex items-center gap-[17px]'>
+                    {/* <div className='hidden lg:flex items-center gap-[17px]'>
                         <button
                             className='w-[180px] h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
                         >
@@ -54,7 +91,7 @@ const Videos = () => {
                             <p className='text-[#FFFFFF] font-medium text-base leading-7'>Learn More</p>
                         </button>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
@@ -67,25 +104,63 @@ const Videos = () => {
         >
             <p className='font-hanken text-[32px] lg:text-[48px] font-medium text-[#101828]'>Videos Gallery</p>
 
-            <div className={`${videosPost?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" :  "flex items-center justify-center"}`}>
+            {/* <div className={`${vid?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" :  "flex items-center justify-center"}`}>
                 {loading ? 
                     <p className='text-2xl text-[#000] text-center font-semibold'>Loading Videos...</p> :
-                    videosPost.length > 0 ?
-                    videosPost.map((event, index) => (
+                    vid?.length > 0 ?
+                    vid?.map((item, index) => (
                     <div key={index} className='relative group overflow-hidden rounded-lg'>
                         <video width="320" height="240" controls>
-                            <source src={event} type="video/mp4" />
+                            <source src={item.link} type="video/mp4" />
                         </video>
                         {/* <img src={event.image} alt={event.title} className='w-full h-auto object-cover' />
                         <div className='absolute top-2 right-2 bg-black bg-opacity-50 px-3 py-1 rounded text-white'>{event.count}</div>
-                        <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white'>{event.title}</div> */}
+                        <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white'>{event.title}</div> 
                     </div>
                     )) : 
                     <p className='text-2xl text-[#000] text-center font-semibold'>No Videos Available</p>
                 }
+            </div> */}
+
+            <div className={`${vid?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" : "flex items-center justify-center"}`}>
+            {loading ? (
+                <p className='text-2xl text-[#000] text-center font-semibold'>Loading Videos...</p>
+            ) : vid?.length > 0 ? (
+                vid?.map((item, index) => {
+                    const youtubeId = item.link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i)?.[1];
+
+                return (
+                    <div key={index} className='relative group overflow-hidden rounded-lg'>
+                        {/* Video container with responsive sizing */}
+                        <div className="w-full aspect-video"> {/* Maintain aspect ratio */}
+                        {
+                            youtubeId ? 
+                                <iframe
+                                    className="w-full h-full rounded-lg"
+                                    src={`https://www.youtube.com/embed/${youtubeId}`}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                                :
+                                <video 
+                                    className="w-full h-full object-cover" // Make video fill container
+                                    controls 
+                                    preload="metadata" // Optimize loading
+                                >
+                                    <source src={item.link} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            }
+                        </div>
+                    </div>
+                )})
+            ) : (
+                <p className='text-2xl text-[#000] text-center font-semibold'>No Videos Available</p>
+            )}
             </div>
 
-            <div className='flex justify-between w-full items-center mt-10'>
+            {/* <div className='flex justify-between w-full items-center mt-10'>
                 <button className='text-gray-400'>← Previous</button>
                 <div className='flex gap-2'>
                     {[1, 2, 3, 8, 9, 10].map((page, index) => (
@@ -93,6 +168,27 @@ const Videos = () => {
                     ))}
                 </div>
                 <button className='text-gray-400'>Next →</button>
+            </div> */}
+            <div className="flex justify-center items-center gap-4 mt-10">
+                <button
+                        onClick={handlePrevPage}
+                        disabled={!prevPageUrl}
+                        className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                        !prevPageUrl && "opacity-50 cursor-not-allowed"
+                        }`}
+                >
+                    Previous
+                </button>
+                <p className="text-[#222222] font-bold">Page {currentPage}</p>
+                <button
+                    onClick={handleNextPage}
+                    disabled={!nextPageUrl}
+                    className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                    !nextPageUrl && "opacity-50 cursor-not-allowed"
+                    }`}
+                >
+                    Next
+                </button>
             </div>
             
         </section>

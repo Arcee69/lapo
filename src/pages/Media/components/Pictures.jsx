@@ -93,7 +93,7 @@ const PicturesGallery = () => {
                             Explore our galleries to see pictures of past seminars, trainings, meetings and other events
                         </p>
                     </div>
-                    <div className='hidden lg:flex items-center gap-[17px]'>
+                    {/* <div className='hidden lg:flex items-center gap-[17px]'>
                         <button
                             className='w-[180px] h-[56px] flex items-center justify-center bg-[#fff] rounded-lg'
                         >
@@ -104,7 +104,7 @@ const PicturesGallery = () => {
                         >
                             <p className='text-[#FFFFFF] font-medium text-base leading-7'>Learn More</p>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
