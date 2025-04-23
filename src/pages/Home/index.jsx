@@ -10,7 +10,7 @@ import Lenis from "@studio-freight/lenis";
 import YouTube from 'react-youtube';
 import axios from "axios"
 
-import ModalPop from "../../components/modal/ModalPop"
+import ModalPop from "../../components/modal/modalPop"
 
 
 import CurveLeft from "../../assets/png/curve_left.png"
