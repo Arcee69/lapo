@@ -104,7 +104,7 @@ const Special = () => {
     <div className='w-full'>
         <SubLoansHeader 
             title="Special loan"
-            subtitle={`This loan product is desigThe Special Loan offers tailored financing options for clients with specific requirements, including emergency funds and support for community-driven projects, ensuring flexibility to meet diverse financial needsned to operate on a group (union) methodology.`}
+            subtitle={`The Special Loan offers tailored financing options for clients with specific requirements, including emergency funds and support for community-driven projects, ensuring flexibility to meet diverse financial needsned to operate on a group (union) methodology.`}
             link="/loans/special"
         />
         <section

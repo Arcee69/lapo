@@ -168,7 +168,7 @@ const Education = () => {
                         "Low Interest Rate",
                     ]}
                     details={` 
-                        School Fees is designed for economically active parents/guardians who have the willingness 
+                        School Fees Loan is designed for economically active parents/guardians who have the willingness 
                         to educate their children in private schools.This product is tailored to close the gap 
                         between the need of the child and what the parent can offer in regard to school fees/levies, 
                         uniforms, books and school bus fees.

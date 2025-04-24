@@ -127,7 +127,7 @@ const Asset = () => {
                 <div className='flex w-[10.688rem] lg:w-[19.7rem] flex-col items-center py-[32px] justify-center gap-4 border border-l-0 border-r-[1px] border-y-0 border-[#EEEEEE]'>
                     <img src={Lab} alt='Lab' className='w-[36px] h-[40px]' />
                     <p className='text-xs lg:text-base font-inter leading-[22px] text-[#445D65]'>Methodology</p>
-                    <p className='font-hanken font-semibold text-center lg:text-[20px] leading-5 lg:leading-[25px] text-[#360E22]'>Individual and group</p>
+                    <p className='font-hanken font-semibold text-center lg:text-[20px] leading-5 lg:leading-[25px] text-[#360E22]'>Individual and Group</p>
                 </div>
                 <div className='flex w-[10.688rem] lg:w-[19.7rem] flex-col items-center py-[32px] justify-center gap-4'>
                     <img src={Collateral} alt='Collateral' className='w-[36px] h-[40px]' />

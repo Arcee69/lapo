@@ -239,7 +239,7 @@ const Header = () => {
                         <p className='text-[#667085] font-inter text-sm leading-5'>Shop. Pay. Withdraw</p>
                       </div>
 
-                      <div 
+                      {/* <div 
                         onClick={() => {
                           navigate("/digital/cards", {
                             state: {section: "ussd"}
@@ -250,7 +250,7 @@ const Header = () => {
                       >
                         <p className='font-hanken text-[#101828] font-medium text-base leading-6'>USSD Banking</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>Dial *351# to experience easy banking</p>
-                      </div>
+                      </div> */}
 
                       {/* <div 
                         className='flex items-center cursor-pointer gap-2 w-full'
@@ -275,7 +275,7 @@ const Header = () => {
                           handleMouseLeave("products")
                         }}
                       >
-                        POS Terminal
+                        PoS Terminal
                       </p>
 
                       <div 
@@ -287,7 +287,7 @@ const Header = () => {
                           }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
-                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Lapo POS</p>
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>Lapo MfB PoS</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>Payment Solution to fuel your growth</p>
                       </div>
                       {/* <div 

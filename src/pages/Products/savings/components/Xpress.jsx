@@ -62,7 +62,7 @@ const Xpress = () => {
         <SubSavingsHeader 
             title="X-press Saving Account"
             subtitle={`
-                With a minimum opening deposit of NGN 1, 000 you can start taking important steps to secure your financial future.
+                With a minimum opening deposit of NGN 1,000 you can start taking important steps to secure your financial future.
             `}
             link="/savings/xpress"
         />
@@ -75,7 +75,7 @@ const Xpress = () => {
                 for managing day-to-day expenses while earning interest on the balance.
             `}
             listContent={[
-                "Account minimum operating balance of N1, 000",
+                "Account minimum operating balance of N1,000",
                 "Savings Plan Account can be opened at any LAPO MfB branch nationwide",
                 "Low entry balance",
                 "Easy access to your Account",
@@ -83,7 +83,7 @@ const Xpress = () => {
                 "Expert Financial Advice"
             ]}
             featuresContent={[
-                "High Competitive Interest Rate",
+                "Competitive interest rate",
             ]}
             documentContent={[
                 "Duly completed application form",

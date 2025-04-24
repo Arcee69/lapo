@@ -75,12 +75,12 @@ const FixedDeposit = () => {
             listContent={[
                 "Highly competitive interest rate",
                 "Available to Individuals, Groups and Associations",
-                "Easy access to your account",
+                "Easy access to your Account",
                 "You are able to secure and grow funds that are not for immediate use",
                 "Expert financial advice"
             ]}
             featuresContent={[
-                "High Competitive Interest Rate",
+                "Competitive interest rate",
             ]}
             documentContent={[
                 "Duly completed application form",

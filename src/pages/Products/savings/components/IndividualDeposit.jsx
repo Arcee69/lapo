@@ -62,7 +62,7 @@ const IndividualDeposit = () => {
         <SubSavingsHeader 
             title="Individual Deposit Account"
             subtitle={`
-                The Savings Plan Account is designed for The Individual Savings Account is a straightforward way 
+                The Individual Savings Account is a straightforward way 
                 for individuals to begin securing their financial future. With a low minimum opening balance, 
                 this account encourages regular savings habits and offers interest earnings to help grow your 
                 funds over time. individuals and groups who wish to save funds toward a particular project(s) 
@@ -83,7 +83,7 @@ const IndividualDeposit = () => {
                 "N1,000 initial deposit & minimum account balance.",
                 "Savings Plan Account can be opened at any LAPO MfB branch nationwide",
                 "Interest: 30% of Monetary Policy Rate (MPR)",
-                "Easy access to your account",
+                "Easy access to your Account",
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "You are able to secure and grow savings",
                 "Expert Financial Advice"

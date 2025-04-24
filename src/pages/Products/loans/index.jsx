@@ -162,19 +162,19 @@ const Loans = () => {
             ref={productRef}
         >
             <div className='flex flex-col items-center gap-6'>
-                <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#FFF0E8]'>
-                    <p className='font-hanken font-medium text-sm leading-[15px] text-[#E78020]'>LAPO Loans</p>
+                <div className='w-[150px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#FFF0E8]'>
+                    <p className='font-hanken font-medium text-sm leading-[15px] text-[#E78020]'>LAPO MfB Loans</p>
                 </div>
                 <p className='font-hanken text-[#000000] text-[32px] leading-[120%] lg:text-[54px] lg:leading-[64px]'>Loan Products</p>
                 <p className='text-[18px] text-[#000000] lg:w-[947px] mx-auto font-inter text-center leading-[27px]'>
-                    Loans can be a valuable financial tool for achieving your goals. Our loan options are designed to provide you with all the help you need
+                    A Loan can be a valuable financial tool for achieving your goals. Our loan options are designed to provide you with all the help you need
                 </p>
             </div>
 
             <div  className='flex flex-col gap-4'>
                 <div onClick={() => {navigate("/loans/regular"); window.scrollTo(0, 0)}} className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] drop-shadow cursor-pointer group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
                     <div className='flex items-center justify-between'>
-                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
+                        <div className='w-auto h-[40px] flex invisible items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>Regular Loans</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />

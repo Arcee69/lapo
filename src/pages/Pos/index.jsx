@@ -6,6 +6,7 @@ import axios from 'axios'
 import PosBanner from "../../assets/png/pos_banner.png"
 import Terminal from "../../assets/png/terminal.png"
 import FiveStars from "../../assets/png/five_stars.png"
+import NDPR from "../../assets/png/ndpr.png"
 
 import Stars from "../../assets/svg/stars.svg"
 import CBN from "../../assets/svg/cbn.svg"
@@ -93,7 +94,7 @@ const Pos = () => {
         // When categories load, find the loan category
         useEffect(() => {
         if (faqCategories?.length > 0) {
-            const loanCategory = faqCategories?.find(cat => cat.name === 'POS Terminal');
+            const loanCategory = faqCategories?.find(cat => cat.name === 'PoS Terminal');
             if (loanCategory) {
                 setSelectedCategoryId(loanCategory.id);
             }
@@ -162,6 +163,7 @@ const Pos = () => {
                 <div className='flex items-center gap-2 mt-3'>
                     <p className='text-xs font-hanken text-[#fff] font-medium capitalize'>licensed by </p>
                     <img src={CBN} alt='cbn_logo' className='w-[22px] h-[28px]' />
+                    <img src={NDPR} alt='ndpr_logo' className='w-[22px] h-[28px]' />
                     <p className='text-xs font-hanken text-[#fff] font-medium capitalize'> insured by </p>
                     <img src={NDIC} alt='ndic_logo' className='w-[70px] h-[28px]' />
                 </div>
@@ -174,7 +176,7 @@ const Pos = () => {
         >
             <div className='flex flex-col gap-3'>
                 <div className='bg-[#FDF2E9] rounded-[6px] flex items-center flex-col justify-center p-2 h-[32px] w-[172px]'>
-                    <p className='text-[#E78020] font-hanken font-medium text-sm leading-[15px]'>Why Choose Our POS?</p>
+                    <p className='text-[#E78020] font-hanken font-medium text-sm leading-[15px]'>Why Choose Our PoS?</p>
                 </div>
                 <div className='flex flex-col gap-5'>
                     <p className='font-hanken font-medium capitalize text-[28px] leading-[100%] lg:text-[48px] lg:leading-[62px] tracking-[-2%]'>
@@ -195,7 +197,7 @@ const Pos = () => {
                     <div className='flex items-start gap-4'>
                         <img src={Lightning} alt='Lightning' className=''/>
                         <div className='flex flex-col gap-4 mt-2'>
-                            <p className='font-inter text-[#101828] font-medium text-[18px] leading-[28px] lg:text-[20px] lg:leading-[30px]'>Modern, User-Friendly POS Terminals</p>
+                            <p className='font-inter text-[#101828] font-medium text-[18px] leading-[28px] lg:text-[20px] lg:leading-[30px]'>Modern, User-Friendly PoS Terminals</p>
                             <p className='text-[#667085] font-inter text-base leading-6 '>
                                 Give your team the autonomy they need with access to as many cards as they need. 
                                 Authorise purchases with a click. Simple.
@@ -254,7 +256,7 @@ const Pos = () => {
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
                 <p className='font-hanken text-[56px] leading-[67px] text-[#fff]'>
-                    Simple Steps to Getting your POS
+                    Simple Steps to Getting your PoS
                 </p>
                 <p className='text-[#D9D9D9] font-inter text-[20px] leading-[30px]'>
                     Our application process is designed to be straightforward and efficient. 
@@ -276,7 +278,7 @@ const Pos = () => {
                             <p className='font-hanken font-medium text-[#000] text-[32px] leading-[41px]'>{step}</p>
                         </div>
                         <p className='font-hanken font-medium text-[20px] leading-[26px] text-[#fff]'>
-                            Step {step}: {index === 0 ? 'Request a POS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
+                            Step {step}: {index === 0 ? 'Request a PoS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
                         </p>
                         <p className='font-inter text-[#D9D9D9] text-[20px] leading-[30px] text-center'>
                             {   index === 0 ? 'Sign up online or visit our branch.' : 
@@ -300,7 +302,7 @@ const Pos = () => {
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
                 <p className='font-hanken text-[32px] capitalize leading-[120%] lg:text-[56px] lg:leading-[67px] text-[#fff]'>
-                    Simple Steps to Getting your POS
+                    Simple Steps to Getting your PoS
                 </p>
                 <p className='text-[#D9D9D9] font-inter text-base lg:text-[20px] leading-[30px]'>
                     Our application process is designed to be straightforward and efficient. 
@@ -323,7 +325,7 @@ const Pos = () => {
                         </div>
                         <div className="flex flex-col items-start lg:items-center gap-2">
                             <p className='font-hanken font-medium text-base whitespace-nowrap leading-[130%] lg:text-[20px] lg:leading-[26px] text-[#fff]'>
-                                Step {step}: {index === 0 ? 'Request a POS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
+                                Step {step}: {index === 0 ? 'Request a PoS' : index === 1 ? "Get it Delivered" :  index === 2 ?  'Start Accepting Payments' : 'Choose Your Loan Type'}
                             </p>
                             <p className='font-inter text-[#D9D9D9] text-base leading-[150%] lg:text-[20px] lg:leading-[30px] lg:text-center'>
                                 {   
@@ -341,19 +343,19 @@ const Pos = () => {
 
 
 
-        <section
+        {/* <section
             className='bg-[#F7F9FC] py-[96px] px-5 lg:px-[80px] gap-6 flex flex-col items-center'
         >
             <img src={FiveStars} alt="FiveStars" className='w-[116px] h-[20px]' />
             <p className='font-hanken font-medium italic text-[30px] leading-[32px] lg:text-[72px] lg:leading-[93.82px] tracking-[-2%] text-center'>
-                “This POS transformed how we handle payments! Quick, reliable, and easy to use. 
+                “This PoS transformed how we handle payments! Quick, reliable, and easy to use. 
             </p>
             <div className='flex flex-col items-center gap-[4px]'>
                 <p className='font-medium text-[#101828] text-[18px] font-inter leading-[28px]'>— Ladidi WUraola</p>
                 <p className='text-[#667085] font-inter text-base leading-[24px]'>Business Owner</p>
             </div>
 
-        </section>
+        </section> */}
         
         <section
             className='bg-[#00984C] h-[471px] px-5 lg:px-0 flex justify-center py-[107px] lg:py-[112px] items-center'
@@ -399,14 +401,14 @@ const Pos = () => {
                 >
                     <p className='font-hanken font-medium text-[48px] leading-[57px] '>FAQs</p>
                     <p className='font-inter text-[#000000] text-[18px] leading-[27px]'>
-                        Find answers to your questions about our POS Terminal and application process.
+                        Find answers to your questions about our PoS Terminal and application process.
                     </p>
                 </div>
                 <div className='flex flex-col gap-[48px]'>
                     <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>How do I request a POS?</p>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>How do I request a PoS?</p>
                         <p className='font-inter text-[#000000] text-base leading-6'>
-                            You can request a POS by signing up online or visiting any of our branches. 
+                            You can request a PoS by signing up online or visiting any of our branches. 
                             Once approved, we’ll deliver it to your business location.
                         </p>
                     </div>
@@ -427,7 +429,7 @@ const Pos = () => {
                         </p>
                     </div>
                     <div className='flex flex-col gap-4'>
-                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What happens if my POS stops working?</p>
+                        <p className='font-hanken text-[#753412] font-medium leading-[30px] text-[20px]'>What happens if my PoS stops working?</p>
                         <p className='font-inter text-[#000000] text-base leading-6'>
                             If you experience any issues, our 24/7 support team is ready to assist you. 
                             We also offer quick replacements to keep your business running smoothly.
@@ -465,7 +467,7 @@ const Pos = () => {
                 >
                     <p className='font-hanken font-medium text-[32px] leading-[120%] lg:text-[48px] lg:leading-[57px] '>FAQs</p>
                     <p className='font-inter text-[#000000] text-base leading-[150%] lg:text-[18px] lg:leading-[27px]'>
-                        Find answers to your questions about our POS Terminal and application process.
+                        Find answers to your questions about our PoS Terminal and application process.
                     </p>
                 </div>
                 <div className='flex flex-col gap-[48px]'>

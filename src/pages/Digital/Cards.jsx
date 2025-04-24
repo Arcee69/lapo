@@ -99,7 +99,7 @@ const Cards = () => {
                         <img src={Money} alt="Money" className='w-[48px] h-[48px]' />
                         <div className='flex flex-col gap-2'>
                             <p className='text-[#101828] font-inter font-medium text-[20px] leading-[30px]'>
-                                Access your funds anytime, anywhere:
+                                Access your funds anytime, anywhere
                             </p>
                             <p className='text-[#667085] font-inter text-base leading-6'>
                                 Say goodbye to the limitations of cash and long queues at the Bank. 
@@ -111,7 +111,7 @@ const Cards = () => {
                         <img src={Shield} alt="Shield" className='w-[48px] h-[48px]' />
                         <div className='flex flex-col gap-2'>
                             <p className='text-[#101828] font-inter font-medium text-[20px] leading-[30px]'>
-                                Enhanced security:
+                                Enhanced security
                             </p>
                             <p className='text-[#667085] font-inter text-base leading-6'>
                                 Your debit card features EMV chip technology, PIN authentication, 
@@ -128,7 +128,7 @@ const Cards = () => {
                         <img src={CardSmall} alt="CardSmall" className='w-[48px] h-[48px]' />
                         <div className='flex flex-col gap-2'>
                             <p className='text-[#101828] font-inter font-medium text-[20px] leading-[30px]'>
-                                Convenient cashless payments:
+                                Convenient cashless payments
                             </p>
                             <p className='text-[#667085] font-inter text-base leading-6'>
                                 Embrace the future of payments and experience the speed, convenience, 
@@ -170,7 +170,7 @@ const Cards = () => {
             </div>
         </section>
 
-        <section
+        {/* <section
             className='lg:px-[80px] py-[96px] flex flex-col items-center gap-[21px]'
             data-aos="fade-up" 
             data-aos-duration="1000" 
@@ -244,7 +244,7 @@ const Cards = () => {
                
                 
             </div>
-        </section>
+        </section> */}
 
         <section
             className='bg-[#FBFAF9] px-5 lg:px-[80px] py-[96px] flex flex-col lg:flex-row items-center gap-[64px]'

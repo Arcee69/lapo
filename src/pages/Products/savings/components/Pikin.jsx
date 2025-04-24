@@ -61,7 +61,7 @@ const Pikin = () => {
     <div className='w-full'>
         <SubSavingsHeader 
             title="My Pikin & I Savings Account"
-            subtitle={`Saving money for your child’s future is as important as raising them well. My Pikin is a savings account designed to provide clients the opportunity to save towards the welfare of their children/dependents.`}
+            subtitle={`Saving money for your child’s future is as important as raising them well. My Pikin & I savings account is a savings account designed to provide clients the opportunity to save towards the welfare of their children/dependents.`}
             link="/savings/pikin"
         />
 
@@ -81,7 +81,7 @@ const Pikin = () => {
                 "A chance for your Child / Ward to win LAPO MfB LTD Scholarship",
                 "Minimum Monthly Accumulated Savings of N5,000",
                 "Available to both New & Existing Groups and Individuals Clients",
-                "Easy access to your account",
+                "Easy access to your Account",
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "Expert financial advice"
             ]}

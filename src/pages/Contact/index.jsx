@@ -104,10 +104,7 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col gap-6'>
                     <p className='font-hanken text-[32px] capitalize leading-[32px] lg:text-[56px] text-center font-medium text-[#101828] lg:leading-[60px]'>
-                        We’d love to hear from you
-                    </p>
-                    <p className='font-inter text-base lg:text-[20px] leading-[30px] text-[#667085] text-center'>
-                        Our friendly team is always here to chat.
+                        We would love to hear from you
                     </p>
                 </div>  
             </div>
@@ -301,22 +298,26 @@ const Contact = () => {
         >
             <div className='flex flex-col gap-6 w-[311px] lg:w-[576px]'>
                 <p className='font-semibold text-[32px] lg:text-[48px] lg:whitespace-nowrap leading-[100%] lg:leading-[60px] text-[#101828] font-hanken'>
-                    Premium customer support
+                   Concerns and Complaints
                 </p>
                 <p className='text-[#667085] font-inter text-base lg:text-[20px] leading-[30px]'>
-                    Enjoy the personalized service you need at LAPO Microfinance Bank, 
-                    including long-term business financial planning and extended-hours 
-                    access to our specialized business service team.
+                   At LAPO MfB, we are committed to continuously enhancing our services to serve you better.
+                   If you've experienced any issues or difficulties with our services. we'd like to hear from you.
                 </p>
-                <ul className='pl-5 list-disc text-[#6A6A6A] text-base lg:text-[20px] font-hanken leading-[25px]'>
-                    <li>One combined monthly statement for all of your business accounts</li>
-                    <li>Extended-hours access to our specialized business service team</li>
-                </ul>
+                <div className='flex flex-col gap-2'>
+                    <p className='text-[#101828] font-semibold text-[20px]'>Share Your Concerns</p>
+                    <p className='text-[#667085] font-inter text-base lg:text-[20px] leading-[30px]'>
+                        Please take a moment to fill out our complaint form, and we'll work to resolve the issue promptly.
+                    </p>
+                </div>
+                <p className='text-[#667085] font-inter text-base lg:text-[20px] leading-[30px]'>
+                    Click the button below to fill the complaint form.
+                </p>
                 <button
                     className='w-[126px] h-[48px] rounded-lg flex items-center justify-center bg-[#E78020]'
-                    onClick={() => {navigate("/contact-us"); window.scrollTo(0, 0)}}
+                    onClick={() => {window.open("https://tinyurl.com/LAPO-MFB-Feedback", "_blank"); window.scrollTo(0, 0)}}
                 >
-                    <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Contact Us</p>
+                    <p className='font-medium text-base leading-6 font-inter text-[#FFFFFF]'>Click here</p>
                 </button>
             </div>
             <div className='lg:w-[576px]'>

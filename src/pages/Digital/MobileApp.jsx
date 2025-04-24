@@ -140,7 +140,7 @@ const MobileApp = () => {
                 </div>
                 <div className='flex items-center gap-2'>
                     <img src={Avatar} alt="Avatar" className='w-[152px] h-[40px]' />
-                    <p className='text-[#667085] font-inter font-medium leading-6 text-base'>Over 50k Downloads</p>
+                    {/* <p className='text-[#667085] font-inter font-medium leading-6 text-base'>Over 50k Downloads</p> */}
                 </div>
 
             </div>
@@ -184,9 +184,9 @@ const MobileApp = () => {
                             />
                         </div>
                         <div className='flex flex-col gap-[7px]'>
-                            <p className='font-inter text-[#fff] text-[24px] lg:text-[30px] leading-[36px]'>Loan Access</p>
+                            <p className='font-inter text-[#fff] text-[24px] lg:text-[30px] leading-[36px]'>Spending Analysis</p>
                             <p className='font-inter text-[15px] text-[#C7C9CA] leading-6'>
-                                Apply for loans in minutes and track your repayments with ease.
+                                Check how your money is being spent and identify areas <br /> for potential savings
                             </p>
                         </div>
                     </div>
@@ -275,7 +275,7 @@ const MobileApp = () => {
                         <img src={Globe} alt="Globe" className='w-[32px] h-[32px]' />
                     </div>
                     <p className='font-hanken font-semibold text-[#111111] text-[20px] lg:text-[22px] leading-[28px]'>Anytime, Anywhere Access</p>
-                    <p className='text-center text-[#555555] text-base leading-[120%] lg:text-[18px] font-inter lg:leading-[28px]'>Simple, intuitive, and easy to navigate.</p>
+                    <p className='text-center text-[#555555] text-base leading-[120%] lg:text-[18px] font-inter lg:leading-[28px]'>Get Access to your money anytime you need it from anywhere.</p>
                 </div>
                 <div className='flex flex-col items-center gap-4'>
                     <div className='bg-[#fff] w-[84px] h-[84px] rounded flex items-center justify-center'>

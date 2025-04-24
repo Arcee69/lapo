@@ -76,7 +76,7 @@ const Social = () => {
             listContent={[
                 "When your deposit is up to N10,000,000 and above, you will be given the opportunity to nominate one child for direct LAPO scholarship",
                 "Attractive interest comes with the account",
-                "Easy access to your account",
+                "Easy access to your Account",
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "You are able to secure and grow savings",
                 "Available to individuals and groups",

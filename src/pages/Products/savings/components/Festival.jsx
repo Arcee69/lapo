@@ -81,7 +81,7 @@ const Festival = () => {
                 "Minimum opening and operating balance is just N200",
                 "Savings Plan Account can be opened at any LAPO MfB branch nationwide",
                 "Very low entry balance",
-                "Easy access to your account",
+                "Easy access to your Account",
                 "Payments can be made anywhere nationwide with our Pocket Money banking service",
                 "You are able to secure and grow savings",
                 "Available to individuals and groups",

@@ -104,7 +104,7 @@ const Sme = () => {
     <div className='w-full'>
         <SubLoansHeader 
             title="MSME Loan"
-            subtitle={`Designed for small and medium enterprises looking to expand, purchase inventory, or enhance operations. Irrespective of the sector your enterprise is operating, LAPO MfB is willing to support you with a credit facility up to N5,000,000 to expand the enterprise..`}
+            subtitle={`Designed for small and medium enterprises looking to expand, purchase inventory, or enhance operations. Irrespective of the sector your enterprise is operating, LAPO MfB is willing to support you with a credit facility up to NGN5,000,000.00 to expand the enterprise.`}
             link="/loans/msme"
         />
         <section
