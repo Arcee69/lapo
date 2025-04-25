@@ -246,9 +246,9 @@ const Loans = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div  className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
+                <div onClick={() => {navigate("/loans/clean-energy"); window.scrollTo(0, 0)}}  className='w-full h-auto lg:h-[330px] bg-[#fff] py-[10px] p-2 lg:px-[28px] rounded-xl flex flex-col gap-[51px] group  border-[3px] border-[#BE438029] hover:border-0  hover:bg-[#941D58]'>
                     <div className='flex items-center justify-between'>
-                        <div className='w-auto h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
+                        <div className='w-auto invisible h-[40px] flex items-center p-2 bg-[#C65B900D]  group-hover:bg-[#941D58] justify-center rounded-[8px]'>
                             <p className='text-xs lg:text-[17px] font-hanken group-hover:text-[#fff] text-[#941D58] leading-[15px]'>Individual and Group Loans</p>
                         </div>
                         <img src={Parent} alt="Parent" className='' />
@@ -257,19 +257,17 @@ const Loans = () => {
                         <p 
                             className='text-[#941D58] group-hover:text-[#fff] font-hanken font-medium text-[20px] leading-[100%] lg:text-[40px] lg:leading-[60px]'
                         >
-                           SUFEN Loan
+                           Clean Energy Loan
                         </p>
                         <p className='font-inter text-[#000000] lg:w-[830px] group-hover:text-[#FFFFFF] text-sm leading-[150%] lg:text-[20px] lg:leading-[30px]'>
-                            The Savings Plan Account is designed for individuals and groups who wish to save 
-                            funds toward a particular project(s) over a specified period of time and earn 
-                            interest on their savings.
+                            This loan product is designed to provide Individual and Group with  clean energy products.
                         </p>
-                        <div onClick={() => {navigate("#"), window.scrollTo(0, 0)}} className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'>
+                        <div  className='bg-[#FFFFFF] flex items-center gap-1 w-[127px] cursor-pointer rounded h-[37px] py-2 group-hover:px-4'>
                             <p className='text-[#FF5F08] font-inter whitespace-nowrap text-sm lg:text-[19px]'>Learn More</p>
                             <IoChevronForward className='text-[#FF5F08] w-5 h-5' /> 
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </section>
 

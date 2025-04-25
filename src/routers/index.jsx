@@ -16,6 +16,7 @@ import Contact from "../pages/Contact";
 import Sustainability from "../pages/Sustainability";
 import ViewBlogPost from "../pages/Blog/components/ViewBlogPost";
 import Regular from "../pages/Products/loans/components/Regular";
+import CleanEnergy from "../pages/Products/loans/components/CleanEnergy";
 import RegularSavings from "../pages/Products/savings/components/Regular";
 import Pikin from "../pages/Products/savings/components/Pikin";
 import FixedDeposit from "../pages/Products/savings/components/FixedDeposit";
@@ -35,6 +36,8 @@ import Blog from "../pages/Blog";
 import Videos from "../pages/Media/components/Videos";
 import Media from "../pages/Media";
 import Privacy from "../pages/Privacy";
+import Terms from "../pages/Terms";
+import BvnConsent from "../pages/BvnConsent";
 
 
 export default function Routers() {
@@ -47,6 +50,7 @@ export default function Routers() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/products" element={<Loans />} />
           <Route path="/loans/regular" element={<Regular />} />
+          <Route path="/loans/clean-energy" element={<CleanEnergy />} />
           <Route path="/loans/msme" element={<Sme />} />
           <Route path="/loans/agricultural" element={<Agricultural />} />
           <Route path="/loans/asset" element={<Asset />} />
@@ -76,6 +80,8 @@ export default function Routers() {
           <Route path="/articles" element={<Blog />} />
           <Route path="/view-post" element={<ViewBlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/bvn/consent" element={<BvnConsent />} />
         </Route>
       </Routes>
     </div>

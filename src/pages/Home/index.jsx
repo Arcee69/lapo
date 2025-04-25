@@ -12,6 +12,7 @@ import axios from "axios"
 
 import ModalPop from "../../components/modal/modalPop"
 
+import CookieConsent from "../../CookieConsent";
 
 import CurveLeft from "../../assets/png/curve_left.png"
 import CurveRight from "../../assets/png/curve_right.png"
@@ -63,6 +64,7 @@ const Home = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [openModal, setOpenModal] = useState(false)
   const [popMedia, setPopMedia] = useState()
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -886,6 +888,8 @@ const Home = () => {
       <ModalPop isOpen={openModal}>
           <Pop handleClose={() => setOpenModal(false)} popMedia={popMedia} />
       </ModalPop>
+
+      <CookieConsent />
 
     </div>
   )

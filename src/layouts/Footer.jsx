@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Logo from "../assets/svg/logo.svg" 
+import Whistleblowing from "../assets/pdf/Whistle_blowing_V_3.pdf" 
 
 const Footer = () => {
 
@@ -77,12 +78,20 @@ const Footer = () => {
       </div>
 
       <div className="mx-[31px] border border-t-[#E2E2E2] border-b-0 border-x-0 py-[32px] pb-[27px] flex flex-col lg:flex-row lg:items-center justify-between">
-        <p className="text-[13px] font-inter text-[#011624]">© 2025 LAPO. All rights reserved.</p>
         <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[48px]">
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/privacy"), window.scrollTo(0, 0)}}>Privacy Policy</p>
-          {/* <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Terms of Service</p>
-          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]">Cookies Settings</p> */}
+          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/terms"), window.scrollTo(0, 0)}}>Terms of Service</p>
+          <a 
+            className="font-medium font-inter text-[13px] block cursor-pointer text-[#011624]"
+            href={Whistleblowing}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Whistleblowing Policy
+          </a>
+          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/bvn/consent"), window.scrollTo(0, 0)}}>BVN Consent</p>
         </div>
+        <p className="text-[13px] font-inter text-[#011624]">© {new Date().getFullYear()} LAPO. All rights reserved.</p>
       </div>
 
       <img 
