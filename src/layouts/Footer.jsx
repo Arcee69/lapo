@@ -26,7 +26,7 @@ const Footer = () => {
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate('/products/savings'), window.scrollTo(0, 0)}}>Savings</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/digital/cards"), window.scrollTo(0, 0)}}>Cards</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/products"), window.scrollTo(0, 0) }}>Loans</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/pos"), window.scrollTo(0, 0) }}>Pos <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/pos"), window.scrollTo(0, 0) }}>PoS <span className="bg-[#00954B] inline-flex text-xs rounded-[16px] p-1 items-center justify-center text-[#fff] w-[42px] h-[22px]">New</span></p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" 
                 onClick={() => {navigate("/digital", {
                             state: {section: "app"}
@@ -41,7 +41,7 @@ const Footer = () => {
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/careers"), window.scroll(0, 0)}}>Careers</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/resources"), window.scroll(0, 0)}}>Resources</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Awards</p>
-              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Board and Excos</p>
+              <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/about"), window.scroll(0, 0)}}>Board and Executives</p>
               <p className="font-inter text-base font-medium cursor-pointer text-[#1E1E1E]" onClick={() => {navigate("/sustainability"), window.scroll(0, 0)}}>Sustainability</p>
             </div>
             <div className="flex w-[180px] flex-col gap-4">

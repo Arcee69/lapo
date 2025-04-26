@@ -580,7 +580,7 @@ const Changemakers = () => {
             <div className='lg:w-[960px] mx-auto gap-6 flex flex-col px-5 lg:px-0 items-center'>
                 <div className='flex items-center justify-center gap-3  flex-col'>
                     <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
-                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Board</p>
+                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO MfB Board</p>
                     </div>
                     <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[32px] lg:leading-[60px]'>
                         Board of Directors
@@ -627,7 +627,7 @@ const Changemakers = () => {
             <div className='lg:w-[960px] mx-auto gap-6 px-5 lg:px-0 flex flex-col items-center'>
                 <div className='flex items-center justify-center gap-3 flex-col'>
                     <div className='w-[165px] h-[32px] flex items-center justify-center rounded-lg bg-[#E8FFF4]'>
-                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO's Excos</p>
+                        <p className='font-hanken text-sm leading-[15px] text-[#00954B]'>LAPO MfB Executives</p>
                     </div>
                     <p className='font-hanken text-[#000000] text-[32px] lg:text-[54px] leading-[32px] lg:leading-[60px]'>
                         Executives

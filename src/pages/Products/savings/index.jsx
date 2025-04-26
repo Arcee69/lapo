@@ -104,8 +104,8 @@ const Savings = () => {
         <section
             className='flex flex-col items-center px-5 lg:px-[75px] py-[112px] gap-[32px]'
         >
-            <div className='w-[110px] h-[32px] bg-[#E8FFF4] rounded-lg p-1 flex items-center justify-center'>
-                <p className='text-[#00954B] font-medium font-hanken text-sm leading-[15px]'>LAPO Savings</p>
+            <div className='w-[150px] h-[32px] bg-[#E8FFF4] rounded-lg p-1 flex items-center justify-center'>
+                <p className='text-[#00954B] font-medium font-hanken text-sm leading-[15px]'>LAPO MfB Savings</p>
             </div>
             <p className='text-[#000] font-hanken font-medium text-[32px] text-center lg:text-[54px] leading-[46px]'>Unlock Your Financial Potential with Our Savings</p>
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
@@ -144,12 +144,12 @@ const Savings = () => {
             ref={productRef}
         >
             <div className='flex flex-col items-center gap-6'>
-                <div className='w-[110px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#E8FFF4]'>
-                    <p className='font-hanken font-medium text-sm leading-[15px] text-[#00954B]'>LAPO Savings</p>
+                <div className='w-[140px] h-[32.59px] flex items-center justify-center p-1 rounded-lg bg-[#E8FFF4]'>
+                    <p className='font-hanken font-medium text-sm leading-[15px] text-[#00954B]'>LAPO MfB Savings</p>
                 </div>
                 <p className='font-hanken text-[#000000] text-[32px] text-center capitalize lg:text-[54px] leading-[120%] lg:leading-[64px]'>7 Ways to grow your future</p>
                 <p className='text-base lg:text-[18px] text-[#000000] w-full lg:w-[947px] mx-auto font-inter text-center leading-[150%] lg:leading-[27px]'>
-                    Whether you’re saving for your children’s education, growing your business, 
+                    Whether you are saving for your children’s education, growing your business, 
                     or preparing for emergencies, our savings accounts are designed to help you 
                     achieve your financial goals with ease.
                 </p>

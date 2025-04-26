@@ -29,141 +29,82 @@ const BvnConsent = () => {
             data-aos-easing="linear"
         >
             <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                By accessing this website, you acknowledge and agree to be bound by these 
-                <span className="font-semibold text-[#000]"> Terms and Conditions of Use</span> ("Terms"). If you do not agree to these Terms, 
-                please refrain from using this website. LAPO Microfinance Bank Ltd. ("LAPO MfB") 
-                reserves the right to modify, amend, or change these Terms at any time without prior notice. 
-                Any such modifications or amendments shall be effective immediately upon posting. 
-                It is your responsibility to review these Terms periodically to ensure that you are aware of any changes. 
-                By continuing to access or use this website after such modifications, you will be deemed to have accepted 
-                those changes.
+                By providing your <span className="font-semibold text-[#000]">Bank Verification Number (BVN) </span> to LAPO Microfinance Bank Ltd. ("LAPO
+                MfB"), you consent to the collection, processing, and use of your BVN for the purpose of verifying
+                your identity, conducting financial and compliance checks, and fulfilling the regulatory
+                requirements under the <span className="font-semibold text-[#000]"> Nigeria Data Protection Regulation (NDPR) </span> and other relevant laws in
+                Nigeria.
             </p>
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Disclaimer Regarding Accuracy of Information
-                </p>
+          
+            <div className="flex flex-col gap-4">
                 <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    While LAPO MfB takes reasonable measures to ensure that the information on this website is 
-                    accurate and up-to-date, we do not warrant, express or imply, the accuracy, adequacy, or 
-                    completeness of the information provided. LAPO MfB expressly disclaims any liability for 
-                    errors or omissions in the information. We do not provide any warranty, express or implied, 
-                    including but not limited to, implied warranties of merchantability, fitness for a particular 
-                    purpose, or freedom from viruses, regarding the materials on this website. Under no circumstances 
-                    will LAPO MfB be liable for any damages arising from the use of this website or any inability to 
-                    use it, including, without limitation, direct, indirect, special, incidental, or consequential 
-                    damages, losses, costs, or expenses resulting from any failure of performance, error, omission, 
-                    interruption, defect, delay in operation or transmission, computer virus, or system failure, 
-                    even if LAPO MfB has been advised of the possibility of such damages.
+                    You expressly authorize LAPO MfB to access, verify, and store the BVN in accordance with
+                    applicable legal and regulatory requirements, including but not limited to the 
+                    <span className="font-semibold text-[#000]"> Central Bank of Nigeria (CBN) </span> guidelines, and other 
+                    financial regulatory authorities. LAPO MfB may use the BVN for the following purposes:
                 </p>
-                
+                <ul className="list-decimal pl-14 font-inter text-[18px] text-[#667085] leading-[28px]">
+                    <li>
+                        <span className="text-[#000] font-semibold">Identity Verification: </span> To confirm your identity and perform KYC (Know Your Customer)
+                        due diligence.     
+                    </li>
+                    <li>
+                        <span className="text-[#000] font-semibold">Regulatory Compliance: </span> To comply with statutory requirements set by the Central Bank
+                        of Nigeria and other financial authorities, including anti-money laundering (AML) and
+                        combating financing of terrorism (CFT) regulations.     
+                    </li>
+                    <li>
+                        <span className="text-[#000] font-semibold">Financial Transactions: </span> To process 
+                        transactions that require verification of your identity.     
+                    </li>
+                </ul>
+            </div>
+            
+            <div className="flex flex-col gap-4">
+                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
+                    You further acknowledge and agree that:
+                </p>
+                <ul className="list-disc pl-14 font-inter text-[18px] text-[#667085] leading-[28px]">
+                    <li>
+                        LAPO MfB shall take reasonable steps to protect your BVN and any personal data you
+                        provide in compliance with the <span className="text-[#000] font-semibold"> Nigeria Data 
+                        Protection Regulation (NDPR) </span> and other relevant privacy laws.    
+                    </li>
+                    <li>
+                        Your BVN and related personal information will not be disclosed to third parties, except
+                        as required for regulatory compliance or as mandated by law.    
+                    </li>
+                    <li>
+                        You consent to the sharing of your BVN with regulatory bodies, financial institutions, and
+                        other relevant authorities as required by law or for compliance purposes.   
+                    </li>
+                    <li>
+                        Your BVN will be stored securely and processed in accordance with LAPO MfB’s internal
+                        data protection policies.   
+                    </li>
+                </ul>
             </div>
 
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Third-Party Links
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    This website may contain links to other websites operated by third parties. 
-                    LAPO MfB is not responsible for the contents of any such third-party websites or 
-                    any other websites linked to those websites. The inclusion of any third-party link 
-                    does not imply endorsement, approval, or sponsorship by LAPO MfB. You acknowledge 
-                    that the use of any third-party website is at your own risk, and LAPO MfB is not liable 
-                    for any loss, injury, or damage arising from your use of such sites. Additionally, 
-                    LAPO MfB does not control or assume responsibility for the placement of cookies, webcasting, 
-                    or any other transmission received from any linked site.
-                </p>
-            </div>
+            <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
+                By providing your BVN, you confirm that you have been fully informed and that you provide
+                consent voluntarily, and you understand the purpose and legal basis for the collection and
+                processing of your BVN.
+            </p>
 
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Indemnification
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    You agree to indemnify, defend, and hold harmless LAPO MfB, its directors, officers, 
-                    employees, agents, and affiliates from and against any and all claims, damages, losses, 
-                    liabilities, costs, and expenses, including but not limited to attorney's fees, arising 
-                    from your breach of these Terms or any violation of the rights of any third party, 
-                    including but not limited to copyrights, intellectual property rights, privacy rights, 
-                    or any other legal rights. This indemnification obligation will survive the termination 
-                    of these Terms and your use of this website.
-                </p>
-            </div>
+            <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
+                Should you wish to withdraw consent or have any concerns about how your personal data is
+                being handled, you may contact LAPO MfB’s Data Protection Officer by writing to: 
+                <span className="text-[#000] font-semibold italic"> The Data Protection Officer LAPO Development Centre, 
+                15 Ikorodu Road, Maryland Bus-stop, Lagos, Nigeria.</span> or <span className="text-[#000] font-semibold italic">
+                by e-mail at dpo@lapo-nigeria.org.</span> Please note that withdrawal of consent may affect your ability 
+                to access certain services offered by LAPO MfB.
+            </p>
 
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Copyrights and Intellectual Property
-                </p>
-                <div className="flex flex-col gap-3">
-                    <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                        The contents of this website, including but not limited to graphics, 
-                        logos, icons, text, images, software, and overall design, are the exclusive 
-                        property of LAPO MfB or its licensors and are protected by applicable intellectual 
-                        property laws, including copyright and trademark laws. The display of such content 
-                        does not grant you any rights, including the right to copy, reproduce, distribute, 
-                        or otherwise use the materials for commercial purposes unless expressly authorized 
-                        by LAPO MfB or the relevant third party owner of the intellectual property.
-                    </p>
-                    <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                        You agree not to delete, modify, or alter any copyright, trademark, or other 
-                        proprietary notices contained in the content obtained from this website. 
-                        You may download or copy materials for your personal, non-commercial use, 
-                        provided that you retain all copyright and other proprietary notices. 
-                        You are prohibited from downloading, copying, or otherwise using any material on 
-                        this website or any linked third-party site in violation of any intellectual property laws.
-                    </p>
-                </div>
-            </div>
+           
 
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Limitation of Liability
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    To the fullest extent permitted by law, LAPO MfB, its affiliates, officers, 
-                    directors, employees, and agents shall not be liable for any direct, indirect, 
-                    special, consequential, or incidental damages, including but not limited to, 
-                    loss of profits, business interruption, or loss of data arising from the use or 
-                    inability to use this website, even if LAPO MfB has been advised of the possibility of such damages.
-                </p>
-            </div>
+           
 
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Governing Law and Dispute Resolution
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    These Terms and Conditions of Use shall be governed by and construed in accordance with the 
-                    laws of the Federal Republic of Nigeria. Any dispute, controversy, or claim arising out of 
-                    or in connection with these Terms, including the validity, interpretation, performance, or 
-                    breach thereof, shall be settled through Arbitration in accordance with the Arbitration and 
-                    Conciliation Act 2023 of Nigeria. The arbitration shall take place in Lagos, Nigeria, and 
-                    shall be conducted in English. The decision of the arbitrator shall be final and binding on 
-                    both parties.
-                </p>
-            </div>
-
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Severability
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    If any provision of these Terms is found to be unlawful, void, 
-                    or for any reason unenforceable, then that provision shall be deemed 
-                    severable from these Terms and shall not affect the validity and enforceability 
-                    of the remaining provisions.
-                </p> 
-            </div>
-
-            <div className='flex flex-col gap-6'>
-                <p className='font-inter font-semibold text-[#101828] text-[30px] leading-[38px]'>
-                    Privacy Policy
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    LAPO MfB is committed to protecting your privacy and ensuring the security of any 
-                    personal information you provide. Please review our Privacy Policy to understand how we 
-                    collect, use, and safeguard your information.
-                </p> 
-            </div>
+           
         </section>
 
         <section

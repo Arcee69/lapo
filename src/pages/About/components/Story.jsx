@@ -115,8 +115,8 @@ const Story = () => {
         data-aos-duration="1000" 
         data-aos-easing="linear"
       >
-        <div className='w-[138px] flex items-center justify-center p-2 bg-[#E8FFF4] rounded-[6px]'>
-          <p className='font-hanken text-xs leading-[15px]'>The LAPO Philosophy</p>
+        <div className='w-[168px] flex items-center justify-center p-2 bg-[#E8FFF4] rounded-[6px]'>
+          <p className='font-hanken text-xs leading-[15px]'>The LAPO MfB Philosophy</p>
         </div>
         <div className='lg:w-[636px] mx-auto flex items-center justify-center'>
           <p className='font-hanken text-[28px] lg:text-[54px] leading-[120%] lg:leading-[64px] text-center text-[#000]'>Pioneering Nigeria’s Financial Future</p>

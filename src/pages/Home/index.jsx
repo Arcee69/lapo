@@ -646,7 +646,7 @@ const Home = () => {
       >
         <div className='flex flex-col items-center gap-2 lg:w-[636px] mx-auto'>
           <div className='w-[148px] h-[32px] flex items-center justify-center rounded-md bg-[#E8FFF4]'>
-            <p className='font-hanken text-xs  text-[#00954B] font-medium'>The Lapo MfB Advantage</p>
+            <p className='font-hanken text-xs  text-[#00954B] font-medium'>The LAPO MfB Advantage</p>
           </div>
           <p className='font-hanken text-[32px] lg:text-[54px] font-medium leading-[120%] lg:leading-[64px] text-center'>
             Unlock Your Financial Potential
