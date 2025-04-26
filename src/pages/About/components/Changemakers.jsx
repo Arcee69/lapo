@@ -62,7 +62,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960823/MD_jin9cy.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -200,7 +200,7 @@ const Changemakers = () => {
         {
             name: 'Israel Aibuedefe',
             position: 'Executive Director, Business Support Division.',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745691762/MR_ISRAEL_evwvwf.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Israel Aibuedefe - Executive Director, Business Support</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -261,7 +261,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960823/MD_jin9cy.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -287,7 +287,7 @@ const Changemakers = () => {
         {
             name: 'Israel Aibuedefe',
             position: 'Executive Director, Business Support Division.',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180265/isreal_pxx2lw.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745691762/MR_ISRAEL_evwvwf.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Israel Aibuedefe - Executive Director, Business Support</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -345,7 +345,7 @@ const Changemakers = () => {
         {
             name: 'Lillian Ehigiamusoe',
             position: 'Head, Operations',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1740180266/lillian_jpsnd9.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692005/MADAM_LILLIAN_a7xgk6.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Lilian Ehigiamusoe - Head, Operations</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -496,7 +496,7 @@ const Changemakers = () => {
         {
             name: 'Abel Ovenseri Enoguanmwonsa',
             position: 'Head, Corporate Services',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689366/abel_s5rsit.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745691887/DR_ABEL_m2m7d9.jpg',
             profile: `<div class="flex flex-col gap-5">
             <p class="font-hanken font-semibold text-base text-[#000]">Abel Ovenseri - Head, Corporate Services</p>
             <p class="text-[#444444] font-inter text-sm">

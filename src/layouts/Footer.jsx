@@ -80,6 +80,7 @@ const Footer = () => {
       <div className="mx-[31px] border border-t-[#E2E2E2] border-b-0 border-x-0 py-[32px] pb-[27px] flex flex-col lg:flex-row lg:items-center justify-between">
         <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[48px]">
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/privacy"), window.scrollTo(0, 0)}}>Privacy Policy</p>
+          <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/cookies-policy"), window.scrollTo(0, 0)}}>Cookies Policy</p>
           <p className="font-medium font-inter text-[13px] cursor-pointer text-[#011624]" onClick={() => {navigate("/terms"), window.scrollTo(0, 0)}}>Terms of Service</p>
           <a 
             className="font-medium font-inter text-[13px] block cursor-pointer text-[#011624]"

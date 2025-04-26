@@ -37,6 +37,7 @@ import Videos from "../pages/Media/components/Videos";
 import Media from "../pages/Media";
 import Privacy from "../pages/Privacy";
 import Terms from "../pages/Terms";
+import CookiesPolicy from "../pages/CookiesPolicy";
 import BvnConsent from "../pages/BvnConsent";
 
 
@@ -81,6 +82,7 @@ export default function Routers() {
           <Route path="/view-post" element={<ViewBlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies-policy" element={<CookiesPolicy />} />
           <Route path="/bvn/consent" element={<BvnConsent />} />
         </Route>
       </Routes>
