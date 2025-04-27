@@ -358,9 +358,9 @@ const Payroll = () => {
             </div>
             <div className='lg:w-[576px]'>
                 <img 
-                    src={Premium} 
+                    src="https://res.cloudinary.com/dairsbzlv/image/upload/v1745758406/support_mecbte.jpg" //{Premium} 
                     alt="Premium" 
-                    className='' 
+                    className='w-full rounded-lg' 
                 />
             </div>
         </section>
