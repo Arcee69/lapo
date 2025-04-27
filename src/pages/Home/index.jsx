@@ -265,7 +265,7 @@ const Home = () => {
     const getPop = async (url = `${URL}/v1/pop`) => {
         try {
           const res = await axios.get(url);
-          console.log(res, "addict")
+          // console.log(res, "addict")
           const data = res.data;
     
           setPopMedia(data?.data || []);

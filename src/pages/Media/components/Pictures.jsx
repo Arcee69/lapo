@@ -35,7 +35,7 @@ const PicturesGallery = () => {
         setLoading(true)
         try {
           const res = await axios.get(url);
-          console.log(res, "addict")
+        //   console.log(res, "addict")
           const data = res?.data;
     
           setGallery(data?.data || []);

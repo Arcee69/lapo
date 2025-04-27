@@ -9,6 +9,7 @@ const MobileNavBar = ({ handleClose }) => {
     const [openPersonalDropdown, setOpenPersonalDropdown] = useState(false);
     const [openSmeDropdown, setOpenSmeDropdown] = useState(false);
     const [openMediaDropdown, setOpenMediaDropdown] = useState(false);
+    const [openBlogDropdown, setOpenBlogDropdown] = useState(false);
     const [openPrivateDropdown, setOpenPrivateDropdown] = useState(false);
     const [openResourcesDropdown, setOpenResourcesDropdown] = useState(false);
     
@@ -28,6 +29,10 @@ const MobileNavBar = ({ handleClose }) => {
 
     const handleMedia = () => {
       setOpenMediaDropdown(!openMediaDropdown)
+    }
+
+    const handleBlog = () => {
+      setOpenBlogDropdown(!openBlogDropdown)
     }
 
     const handlePrivate = () => {
@@ -61,7 +66,7 @@ const MobileNavBar = ({ handleClose }) => {
                       <p onClick={() => {navigate("/products/savings"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Savings</p>
                       <p onClick={() => {navigate("/products"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Loans</p>
                       <p onClick={() => {navigate("/digital"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Digital Banking</p>
-                      <p onClick={() => {navigate("/pos"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Pos Terminal</p>
+                      <p onClick={() => {navigate("/pos"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">PoS Terminal</p>
                 </div>
               )
             }
@@ -77,9 +82,22 @@ const MobileNavBar = ({ handleClose }) => {
             {
               openMediaDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                    <p onClick={() => {navigate("/blog"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Blog</p>
-                    <p onClick={() => {navigate("/media"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Gallery</p>
-                    <p onClick={() => {navigate("/blog"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Press Release</p>
+                    <p onClick={() => {navigate("/gallery/pictures"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Pictures</p>
+                    <p onClick={() => {navigate("/gallery/videos"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Videos</p>
+                </div>
+              )
+            }
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center justify-between" onClick={handleBlog}>
+              <p className="font-medium font-hanken text-[#334E69] text-base uppercase">Blog</p>
+              {openBlogDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
+            </div>
+            {
+              openBlogDropdown && (
+                <div className='flex flex-col gap-3 mt-3'>
+                    <p onClick={() => {navigate("/articles"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Articles</p>
+                    <p onClick={() => {navigate("/press-release"); window.scrollTo(0,0); handleClose()}} className="font-hanken font-[350] text-[#334E69] text-base uppercase">Press Release</p>
                 </div>
               )
             }
