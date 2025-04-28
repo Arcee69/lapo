@@ -363,7 +363,7 @@ const Governance = () => {
                     Making Finance Work for Everyone
                 </p>
                 <p className='text-[18px] font-inter text-[#000000] leading-[27px]'>
-                    At LAPO Microfinance Bank, we’re committed to breaking financial barriers and ensuring 
+                    At LAPO Microfinance Bank, we are committed to breaking financial barriers and ensuring 
                     that everyone—regardless of background—has access to the financial services they need to thrive. 
                     From small business owners to everyday individuals, our inclusive financial solutions are designed 
                     to empower communities, foster growth, and create lasting impact. Because when opportunities are 

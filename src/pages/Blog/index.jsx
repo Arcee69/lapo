@@ -1,7 +1,8 @@
 import React,  { useEffect, useRef, useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-
+import Left from "../../assets/svg/left_brick.svg"
+import Right from "../../assets/svg/right_brick.svg"
 
 import Stars from "../../assets/svg/stars.svg"
 import axios from 'axios'
@@ -96,7 +97,7 @@ const Blog = () => {
 
   return (
     <div className='w-full'>
-        <section 
+        {/* <section 
             style={{
                 backgroundImage: `url(https://res.cloudinary.com/dairsbzlv/image/upload/v1744710874/christmas_y06gtu.png)`,
                 backgroundSize:"cover",
@@ -131,6 +132,36 @@ const Blog = () => {
                     </button>
                 </div>
         
+            </div>
+        </section> */}
+
+        <section
+            className='bg-[#00984C] h-[27.83rem] pt-[100px] relative overflow-hidden'
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-easing="linear"
+        >
+            <div className='hidden lg:flex items-center justify-between absolute top-44 z-10 -inset-x-4'>
+                <img src={Left} alt='Left' className='' />
+                <img src={Right} alt='Right' className='' />
+            </div>
+        
+            <div className='flex flex-col items-center pt-[45px] pb-[80px]'>
+                <div className='flex flex-col items-center gap-4 lg:w-[688px] mx-auto'>
+                    <div className='w-[211px] h-[28px] rounded-[6px] gap-1 flex items-center justify-center bg-[#FDF2E9]'>
+                        <img src={Stars} alt='Stars' className='w-[13px] h-[13px]' />
+                        <p className='text-xs font-hanken text-[#E78020]'>Empowering 6M+ Nigerians</p>
+                    </div>
+                    <div className='flex flex-col mt-5 gap-6'>
+                        <p className='font-hanken capitalize text-[32px] leading-[32px] lg:text-[56px] text-center font-medium text-[#FFFFFF] lg:leading-[66px]'>
+                            Welcome to LAPO MfB {location.pathname === "/press-release" ? "Press Releases" : "Articles"} Page
+                        </p>
+                        {/* <p className='font-hanken text-base lg:text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
+                            Explore our galleries to see pictures of past seminars, trainings, meetings and other events
+                        </p> */}
+                    </div>
+                    
+                </div>
             </div>
         </section>
 
