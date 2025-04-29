@@ -154,11 +154,15 @@ const Blog = () => {
                     </div>
                     <div className='flex flex-col mt-5 gap-6'>
                         <p className='font-hanken capitalize text-[32px] leading-[32px] lg:text-[56px] text-center font-medium text-[#FFFFFF] lg:leading-[66px]'>
-                            Welcome to LAPO MfB {location.pathname === "/press-release" ? "Press Releases" : "Articles"} Page
+                            {location.pathname === "/press-release" ? "Our News, Your Insight" : "Stories that Inspire"}
                         </p>
-                        {/* <p className='font-hanken text-base lg:text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
-                            Explore our galleries to see pictures of past seminars, trainings, meetings and other events
-                        </p> */}
+                        <p className='font-hanken text-base lg:text-[20px] leading-[30px] text-[#FFFFFF] text-center'>
+                            {
+                                location.pathname === "/press-release" 
+                                ? `Stay updated with official announcements, milestones, and events shaping our journey.` 
+                                : `Dive into experts tips, insights, and real-life stories that drive change and impact.`
+                            } 
+                        </p>
                     </div>
                     
                 </div>

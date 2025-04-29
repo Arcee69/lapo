@@ -403,7 +403,7 @@ const Changemakers = () => {
         {
             name: 'Peggy Idehen',
             position: 'Head, Corporate Secretariat',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692093/MADAM_PEGGY_wnirj6.jpg',  //'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png',
             profile: `<div class="flex flex-col gap-5">
             <p class="font-hanken font-semibold text-base text-[#000]">Peggy Osaiyekemwen Idehen - Head, Corporate Secretariat/Company Secretary</p>
             <p class="text-[#444444] font-inter text-sm">

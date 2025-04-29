@@ -3,11 +3,11 @@ import React from 'react'
 const Legal = () => {
   return (
     <section
-            className='flex flex-col py-[96px] items-start px-5 lg:px-0 lg:w-[45rem] gap-[48px] mx-auto'
-            data-aos="fade-up" 
-            data-aos-duration="1000" 
-            data-aos-easing="linear"
-        >
+        className='flex flex-col py-[96px] items-start px-5 lg:px-0 lg:w-[45rem] gap-[48px] mx-auto'
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-easing="linear"
+    >
             <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
                 LAPO Microfinance Bank (“we,” “our,” or “us”) values your privacy. 
                 This Privacy Policy explains how we collect, use, and protect your 
@@ -102,11 +102,7 @@ const Legal = () => {
                 <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
                     Please also feel free to contact LAPO MfB if you have any questions about this Privacy Policy 
                     or LAPO MfB’s practices, or if you are seeking to exercise any of your statutory rights. 
-                    You may contact us at info@LAPO MfBfs.com or at our mailing address below:
-                </p>
-                <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
-                    For Customers and Authorized Users who use Workspaces 
-                    established for Customers in the US:
+                    You may contact us at customersupport@lapo-nigeria.org or at our mailing address below:
                 </p>
                 <p className='font-inter text-[#667085] text-[18px] leading-[28px]'>
                     LAPO Microfinance Bank
