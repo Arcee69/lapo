@@ -84,15 +84,15 @@ const Blog = () => {
     //     return matchSearch
     //   })
 
-      const totalPages = Math.ceil(filteredPost.length / postsPerPage);
+    //   const totalPages = Math.ceil(filteredPost.length / postsPerPage);
 
       // Get the current page posts
-      const indexOfLastPost = currentPage * postsPerPage;
-      const indexOfFirstPost = indexOfLastPost - postsPerPage;
-      const currentPosts = filteredPost.slice(indexOfFirstPost, indexOfLastPost);
+    //   const indexOfLastPost = currentPage * postsPerPage;
+    //   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    //   const currentPosts = filteredPost.slice(indexOfFirstPost, indexOfLastPost);
   
       // Change page function
-      const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    //   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   
 
   return (
@@ -199,11 +199,11 @@ const Blog = () => {
             <div className='flex flex-col gap-[32px]' ref={blogRef}>
                 <p className='font-semibold font-inter text-[#101828] leading-[32px] text-[24px]'>{location.pathname === "/press-release" ? "All Press Releases" : "All Articles"}</p>
 
-                <div className={`${currentPosts?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
+                <div className={`${filteredPost?.length > 0 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]" :  "flex items-center justify-center"}`}>
                     { loading ? 
                         <p className='text-2xl text-[#000] text-center font-semibold'>Loading Post...</p> :
-                        currentPosts?.length > 0 ?
-                        currentPosts?.map((item) => (
+                        filteredPost?.length > 0 ?
+                        filteredPost?.map((item) => (
                             <div key={item.id} className='flex cursor-pointer flex-col gap-[32px]' onClick={() => {navigate("/view-post", {state: item}), window.scrollTo(0,0)}} >
                                 <img src={item.image} alt="event" className='rounded-lg w-[384px] h-[240px]' />
                                 <div className='flex flex-col gap-3'>
@@ -228,8 +228,8 @@ const Blog = () => {
 
 
                 {/* Pagination */}
-                <div className="flex justify-between items-center py-5">
-                    {/* Previous Button */}
+                {/* <div className="flex justify-between items-center py-5">
+                    {/* Previous Button 
                     <button
                         className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
                         onClick={() => paginate(currentPage - 1)}
@@ -238,7 +238,7 @@ const Blog = () => {
                         <FiChevronLeft className="w-4 h-4 mr-1" /> Previous
                     </button>
 
-                    {/* Page Numbers */}
+                    {/* Page Numbers 
                     <div className="flex items-center gap-2">
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
                             <button
@@ -255,7 +255,7 @@ const Blog = () => {
                         ))}
                     </div>
 
-                    {/* Next Button */}
+                    {/* Next Button 
                     <button
                         className={`flex items-center text-[#475467] font-inter text-sm ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
                         onClick={() => paginate(currentPage + 1)}
@@ -263,6 +263,29 @@ const Blog = () => {
                     >
                         Next <FiChevronRight className="w-4 h-4 ml-1" />
                     </button>
+                </div> */}
+
+                {/* Pagination */}
+                <div className="flex justify-center items-center gap-4 mt-10">
+                <button
+                    onClick={handlePrevPage}
+                    disabled={!prevPageUrl}
+                    className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                    !prevPageUrl && "opacity-50 cursor-not-allowed"
+                    }`}
+                >
+                    Previous
+                </button>
+                <p className="text-[#222222] font-bold">Page {currentPage}</p>
+                <button
+                    onClick={handleNextPage}
+                    disabled={!nextPageUrl}
+                    className={`px-4 py-2 bg-[#00AA55] text-white font-bold rounded ${
+                    !nextPageUrl && "opacity-50 cursor-not-allowed"
+                    }`}
+                >
+                    Next
+                </button>
                 </div>
 
             </div>
