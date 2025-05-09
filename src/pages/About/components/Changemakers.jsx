@@ -18,27 +18,22 @@ const Changemakers = () => {
 
     const board = [
         {
-            name: 'Godwin Ehigiamusoe',
-            position: 'Chairman',
+            name: 'Godwin Eseiwi Ehigiamusoe',
+            position: 'Board Chairman',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741960790/chairman_uiyhij.png',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Godwin Eseiwi Ehigiamusoe - Board Chairman</p>
                 <p class="text-[#444444] font-inter text-sm">
                     Godwin Eseiwi Ehigiamusoe is an acknowledged microfinance practitioner and social entrepreneur. 
-                    His impactful works have significantly expanded the frontiers of finance. In the late 1980s, 
-                    Dr. Ehigiamusoe founded Lift Above Poverty Organisation (LAPO) a poverty-focused development 
-                    organization, in response to the spike in poverty; a fall-out of the implementation of the 
-                    Structural Adjustment Programme.
+                    His impactful works have significantly expanded the frontiers of finance. 
+                    In the late 1980s, Dr. Ehigiamusoe founded Lift Above Poverty Organisation (LAPO) a poverty-focused 
+                    development organization, in response to the spike in poverty; a fall-out of the implementation of 
+                    the Structural Adjustment Programme.
                 </p>
                 <p class="text-[#444444] font-inter text-sm">
                     LAPO has evolved into a network of mutually reinforcing institutions in microfinance, 
-                    micro-insurance, micro-leasing, healthcare, and education meeting the needs of millions 
-                    in Nigeria and Sierra Leone.
-                </p>
-                <p class="text-[#444444] font-inter text-sm">
-                    LAPO has evolved into a network of mutually reinforcing institutions in microfinance, 
-                    micro-insurance, micro-leasing, healthcare, and education meeting the needs of millions 
-                    in Nigeria and Sierra Leone.
+                    micro-insurance, micro-leasing, healthcare, and education meeting the needs of 
+                    millions in Nigeria and Sierra Leone.
                 </p>
                 <p class="text-[#444444] font-inter text-sm">
                     Dr. Ehigiamusoe contributed to the development of the microfinance sector in Nigeria and beyond; 
@@ -46,16 +41,16 @@ const Changemakers = () => {
                     Framework and as well as in building capacity for key actors in the sector.
                 </p>
                 <p class="text-[#444444] font-inter text-sm">
-                    He earned a doctorate degree in policy and development studies with emphasis on policy instruments 
-                    and financial inclusion. He is a certified microfinance banker and a fellow of the Chartered 
-                    Institute of Bankers of Nigeria. In 2008, he won the FATE Foundation’s Model Entrepreneur, 
-                    and Prof Schwab Foundation’s Outstanding Social Entrepreneur – Africa-2010. 
+                    He earned a doctorate degree in policy and development studies with emphasis on policy 
+                    instruments and financial inclusion. He is a certified microfinance banker and a fellow 
+                    of the Chartered Institute of Bankers of Nigeria. In 2008, he won the FATE Foundation’s 
+                    Model Entrepreneur, and Prof Schwab Foundation’s Outstanding Social Entrepreneur – Africa-2010. 
                     In 2014, has won the Distinguished Alumni Award of the Lagos Business School. 
-                    In 2016, he was honoured by the University of Benin, Benin City, Nigeria, his alma mater, 
-                    with D.Sc. (honoris causa).
+                    In 2016, he was honoured by the University of Benin, Benin City, Nigeria, his alma mater, with D.Sc. 
+                    (honoris causa).
                 </p>
                 <p class="text-[#444444] font-inter text-sm">
-                    He has authored books on non-profit, microfinance and enterprise development
+                    He has authored books on non-profit, microfinance and enterprise development
                 </p>
             </div>`
         },
@@ -344,7 +339,7 @@ const Changemakers = () => {
         },
         {
             name: 'Lillian Ehigiamusoe',
-            position: 'Head, Operations',
+            position: 'Executive Director, Operations',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692005/MADAM_LILLIAN_a7xgk6.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Lilian Ehigiamusoe - Head, Operations</p>
@@ -494,11 +489,11 @@ const Changemakers = () => {
         </div>`
         },
         {
-            name: 'Abel Ovenseri Enoguanmwonsa',
+            name: 'Abel Enoguanmwonsa Ovenseri',
             position: 'Head, Corporate Services',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745691887/DR_ABEL_m2m7d9.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1746813950/Dr_Abel_ghxc90.jpg',
             profile: `<div class="flex flex-col gap-5">
-            <p class="font-hanken font-semibold text-base text-[#000]">Abel Ovenseri - Head, Corporate Services</p>
+            <p class="font-hanken font-semibold text-base text-[#000]">Abel Enoguanmwonsa Ovenseri - Head, Corporate Services</p>
             <p class="text-[#444444] font-inter text-sm">
                 Abel is a strategic and results-oriented professional with over a decade of experience in advancing 
                 financial inclusion, institutional development, and sustainable impact. As Head of Corporate Services 
