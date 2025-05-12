@@ -250,6 +250,39 @@ const Changemakers = () => {
                 </p>
             </div>`
         },
+        {
+            name: 'Lilian Ehigiamusoe',
+            position: 'Executive Director, Operations',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692005/MADAM_LILLIAN_a7xgk6.jpg',
+            profile: `<div class="flex flex-col gap-5">
+                <p class="font-hanken font-semibold text-base text-[#000]">Lilian Ehigiamusoe - Head, Operations</p>
+                <p class="text-[#444444] font-inter text-sm">
+                    Mrs. Lilian Ehigiamusoe obtained a Bachelor’s Degree in Public Administration from Ambrose Alli 
+                    University, Ekpoma (2000), and a Master’s Degree in Public Administration from the University of 
+                    Benin (2010). She has attended several executive management programs at prestigious institutions, 
+                    including the Lagos Business School (Nigeria), Development Bank of Nigeria(DBN), Risk and Compliance 
+                    Training (Kenya), and various specialized training sessions in business continuity, risk management, 
+                    and operational excellence, from B.Adedipe Associates(BAA) Consults(Nigeria) and the Frankfurt 
+                    School(Germany).
+                </p>
+                <p class="text-[#444444] font-inter text-sm">
+                    She has over two decades of experience in the microfinance sector with a rich pedigree in 
+                    Enterprise Risk Management, holding key leadership roles, such as Head of Risk Management 
+                    and Group Head of Operations & Information and Technology Risk Management.
+                </p>
+                <p class="text-[#444444] font-inter text-sm">
+                    A certified microfinance banker and a certified risk management professional with the 
+                    Risk Management Society, United States of America (USA), Lilian is also a member of the 
+                    Chartered Institute of Finance and Control (CIFC) and a member of the Administrative Staff 
+                    College of Nigeria (ASCON).
+                </p>
+                <p class="text-[#444444] font-inter text-sm">
+                    She joined the Bank in 2004 as a Branch Manager and rose through various ranks over the 
+                    years and appointed Head, Risk Management Department, until her appointment on 27th November 2024 
+                    as Head, Operations.
+                </p>
+            </div>`
+        },
     ]
 
     const excos = [
@@ -338,7 +371,7 @@ const Changemakers = () => {
             </div>`
         },
         {
-            name: 'Lillian Ehigiamusoe',
+            name: 'Lilian Ehigiamusoe',
             position: 'Executive Director, Operations',
             image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692005/MADAM_LILLIAN_a7xgk6.jpg',
             profile: `<div class="flex flex-col gap-5">
