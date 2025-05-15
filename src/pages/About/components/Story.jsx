@@ -134,7 +134,7 @@ const Story = () => {
 
             {/* Text */}
             <p className="text-white font-inter text-[20px] font-bold leading-[30px]">
-              The first choice financial institution committed to improving lives.
+              The First Choice Financial Institution Committed To Improving Lives.
             </p>
 
             {/* Fold Effect */}
