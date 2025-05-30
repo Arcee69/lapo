@@ -156,7 +156,7 @@ const PicturesGallery = () => {
             >
                 Next
             </button>
-        </div>
+            </div>
 
             {/* <div className="flex justify-between w-full items-center py-5">
                 {/* Previous Button 
