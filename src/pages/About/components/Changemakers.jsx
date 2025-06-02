@@ -57,7 +57,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -289,7 +289,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
