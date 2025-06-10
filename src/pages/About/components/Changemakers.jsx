@@ -57,7 +57,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', 
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -83,7 +83,7 @@ const Changemakers = () => {
         {
             name: 'Joshua James Etopidiok',
             position: 'Non-Executive Director',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689056/josh_dvdzjf.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1749546353/Joshua_cdmbrn.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689056/josh_dvdzjf.png',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Joshua James Etopidiok - Non-Executive Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -122,7 +122,7 @@ const Changemakers = () => {
         {
             name: 'Aigbe Olotu',
             position: 'Independent Non-Executive Director',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688653/aigbe_nqygpg.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1749546362/Aigbe_iw5lpj.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1741688653/aigbe_nqygpg.png',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Aigbe Olotu - Independent Non-Executive Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -431,7 +431,7 @@ const Changemakers = () => {
         {
             name: 'Peggy Idehen',
             position: 'Head, Corporate Secretariat',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1745942175/MADAM_PEGGY_mmzahf.jpg',  //'https://res.cloudinary.com/dairsbzlv/image/upload/v1741689484/peggy_noxyih.png',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1749546282/Peggy_kbreys.png', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745942175/MADAM_PEGGY_mmzahf.jpg',
             profile: `<div class="flex flex-col gap-5">
             <p class="font-hanken font-semibold text-base text-[#000]">Peggy Osaiyekemwen Idehen - Head, Corporate Secretariat/Company Secretary</p>
             <p class="text-[#444444] font-inter text-sm">
