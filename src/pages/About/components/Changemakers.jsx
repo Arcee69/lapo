@@ -676,7 +676,7 @@ const Changemakers = () => {
         >
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]'>
                 {excos.map((item, index) => (
-                    <div className='flex flex-col items-start mx-auto gap-6 ' key={index}>
+                    <div className='flex flex-col items-start gap-6 ' key={index}>
                         <img src={item.image} alt={item.name} className='w-[296px] h-[386px] object-cover rounded-t-[15px]' />
                         <div className='flex flex-col items-start gap-1'>
                             <p className='font-inter text-[#101828] font-medium text-[20px] leading-[30px]'>{item.name}</p>
