@@ -91,7 +91,7 @@ const Cards = () => {
                 <div className='bg-[#E8FFF4] w-[75px] flex items-center justify-center flex-col h-[32px] rounded-[6px]'>
                     <p className='font-hanken text-sm font-medium leading-[15px] text-[#00954B]'>Benefits</p>
                 </div>
-                <p className='font-hanken text-[#101828] text-center font-medium text-[32px] lg:text-[48px] leading-[44px]'>Why Choose the LAPO Debit Card?</p>
+                <p className='font-hanken text-[#101828] text-center font-medium text-[32px] lg:text-[48px] leading-[44px]'>Why Choose the LAPO MfB Debit Card?</p>
             </div>
             <div className='flex flex-col lg:flex-row items-start gap-[48px] lg:gap-[96px]'>
                 <div className='lg:w-[391.82px] lg:h-[428px] flex flex-col gap-[48px]'>
@@ -103,7 +103,7 @@ const Cards = () => {
                             </p>
                             <p className='text-[#667085] font-inter text-base leading-6'>
                                 Say goodbye to the limitations of cash and long queues at the Bank. 
-                                With a LAPO Debit Card, your money is always at your fingertips.
+                                With a LAPO MfB Debit Card, your money is always at your fingertips.
                             </p>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ const Cards = () => {
         >
             <div className='lg:w-[768px] flex flex-col gap-5'>
                 <p className='font-inter font-semibold text-[24px] leading-[120%] lg:text-[36px] lg:leading-[44px] text-[#fff] text-center'>
-                    Get your LAPO Debit Card today and unlock a world of financial freedom and convenience!
+                    Get your LAPO MfB Debit Card today and unlock a world of financial freedom and convenience!
                 </p>
                 <p className='font-inter text-base leading-[150%] lg:text-[20px] lg:leading-[30px] text-center text-[#fff]'>
                     Visit any of our branches to apply for your card
@@ -257,7 +257,7 @@ const Cards = () => {
                     Premium customer support
                 </p>
                 <p className='text-[#667085] font-inter text-base lg:text-[20px] leading-[30px]'>
-                    Enjoy the personalized service you need at LAPO Microfinance Bank, 
+                    Enjoy the personalized service you need at LAPO MfB, 
                     including long-term business financial planning and extended-hours 
                     access to our specialized business service team.
                 </p>
@@ -307,7 +307,7 @@ const Cards = () => {
                             state: {section: "app"}
                           }); window.scrollTo(0, 0)}}
                     >
-                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
+                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO MfB App</p>
                     </div>
                 </div>
             </div>

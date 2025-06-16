@@ -752,7 +752,7 @@ const Home = () => {
                 <p className='font-hanken font-medium text-[32px] '><span className='text-[#121212]'>Shop.</span> <span className='text-[#00954B]'>Pay.</span> <span className='text-[#E78020]'>Withdraw</span></p>
                 <p className='font-hanken text-[#6A6A6A] text-[20px]'>
                   Access your funds anytime, anywhere: Say goodbye to the limitations of cash and long queues at 
-                  the Bank. With a LAPO Debit Card, your money is always at your fingertips.
+                  the Bank. With a LAPO MfB Debit Card, your money is always at your fingertips.
                 </p>
               </div>
               <div className='absolute bottom-0 right-0'>

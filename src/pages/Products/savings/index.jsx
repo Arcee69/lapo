@@ -263,7 +263,7 @@ const Savings = () => {
                 <div className='bg-[#FDF2E9] rounded-[6px] flex items-center justify-center w-[119px] h-[32px]'>
                     <p className='font-hanken font-medium text-sm text-[#E78020] leading-[15px]'>Word of mouth</p>
                 </div>
-                <p className='font-hanken text-[32px] leading-[32px] lg:text-[54px] lg:leading-[56px] text-[#000] lg:w-[635px] text-center'>Hear From Our LAPO Saver</p>
+                <p className='font-hanken text-[32px] leading-[32px] lg:text-[54px] lg:leading-[56px] text-[#000] lg:w-[635px] text-center'>Hear From Our LAPO MfB Saver</p>
             </div>
 
             <iframe 
@@ -305,7 +305,7 @@ const Savings = () => {
                             state: {section: "app"}
                           }); window.scrollTo(0, 0)}}
                     >
-                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
+                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO MfB App</p>
                     </div>
                 </div>
             </div>

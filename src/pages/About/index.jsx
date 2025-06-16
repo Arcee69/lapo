@@ -52,7 +52,7 @@ const About = () => {
               <div className='flex items-center md:justify-center  gap-4 w-max md:w-full'>
                 {/* Tab items with flex-shrink-0 */}
                 <div onClick={() => changeActiveTab(1)} className={`${activeTab === 1 ? "bg-[#00B259]" : "bg-[#007A3D]"} flex-shrink-0 w-auto lg:w-[168px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
-                  <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>The LAPO story</p>
+                  <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>The LAPO MfB story</p>
                 </div>
                 <div onClick={() => changeActiveTab(2)} className={`${activeTab === 2 ? "bg-[#00B259]" : "bg-[#007A3D]"} flex-shrink-0 w-auto lg:w-[221px] h-[48px] flex items-center justify-center rounded-lg p-2 cursor-pointer`}>
                   <p className='text-white whitespace-nowrap font-inter leading-6 text-base'>Board and Executives</p>

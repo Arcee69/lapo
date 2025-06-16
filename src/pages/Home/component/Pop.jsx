@@ -3,8 +3,8 @@ import { MdOutlineClose } from "react-icons/md";
 
 const Pop = ({ handleClose, popMedia }) => {
   return (
-    <div className='bg-[#fff] w-[611px] h-[450px] overflow-y-scroll mt-[30px] rounded-lg flex flex-col'>
-        <div className='flex items-center justify-end p-6'>
+    <div className='bg-[#fff] w-[611px] h-[450px] overflow-y-scroll scrollbar-hide mt-[30px] rounded-lg flex flex-col'>
+        <div className='flex items-center cursor-pointer justify-end p-6'>
             <MdOutlineClose className="text-[#000] w-5 h-5" onClick={handleClose}/>
         </div>
 

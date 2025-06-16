@@ -235,7 +235,7 @@ const Header = () => {
                         }}
                         className='flex flex-col gap-2 cursor-pointer hover:bg-[#FFF9F5] rounded-lg p-2'
                       >
-                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>LAPO Card</p>
+                        <p className='font-hanken text-[#101828] font-medium text-base leading-6'>LAPO MfB Card</p>
                         <p className='text-[#667085] font-inter text-sm leading-5'>Shop. Pay. Withdraw</p>
                       </div>
 

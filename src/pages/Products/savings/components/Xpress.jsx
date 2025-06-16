@@ -175,7 +175,7 @@ const Xpress = () => {
             data-aos-duration="1000" 
             data-aos-easing="linear"
         >
-            <p className='text-[32px] lg:text-[54px] font-hanken leading-[51px] text-[#1E1E1E]'>Related Loan Products</p>
+            <p className='text-[32px] lg:text-[54px] font-hanken leading-[51px] text-[#1E1E1E]'>Related Savings Products</p>
             <div className='flex flex-col lg:flex-row items-start gap-[30px]'>
                 <div className='flex flex-col shadow-md rounded-lg w-[21.438rem] mx-auto lg:w-[22.9rem] h-[324px]'>
                     <img 

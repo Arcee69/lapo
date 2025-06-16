@@ -247,7 +247,7 @@ const MobileApp = () => {
         <section
             className='bg-[#F8F1EE] flex flex-col items-center py-[90px] px-4 lg:px-[100px] gap-[32px] lg:gap-[60px]'
         >
-            <p className='text-[32px] text-center lg:text-[44px] text-[#111111] font-hanken font-semibold leading-[52px]'>Why Choose LAPO Mobile App?</p>
+            <p className='text-[32px] text-center lg:text-[44px] text-[#111111] font-hanken font-semibold leading-[52px]'>Why Choose LAPO MfB Mobile App?</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-[50px]'>
                 <div className='flex flex-col items-center gap-4'>
                     <div className='bg-[#fff] w-[84px] h-[84px] rounded flex items-center justify-center'>
@@ -307,7 +307,7 @@ const MobileApp = () => {
                     <p className='text-xs text-[#E78020] leading-[15px]'>Application</p>
                 </div>
                 <p className='font-hanken text-[32px] leading-[120%] capitalize lg:text-[56px] lg:leading-[67px] text-[#fff]'>
-                    How to register on the LAPO Mobile App
+                    How to register on the LAPO MfB Mobile App
                 </p>
             </div>
 
@@ -330,8 +330,8 @@ const MobileApp = () => {
                             </p>
                             <p className='font-inter text-[#D9D9D9] text-base leading-[150%] lg:text-[20px] lg:leading-[30px] lg:text-center'>
                                 {   
-                                    index === 0 ? 'Download the LAPO Mobile App from Google Play or the App Store.' : 
-                                    index === 1 ? 'Register with your LAPO account details on the app.' :
+                                    index === 0 ? 'Download the LAPO MfB Mobile App from Google Play or the App Store.' : 
+                                    index === 1 ? 'Register with your LAPO MfB account details on the app.' :
                                     'Seamless transactions, easy bill payment anytime, anywhere!'
                                 }
                             </p>
@@ -456,7 +456,7 @@ const MobileApp = () => {
                     Bank On the Go – Anytime, Anywhere!
                 </p>
                 <p className='text-[#667085] text-[20px] font-nunito leading-[30px] lg:w-[480px]'>
-                    Download LAPO's mobile app for seamless banking, savings, 
+                    Download LAPO's MfB mobile app for seamless banking, savings, 
                     and loans—all at your fingertips.
                 </p>
                 <div className='flex items-center gap-4'>
