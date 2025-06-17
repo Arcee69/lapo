@@ -57,7 +57,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', 
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1750170361/MD_mmhc0a.jpg',   //'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', 
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -289,7 +289,7 @@ const Changemakers = () => {
         {
             name: 'Cynthia Ikponmwosa',
             position: 'Managing Director/CEO',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1748888336/MD_Picture_New_wzfd2c.jpg', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745692517/MD_mklirj.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1750170361/MD_mmhc0a.jpg',
             profile: `<div class="flex flex-col gap-5">
                 <p class="font-hanken font-semibold text-base text-[#000]">Cynthia Ikponmwosa - Managing Director</p>
                 <p class="text-[#444444] font-inter text-sm">
@@ -431,7 +431,7 @@ const Changemakers = () => {
         {
             name: 'Peggy Idehen',
             position: 'Head, Corporate Secretariat',
-            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1749546282/Peggy_kbreys.png', //'https://res.cloudinary.com/dairsbzlv/image/upload/v1745942175/MADAM_PEGGY_mmzahf.jpg',
+            image: 'https://res.cloudinary.com/dairsbzlv/image/upload/v1750170361/Peggy_mbifcz.jpg',
             profile: `<div class="flex flex-col gap-5">
             <p class="font-hanken font-semibold text-base text-[#000]">Peggy Osaiyekemwen Idehen - Head, Corporate Secretariat/Company Secretary</p>
             <p class="text-[#444444] font-inter text-sm">
