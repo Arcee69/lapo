@@ -277,7 +277,7 @@ const CleanEnergy = () => {
                         <p className='font-hanken text-[#000000] font-medium  text-[13px] lg:text-base leading-6'>Contact Us</p>
                     </div>
                     <div className='bg-[#000000] w-[187px] lg:w-[225px] cursor-pointer h-[48px] rounded-[8px] flex items-center justify-center p-2'>
-                        <p className='font-hanken font-medium text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
+                        <p className='font-hanken font-medium text-[13px] lg:text-base text-[#fff]'>Download the LAPO MfB App</p>
                     </div>
                 </div>
             </div>

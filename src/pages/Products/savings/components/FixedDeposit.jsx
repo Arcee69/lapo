@@ -160,7 +160,7 @@ const FixedDeposit = () => {
                             state: {section: "app"}
                           }); window.scrollTo(0, 0)}}
                     >
-                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO App</p>
+                        <p className='font-hanken font-medium whitespace-nowrap text-[13px] lg:text-base text-[#fff]'>Download the LAPO MfB App</p>
                     </div>
                 </div>
             </div>
