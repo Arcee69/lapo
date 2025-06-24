@@ -1,24 +1,23 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 const ViewBlogPost = () => {
     const [loading, setLoading] = useState(false)
     const [blogPost, setBlogPost] = useState([])
     
+    const { slug } = useParams()
     const { state } = useLocation()
-    console.log(state, "state") 
 
-     let URL = import.meta.env.VITE_APP_API_URL;
+    let URL = import.meta.env.VITE_APP_API_URL;
 
     const navigate = useNavigate()
 
-    const fetchPost = async (url = `${URL}/v1/post/slug/${state.slug}`) => {
+    const fetchPost = async (url = `${URL}/v1/post/slug/${slug}`) => {
         setLoading(true)
         try {
             const res = await axios.get(url);
-          console.log(res, "popsicle")
-          const data = res.data;
+            const data = res.data;
     
           setBlogPost(data?.data || []);
         } catch (err) {
@@ -30,7 +29,7 @@ const ViewBlogPost = () => {
 
     useEffect(() => {
         fetchPost()
-    }, [state])
+    }, [state, slug])
 
   return (
     <div className='w-full flex flex-col items-start gap-5 pt-[186px] pb-[49px] px-5 lg:px-[112px]'>
