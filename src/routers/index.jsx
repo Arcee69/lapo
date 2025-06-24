@@ -79,7 +79,7 @@ export default function Routers() {
           <Route path="/digital/cards" element={<Cards />} />
           <Route path="/press-release" element={<Blog />} />
           <Route path="/articles" element={<Blog />} />
-          <Route path="/view-post" element={<ViewBlogPost />} />
+          <Route path="/view-post/:slug" element={<ViewBlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
